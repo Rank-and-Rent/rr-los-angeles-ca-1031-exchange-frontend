@@ -7,7 +7,8 @@ import { ArrowRight, MapPin, Filter } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { locationsData } from "@/data";
-import { PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
+import { PRIMARY_CITY, PRIMARY_STATE_ABBR, PHONE } from "@/lib/constants";
+import { getLocationImagePath } from "@/lib/image-utils";
 
 export default function LocationsPage() {
   const [searchQuery] = useState("");
@@ -106,7 +107,7 @@ export default function LocationsPage() {
           name="keywords"
           content="1031 exchange locations, Los Angeles CA, Southern California, property markets, real estate investment"
         />
-        <link rel="canonical" href="https://www.1031exchangela.com/locations" />
+        <link rel="canonical" href="https://www.1031exchangelosangeles.com/locations" />
       </Head>
 
       <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
@@ -181,7 +182,13 @@ export default function LocationsPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 hover:bg-slate-900/80 transition-colors group"
+                      className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 hover:bg-slate-900/80 transition-colors group relative overflow-hidden"
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getLocationImagePath(location.slug)})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
                     >
                       <div className="flex items-start gap-3 mb-4">
                         <MapPin className="h-5 w-5 text-amber-400 mt-1 flex-shrink-0" />
@@ -259,10 +266,10 @@ export default function LocationsPage() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:213-555-1031"
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
                 >
-                  Call 213-555-1031
+                  Call {PHONE}
                 </a>
               </div>
             </motion.div>

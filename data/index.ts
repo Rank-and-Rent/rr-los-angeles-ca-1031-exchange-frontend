@@ -1,9 +1,16 @@
-// Export all data files for easy importing
-export { servicesData } from './services';
-export { locationsData } from './locations';
-export { propertyTypesData } from './propertyTypes';
-export { inventoryCategories } from './inventoryCategories';
-export { inventorySpotlight } from './inventorySpotlight';
-export { resources } from './resources';
-export { serviceVariants, locationVariants, assignments } from './layouts';
-export type { ServiceItem, LocationItem, PropertyTypeItem, InventoryCategory, ResourceLink, PageLayoutVariant, LayoutAssignments, InventorySpotlightItem } from './types';
+export * from "./types";
+export { servicesData } from "./services";
+export { locationsData } from "./locations";
+export { toolsData } from "./tools";
+export { propertyTypesData } from "./propertyTypes";
+export { inventoryCategories } from "./inventoryCategories";
+export { resources } from "./resources";
+export { serviceVariants, locationVariants, assignments } from "./layouts";
+export * as servicesBatch01 from "./batches/services/batch-01";
+export * as servicesBatch02 from "./batches/services/batch-02";
+export * as servicesBatch03 from "./batches/services/batch-03";
+export * as locationsBatch01 from "./batches/locations/batch-01";
+export * as locationsBatch02 from "./batches/locations/batch-02";
+export * as locationsBatch03 from "./batches/locations/batch-03";
+export { locationContentMap, type LocationContent } from "./locationContent";
+export * as inventoryBatch01 from "./batches/inventory/batch-01";

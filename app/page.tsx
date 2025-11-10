@@ -8,31 +8,28 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Calculator,
-  CalendarDays,
-  CheckCircle,
   Building,
-  ClipboardList,
-  Clock,
   FileText,
-  Gavel,
   Info,
   Landmark,
   Layers,
   MapPin,
   Phone,
+  Receipt,
   ShieldCheck,
+  Target,
 } from "lucide-react";
 import { servicesData, propertyTypesData, locationsData } from "@/data";
+import { BRAND_NAME, PHONE, ADDRESS } from "@/lib/constants";
+import { getLocationImagePath, getPropertyTypeImagePath } from "@/lib/image-utils";
 
 
-const PHONE = "213-555-1031";
-const BRAND_NAME = "1031 Exchange Los Angeles";
 const PRIMARY_BRAND_COLOR = "#0f2d4c";
 const ACCENT_COLOR = "#f5b544";
 const HAS_STAFFED_OFFICE = true;
 
 type Service = { title: string; description: string; href: string };
-type PropertyType = { title: string; benefit: string; href: string };
+type PropertyType = { title: string; benefit: string; href: string; slug: string };
 type CityItem = { name: string; description: string; slug: string };
 type FAQ = { question: string; answer: string };
 
@@ -51,18 +48,19 @@ const PROPERTY_TYPES: readonly PropertyType[] = propertyTypesData
   .slice(0, 6)
   .map(propertyType => {
     const benefitMap: Record<string, string> = {
-      multifamily: "Preserve rental income streams while repositioning into stabilized or value-add apartment assets.",
-      "triple-net-retail": "Exchange into long-term net lease credit tenants to reduce hands-on management obligations.",
-      "industrial-flex": "Capture logistics growth with build-to-suit warehouses and adaptive reuse flex properties.",
-      "medical-office": "Align with healthcare operator demand while maintaining like-kind commercial status and stable leases.",
-      "dst-tic": "Access institutional fractional portfolios while complying with IRS revenue rulings for passive investors.",
-      "self-storage": "Own recession-resistant self-storage assets with consistent demand and automated operations.",
+      multifamily: "Stable rental income with professional management options for hands-off ownership opportunities.",
+      "triple-net-retail": "Credit-rated corporate tenants provide guaranteed monthly cash flow with zero management responsibilities.",
+      "industrial-flex": "Essential logistics businesses with long-term leases and recession-resistant tenant bases.",
+      "medical-office": "Healthcare providers offer stable occupancy with corporate tenant reliability and lease guarantees.",
+      "dst-tic": "Fractional ownership provides passive income diversification with institutional-quality NNN lease properties.",
+      "self-storage": "Automated operations and consistent demand create reliable passive income streams.",
     };
 
     return {
       title: propertyType.name,
       benefit: benefitMap[propertyType.slug] || "Strategic property investment opportunity for 1031 exchange investors.",
       href: `/property-types/${propertyType.route}`,
+      slug: propertyType.slug,
     };
   });
 
@@ -72,13 +70,28 @@ const CA_CITIES_SLUGS: readonly CityItem[] = locationsData
   .map(location => {
     const descriptionMap: Record<string, string> = {
       "downtown-los-angeles": "Exchange support for adaptive reuse towers, mixed-use redevelopments, and Opportunity Zone parcels.",
-      "santa-monica": "Coastal advisory for hospitality, retail, and multifamily repositioning along the Silicon Beach corridor.",
-      "pasadena": "Historic district compliance with attorney partnerships for legacy wealth transitions.",
-      "west-hollywood": "Guidance for boutique hospitality and creative office reinvestments with tight deadline management.",
-      "long-beach": "Port-adjacent logistics exchanges and mixed-use waterfront developments across Los Angeles County.",
-      "glendale": "Investor services for corporate headquarters relocations and Class A office dispositions.",
-      "beverly-hills": "Luxury retail and office properties with high-net-worth investor focus.",
       "century-city": "Corporate headquarters and medical office properties in the heart of LA's business district.",
+      "hollywood": "Entertainment industry properties and creative office spaces in Hollywood CA.",
+      "beverly-hills": "Luxury retail and office properties with high-net-worth investor focus.",
+      "west-hollywood": "Guidance for boutique hospitality and creative office reinvestments with tight deadline management.",
+      "culver-city": "Tech and media company headquarters with modern office and flex properties.",
+      "santa-monica": "Coastal advisory for hospitality, retail, and multifamily repositioning along the Silicon Beach corridor.",
+      "venice": "Beachfront commercial and residential properties in Venice CA.",
+      "marina-del-rey": "Marina and waterfront commercial properties in Marina Del Rey CA.",
+      "malibu": "Exclusive coastal properties and luxury estates in Malibu CA.",
+      "burbank": "Media and entertainment industry properties in Burbank CA.",
+      "glendale": "Investor services for corporate headquarters relocations and Class A office dispositions.",
+      "pasadena": "Historic district compliance with attorney partnerships for legacy wealth transitions.",
+      "san-fernando-valley": "Affordable commercial properties and industrial spaces across the San Fernando Valley.",
+      "long-beach": "Port-adjacent logistics exchanges and mixed-use waterfront developments across Los Angeles County.",
+      "torrance": "South Bay commercial and industrial properties in Torrance CA.",
+      "redondo-beach": "Beach city commercial properties and retail spaces in Redondo Beach CA.",
+      "manhattan-beach": "Upscale beach city properties and commercial real estate in Manhattan Beach CA.",
+      "pomona": "Inland Empire commercial and industrial properties in Pomona CA.",
+      "rancho-cucamonga": "Growing Inland Empire market with commercial and industrial opportunities.",
+      "ontario": "Airport-adjacent logistics and distribution properties in Ontario CA.",
+      "irvine": "Orange County-adjacent properties with corporate office and R&D facilities.",
+      "newport-beach": "Luxury coastal properties and high-end commercial real estate in Newport Beach CA.",
     };
 
     return {
@@ -90,34 +103,34 @@ const CA_CITIES_SLUGS: readonly CityItem[] = locationsData
 
 const FAQ_ITEMS: readonly FAQ[] = [
   {
-    question: "What are the 45 and 180 day rules?",
+    question: "What makes triple net lease properties attractive investments?",
     answer:
-      "The IRS requires identification of replacement property within 45 calendar days of the relinquished property closing and completion of the acquisition within 180 calendar days or the due date of the tax return, whichever occurs first. Missing either deadline disqualifies the exchange.",
+      "NNN lease properties offer stable passive income through credit-rated corporate tenants who assume all property expenses, maintenance, and risks. These recession-proof businesses provide guaranteed monthly cash flow with zero management responsibilities for property owners.",
   },
   {
-    question: "What qualifies as like-kind property?",
+    question: "What types of businesses typically use triple net leases?",
     answer:
-      "Real property held for productive use in a trade or business or for investment qualifies as like-kind to other real property of the same class. Personal property and primary residences do not qualify. California conforms to the federal like-kind definition for real property.",
+      "Essential service businesses dominate NNN leases including fast-food restaurants (Taco Bell, Wendy's), drug stores (Walgreens, CVS), convenience stores (7-Eleven), medical clinics, auto parts stores (AutoZone), dollar stores (Dollar General), car washes, and gas station-convenience store combinations.",
   },
   {
-    question: "What is boot and how is it taxed?",
+    question: "What are the different types of triple net leases?",
     answer:
-      "Boot is any cash, debt relief, or non-like-kind property received during the exchange. Boot is taxable to the extent of realized gain. Careful contract structuring and intermediary controls help reduce or eliminate boot.",
+      "Absolute NNN leases have tenants paying all expenses including taxes, insurance, and maintenance. Regular NNN leases are similar but may require landlords to cover some costs like roof repairs. Ground leases involve land-only rentals lasting 20-99 years where tenants pay all development costs.",
   },
   {
-    question: "How are transfer taxes handled in California?",
+    question: "How do I evaluate tenant creditworthiness for NNN properties?",
     answer:
-      "Documentary transfer taxes in Los Angeles County and statewide transfer taxes remain due and payable during a 1031 exchange. These taxes are not deferred by the exchange structure and must be budgeted at closing.",
+      "Review S&P and Moody's credit ratings, financial statements, business stability during economic downturns, and lease guarantees. Investment-grade rated tenants provide the highest security for passive income investments.",
   },
   {
-    question: "Can I perform a reverse exchange?",
+    question: "What are the benefits of owning NNN lease properties?",
     answer:
-      "A reverse exchange allows acquisition of the replacement property before the relinquished sale. It requires a qualified exchange accommodation arrangement and strict compliance with IRS Rev. Proc. 2000-37 and related guidance.",
+      "NNN properties offer low entry barriers ($500K-$2M+), predictable monthly income with rent escalations, zero management responsibilities, tax advantages, and security not found in traditional investments. Corporate tenants assume all property risks.",
   },
   {
-    question: "How do I report the exchange on IRS Form 8824?",
+    question: "How does passive income work with triple net lease properties?",
     answer:
-      "Report the exchange on IRS Form 8824 for the tax year in which the relinquished property transfers. Include California adjustments on the state return and maintain supporting documentation for audit review.",
+      "Property owners collect guaranteed monthly rent payments while tenants handle all property expenses, maintenance, and management. This creates truly passive income streams with corporate-level reliability and long-term lease guarantees (10-20+ years).",
   },
 ];
 
@@ -125,16 +138,16 @@ const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: BRAND_NAME,
-  url: "https://www.1031exchangela.com/",
-  logo: "https://www.1031exchangela.com/og-image.png",
-  telephone: "+1-213-555-1031",
+  url: "https://www.1031exchangelosangeles.com/",
+  logo: "https://www.1031exchangelosangeles.com/og-image.png",
+  telephone: "+1-818-412-8402",
   address: HAS_STAFFED_OFFICE
     ? {
         "@type": "PostalAddress",
-        streetAddress: "1010 Santa Monica Boulevard Suite 1600",
+        streetAddress: ADDRESS.split(',')[0],
         addressLocality: "Los Angeles",
         addressRegion: "CA",
-        postalCode: "90067",
+        postalCode: ADDRESS.split(',').slice(-1)[0].trim().split(' ')[1],
         addressCountry: "US",
       }
     : {
@@ -150,7 +163,7 @@ const ORGANIZATION_SCHEMA = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+1-213-555-1031",
+      telephone: "+1-818-412-8402",
       contactType: "customer service",
       areaServed: ["US-CA", "US-CA-Los Angeles"],
       availableLanguage: ["English"],
@@ -162,11 +175,11 @@ const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "1031 Exchange Los Angeles",
-  url: "https://www.1031exchangela.com/",
+  url: "https://www.1031exchangelosangeles.com/",
   potentialAction: {
     "@type": "SearchAction",
     target:
-      "https://www.1031exchangela.com/search?query={search_term_string}",
+      "https://www.1031exchangelosangeles.com/search?query={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -183,6 +196,73 @@ const FAQ_SCHEMA = {
     },
   })),
 };
+
+const LOCAL_BUSINESS_SCHEMA = (() => {
+  const baseSchema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.1031exchangelosangeles.com/#organization",
+    name: BRAND_NAME,
+    image: "https://www.1031exchangelosangeles.com/og-image.png",
+    logo: "https://www.1031exchangelosangeles.com/og-image.png",
+    url: "https://www.1031exchangelosangeles.com/",
+    telephone: "+1-818-412-8402",
+    email: "help@1031exchangelosangeles.com",
+    address: HAS_STAFFED_OFFICE
+      ? {
+          "@type": "PostalAddress",
+          streetAddress: ADDRESS.split(',')[0],
+          addressLocality: "Los Angeles",
+          addressRegion: "CA",
+          postalCode: ADDRESS.split(',').slice(-1)[0].trim().split(' ')[1],
+          addressCountry: "US",
+        }
+      : {
+          "@type": "PostalAddress",
+          addressLocality: "Los Angeles",
+          addressRegion: "CA",
+          addressCountry: "US",
+        },
+    priceRange: "$$",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Los Angeles",
+        "@id": "https://www.wikidata.org/wiki/Q65",
+      },
+      {
+        "@type": "State",
+        name: "California",
+        "@id": "https://www.wikidata.org/wiki/Q99",
+      },
+    ],
+    serviceType: [
+      "1031 Exchange Services",
+      "Triple Net Lease Property Identification",
+      "NNN Lease Property Investment",
+      "Commercial Real Estate Advisory",
+    ],
+    description: "Expert triple net lease property identification connecting Los Angeles CA investors with credit-rated corporate tenants and passive income opportunities.",
+  };
+
+  if (HAS_STAFFED_OFFICE) {
+    baseSchema.geo = {
+      "@type": "GeoCoordinates",
+      latitude: "34.0522",
+      longitude: "-118.2437",
+    };
+    baseSchema.openingHoursSpecification = [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    ];
+  }
+
+  return baseSchema;
+})();
 
 type FormState = {
   name: string;
@@ -315,11 +395,17 @@ export default function Page(): JSX.Element {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.1031exchangela.com/" />
+        <link rel="canonical" href="https://www.1031exchangelosangeles.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(ORGANIZATION_SCHEMA),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA),
           }}
         />
         <script
@@ -354,10 +440,10 @@ export default function Page(): JSX.Element {
                     Pacific Equity
                   </p>
                   <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
-                    Los Angeles 1031 Exchange Experts
+                    Los Angeles NNN Lease Property Experts
                   </h1>
                   <p className="mt-6 text-lg leading-relaxed text-slate-100/90 md:text-xl">
-                    Strategic guidance for California investors managing proceeds, identifying replacement property within 45 days, and closing inside the 180 day IRS deadline with documented compliance at every step.
+                    Whether you&apos;re seeking stable passive income or recession-proof investments, we identify triple net lease properties with credit-rated tenants providing guaranteed monthly cash flow and zero management responsibilities across Los Angeles CA.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
@@ -379,7 +465,7 @@ export default function Page(): JSX.Element {
                       href="#lead-form"
                       className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3 text-base font-medium text-white transition focus-visible:ring-2 focus-visible:ring-slate-100 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:border-white/60 hover:bg-white/5"
                     >
-                      Start My Exchange
+                      Find NNN Properties
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
                   </motion.div>
@@ -392,22 +478,22 @@ export default function Page(): JSX.Element {
                 <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                   <div className="flex flex-col gap-3 text-sm text-white/85">
                     <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/60">
-                      <Clock className="h-4 w-4" aria-hidden="true" />
-                      Deadline Assurance
+                      <Target className="h-4 w-4" aria-hidden="true" />
+                      NNN Property Assurance
                     </div>
                     <p className="text-base text-white/90">
-                      45 Day identification. 180 Day closing. We help you stay compliant.
+                      Credit-rated tenants. Corporate guarantees. Zero management responsibilities.
                     </p>
                   </div>
                   <div className="grid grid-cols-1 gap-4 text-sm text-white/75 sm:grid-cols-3">
                     <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      CPA Alliance
+                      Investment-Grade Tenants
                     </div>
                     <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      Attorney Partners
+                      Corporate Guarantees
                     </div>
                     <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      Qualified Intermediary Network
+                      Passive Income Focus
                     </div>
                   </div>
                 </div>
@@ -432,43 +518,37 @@ export default function Page(): JSX.Element {
                   Why Choose {BRAND_NAME}
                 </p>
                 <h2 className="font-serif text-3xl text-white md:text-4xl">
-                  Precision exchange guidance grounded in California law, timeline discipline, and escrow transparency.
+                  Expert NNN lease property identification delivering passive income security and hands-off ownership.
                 </h2>
                 <p className="text-base leading-relaxed text-slate-300">
-                  We align investors, intermediaries, counsel, and title teams across Los Angeles County to preserve tax deferral and maintain audit-ready documentation.
+                  We connect Los Angeles CA investors with investment-grade triple net lease properties featuring credit-rated tenants, guaranteed monthly cash flow, and zero management responsibilities.
                 </p>
               </motion.div>
               <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
                 {[
                   {
-                    title: "California and Los Angeles County Expertise",
+                    title: "Investment-Grade Tenant Selection & Verification",
                     description:
-                      "Local zoning nuance, transfer tax planning, and market knowledge aligned with California Franchise Tax Board conformity.",
-                    icon: Landmark,
-                  },
-                  {
-                    title: "Attorney and CPA Coordination",
-                    description:
-                      "Project manage legal and tax advisors with secure data rooms and scheduled review checkpoints.",
-                    icon: Gavel,
-                  },
-                  {
-                    title: "Qualified Intermediary Network",
-                    description:
-                      "Pair your exchange with bonded intermediaries that operate segregated trust accounts and fidelity insurance.",
+                      "Connect with S&P and Moody-rated corporate tenants including fast-food chains, drug stores, and medical companies with proven recession resistance. Verify tenant creditworthiness and lease terms ensuring long-term stability (10-20+ years) and predictable income streams.",
                     icon: ShieldCheck,
                   },
                   {
-                    title: "IRS-Compliant Escrow Workflow",
+                    title: "Triple Net Lease Structure Analysis",
                     description:
-                      "Implement assignment documentation, replacement property vesting, and escrow disbursement controls.",
+                      "Evaluate absolute NNN, regular NNN, and ground lease options to identify properties where tenants assume all expenses and risks.",
                     icon: FileText,
                   },
                   {
-                    title: "Timeline and Audit Discipline",
+                    title: "Passive Income Optimization",
                     description:
-                      "Document every milestone with time-stamped notices, acknowledgement logs, and 8824-ready summaries.",
-                    icon: ClipboardList,
+                      "Structure acquisitions for guaranteed monthly cash flow with annual rent escalations and minimal landlord responsibilities.",
+                    icon: Calculator,
+                  },
+                  {
+                    title: "Los Angeles Market Intelligence",
+                    description:
+                      "Navigate Southern California commercial real estate with deep knowledge of essential service businesses and property availability.",
+                    icon: Landmark,
                   },
                 ].map((item) => (
                   <motion.div
@@ -495,21 +575,14 @@ export default function Page(): JSX.Element {
               </div>
               <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900/60 px-6 py-6 md:px-8 md:py-7">
                 <p className="text-sm text-slate-300">
-                  A 1031 exchange defers federal and California income tax on qualifying real property. It does not remove transfer or documentary taxes in Los Angeles County. Review the{" "}
+                  Triple net lease properties offer investors stable passive income through credit-rated corporate tenants. While NNN investments can be part of tax-advantaged strategies, they do not guarantee specific tax outcomes. Review the{" "}
                   <Link
                     href="https://ttc.lacounty.gov/documentary-transfer-tax/"
                     className="text-slate-100 underline decoration-2 underline-offset-4"
                   >
                     Los Angeles County documentary transfer tax guidance
                   </Link>{" "}
-                  and the{" "}
-                  <Link
-                    href="https://www.boe.ca.gov/proptaxes/transfer.htm"
-                    className="text-slate-100 underline decoration-2 underline-offset-4"
-                  >
-                    California statewide transfer tax overview
-                  </Link>{" "}
-                  before closing.
+                  and consult qualified tax professionals for your specific situation.
                 </p>
               </div>
             </div>
@@ -525,10 +598,10 @@ export default function Page(): JSX.Element {
               >
                 <div className="max-w-2xl">
                   <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                    How a 1031 Works
+                    NNN Lease Investment Process
                   </p>
                   <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                    Sequence the exchange with disciplined logistics and formal documentation.
+                    Identify credit-rated tenants, verify lease terms, and secure passive income properties.
                   </h2>
                 </div>
                 <div className="flex gap-4 text-sm text-slate-300">
@@ -551,22 +624,22 @@ export default function Page(): JSX.Element {
               <div className="mt-12 grid gap-6 md:grid-cols-3">
                 {[
                   {
-                    title: "Sell the relinquished property",
+                    title: "Evaluate tenant creditworthiness",
                     description:
-                      "Initiate the exchange before closing. Assign rights to the qualified intermediary and escrow instructions prior to funding.",
-                    icon: CheckCircle,
+                      "Research corporate tenant financial strength, S&P/Moody ratings, and business stability across economic cycles.",
+                    icon: ShieldCheck,
                   },
                   {
-                    title: "Identify within 45 days",
+                    title: "Analyze lease structures",
                     description:
-                      "Submit written identification of up to three properties or follow the 200 percent rule with acknowledgements retained.",
-                    icon: Clock,
+                      "Review absolute NNN vs regular NNN terms, rent escalation clauses, and expense responsibility assignments.",
+                    icon: FileText,
                   },
                   {
-                    title: "Close within 180 days",
+                    title: "Secure passive income properties",
                     description:
-                      "Complete acquisition by day 180 or the tax filing deadline. Ensure vesting, debt replacement, and escrow disbursements align.",
-                    icon: Layers,
+                      "Identify recession-proof businesses with guaranteed monthly cash flow and zero management requirements.",
+                    icon: Target,
                   },
                 ].map((item) => (
                   <motion.div
@@ -614,10 +687,10 @@ export default function Page(): JSX.Element {
                 className="max-w-2xl"
               >
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  Services Preview
+                  NNN Property Services
                 </p>
                 <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Advisory, escrow coordination, and compliance management engineered for complex California exchanges.
+                  Comprehensive triple net lease property identification and acquisition support across Los Angeles CA.
                 </h2>
               </motion.div>
               <div className="mt-14 grid gap-8 md:grid-cols-2">
@@ -672,7 +745,7 @@ export default function Page(): JSX.Element {
                   Property Types
                 </p>
                 <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Evaluate each asset class for risk, financing, and operational demands before submitting your identification list.
+                  Discover triple net lease opportunities across essential service businesses with credit-rated corporate tenants.
                 </h2>
               </motion.div>
               <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -682,7 +755,13 @@ export default function Page(): JSX.Element {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/70 p-7 shadow transition hover:-translate-y-1 hover:shadow-lg"
+                    className="rounded-2xl border border-slate-800 bg-slate-900/70 p-7 shadow transition hover:-translate-y-1 hover:shadow-lg relative overflow-hidden"
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getPropertyTypeImagePath(property.slug)})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
                   >
                     <Layers
                       className="h-8 w-8"
@@ -729,10 +808,10 @@ export default function Page(): JSX.Element {
                   Los Angeles Coverage
                 </p>
                 <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Advisory reach across every Los Angeles County submarket with coordinated statewide support.
+                  Comprehensive NNN lease property identification across every Los Angeles CA submarket.
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-slate-300">
-                  {BRAND_NAME} guides exchanges from Westside luxury dispositions to industrial repositioning throughout the Inland Empire. Our qualified intermediary network spans California for investors executing multi-county rollovers.
+                  {BRAND_NAME} connects investors with triple net lease properties featuring credit-rated tenants from Downtown LA to the Inland Empire. Our extensive market knowledge ensures access to recession-proof businesses with guaranteed income streams.
                 </p>
 
                 {/* Location Search */}
@@ -758,7 +837,13 @@ export default function Page(): JSX.Element {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6"
+                    className="flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 relative overflow-hidden"
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getLocationImagePath(city.slug)})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
                   >
                     <div className="flex items-start gap-3">
                       <MapPin
@@ -826,54 +911,94 @@ export default function Page(): JSX.Element {
             </div>
           </section>
 
+          {/* Tools Section */}
           <section className="bg-slate-900 py-20 md:py-28">
             <div className="mx-auto max-w-7xl px-6 md:px-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="grid gap-8 md:grid-cols-2"
+                className="text-center mb-16"
               >
-                <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow transition hover:-translate-y-1 hover:shadow-lg">
-                  <Calculator
-                    className="h-10 w-10"
-                    style={{ color: ACCENT_COLOR }}
-                    aria-hidden="true"
-                  />
-                  <h3 className="mt-5 font-serif text-2xl text-white">
-                    Capital Gains Estimator
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                    Forecast federal and California capital gains exposure, depreciation recapture, and potential boot to guide reinvestment targets.
-                  </p>
-                  <Link
-                    href="/resources/calculator"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                  >
-                    Launch estimator
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                <h2 className="font-serif text-3xl text-white md:text-4xl mb-4">
+                  Free NNN Property Tools
+                </h2>
+                <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                  Educational calculators and resources to help Los Angeles CA investors evaluate
+                  triple net lease opportunities. These tools provide analysis and guidance for
+                  identifying passive income properties with credit-rated corporate tenants.
+                </p>
+              </motion.div>
+
+              <div className="grid gap-8 md:grid-cols-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-blue-900/20 to-blue-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <Link href="/tools/boot-calculator" className="block">
+                    <Calculator className="mb-4 h-12 w-12 text-blue-400" />
+                    <h3 className="mb-2 text-2xl font-semibold">Boot Calculator</h3>
+                    <p className="text-slate-100 mb-4">
+                      Calculate boot and estimate tax implications from cash received, mortgage relief, and non-like-kind property.
+                    </p>
+                    <div className="flex items-center text-sm font-medium text-blue-300 group-hover:text-blue-200">
+                      Use Calculator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </Link>
-                </div>
-                <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow transition hover:-translate-y-1 hover:shadow-lg">
-                  <CalendarDays
-                    className="h-10 w-10"
-                    style={{ color: ACCENT_COLOR }}
-                    aria-hidden="true"
-                  />
-                  <h3 className="mt-5 font-serif text-2xl text-white">
-                    Timeline Reminders
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                    Automate milestone alerts, document acknowledgements, and team coordination for every exchange deadline.
-                  </p>
-                  <Link
-                    href="/resources/timeline"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                  >
-                    View reminders
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-green-900/20 to-green-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <Link href="/tools/exchange-cost-estimator" className="block">
+                    <Receipt className="mb-4 h-12 w-12 text-green-400" />
+                    <h3 className="mb-2 text-2xl font-semibold">Exchange Cost Estimator</h3>
+                    <p className="text-slate-100 mb-4">
+                      Estimate QI fees, escrow costs, title insurance, and recording fees for Los Angeles County exchanges.
+                    </p>
+                    <div className="flex items-center text-sm font-medium text-green-300 group-hover:text-green-200">
+                      Use Estimator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </Link>
-                </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-purple-900/20 to-purple-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <Link href="/tools/identification-rules-checker" className="block">
+                    <Target className="mb-4 h-12 w-12 text-purple-400" />
+                    <h3 className="mb-2 text-2xl font-semibold">Identification Rules Checker</h3>
+                    <p className="text-slate-100 mb-4">
+                      Validate replacement property identification against IRS Three Property, 200%, and 95% Rules.
+                    </p>
+                    <div className="flex items-center text-sm font-medium text-purple-300 group-hover:text-purple-200">
+                      Use Validator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                </motion.div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-12 text-center"
+              >
+                <Link
+                  href="/tools"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 transition-colors"
+                >
+                  View All Tools
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </motion.div>
             </div>
           </section>
@@ -890,7 +1015,7 @@ export default function Page(): JSX.Element {
                   Frequently Asked Questions
                 </p>
                 <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Clear explanations for investors, attorneys, and advisors navigating California 1031 exchanges.
+                  Comprehensive answers for investors exploring triple net lease properties and passive income opportunities.
                 </h2>
               </motion.div>
               <div className="mt-12 divide-y divide-slate-800 rounded-2xl border border-slate-800 bg-slate-900/60">
@@ -942,10 +1067,10 @@ export default function Page(): JSX.Element {
                     id="lead-form-title"
                     className="mt-3 font-serif text-3xl text-white md:text-4xl"
                   >
-                    Request a confidential consultation to map your Los Angeles 1031 exchange.
+                    Request a confidential consultation to discover Los Angeles CA NNN lease opportunities.
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-slate-300">
-                    Submit your property timeline and we will coordinate a call covering intermediary selection, financing, and closing logistics. Urgent deadlines receive same-day scheduling.
+                    Share your investment goals and we will identify triple net lease properties with credit-rated corporate tenants providing guaranteed passive income. Same-day responses for serious investors.
                   </p>
                   <div className="mt-8 flex flex-col gap-4 text-sm text-slate-300">
                     <div className="flex items-center gap-3">
@@ -1013,7 +1138,7 @@ export default function Page(): JSX.Element {
                       required
                     />
                     <FormField
-                      label="Property Being Sold"
+                      label="Current Investment Focus"
                       id="property"
                       type="text"
                       autoComplete="organization-title"
@@ -1060,7 +1185,7 @@ export default function Page(): JSX.Element {
                       }
                       error={errors.message}
                       required
-                      helper="Share exchange goals, debt profile, or special instructions."
+                      helper="Share investment goals, preferred property types, or passive income objectives."
                     />
                   </div>
                   <motion.button
@@ -1078,7 +1203,7 @@ export default function Page(): JSX.Element {
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </motion.button>
                   <p className="mt-4 text-xs text-slate-400" id="form-compliance">
-                    Educational content only. Not tax or legal advice.
+                    Educational content only. Not investment, tax, or legal advice.
                   </p>
                   <div className="mt-4 text-sm" role="status" aria-live="polite">
                     {statusMessage && (
@@ -1105,7 +1230,7 @@ export default function Page(): JSX.Element {
                   {BRAND_NAME}
                 </p>
                 <p className="text-sm leading-relaxed text-slate-400">
-                  Trusted 1031 exchange support for Los Angeles investors, advisors, and property owners seeking precise compliance and confident reinvestment.
+                  Expert triple net lease property identification connecting Los Angeles CA investors with credit-rated corporate tenants and passive income opportunities.
                 </p>
                 <Link
                   href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
@@ -1116,13 +1241,13 @@ export default function Page(): JSX.Element {
                 </Link>
                 {HAS_STAFFED_OFFICE ? (
                   <div className="text-sm text-slate-400">
-                    <p>1010 Santa Monica Boulevard Suite 1600</p>
-                    <p>Los Angeles, CA 90067</p>
+                    <p>722 S Broadway</p>
+                    <p>Los Angeles, CA 90014</p>
                     <p>Monday to Friday, 8:00 AM to 6:00 PM PT</p>
                   </div>
                 ) : (
                   <p className="text-sm text-slate-400">
-                    Remote advisory team with on-site coverage across California by appointment.
+                    Dedicated NNN lease specialists with comprehensive Los Angeles CA market coverage.
                   </p>
                 )}
               </div>

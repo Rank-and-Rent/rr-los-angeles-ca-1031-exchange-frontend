@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Users, Target, Award } from "lucide-react";
 import Head from "next/head";
-import { BRAND_NAME } from "@/lib/constants";
+import { BRAND_NAME, PHONE } from "@/lib/constants";
 
 export default function AboutPage() {
   return (
@@ -19,7 +19,7 @@ export default function AboutPage() {
           name="keywords"
           content="1031 exchange, Los Angeles CA, tax deferral, property exchange, qualified intermediary"
         />
-        <link rel="canonical" href="https://www.1031exchangela.com/about" />
+        <link rel="canonical" href="https://www.1031exchangelosangeles.com/about" />
       </Head>
 
       <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
@@ -373,10 +373,10 @@ export default function AboutPage() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:213-555-1031"
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
                 >
-                  Call 213-555-1031
+                  Call {PHONE}
                 </a>
               </div>
             </motion.div>

@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
-import { SERVICES, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
+import { SERVICES, ADDRESS, PHONE, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
 import { notFound } from "next/navigation";
 
 interface ServicePageProps {
@@ -16,8 +16,6 @@ interface ServicePageProps {
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const [searchQuery] = useState("");
-
   const service = SERVICES.find(s => s.slug === params.slug);
   if (!service) {
     notFound();
@@ -29,20 +27,15 @@ export default function ServicePage({ params }: ServicePageProps) {
     ).slice(0, 4);
   }, [service]);
 
-  const filteredRelatedServices = useMemo(() => {
-    if (!searchQuery.trim()) return relatedServices;
-    return relatedServices.filter(s =>
-      s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      s.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }, [searchQuery, relatedServices]);
-
-  const searchItems = relatedServices.map(s => ({
-    title: s.title,
-    slug: s.slug,
-    description: s.description,
-    href: `/services/${s.slug}`,
-  }));
+  // Search items include ALL services except the current one
+  const searchItems = useMemo(() => {
+    return SERVICES.filter(s => s.slug !== service.slug).map(s => ({
+      title: s.title,
+      slug: s.slug,
+      description: s.description,
+      href: `/services/${s.slug}`,
+    }));
+  }, [service]);
 
   const handleNoResults = (query: string) => {
     window.location.href = `/contact?project_type=${encodeURIComponent(query)}`;
@@ -80,7 +73,39 @@ export default function ServicePage({ params }: ServicePageProps) {
           name="keywords"
           content={`${service.title.toLowerCase()}, 1031 exchange, Los Angeles CA, property replacement, tax deferral, real estate investment`}
         />
-        <link rel="canonical" href={`https://www.1031exchangela.com/services/${service.slug}`} />
+        <link rel="canonical" href={`https://www.1031exchangelosangeles.com/services/${service.slug}`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": service.title,
+              "description": service.description,
+              "provider": {
+                "@type": "Organization",
+                "name": "1031 Exchange Los Angeles",
+                "url": "https://www.1031exchangelosangeles.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": ADDRESS.split(',')[0],
+                  "addressLocality": PRIMARY_CITY,
+                  "addressRegion": PRIMARY_STATE_ABBR,
+                  "postalCode": ADDRESS.split(',').slice(-1)[0].trim().split(' ')[1],
+                  "addressCountry": "US"
+                },
+                "telephone": "+1-818-412-8402",
+                "email": "help@1031exchangelosangeles.com"
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": "Los Angeles County, CA"
+              },
+              "serviceType": "1031 Exchange Consulting",
+              "url": `https://www.1031exchangelosangeles.com/services/${service.slug}`
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
@@ -143,10 +168,10 @@ export default function ServicePage({ params }: ServicePageProps) {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:213-555-1031"
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
                 >
-                  Call 213-555-1031
+                  Call {PHONE}
                 </a>
               </div>
             </motion.div>
@@ -225,19 +250,20 @@ export default function ServicePage({ params }: ServicePageProps) {
                     Related Services
                   </h3>
 
-                  {/* Search within related services */}
+                  {/* Search all services */}
                   <div className="mb-4">
                     <SearchInput
-                      placeholder="Search related services..."
+                      placeholder="Search all services..."
                       items={searchItems}
                       onNoResults={handleNoResults}
-                      maxResults={4}
+                      maxResults={10}
                     />
                   </div>
 
+                  {/* Display related services by default */}
                   <div className="space-y-3">
-                    {filteredRelatedServices.length > 0 ? (
-                      filteredRelatedServices.map((relatedService) => (
+                    {relatedServices.length > 0 ? (
+                      relatedServices.map((relatedService) => (
                         <Link
                           key={relatedService.slug}
                           href={`/services/${relatedService.slug}`}
@@ -251,19 +277,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                           </p>
                         </Link>
                       ))
-                    ) : (
-                      <div className="text-center py-6">
-                        <p className="text-sm text-slate-400 mb-3">
-                          No services found matching &quot;{searchQuery}&quot;
-                        </p>
-                        <Link
-                          href={`/contact?project_type=${encodeURIComponent(searchQuery)}`}
-                          className="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors"
-                        >
-                          Get help with this →
-                        </Link>
-                      </div>
-                    )}
+                    ) : null}
                   </div>
                 </motion.div>
 

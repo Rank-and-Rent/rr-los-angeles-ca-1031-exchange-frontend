@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Calculator, CalendarDays } from "lucide-react";
 import Head from "next/head";
 import { resources } from "@/data";
+import { PHONE } from "@/lib/constants";
 
 export default function ResourcesPage() {
   return (
@@ -19,7 +20,7 @@ export default function ResourcesPage() {
           name="keywords"
           content="1031 exchange resources, IRS Form 8824, Los Angeles CA, tax guidance, 1031 calculator, exchange timeline, IRS regulations"
         />
-        <link rel="canonical" href="https://www.1031exchangela.com/resources" />
+        <link rel="canonical" href="https://www.1031exchangelosangeles.com/resources" />
       </Head>
 
       <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
@@ -158,10 +159,10 @@ export default function ResourcesPage() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:213-555-1031"
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
                 >
-                  Call 213-555-1031
+                  Call {PHONE}
                 </a>
               </div>
             </motion.div>

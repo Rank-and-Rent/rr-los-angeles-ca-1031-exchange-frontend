@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -10,15 +11,24 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { BRAND_NAME, PHONE, SERVICES, LOCATIONS } from "@/lib/constants";
+import { PHONE, SERVICES, LOCATIONS, PROPERTY_TYPES } from "@/lib/constants";
 
 const Header = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isSticky, setIsSticky] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
+  const [propertiesOpen, setPropertiesOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
+  const propertiesRef = useRef<HTMLDivElement>(null);
+  const toolsRef = useRef<HTMLDivElement>(null);
+
+  // On non-home pages, always use white text/logo
+  const shouldUseWhiteText = !isHomePage || isSticky;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,12 +48,26 @@ const Header = () => {
       ) {
         setLocationsOpen(false);
       }
+      if (
+        propertiesRef.current &&
+        !propertiesRef.current.contains(event.target as Node)
+      ) {
+        setPropertiesOpen(false);
+      }
+      if (
+        toolsRef.current &&
+        !toolsRef.current.contains(event.target as Node)
+      ) {
+        setToolsOpen(false);
+      }
     };
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setServicesOpen(false);
         setLocationsOpen(false);
+        setPropertiesOpen(false);
+        setToolsOpen(false);
         setMobileMenuOpen(false);
       }
     };
@@ -59,18 +83,10 @@ const Header = () => {
     };
   }, []);
 
-  const servicesByCategory = SERVICES.reduce((acc, service) => {
-    if (!acc[service.category]) {
-      acc[service.category] = [];
-    }
-    acc[service.category].push(service);
-    return acc;
-  }, {} as Record<string, typeof SERVICES>);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSticky
+        isSticky || !isHomePage
           ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800/50 shadow-lg"
           : "bg-transparent"
       }`}
@@ -80,9 +96,13 @@ const Header = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-serif font-semibold text-black hover:text-black transition-colors"
+            className="flex items-center"
           >
-            {BRAND_NAME}
+            <img
+              src="/1031-exchange-los-angeles-ca-logo.png"
+              alt="1031 Exchange Los Angeles"
+              className={`h-12 w-auto transition-all duration-300 ${shouldUseWhiteText ? 'brightness-0 invert' : ''}`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -103,7 +123,7 @@ const Header = () => {
                     }
                   }, 100);
                 }}
-                className="flex items-center space-x-1 text-black hover:text-black transition-colors"
+                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
@@ -122,35 +142,23 @@ const Header = () => {
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
                   >
-                    <div className="space-y-6">
-                      {Object.entries(servicesByCategory).map(([category, services]) => (
-                        <div key={category}>
-                          <h3 className="text-sm font-medium text-black uppercase tracking-wide mb-3">
-                            {category === 'identification' && 'Property Identification'}
-                            {category === 'timeline' && 'Timeline Management'}
-                            {category === 'compliance' && 'Compliance Support'}
-                            {category === 'analysis' && 'Market Analysis'}
-                          </h3>
-                          <div className="space-y-2">
-                            {services.slice(0, 3).map((service) => (
-                              <Link
-                                key={service.slug}
-                                href={`/services/${service.slug}`}
-                                className="block text-sm text-black hover:text-black hover:bg-slate-800/50 rounded px-2 py-1 transition-colors"
-                              >
-                                {service.title}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="space-y-4">
+                      {SERVICES.slice(0, 7).map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={`/services/${service.slug}`}
+                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
+                        >
+                          {service.title}
+                        </Link>
                       ))}
                     </div>
                     <div className="mt-6 pt-4 border-t border-slate-800">
                       <Link
                         href="/services"
-                        className="text-sm text-black hover:text-white font-medium"
+                        className="text-sm text-white hover:text-white font-medium"
                       >
-                        View all services →
+                        View all {SERVICES.length} services →
                       </Link>
                     </div>
                   </motion.div>
@@ -164,6 +172,7 @@ const Header = () => {
                 onClick={() => {
                   setLocationsOpen(!locationsOpen);
                   setServicesOpen(false);
+                  setPropertiesOpen(false);
                 }}
                 onMouseEnter={() => setLocationsOpen(true)}
                 onMouseLeave={() => {
@@ -173,7 +182,7 @@ const Header = () => {
                     }
                   }, 100);
                 }}
-                className="flex items-center space-x-1 text-black hover:text-black transition-colors"
+                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
                 aria-expanded={locationsOpen}
                 aria-haspopup="true"
               >
@@ -193,11 +202,11 @@ const Header = () => {
                     onMouseLeave={() => setLocationsOpen(false)}
                   >
                     <div className="grid grid-cols-2 gap-4">
-                      {LOCATIONS.map((location) => (
+                      {LOCATIONS.slice(0, 8).map((location) => (
                         <Link
                           key={location.slug}
                           href={`/locations/${location.slug}`}
-                          className="block text-sm text-black hover:text-black hover:bg-slate-800/50 rounded px-2 py-1 transition-colors"
+                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-2 py-1 transition-colors"
                         >
                           {location.name}
                         </Link>
@@ -206,9 +215,152 @@ const Header = () => {
                     <div className="mt-6 pt-4 border-t border-slate-800">
                       <Link
                         href="/locations"
-                        className="text-sm text-black hover:text-white font-medium"
+                        className="text-sm text-white hover:text-white font-medium"
                       >
-                        View all locations →
+                        View all {LOCATIONS.length} locations →
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Properties Dropdown */}
+            <div className="relative" ref={propertiesRef}>
+              <button
+                onClick={() => {
+                  setPropertiesOpen(!propertiesOpen);
+                  setServicesOpen(false);
+                  setLocationsOpen(false);
+                }}
+                onMouseEnter={() => setPropertiesOpen(true)}
+                onMouseLeave={() => {
+                  setTimeout(() => {
+                    if (!propertiesRef.current?.matches(':hover')) {
+                      setPropertiesOpen(false);
+                    }
+                  }, 100);
+                }}
+                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
+                aria-expanded={propertiesOpen}
+                aria-haspopup="true"
+              >
+                <span>Properties</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+
+              <AnimatePresence>
+                {propertiesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
+                    onMouseEnter={() => setPropertiesOpen(true)}
+                    onMouseLeave={() => setPropertiesOpen(false)}
+                  >
+                    <div className="space-y-4">
+                      {PROPERTY_TYPES.map((propertyType) => (
+                        <Link
+                          key={propertyType.slug}
+                          href={`/property-types#${propertyType.slug}`}
+                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
+                        >
+                          {propertyType.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-slate-800">
+                      <Link
+                        href="/properties"
+                        className="text-sm text-white hover:text-white font-medium"
+                      >
+                        View all properties →
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Tools Dropdown */}
+            <div className="relative" ref={toolsRef}>
+              <button
+                onClick={() => {
+                  setToolsOpen(!toolsOpen);
+                  setServicesOpen(false);
+                  setLocationsOpen(false);
+                  setPropertiesOpen(false);
+                }}
+                onMouseEnter={() => setToolsOpen(true)}
+                onMouseLeave={() => {
+                  setTimeout(() => {
+                    if (!toolsRef.current?.matches(':hover')) {
+                      setToolsOpen(false);
+                    }
+                  }, 100);
+                }}
+                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
+                aria-expanded={toolsOpen}
+                aria-haspopup="true"
+              >
+                <span>Tools</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+
+              <AnimatePresence>
+                {toolsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
+                    onMouseEnter={() => setToolsOpen(true)}
+                    onMouseLeave={() => setToolsOpen(false)}
+                  >
+                    <div className="space-y-4">
+                      <Link
+                        href="/tools/boot-calculator"
+                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
+                        onClick={() => setToolsOpen(false)}
+                      >
+                        <div className="font-medium">Boot Calculator</div>
+                        <div className="text-xs text-slate-400 mt-1">
+                          Calculate boot and tax implications
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/tools/exchange-cost-estimator"
+                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
+                        onClick={() => setToolsOpen(false)}
+                      >
+                        <div className="font-medium">Exchange Cost Estimator</div>
+                        <div className="text-xs text-slate-400 mt-1">
+                          Estimate QI fees and closing costs
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/tools/identification-rules-checker"
+                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
+                        onClick={() => setToolsOpen(false)}
+                      >
+                        <div className="font-medium">Identification Rules Checker</div>
+                        <div className="text-xs text-slate-400 mt-1">
+                          Validate against IRS identification rules
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-slate-800">
+                      <Link
+                        href="/tools"
+                        className="text-sm text-white hover:text-white font-medium"
+                        onClick={() => setToolsOpen(false)}
+                      >
+                        View all tools →
                       </Link>
                     </div>
                   </motion.div>
@@ -218,14 +370,14 @@ const Header = () => {
 
             <Link
               href="/about"
-              className="text-black hover:text-black transition-colors"
+              className={`${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
             >
               About
             </Link>
 
             <Link
               href="/blog"
-              className="text-black hover:text-black transition-colors"
+              className={`${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
             >
               Blog
             </Link>
@@ -242,7 +394,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-black hover:text-black transition-colors"
+            className={`md:hidden ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle mobile menu"
           >
@@ -269,7 +421,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="flex items-center justify-between w-full text-left text-black hover:text-black"
+                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
                     aria-expanded={servicesOpen}
                   >
                     <span className="font-medium">Services</span>
@@ -283,34 +435,24 @@ const Header = () => {
                         exit={{ opacity: 0, height: 0 }}
                         className="mt-4 space-y-4"
                       >
-                        {Object.entries(servicesByCategory).map(([category, services]) => (
-                          <div key={category}>
-                            <h4 className="text-sm font-medium text-black uppercase tracking-wide mb-2">
-                              {category === 'identification' && 'Property Identification'}
-                              {category === 'timeline' && 'Timeline Management'}
-                              {category === 'compliance' && 'Compliance Support'}
-                              {category === 'analysis' && 'Market Analysis'}
-                            </h4>
-                            <div className="space-y-1">
-                              {services.slice(0, 2).map((service) => (
-                                <Link
-                                  key={service.slug}
-                                  href={`/services/${service.slug}`}
-                                  className="block text-sm text-black hover:text-white py-1"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  {service.title}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
+                        <div className="space-y-3">
+                          {SERVICES.slice(0, 7).map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              className="block text-sm text-white hover:text-white py-2"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
                         <Link
                           href="/services"
-                          className="block text-sm text-black font-medium pt-2"
+                          className="block text-sm text-white font-medium pt-2"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          View all services →
+                          View all {SERVICES.length} services →
                         </Link>
                       </motion.div>
                     )}
@@ -321,7 +463,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => setLocationsOpen(!locationsOpen)}
-                    className="flex items-center justify-between w-full text-left text-black hover:text-black"
+                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
                     aria-expanded={locationsOpen}
                   >
                     <span className="font-medium">Locations</span>
@@ -339,7 +481,7 @@ const Header = () => {
                           <Link
                             key={location.slug}
                             href={`/locations/${location.slug}`}
-                            className="block text-sm text-black hover:text-white py-1"
+                            className="block text-sm text-white hover:text-white py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {location.name}
@@ -347,10 +489,101 @@ const Header = () => {
                         ))}
                         <Link
                           href="/locations"
-                          className="block text-sm text-black font-medium pt-2 col-span-2"
+                          className="block text-sm text-white font-medium pt-2 col-span-2"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          View all locations →
+                          View all {LOCATIONS.length} locations →
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Properties Mobile */}
+                <div>
+                  <button
+                    onClick={() => setPropertiesOpen(!propertiesOpen)}
+                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
+                    aria-expanded={propertiesOpen}
+                  >
+                    <span className="font-medium">Properties</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${propertiesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {propertiesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-4 space-y-2"
+                      >
+                        {PROPERTY_TYPES.map((propertyType) => (
+                          <Link
+                            key={propertyType.slug}
+                            href={`/property-types#${propertyType.slug}`}
+                            className="block text-sm text-white hover:text-white py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {propertyType.name}
+                          </Link>
+                        ))}
+                        <Link
+                          href="/properties"
+                          className="block text-sm text-white font-medium pt-2"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          View all properties →
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Tools Mobile */}
+                <div>
+                  <button
+                    onClick={() => setToolsOpen(!toolsOpen)}
+                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
+                    aria-expanded={toolsOpen}
+                  >
+                    <span className="font-medium">Tools</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${toolsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {toolsOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-4 space-y-2"
+                      >
+                        <Link
+                          href="/tools/boot-calculator"
+                          className="block text-sm text-white hover:text-white py-1"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Boot Calculator
+                        </Link>
+                        <Link
+                          href="/tools/exchange-cost-estimator"
+                          className="block text-sm text-white hover:text-white py-1"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Exchange Cost Estimator
+                        </Link>
+                        <Link
+                          href="/tools/identification-rules-checker"
+                          className="block text-sm text-white hover:text-white py-1"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Identification Rules Checker
+                        </Link>
+                        <Link
+                          href="/tools"
+                          className="block text-sm text-white font-medium pt-2"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          View all tools →
                         </Link>
                       </motion.div>
                     )}
@@ -359,7 +592,7 @@ const Header = () => {
 
                 <Link
                   href="/about"
-                  className="block text-black hover:text-black font-medium"
+                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
@@ -367,7 +600,7 @@ const Header = () => {
 
                 <Link
                   href="/blog"
-                  className="block text-black hover:text-black font-medium"
+                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Blog
@@ -376,7 +609,7 @@ const Header = () => {
                 <div className="pt-4 border-t border-slate-800">
                   <a
                     href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                    className="inline-flex items-center gap-2 text-black hover:text-white font-medium"
+                    className="inline-flex items-center gap-2 text-white hover:text-white font-medium"
                   >
                     <Phone className="h-4 w-4" />
                     {PHONE}

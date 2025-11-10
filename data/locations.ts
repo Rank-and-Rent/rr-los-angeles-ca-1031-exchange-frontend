@@ -5,37 +5,37 @@ export const locationsData: LocationItem[] = [
   {
     slug: "downtown-los-angeles",
     name: "Downtown Los Angeles, CA",
-    route: "downtown-los-angeles",
+    route: "downtown-los-angeles-ca",
     type: "district"
   },
   {
     slug: "century-city",
     name: "Century City, CA",
-    route: "century-city",
+    route: "century-city-ca",
     type: "district"
   },
   {
     slug: "hollywood",
     name: "Hollywood, CA",
-    route: "hollywood",
+    route: "hollywood-ca",
     type: "neighborhood"
   },
   {
     slug: "beverly-hills",
     name: "Beverly Hills, CA",
-    route: "beverly-hills",
+    route: "beverly-hills-ca",
     type: "city"
   },
   {
     slug: "west-hollywood",
     name: "West Hollywood, CA",
-    route: "west-hollywood",
+    route: "west-hollywood-ca",
     type: "city"
   },
   {
     slug: "culver-city",
     name: "Culver City, CA",
-    route: "culver-city",
+    route: "culver-city-ca",
     type: "city"
   },
 
@@ -43,25 +43,25 @@ export const locationsData: LocationItem[] = [
   {
     slug: "santa-monica",
     name: "Santa Monica, CA",
-    route: "santa-monica",
+    route: "santa-monica-ca",
     type: "city"
   },
   {
     slug: "venice",
     name: "Venice, CA",
-    route: "venice",
+    route: "venice-ca",
     type: "neighborhood"
   },
   {
     slug: "marina-del-rey",
     name: "Marina Del Rey, CA",
-    route: "marina-del-rey",
+    route: "marina-del-rey-ca",
     type: "district"
   },
   {
     slug: "malibu",
     name: "Malibu, CA",
-    route: "malibu",
+    route: "malibu-ca",
     type: "city"
   },
 
@@ -69,25 +69,25 @@ export const locationsData: LocationItem[] = [
   {
     slug: "burbank",
     name: "Burbank, CA",
-    route: "burbank",
+    route: "burbank-ca",
     type: "city"
   },
   {
     slug: "glendale",
     name: "Glendale, CA",
-    route: "glendale",
+    route: "glendale-ca",
     type: "city"
   },
   {
     slug: "pasadena",
     name: "Pasadena, CA",
-    route: "pasadena",
+    route: "pasadena-ca",
     type: "city"
   },
   {
     slug: "san-fernando-valley",
     name: "San Fernando Valley, CA",
-    route: "san-fernando-valley",
+    route: "san-fernando-valley-ca",
     type: "district"
   },
 
@@ -95,25 +95,25 @@ export const locationsData: LocationItem[] = [
   {
     slug: "long-beach",
     name: "Long Beach, CA",
-    route: "long-beach",
+    route: "long-beach-ca",
     type: "city"
   },
   {
     slug: "torrance",
     name: "Torrance, CA",
-    route: "torrance",
+    route: "torrance-ca",
     type: "city"
   },
   {
     slug: "redondo-beach",
     name: "Redondo Beach, CA",
-    route: "redondo-beach",
+    route: "redondo-beach-ca",
     type: "city"
   },
   {
     slug: "manhattan-beach",
     name: "Manhattan Beach, CA",
-    route: "manhattan-beach",
+    route: "manhattan-beach-ca",
     type: "city"
   },
 
@@ -121,19 +121,19 @@ export const locationsData: LocationItem[] = [
   {
     slug: "pomona",
     name: "Pomona, CA",
-    route: "pomona",
+    route: "pomona-ca",
     type: "city"
   },
   {
     slug: "rancho-cucamonga",
     name: "Rancho Cucamonga, CA",
-    route: "rancho-cucamonga",
+    route: "rancho-cucamonga-ca",
     type: "city"
   },
   {
     slug: "ontario",
     name: "Ontario, CA",
-    route: "ontario",
+    route: "ontario-ca",
     type: "city"
   },
 
@@ -141,13 +141,13 @@ export const locationsData: LocationItem[] = [
   {
     slug: "irvine",
     name: "Irvine, CA",
-    route: "irvine",
+    route: "irvine-ca",
     type: "city"
   },
   {
     slug: "newport-beach",
     name: "Newport Beach, CA",
-    route: "newport-beach",
+    route: "newport-beach-ca",
     type: "city"
   }
 ];

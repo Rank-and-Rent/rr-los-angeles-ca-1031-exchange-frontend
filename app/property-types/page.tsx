@@ -6,15 +6,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, Filter } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
-import { inventorySpotlight, propertyTypesData } from "@/data";
+import { inventoryBatch01, propertyTypesData } from "@/data";
+import { PHONE } from "@/lib/constants";
+import { getPropertyTypeImagePath } from "@/lib/image-utils";
 
 export default function PropertyTypesPage() {
   const [searchQuery] = useState("");
 
   const filteredPropertyTypes = useMemo(() => {
-    if (!searchQuery.trim()) return inventorySpotlight;
+    if (!searchQuery.trim()) return inventoryBatch01.inventorySpotlight01;
 
-    return inventorySpotlight.filter(property =>
+    return inventoryBatch01.inventorySpotlight01.filter(property =>
       property.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       property.copy.toLowerCase().includes(searchQuery.toLowerCase()) ||
       property.type.toLowerCase().includes(searchQuery.toLowerCase())
@@ -26,12 +28,15 @@ export default function PropertyTypesPage() {
     window.location.href = `/contact?project_type=${encodeURIComponent(query)}`;
   };
 
-  const searchItems = inventorySpotlight.map(property => ({
-    title: property.title,
-    slug: property.type,
-    description: property.copy,
-    href: property.href,
-  }));
+  const searchItems = inventoryBatch01.inventorySpotlight01.map(property => {
+    const pt = propertyTypesData.find(p => p.slug === property.type);
+    return {
+      title: property.title,
+      slug: pt?.route || property.type,
+      description: property.copy,
+      href: `/property-types/${pt?.route || property.type}`,
+    };
+  });
 
   return (
     <>
@@ -45,7 +50,40 @@ export default function PropertyTypesPage() {
           name="keywords"
           content="1031 exchange property types, Los Angeles CA, multifamily, triple net retail, industrial, medical office, self storage, DST TIC"
         />
-        <link rel="canonical" href="https://www.1031exchangela.com/property-types" />
+        <link rel="canonical" href="https://www.1031exchangelosangeles.com/property-types" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "1031 Exchange Property Types | Los Angeles CA",
+              "description": "Explore 1031 exchange property types in Los Angeles CA. Multifamily, triple net retail, industrial flex, medical office, self storage, and more investment opportunities.",
+              "url": "https://www.1031exchangelosangeles.com/property-types",
+              "mainEntity": {
+                "@type": "ItemList",
+                "name": "1031 Exchange Property Types",
+                "description": "Available property types for 1031 exchanges in Los Angeles CA",
+                "numberOfItems": inventoryBatch01.inventorySpotlight01.length,
+                "itemListElement": inventoryBatch01.inventorySpotlight01.map((property, index) => ({
+                  "@type": "ListItem",
+                  "position": index + 1,
+                  "item": {
+                    "@type": "Product",
+                    "name": property.title,
+                    "description": property.copy,
+                    "category": property.type
+                  }
+                }))
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "1031 Exchange Los Angeles",
+                "url": "https://www.1031exchangelosangeles.com"
+              }
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
@@ -101,7 +139,13 @@ export default function PropertyTypesPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-slate-900/60 border border-slate-800 rounded-xl p-8 hover:bg-slate-900/80 transition-colors group"
+                      className="bg-slate-900/60 border border-slate-800 rounded-xl p-8 hover:bg-slate-900/80 transition-colors group relative overflow-hidden"
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getPropertyTypeImagePath(property.type)})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
                     >
                       <div className="flex items-start justify-between mb-6">
                         <div className="flex-1">
@@ -122,10 +166,10 @@ export default function PropertyTypesPage() {
                         </div>
                       </div>
                       <Link
-                        href={property.href}
+                        href={`/property-types/${propertyTypesData.find(pt => pt.slug === property.type)?.route || property.type}`}
                         className="inline-flex items-center gap-2 text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors group-hover:translate-x-1 transform transition-transform"
                       >
-                        {property.ctaLabel}
+                        Learn More About {propertyTypesData.find(pt => pt.slug === property.type)?.name || property.type}
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                     </motion.div>
@@ -184,10 +228,10 @@ export default function PropertyTypesPage() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:213-555-1031"
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
                 >
-                  Call 213-555-1031
+                  Call {PHONE}
                 </a>
               </div>
             </motion.div>
