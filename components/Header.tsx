@@ -17,15 +17,22 @@ const Header = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const [isSticky, setIsSticky] = useState(false);
+  // Desktop dropdown states
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const [propertiesOpen, setPropertiesOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  // Mobile menu states (separate from desktop)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
+  const [mobilePropertiesOpen, setMobilePropertiesOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
   const propertiesRef = useRef<HTMLDivElement>(null);
   const toolsRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // On non-home pages, always use white text/logo
   const shouldUseWhiteText = !isHomePage || isSticky;
@@ -35,30 +42,53 @@ const Header = () => {
       setIsSticky(window.scrollY > 0);
     };
 
+    // Only handle click outside for desktop dropdowns (not mobile menu)
     const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      const isMobile = window.innerWidth < 768; // md breakpoint
+      
+      // Don't handle click outside for mobile menu
+      if (isMobile && mobileMenuRef.current?.contains(target)) {
+        return;
+      }
+
+      // Desktop dropdown handlers
       if (
         servicesRef.current &&
-        !servicesRef.current.contains(event.target as Node)
+        !servicesRef.current.contains(target)
       ) {
         setServicesOpen(false);
       }
       if (
         locationsRef.current &&
-        !locationsRef.current.contains(event.target as Node)
+        !locationsRef.current.contains(target)
       ) {
         setLocationsOpen(false);
       }
       if (
         propertiesRef.current &&
-        !propertiesRef.current.contains(event.target as Node)
+        !propertiesRef.current.contains(target)
       ) {
         setPropertiesOpen(false);
       }
       if (
         toolsRef.current &&
-        !toolsRef.current.contains(event.target as Node)
+        !toolsRef.current.contains(target)
       ) {
         setToolsOpen(false);
+      }
+
+      // Close mobile menu if clicking outside
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(target) &&
+        isMobile
+      ) {
+        setMobileMenuOpen(false);
+        setMobileServicesOpen(false);
+        setMobileLocationsOpen(false);
+        setMobilePropertiesOpen(false);
+        setMobileToolsOpen(false);
       }
     };
 
@@ -69,6 +99,10 @@ const Header = () => {
         setPropertiesOpen(false);
         setToolsOpen(false);
         setMobileMenuOpen(false);
+        setMobileServicesOpen(false);
+        setMobileLocationsOpen(false);
+        setMobilePropertiesOpen(false);
+        setMobileToolsOpen(false);
       }
     };
 
@@ -393,7 +427,18 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            type="button"
+            onClick={() => {
+              const newState = !mobileMenuOpen;
+              setMobileMenuOpen(newState);
+              // Close all mobile dropdowns when closing the menu
+              if (!newState) {
+                setMobileServicesOpen(false);
+                setMobileLocationsOpen(false);
+                setMobilePropertiesOpen(false);
+                setMobileToolsOpen(false);
+              }
+            }}
             className={`md:hidden ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle mobile menu"
@@ -410,6 +455,7 @@ const Header = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
+              ref={mobileMenuRef}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -420,28 +466,33 @@ const Header = () => {
                 {/* Services Mobile */}
                 <div>
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      setServicesOpen(!servicesOpen);
-                      setLocationsOpen(false);
-                      setPropertiesOpen(false);
-                      setToolsOpen(false);
+                      const newState = !mobileServicesOpen;
+                      setMobileServicesOpen(newState);
+                      // Close other dropdowns when opening this one
+                      if (newState) {
+                        setMobileLocationsOpen(false);
+                        setMobilePropertiesOpen(false);
+                        setMobileToolsOpen(false);
+                      }
                     }}
                     className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={servicesOpen}
+                    aria-expanded={mobileServicesOpen}
                   >
                     <span className="font-medium">Services</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {servicesOpen && (
+                    {mobileServicesOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-4 space-y-4"
-                        onClick={(e) => e.stopPropagation()}
+                        transition={{ duration: 0.2 }}
+                        className="mt-4 space-y-4 overflow-hidden"
                       >
                         <div className="space-y-3">
                           {SERVICES.slice(0, 7).map((service) => (
@@ -451,7 +502,7 @@ const Header = () => {
                               className="block text-sm text-white hover:text-white py-2"
                               onClick={() => {
                                 setMobileMenuOpen(false);
-                                setServicesOpen(false);
+                                setMobileServicesOpen(false);
                               }}
                             >
                               {service.title}
@@ -463,7 +514,7 @@ const Header = () => {
                           className="block text-sm text-white font-medium pt-2"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setServicesOpen(false);
+                            setMobileServicesOpen(false);
                           }}
                         >
                           View all {SERVICES.length} services →
@@ -476,28 +527,33 @@ const Header = () => {
                 {/* Locations Mobile */}
                 <div>
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      setLocationsOpen(!locationsOpen);
-                      setServicesOpen(false);
-                      setPropertiesOpen(false);
-                      setToolsOpen(false);
+                      const newState = !mobileLocationsOpen;
+                      setMobileLocationsOpen(newState);
+                      // Close other dropdowns when opening this one
+                      if (newState) {
+                        setMobileServicesOpen(false);
+                        setMobilePropertiesOpen(false);
+                        setMobileToolsOpen(false);
+                      }
                     }}
                     className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={locationsOpen}
+                    aria-expanded={mobileLocationsOpen}
                   >
                     <span className="font-medium">Locations</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${locationsOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileLocationsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {locationsOpen && (
+                    {mobileLocationsOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-4 grid grid-cols-2 gap-2"
-                        onClick={(e) => e.stopPropagation()}
+                        transition={{ duration: 0.2 }}
+                        className="mt-4 grid grid-cols-2 gap-2 overflow-hidden"
                       >
                         {LOCATIONS.map((location) => (
                           <Link
@@ -506,7 +562,7 @@ const Header = () => {
                             className="block text-sm text-white hover:text-white py-1"
                             onClick={() => {
                               setMobileMenuOpen(false);
-                              setLocationsOpen(false);
+                              setMobileLocationsOpen(false);
                             }}
                           >
                             {location.name}
@@ -517,7 +573,7 @@ const Header = () => {
                           className="block text-sm text-white font-medium pt-2 col-span-2"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setLocationsOpen(false);
+                            setMobileLocationsOpen(false);
                           }}
                         >
                           View all {LOCATIONS.length} locations →
@@ -530,28 +586,33 @@ const Header = () => {
                 {/* Properties Mobile */}
                 <div>
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      setPropertiesOpen(!propertiesOpen);
-                      setServicesOpen(false);
-                      setLocationsOpen(false);
-                      setToolsOpen(false);
+                      const newState = !mobilePropertiesOpen;
+                      setMobilePropertiesOpen(newState);
+                      // Close other dropdowns when opening this one
+                      if (newState) {
+                        setMobileServicesOpen(false);
+                        setMobileLocationsOpen(false);
+                        setMobileToolsOpen(false);
+                      }
                     }}
                     className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={propertiesOpen}
+                    aria-expanded={mobilePropertiesOpen}
                   >
                     <span className="font-medium">Properties</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${propertiesOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobilePropertiesOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {propertiesOpen && (
+                    {mobilePropertiesOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-4 space-y-2"
-                        onClick={(e) => e.stopPropagation()}
+                        transition={{ duration: 0.2 }}
+                        className="mt-4 space-y-2 overflow-hidden"
                       >
                         {PROPERTY_TYPES.map((propertyType) => (
                           <Link
@@ -560,7 +621,7 @@ const Header = () => {
                             className="block text-sm text-white hover:text-white py-1"
                             onClick={() => {
                               setMobileMenuOpen(false);
-                              setPropertiesOpen(false);
+                              setMobilePropertiesOpen(false);
                             }}
                           >
                             {propertyType.name}
@@ -571,7 +632,7 @@ const Header = () => {
                           className="block text-sm text-white font-medium pt-2"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setPropertiesOpen(false);
+                            setMobilePropertiesOpen(false);
                           }}
                         >
                           View all properties →
@@ -584,35 +645,40 @@ const Header = () => {
                 {/* Tools Mobile */}
                 <div>
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      setToolsOpen(!toolsOpen);
-                      setServicesOpen(false);
-                      setLocationsOpen(false);
-                      setPropertiesOpen(false);
+                      const newState = !mobileToolsOpen;
+                      setMobileToolsOpen(newState);
+                      // Close other dropdowns when opening this one
+                      if (newState) {
+                        setMobileServicesOpen(false);
+                        setMobileLocationsOpen(false);
+                        setMobilePropertiesOpen(false);
+                      }
                     }}
                     className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={toolsOpen}
+                    aria-expanded={mobileToolsOpen}
                   >
                     <span className="font-medium">Tools</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${toolsOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileToolsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {toolsOpen && (
+                    {mobileToolsOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-4 space-y-2"
-                        onClick={(e) => e.stopPropagation()}
+                        transition={{ duration: 0.2 }}
+                        className="mt-4 space-y-2 overflow-hidden"
                       >
                         <Link
                           href="/tools/boot-calculator"
                           className="block text-sm text-white hover:text-white py-1"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setToolsOpen(false);
+                            setMobileToolsOpen(false);
                           }}
                         >
                           Boot Calculator
@@ -622,7 +688,7 @@ const Header = () => {
                           className="block text-sm text-white hover:text-white py-1"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setToolsOpen(false);
+                            setMobileToolsOpen(false);
                           }}
                         >
                           Exchange Cost Estimator
@@ -632,7 +698,7 @@ const Header = () => {
                           className="block text-sm text-white hover:text-white py-1"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setToolsOpen(false);
+                            setMobileToolsOpen(false);
                           }}
                         >
                           Identification Rules Checker
@@ -642,7 +708,7 @@ const Header = () => {
                           className="block text-sm text-white font-medium pt-2"
                           onClick={() => {
                             setMobileMenuOpen(false);
-                            setToolsOpen(false);
+                            setMobileToolsOpen(false);
                           }}
                         >
                           View all tools →
