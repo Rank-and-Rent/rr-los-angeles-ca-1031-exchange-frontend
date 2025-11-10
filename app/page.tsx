@@ -422,12 +422,32 @@ export default function Page(): JSX.Element {
         />
       </Head>
       <div className="min-h-screen bg-slate-950 text-slate-100">
-        <header className="relative overflow-hidden mt-16 md:mt-20" style={heroBackgroundStyle}>
+        <header className="relative overflow-hidden mt-16 md:mt-20">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ zIndex: 0 }}
+          >
+            <source src="/1031-exchange-los-angeles-ca.mp4" type="video/mp4" />
+          </video>
+          <div
+            className="absolute inset-0"
+            style={{
+              ...heroBackgroundStyle,
+              zIndex: 1,
+            }}
+          />
           <div
             className="pointer-events-none absolute inset-0 opacity-100"
-            style={overlayStyle}
+            style={{
+              ...overlayStyle,
+              zIndex: 2,
+            }}
           />
-          <div className="relative mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32">
+          <div className="relative mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32" style={{ zIndex: 3 }}>
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -437,7 +457,7 @@ export default function Page(): JSX.Element {
               <div className="flex flex-col gap-8 md:gap-10">
                 <div className="max-w-3xl">
                   <p className="text-xs uppercase tracking-[0.35em] text-slate-200">
-                    Pacific Equity
+                    1031 Exchange Los Angeles
                   </p>
                   <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
                     Los Angeles NNN Lease Property Experts
