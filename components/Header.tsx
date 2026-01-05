@@ -321,6 +321,18 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
+            {/* Business Profiles Link */}
+            <Link
+              href="/business-profiles"
+              className={`transition-colors ${
+                shouldUseWhiteText
+                  ? 'text-white hover:text-white'
+                  : 'text-black hover:text-black'
+              }`}
+            >
+              Business Profiles
+            </Link>
+
             {/* Tools Dropdown */}
             <div className="relative" ref={toolsRef}>
               <button
@@ -720,6 +732,14 @@ const Header = () => {
                     )}
                   </AnimatePresence>
                 </div>
+
+                <Link
+                  href="/business-profiles"
+                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Business Profiles
+                </Link>
 
                 <Link
                   href="/about"

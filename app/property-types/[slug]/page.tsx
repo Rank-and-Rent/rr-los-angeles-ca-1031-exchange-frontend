@@ -3,10 +3,10 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft, TrendingUp, Clock, DollarSign, Building } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
-import { inventoryBatch01, propertyTypesData } from "@/data";
+import { inventoryBatch01, propertyTypesData, propertyTypesBatch01 } from "@/data";
 import { PHONE, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getPropertyTypeImagePath } from "@/lib/image-utils";
@@ -32,6 +32,9 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
   if (!inventoryData) {
     notFound();
   }
+
+  // Get rich content data for this property type
+  const richContent = propertyTypesBatch01.propertyTypesBatch01[propertyType.slug as keyof typeof propertyTypesBatch01.propertyTypesBatch01];
 
   // Get related property types (exclude current one)
   const relatedPropertyTypes = useMemo(() => {
@@ -67,8 +70,8 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
     window.location.href = `/contact?project_type=${encodeURIComponent(query)}`;
   };
 
-  // Generate FAQ content based on property type
-  const faqs = [
+  // Use rich content FAQs if available, otherwise generate basic ones
+  const faqs = richContent?.faqs || [
     {
       question: `What makes ${inventoryData.title.toLowerCase()} a good 1031 exchange option in ${PRIMARY_CITY} ${PRIMARY_STATE_ABBR}?`,
       answer: `${inventoryData.copy} Our Los Angeles CA specialists help investors identify ${propertyType.name.toLowerCase()} properties that meet IRS like-kind requirements while providing strong investment returns and operational benefits.`

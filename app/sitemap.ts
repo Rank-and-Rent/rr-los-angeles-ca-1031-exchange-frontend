@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { servicesData, locationsData, toolsData } from '@/data'
+import { servicesData, locationsData, toolsData, businessProfilesData } from '@/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.1031exchangelosangeles.com'
@@ -40,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/business-profiles`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/resources`,
@@ -91,5 +97,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...servicePages, ...locationPages, ...toolPages]
+  // Generate business profile pages
+  const businessProfilePages: MetadataRoute.Sitemap = businessProfilesData.map((profile) => ({
+    url: `${baseUrl}/business-profiles/${profile.route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...servicePages, ...locationPages, ...toolPages, ...businessProfilePages]
 }

@@ -22,6 +22,12 @@ export interface PropertyTypeItem {
   route: Slug;
 }
 
+export interface BusinessProfileItem {
+  slug: Slug;
+  name: string;
+  route: Slug;
+}
+
 export interface InventoryCategory {
   slug: Slug;
   name: string;

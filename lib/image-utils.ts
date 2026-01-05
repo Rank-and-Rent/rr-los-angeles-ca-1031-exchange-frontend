@@ -101,3 +101,10 @@ export function getPropertyTypeImageUrlWithFallback(slug: string): string {
   return `${basePath}.${primaryExtension}`;
 }
 
+/**
+ * Generate business profile image path
+ * Format: /business-profiles/{businessProfileSlug}-1031-exchange.jpg
+ */
+export function getBusinessProfileImagePath(slug: string): string {
+  return `/business-profiles/${slug}-1031-exchange.jpg`;
+}
