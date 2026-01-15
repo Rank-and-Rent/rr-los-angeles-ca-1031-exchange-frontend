@@ -27,6 +27,23 @@ import { businessProfilesBatch01, businessProfilesData } from "@/data";
 import { PHONE } from "@/lib/constants";
 import { getBusinessProfileImagePath } from "@/lib/image-utils";
 
+interface BusinessProfileBatchData {
+  title: string;
+  description: string;
+  content: string;
+  benefits: string[];
+  marketData: {
+    averageCapRate: string;
+    averageLeaseTerm: string;
+    typicalInvestment: string;
+    tenantTypes: string[];
+  };
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
 export default function BusinessProfilesPage() {
   const [searchQuery] = useState("");
 
@@ -44,7 +61,7 @@ export default function BusinessProfilesPage() {
   };
 
   const searchItems = businessProfilesData.map(profile => {
-    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
+    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
     return {
       title: profile.name,
       slug: profile.route,
@@ -86,7 +103,7 @@ export default function BusinessProfilesPage() {
                   "item": {
                     "@type": "Product",
                     "name": profile.name,
-                    "description": (businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData)?.description,
+                    "description": (businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData)?.description,
                     "category": "Single Tenant Property"
                   }
                 }))
@@ -150,7 +167,9 @@ export default function BusinessProfilesPage() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {filteredBusinessProfiles.map((profile, index) => {
-                    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
+<<<<<<< HEAD
+                    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
+>>>>>>> bf0f15aa (Fix build errors and optimize build performance)
                     return (
                       <motion.div
                         key={profile.slug}

@@ -1,8 +1,17 @@
 "use client";
 
 import { useMemo } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, ArrowLeft, TrendingUp, Building, DollarSign, Clock } from "lucide-react";
+import Head from "next/head";
+import SearchInput from "@/components/SearchInput";
+import { businessProfilesBatch01, businessProfilesData } from "@/data";
+import { PHONE } from "@/lib/constants";
+import { getBusinessProfileImagePath } from "@/lib/image-utils";
+import { notFound } from "next/navigation";
 
-interface BusinessProfileData {
+interface BusinessProfileBatchData {
   title: string;
   description: string;
   content: string;
@@ -18,15 +27,6 @@ interface BusinessProfileData {
     answer: string;
   }>;
 }
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft, TrendingUp, Building, DollarSign, Clock } from "lucide-react";
-import Head from "next/head";
-import SearchInput from "@/components/SearchInput";
-import { businessProfilesBatch01, businessProfilesData } from "@/data";
-import { PHONE } from "@/lib/constants";
-import { getBusinessProfileImagePath } from "@/lib/image-utils";
-import { notFound } from "next/navigation";
 
 interface BusinessProfilePageProps {
   params: {
@@ -42,7 +42,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
   }
 
   // Get business profile data
-  const profileData = businessProfilesBatch01[businessProfile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
+  const profileData = businessProfilesBatch01[businessProfile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
   if (!profileData) {
     notFound();
   }
@@ -53,7 +53,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
       .filter(bp => bp.slug !== businessProfile.slug)
       .slice(0, 4)
       .map(bp => {
-        const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01];
+        const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
         return {
           ...bp,
           description: (data as unknown as BusinessProfileData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities.`,
@@ -66,7 +66,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
     return businessProfilesData
       .filter(bp => bp.slug !== businessProfile.slug)
       .map(bp => {
-        const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01];
+        const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
         return {
           title: bp.name,
           slug: bp.route,
