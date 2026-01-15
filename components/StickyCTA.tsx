@@ -3,8 +3,24 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, ArrowRight, X } from "lucide-react";
 import { PHONE } from "@/lib/constants";
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
+function CloseIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
 
 const StickyCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,12 +28,9 @@ const StickyCTA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past hero section (approx 400px)
-      const heroHeight = 400;
-      const scrolled = window.scrollY > heroHeight;
+      const scrolled = window.scrollY > 800;
       setIsVisible(scrolled && !isDismissed);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDismissed]);
@@ -30,56 +43,32 @@ const StickyCTA = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 100 }}
-        transition={{ duration: 0.3 }}
         className="fixed bottom-6 left-6 right-6 z-40 md:left-auto md:right-6 md:w-80"
       >
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-4 md:p-6">
+        <div className="bg-white border border-gray-200 shadow-2xl p-6">
           <div className="flex items-start justify-between mb-4">
-            <div className="flex-1">
-              <h3 className="text-lg font-serif font-semibold text-white mb-1">
-                Ready to Start Your Exchange?
-              </h3>
-              <p className="text-sm text-slate-300">
-                Get expert guidance on Los Angeles CA 1031 properties.
-              </p>
+            <div>
+              <h3 className="font-serif text-xl text-navy mb-1">Start Your Exchange</h3>
+              <p className="text-sm text-gray-600">Expert guidance for LA investors.</p>
             </div>
             <button
-              onClick={() => {
-                setIsDismissed(true);
-                setIsVisible(false);
-              }}
-              className="text-slate-400 hover:text-white transition-colors ml-3"
-              aria-label="Dismiss"
+              onClick={() => { setIsDismissed(true); setIsVisible(false); }}
+              className="text-gray-400 hover:text-navy transition-colors"
             >
-              <X className="h-5 w-5" />
+              <CloseIcon className="w-5 h-5" />
             </button>
           </div>
 
-          <div className="flex flex-col gap-3">
-            {/* Desktop: Contact Button */}
-            <Link
-              href="/contact"
-              className="hidden md:inline-flex items-center justify-center gap-2 w-full rounded-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 hover:from-amber-600 hover:to-amber-700 transition-colors shadow-lg"
-            >
+          <div className="space-y-3">
+            <Link href="/contact" className="hidden md:block w-full py-3 bg-navy hover:bg-navy-light text-white text-center font-sans text-sm tracking-wider transition-colors">
               Get Started
-              <ArrowRight className="h-4 w-4" />
             </Link>
-
-            {/* Mobile: Call Button */}
-            <a
-              href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-              className="md:hidden inline-flex items-center justify-center gap-2 w-full rounded-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 transition-colors shadow-lg"
-            >
-              <Phone className="h-4 w-4" />
+            <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="md:hidden flex items-center justify-center gap-2 w-full py-3 bg-navy hover:bg-navy-light text-white font-sans text-sm tracking-wider transition-colors">
+              <PhoneIcon className="w-4 h-4" />
               Call {PHONE}
             </a>
-
-            {/* Secondary link */}
-            <Link
-              href="/services"
-              className="text-center text-sm text-slate-400 hover:text-slate-200 transition-colors"
-            >
-              Explore Services →
+            <Link href="/services" className="block text-center text-sm text-gray-500 hover:text-navy transition-colors">
+              Explore Services
             </Link>
           </div>
         </div>

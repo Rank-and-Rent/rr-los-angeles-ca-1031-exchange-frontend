@@ -2,33 +2,17 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import { FormEvent, useState, useMemo, useRef, useEffect } from "react";
-import SearchInput from "@/components/SearchInput";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Calculator,
-  Building,
-  FileText,
-  Info,
-  Landmark,
-  Layers,
-  MapPin,
-  Phone,
-  Receipt,
-  ShieldCheck,
-  Target,
-} from "lucide-react";
-import { servicesData, propertyTypesData, locationsData } from "@/data";
-import { BRAND_NAME, PHONE, ADDRESS, PROPERTY_TYPES as PROPERTY_TYPES_CONSTANTS, SERVICES as SERVICES_CONSTANTS } from "@/lib/constants";
+import Image from "next/image";
+import { FormEvent, useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { locationsData, propertyTypesData, servicesData } from "@/data";
+import { BRAND_NAME, PHONE, ADDRESS } from "@/lib/constants";
 import { getLocationImagePath, getPropertyTypeImagePath } from "@/lib/image-utils";
 import { TURNSTILE_SITE_KEY } from "@/lib/turnstile";
 
-// Extend window type for Turnstile
 declare global {
   interface Window {
     _turnstileLoaded?: boolean;
-    _lastTurnstileToken?: string;
     turnstile?: {
       render: (element: HTMLElement, options: Record<string, unknown>) => string;
       execute: (widgetId: string, options?: Record<string, unknown>) => Promise<string>;
@@ -37,296 +21,224 @@ declare global {
   }
 }
 
-const PRIMARY_BRAND_COLOR = "#0f2d4c";
-const ACCENT_COLOR = "#f5b544";
-const HAS_STAFFED_OFFICE = true;
-
-// Combine property types first, then services
-const PROJECT_TYPES = [
-  ...PROPERTY_TYPES_CONSTANTS.map(pt => pt.name),
-  ...SERVICES_CONSTANTS.map(s => s.title),
-  "Other"
+// Feature Slides
+const FEATURE_SLIDES = [
+  {
+    id: 1,
+    pretitle: "What's Your",
+    title: "INVESTMENT",
+    subtitle: "WORTH TODAY?",
+    image: "/locations/1031-exchange-beverly-hills-ca.webp",
+    cta: { text: "Get Valuation", href: "/contact" },
+  },
+  {
+    id: 2,
+    pretitle: "Exchange Your",
+    title: "PROPERTY",
+    subtitle: "TAX-FREE",
+    image: "/locations/1031-exchange-santa-monica-ca.jpg",
+    cta: { text: "Start Exchange", href: "/contact" },
+  },
+  {
+    id: 3,
+    pretitle: "Explore",
+    title: "LOS ANGELES",
+    subtitle: "OPPORTUNITIES",
+    image: "/locations/1031-exchange-malibu-ca.webp",
+    cta: { text: "View Properties", href: "/property-types" },
+  },
 ];
 
-type Service = { title: string; description: string; href: string };
-type PropertyType = { title: string; benefit: string; href: string; slug: string };
-type CityItem = { name: string; description: string; slug: string };
-type FAQ = { question: string; answer: string };
+// Featured Locations
+const FEATURED_LOCATIONS = locationsData.slice(0, 8).map(loc => ({
+  name: loc.name,
+  slug: loc.route,
+  image: getLocationImagePath(loc.slug),
+}));
 
-// Map servicesData to the expected format for the home page
-const SERVICES: readonly Service[] = servicesData
-  .filter(service => ['timelines', 'structures', 'execution'].includes(service.category))
-  .slice(0, 5)
-  .map(service => ({
+// Property Types
+const PROPERTY_TYPES = propertyTypesData.map(pt => ({
+  name: pt.name,
+  slug: pt.route,
+  image: getPropertyTypeImagePath(pt.slug),
+}));
+
+// Services
+const EXCHANGE_SERVICES = servicesData.slice(0, 6).map(service => ({
     title: service.name,
     description: service.short,
     href: `/services/${service.route}`,
   }));
 
-// Map propertyTypesData to the expected format for the home page
-const PROPERTY_TYPES: readonly PropertyType[] = propertyTypesData
-  .slice(0, 6)
-  .map(propertyType => {
-    const benefitMap: Record<string, string> = {
-      multifamily: "Stable rental income with professional management options for hands-off ownership opportunities.",
-      "triple-net-retail": "Credit-rated corporate tenants provide guaranteed monthly cash flow with zero management responsibilities.",
-      "industrial-flex": "Essential logistics businesses with long-term leases and recession-resistant tenant bases.",
-      "medical-office": "Healthcare providers offer stable occupancy with corporate tenant reliability and lease guarantees.",
-      "dst-tic": "Fractional ownership provides passive income diversification with institutional-quality NNN lease properties.",
-      "self-storage": "Automated operations and consistent demand create reliable passive income streams.",
-    };
-
-    return {
-      title: propertyType.name,
-      benefit: benefitMap[propertyType.slug] || "Strategic property investment opportunity for 1031 exchange investors.",
-      href: `/property-types/${propertyType.route}`,
-      slug: propertyType.slug,
-    };
-  });
-
-// Map locationsData to the expected format for the home page
-const CA_CITIES_SLUGS: readonly CityItem[] = locationsData
-  .slice(0, 6)
-  .map(location => {
-    const descriptionMap: Record<string, string> = {
-      "downtown-los-angeles": "Exchange support for adaptive reuse towers, mixed-use redevelopments, and Opportunity Zone parcels.",
-      "century-city": "Corporate headquarters and medical office properties in the heart of LA's business district.",
-      "hollywood": "Entertainment industry properties and creative office spaces in Hollywood CA.",
-      "beverly-hills": "Luxury retail and office properties with high-net-worth investor focus.",
-      "west-hollywood": "Guidance for boutique hospitality and creative office reinvestments with tight deadline management.",
-      "culver-city": "Tech and media company headquarters with modern office and flex properties.",
-      "santa-monica": "Coastal advisory for hospitality, retail, and multifamily repositioning along the Silicon Beach corridor.",
-      "venice": "Beachfront commercial and residential properties in Venice CA.",
-      "marina-del-rey": "Marina and waterfront commercial properties in Marina Del Rey CA.",
-      "malibu": "Exclusive coastal properties and luxury estates in Malibu CA.",
-      "burbank": "Media and entertainment industry properties in Burbank CA.",
-      "glendale": "Investor services for corporate headquarters relocations and Class A office dispositions.",
-      "pasadena": "Historic district compliance with attorney partnerships for legacy wealth transitions.",
-      "san-fernando-valley": "Affordable commercial properties and industrial spaces across the San Fernando Valley.",
-      "long-beach": "Port-adjacent logistics exchanges and mixed-use waterfront developments across Los Angeles County.",
-      "torrance": "South Bay commercial and industrial properties in Torrance CA.",
-      "redondo-beach": "Beach city commercial properties and retail spaces in Redondo Beach CA.",
-      "manhattan-beach": "Upscale beach city properties and commercial real estate in Manhattan Beach CA.",
-      "pomona": "Inland Empire commercial and industrial properties in Pomona CA.",
-      "rancho-cucamonga": "Growing Inland Empire market with commercial and industrial opportunities.",
-      "ontario": "Airport-adjacent logistics and distribution properties in Ontario CA.",
-      "irvine": "Orange County-adjacent properties with corporate office and R&D facilities.",
-      "newport-beach": "Luxury coastal properties and high-end commercial real estate in Newport Beach CA.",
-    };
-
-    return {
-      name: location.name,
-      description: descriptionMap[location.slug] || `${location.type} properties available for 1031 exchange in ${location.name}.`,
-      slug: location.route,
-    };
-  });
-
-const FAQ_ITEMS: readonly FAQ[] = [
+// FAQ Items
+const FAQ_ITEMS = [
   {
-    question: "What makes triple net lease properties attractive investments?",
-    answer:
-      "NNN lease properties offer stable passive income through credit-rated corporate tenants who assume all property expenses, maintenance, and risks. These recession-proof businesses provide guaranteed monthly cash flow with zero management responsibilities for property owners.",
+    question: "What is a 1031 Exchange?",
+    answer: "A 1031 exchange allows real estate investors to defer capital gains taxes by reinvesting proceeds from a sold property into a like-kind replacement property. Named after Section 1031 of the Internal Revenue Code, this powerful strategy has helped investors build generational wealth while preserving capital for continued growth.",
   },
   {
-    question: "What types of businesses typically use triple net leases?",
-    answer:
-      "Essential service businesses dominate NNN leases including fast-food restaurants (Taco Bell, Wendy's), drug stores (Walgreens, CVS), convenience stores (7-Eleven), medical clinics, auto parts stores (AutoZone), dollar stores (Dollar General), car washes, and gas station-convenience store combinations.",
+    question: "What are the time requirements?",
+    answer: "Two critical deadlines govern every 1031 exchange: you must identify potential replacement properties within 45 days of selling your relinquished property, and complete the acquisition within 180 days. These deadlines are absolute and cannot be extended, making professional guidance essential.",
   },
   {
-    question: "What are the different types of triple net leases?",
-    answer:
-      "Absolute NNN leases have tenants paying all expenses including taxes, insurance, and maintenance. Regular NNN leases are similar but may require landlords to cover some costs like roof repairs. Ground leases involve land-only rentals lasting 20-99 years where tenants pay all development costs.",
+    question: "What properties qualify?",
+    answer: "Any real property held for investment or business use qualifies for 1031 exchange treatment. This includes commercial buildings, apartment complexes, industrial facilities, retail centers, and vacant land. Personal residences and properties held primarily for resale do not qualify.",
   },
   {
-    question: "How do I evaluate tenant creditworthiness for NNN properties?",
-    answer:
-      "Review S&P and Moody's credit ratings, financial statements, business stability during economic downturns, and lease guarantees. Investment-grade rated tenants provide the highest security for passive income investments.",
-  },
-  {
-    question: "What are the benefits of owning NNN lease properties?",
-    answer:
-      "NNN properties offer low entry barriers ($500K-$2M+), predictable monthly income with rent escalations, zero management responsibilities, tax advantages, and security not found in traditional investments. Corporate tenants assume all property risks.",
-  },
-  {
-    question: "How does passive income work with triple net lease properties?",
-    answer:
-      "Property owners collect guaranteed monthly rent payments while tenants handle all property expenses, maintenance, and management. This creates truly passive income streams with corporate-level reliability and long-term lease guarantees (10-20+ years).",
+    question: "Why use a Qualified Intermediary?",
+    answer: "IRS regulations prohibit you from directly touching exchange proceeds. A Qualified Intermediary holds your funds between transactions, ensuring compliance with constructive receipt rules. This protection is essential for maintaining the tax-deferred status of your exchange.",
   },
 ];
 
+// Schema
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: BRAND_NAME,
   url: "https://www.1031exchangelosangeles.com/",
-  logo: "https://www.1031exchangelosangeles.com/og-image.png",
   telephone: "+1-818-412-8402",
-  address: HAS_STAFFED_OFFICE
-    ? {
+  address: {
         "@type": "PostalAddress",
         streetAddress: ADDRESS.split(',')[0],
         addressLocality: "Los Angeles",
         addressRegion: "CA",
-        postalCode: ADDRESS.split(',').slice(-1)[0].trim().split(' ')[1],
-        addressCountry: "US",
-      }
-    : {
-        "@type": "PostalAddress",
-        addressLocality: "Los Angeles",
-        addressRegion: "CA",
         addressCountry: "US",
       },
-  sameAs: [
-    "https://www.linkedin.com/company/pacific-equity-1031-advisors",
-    "https://www.avvo.com/",
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "+1-818-412-8402",
-      contactType: "customer service",
-      areaServed: ["US-CA", "US-CA-Los Angeles"],
-      availableLanguage: ["English"],
-    },
-  ],
 };
 
-const WEBSITE_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "1031 Exchange Los Angeles",
-  url: "https://www.1031exchangelosangeles.com/",
-  potentialAction: {
-    "@type": "SearchAction",
-    target:
-      "https://www.1031exchangelosangeles.com/search?query={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
-};
+// SVG Icons
+function ChevronLeftIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <polyline points="15 18 9 12 15 6" />
+    </svg>
+  );
+}
 
-const FAQ_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+function ChevronRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  );
+}
 
-const LOCAL_BUSINESS_SCHEMA = (() => {
-  const baseSchema: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.1031exchangelosangeles.com/#organization",
-    name: BRAND_NAME,
-    image: "https://www.1031exchangelosangeles.com/og-image.png",
-    logo: "https://www.1031exchangelosangeles.com/og-image.png",
-    url: "https://www.1031exchangelosangeles.com/",
-    telephone: "+1-818-412-8402",
-    email: "help@1031exchangelosangeles.com",
-    address: HAS_STAFFED_OFFICE
-      ? {
-          "@type": "PostalAddress",
-          streetAddress: ADDRESS.split(',')[0],
-          addressLocality: "Los Angeles",
-          addressRegion: "CA",
-          postalCode: ADDRESS.split(',').slice(-1)[0].trim().split(' ')[1],
-          addressCountry: "US",
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
+function PlusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  );
+}
+
+function MinusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  );
+}
+
+// Animated Section Title Component
+function AnimatedTitle({ 
+  overline, 
+  title, 
+  className = "" 
+}: { 
+  overline?: string; 
+  title: string; 
+  className?: string;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <div ref={ref} className={`text-center mb-20 ${className}`}>
+      {overline && (
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="font-sans text-sm tracking-[0.4em] uppercase text-gray-400 mb-6"
+        >
+          {overline}
+        </motion.p>
+      )}
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="font-serif text-5xl md:text-6xl lg:text-7xl text-navy font-light tracking-wide"
+      >
+        {title}
+      </motion.h2>
+      <motion.div
+        initial={{ width: 0 }}
+        animate={isInView ? { width: 80 } : {}}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="h-px bg-navy mx-auto mt-8"
+      />
+    </div>
+  );
+}
+
+// Animated Counter Component
+function AnimatedCounter({ value, suffix = "", label }: { value: number | string; suffix?: string; label: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [count, setCount] = useState(0);
+  const numericValue = typeof value === 'string' ? parseFloat(value.replace(/[^0-9.]/g, '')) : value;
+
+  useEffect(() => {
+    if (isInView && typeof numericValue === 'number') {
+      const duration = 2000;
+      const steps = 60;
+      const increment = numericValue / steps;
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= numericValue) {
+          setCount(numericValue);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(current));
         }
-      : {
-          "@type": "PostalAddress",
-          addressLocality: "Los Angeles",
-          addressRegion: "CA",
-          addressCountry: "US",
-        },
-    priceRange: "$$",
-    areaServed: [
-      {
-        "@type": "City",
-        name: "Los Angeles",
-        "@id": "https://www.wikidata.org/wiki/Q65",
-      },
-      {
-        "@type": "State",
-        name: "California",
-        "@id": "https://www.wikidata.org/wiki/Q99",
-      },
-    ],
-    serviceType: [
-      "1031 Exchange Services",
-      "Triple Net Lease Property Identification",
-      "NNN Lease Property Investment",
-      "Commercial Real Estate Advisory",
-    ],
-    description: "Expert triple net lease property identification connecting Los Angeles CA investors with credit-rated corporate tenants and passive income opportunities.",
-  };
+      }, duration / steps);
+      return () => clearInterval(timer);
+    }
+  }, [isInView, numericValue]);
 
-  if (HAS_STAFFED_OFFICE) {
-    baseSchema.geo = {
-      "@type": "GeoCoordinates",
-      latitude: "34.0522",
-      longitude: "-118.2437",
-    };
-    baseSchema.openingHoursSpecification = [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "18:00",
-      },
-    ];
-  }
-
-  return baseSchema;
-})();
-
-type FormState = {
-  name: string;
-  company: string;
-  email: string;
-  phone: string;
-  projectType: string;
-  timeline: string;
-  details: string;
-};
-
-type FormErrors = Partial<Record<keyof FormState, string>>;
-
-const initialFormState: FormState = {
-  name: "",
-  company: "",
-  email: "",
-  phone: "",
-  projectType: "",
-  timeline: "",
-  details: "",
-};
-
-const heroBackgroundStyle = {
-  backgroundImage:
-    "linear-gradient(140deg, rgba(15,45,76,0.96) 0%, rgba(15,45,76,0.82) 40%, rgba(245,181,68,0.28) 100%)",
-};
-
-const overlayStyle = {
-  backgroundImage:
-    "radial-gradient(circle at 20% 20%, rgba(245,181,68,0.18), transparent 55%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.14), transparent 45%)",
-};
-
-const glassPanelStyle = {
-  background:
-    "linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04))",
-  borderColor: "rgba(255,255,255,0.18)",
-  backdropFilter: "blur(14px)",
-} as const;
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <p className="font-serif text-6xl md:text-7xl lg:text-8xl text-navy font-light tracking-tight">
+        {typeof value === 'string' && value.startsWith('$') ? '$' : ''}
+        {typeof value === 'string' ? value.replace(/[^0-9.]/g, '').split('.')[0] === String(count) ? value : count.toLocaleString() : count.toLocaleString()}
+        {suffix}
+      </p>
+      <p className="font-sans text-sm tracking-[0.25em] uppercase text-gray-500 mt-4">{label}</p>
+    </motion.div>
+  );
+}
 
 function loadTurnstile(): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
   if (window._turnstileLoaded) return Promise.resolve();
-
   return new Promise<void>((resolve, reject) => {
     const existing = document.querySelector<HTMLScriptElement>(
       'script[src^="https://challenges.cloudflare.com/turnstile/v0/api.js"]'
@@ -339,1298 +251,673 @@ function loadTurnstile(): Promise<void> {
     s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
     s.async = true;
     s.defer = true;
-    s.onload = () => {
-      window._turnstileLoaded = true;
-      resolve();
-    };
-    s.onerror = () => {
-      console.error("Failed to load Turnstile script");
-      reject(new Error("Turnstile script failed to load"));
-    };
+    s.onload = () => { window._turnstileLoaded = true; resolve(); };
+    s.onerror = () => reject(new Error("Turnstile failed"));
     document.head.appendChild(s);
   });
 }
 
-// Removed cardMotion to fix SSR hydration issues
-
-export default function Page(): JSX.Element {
-  const [formState, setFormState] = useState<FormState>(initialFormState);
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle",
-  );
-  const [statusMessage, setStatusMessage] = useState<string>("");
-  const [locationSearchQuery] = useState("");
+export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [formState, setFormState] = useState({
+    name: "", email: "", phone: "", propertyType: "", message: "",
+  });
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [turnstileId, setTurnstileId] = useState<string | null>(null);
   const [turnstileReady, setTurnstileReady] = useState(false);
   const captchaRef = useRef<HTMLDivElement | null>(null);
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
-  const heroCityNames = useMemo(
-    () => CA_CITIES_SLUGS.map((city) => city.name).join(" • "),
-    [],
-  );
-
-  const filteredCities = useMemo(() => {
-    if (!locationSearchQuery.trim()) return CA_CITIES_SLUGS;
-    return CA_CITIES_SLUGS.filter(city =>
-      city.name.toLowerCase().includes(locationSearchQuery.toLowerCase()) ||
-      city.description.toLowerCase().includes(locationSearchQuery.toLowerCase())
-    );
-  }, [locationSearchQuery]);
-
-  useEffect(() => {
-    let cancelled = false;
-    if (!TURNSTILE_SITE_KEY) return;
-
-    const initTurnstile = async () => {
-      try {
-        await loadTurnstile();
-        if (cancelled) return;
-
-        const turnstile = window.turnstile;
-        if (!turnstile || !captchaRef.current) {
-          console.error("Turnstile not available");
-          return;
-        }
-
-        const id: string = turnstile.render(captchaRef.current, {
-          sitekey: TURNSTILE_SITE_KEY,
-          size: "normal",
-          callback: () => setTurnstileReady(true),
-          "error-callback": () => setTurnstileReady(false),
-          "timeout-callback": () => setTurnstileReady(false),
-        });
-
-        setTurnstileId(id);
-        setTurnstileReady(true);
-      } catch (error) {
-        console.error("Failed to initialize Turnstile:", error);
-        setTurnstileReady(false);
-      }
-    };
-
-    initTurnstile();
-
-    return () => {
-      cancelled = true;
-    };
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % FEATURE_SLIDES.length);
   }, []);
 
-  const validateForm = (state: FormState): FormErrors => {
-    const newErrors: FormErrors = {};
-    if (!state.name.trim()) {
-      newErrors.name = "Please enter your full name.";
-    }
-    if (!state.email.trim()) {
-      newErrors.email = "Please enter a valid email address.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email.trim())) {
-      newErrors.email = "Please enter a valid email format.";
-    }
-    if (!state.phone.trim()) {
-      newErrors.phone = "Please provide a phone number.";
-    }
-    if (!state.projectType) {
-      newErrors.projectType = "Please select a project type.";
-    }
-    if (!state.timeline) {
-      newErrors.timeline = "Please select a timeline.";
-    }
-    if (!state.details.trim()) {
-      newErrors.details = "Please provide details about your exchange goals.";
-    }
-    return newErrors;
-  };
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + FEATURE_SLIDES.length) % FEATURE_SLIDES.length);
+  }, []);
 
-  const handleInputChange = (field: keyof FormState, value: string) => {
-    // Special handling for phone field - only allow numbers, spaces, dashes, and parentheses
-    if (field === 'phone') {
-      const phoneRegex = /[^0-9\s\-\(\)\+]/g;
-      value = value.replace(phoneRegex, '');
-    }
+  useEffect(() => {
+    autoPlayRef.current = setInterval(nextSlide, 7000);
+    return () => { if (autoPlayRef.current) clearInterval(autoPlayRef.current); };
+  }, [nextSlide]);
 
-    setFormState(prev => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
-    }
-  };
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) return;
+    let cancelled = false;
+    const init = async () => {
+      try {
+        await loadTurnstile();
+        if (cancelled || !window.turnstile || !captchaRef.current) return;
+        const id = window.turnstile.render(captchaRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: () => setTurnstileReady(true),
+        });
+        setTurnstileId(id);
+        setTurnstileReady(true);
+      } catch { setTurnstileReady(false); }
+    };
+    init();
+    return () => { cancelled = true; };
+  }, []);
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus("idle");
-    setStatusMessage("");
-
-    const validationErrors = validateForm(formState);
-    setErrors(validationErrors);
-
-    if (Object.keys(validationErrors).length > 0) {
-      setStatus("error");
-      setStatusMessage("Please complete all required fields.");
-      return;
-    }
-
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setFormStatus("loading");
     try {
-      setStatus("loading");
-      let turnstileToken = "";
-      if (TURNSTILE_SITE_KEY) {
-        if (!turnstileReady || !window.turnstile || !turnstileId) {
-          setStatus("error");
-          setStatusMessage("Please complete the security verification.");
-          return;
-        }
-
-        try {
-          window.turnstile!.reset(turnstileId);
-          turnstileToken = await new Promise<string>((resolve, reject) => {
-            window.turnstile!.execute(turnstileId, {
-              async: true,
-              action: "form_submit",
-              callback: (token: string) => resolve(token),
-              "error-callback": () => reject(new Error("turnstile-error")),
-              "timeout-callback": () => reject(new Error("turnstile-timeout")),
-            });
-          });
-        } catch (err) {
-          console.error("Turnstile execution error:", err);
-          setStatus("error");
-          setStatusMessage("Security verification failed. Please try again.");
-          return;
-        }
+      let token = "";
+      if (TURNSTILE_SITE_KEY && window.turnstile && turnstileId) {
+        window.turnstile.reset(turnstileId);
+        token = await window.turnstile.execute(turnstileId, { action: "form_submit" }) as string;
       }
-
-      const response = await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formState,
-          phone: formState.phone.replace(/\D/g, ''),
-          turnstileToken,
-        }),
+        body: JSON.stringify({ ...formState, turnstileToken: token }),
       });
-
-      if (!response.ok) {
-        throw new Error("Submission failed");
-      }
-
-      setStatus("success");
-      setStatusMessage("Thank you for your inquiry. A member of our team will contact you within 24 hours.");
-      setFormState(initialFormState);
-      setErrors({});
-      if (window.turnstile && turnstileId) {
-        window.turnstile!.reset(turnstileId);
-      }
-    } catch {
-      setStatus("error");
-      setStatusMessage("There was an issue sending your message. Please try again or call us directly.");
-      if (window.turnstile && turnstileId) {
-        window.turnstile!.reset(turnstileId);
-      }
-    }
+      if (!res.ok) throw new Error();
+      setFormStatus("success");
+      setFormState({ name: "", email: "", phone: "", propertyType: "", message: "" });
+    } catch { setFormStatus("error"); }
   };
+
+  const currentFeatureSlide = FEATURE_SLIDES[currentSlide];
 
   return (
     <>
       <Head>
         <link rel="canonical" href="https://www.1031exchangelosangeles.com/" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ORGANIZATION_SCHEMA),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(WEBSITE_SCHEMA),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(FAQ_SCHEMA),
-          }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }} />
       </Head>
-      <div className="min-h-screen bg-slate-950 text-slate-100">
-        <header className="relative overflow-hidden mt-16 md:mt-20">
+
+      <div className="bg-white">
+        {/* ==========================================
+            HERO SECTION - VIDEO BACKGROUND
+        ========================================== */}
+        <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+          {/* Video Background */}
           <video
             autoPlay
             loop
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ zIndex: 0 }}
           >
-            <source src="/1031-exchange-los-angeles-ca.mp4" type="video/mp4" />
+            <source src="/los angeles bbay.mp4" type="video/mp4" />
           </video>
-          <div
-            className="absolute inset-0"
-            style={{
-              ...heroBackgroundStyle,
-              zIndex: 1,
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-0 opacity-100"
-            style={{
-              ...overlayStyle,
-              zIndex: 2,
-            }}
-          />
-          <div className="relative mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-32" style={{ zIndex: 3 }}>
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+          
+          {/* Hero Content - Elegant like feature slides */}
+          <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="flex flex-col gap-12"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5 }}
             >
-              <div className="flex flex-col gap-8 md:gap-10">
-                <div className="max-w-3xl">
-                  <p className="text-xs uppercase tracking-[0.35em] text-slate-200">
-                    1031 Exchange Los Angeles
-                  </p>
-                  <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
-                    Los Angeles NNN Lease Property Experts
-                  </h1>
-                  <p className="mt-6 text-lg leading-relaxed text-slate-100/90 md:text-xl">
-                    Whether you&apos;re seeking stable passive income or recession-proof investments, we identify triple net lease properties with credit-rated tenants providing guaranteed monthly cash flow and zero management responsibilities across Los Angeles CA.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <motion.a
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                    className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-base font-medium shadow-lg transition-transform focus-visible:ring-2 focus-visible:ring-slate-50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-                    style={{
-                      backgroundColor: ACCENT_COLOR,
-                      color: PRIMARY_BRAND_COLOR,
-                    }}
-                  >
-                    <Phone className="h-4 w-4" aria-hidden="true" />
-                    Call {PHONE}
-                  </motion.a>
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Link
-                      href="#lead-form"
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3 text-base font-medium text-white transition focus-visible:ring-2 focus-visible:ring-slate-100 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:border-white/60 hover:bg-white/5"
-                    >
-                      Find NNN Properties
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-              <div
-                className="rounded-3xl border px-6 py-6 shadow-lg md:px-8 md:py-7"
-                style={glassPanelStyle}
+{/* Pre-title */}
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="font-serif text-2xl md:text-3xl text-white/80 italic mb-6"
               >
-                <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-                  <div className="flex flex-col gap-3 text-sm text-white/85">
-                    <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/60">
-                      <Target className="h-4 w-4" aria-hidden="true" />
-                      NNN Property Assurance
-                    </div>
-                    <p className="text-base text-white/90">
-                      Credit-rated tenants. Corporate guarantees. Zero management responsibilities.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-1 gap-4 text-sm text-white/75 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      Investment-Grade Tenants
-                    </div>
-                    <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      Corporate Guarantees
-                    </div>
-                    <div className="rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-center">
-                      Passive Income Focus
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/30">
-                {heroCityNames}
-              </p>
+                Los Angeles Premier
+              </motion.p>
+              
+              {/* Main Title - All on one line */}
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-wider mb-8"
+              >
+                1031 Exchange
+              </motion.h1>
+              
+              {/* Tagline */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                className="font-sans text-lg md:text-xl text-white/70 tracking-wide max-w-2xl mx-auto mb-12"
+              >
+                Defer capital gains. Preserve wealth. Build your legacy.
+              </motion.p>
+              
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
+                  <Link
+                  href="/contact" 
+                  className="px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
+                  >
+                  Start Your Exchange
+                  </Link>
+                  <Link
+                  href="/services" 
+                  className="px-12 py-4 border border-white/50 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
+                  >
+                  Our Services
+                  </Link>
+              </motion.div>
             </motion.div>
           </div>
-        </header>
+          
+          {/* Scroll Indicator */}
+                  <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+          >
+            <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-2">
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="w-1 h-2 bg-white/50 rounded-full"
+              />
+              </div>
+          </motion.div>
+          </section>
 
-        <main>
-          <section className="bg-slate-950 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mx-auto flex max-w-3xl flex-col gap-4 text-center"
+        {/* ==========================================
+            FEATURE SLIDER SECTION
+        ========================================== */}
+        <section className="relative h-[85vh] min-h-[600px] overflow-hidden">
+          {/* Slide Background */}
+          <AnimatePresence mode="wait">
+              <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0"
             >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  Why Choose {BRAND_NAME}
-                </p>
-                <h2 className="font-serif text-3xl text-white md:text-4xl">
-                  Expert NNN lease property identification delivering passive income security and hands-off ownership.
-                </h2>
-                <p className="text-base leading-relaxed text-slate-300">
-                  We connect Los Angeles CA investors with investment-grade triple net lease properties featuring credit-rated tenants, guaranteed monthly cash flow, and zero management responsibilities.
-                </p>
+              <Image
+                src={currentFeatureSlide.image}
+                alt={currentFeatureSlide.title}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
               </motion.div>
-              <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-                {[
-                  {
-                    title: "Investment-Grade Tenant Selection & Verification",
-                    description:
-                      "Connect with S&P and Moody-rated corporate tenants including fast-food chains, drug stores, and medical companies with proven recession resistance. Verify tenant creditworthiness and lease terms ensuring long-term stability (10-20+ years) and predictable income streams.",
-                    icon: ShieldCheck,
-                  },
-                  {
-                    title: "Triple Net Lease Structure Analysis",
-                    description:
-                      "Evaluate absolute NNN, regular NNN, and ground lease options to identify properties where tenants assume all expenses and risks.",
-                    icon: FileText,
-                  },
-                  {
-                    title: "Passive Income Optimization",
-                    description:
-                      "Structure acquisitions for guaranteed monthly cash flow with annual rent escalations and minimal landlord responsibilities.",
-                    icon: Calculator,
-                  },
-                  {
-                    title: "Los Angeles Market Intelligence",
-                    description:
-                      "Navigate Southern California commercial real estate with deep knowledge of essential service businesses and property availability.",
-                    icon: Landmark,
-                  },
-                ].map((item) => (
+          </AnimatePresence>
+
+          {/* Slide Content */}
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <AnimatePresence mode="wait">
                   <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
+                key={currentSlide}
+                initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="rounded-2xl border border-slate-800/70 bg-slate-900/50 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                    whileHover={{ y: -6 }}
-                  >
-                    <item.icon
-                      className="h-10 w-10"
-                      style={{ color: ACCENT_COLOR }}
-                      aria-hidden="true"
-                    />
-                    <h3 className="mt-6 font-serif text-xl text-white">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                      {item.description}
-                    </p>
+                exit={{ opacity: 0, y: -40 }}
+                transition={{ duration: 0.8 }}
+                className="text-center px-6"
+              >
+                <p className="font-serif text-2xl md:text-3xl text-white/90 italic mb-2">
+                  {currentFeatureSlide.pretitle}
+                </p>
+                <h2 className="font-serif text-6xl md:text-8xl lg:text-9xl text-white tracking-wider mb-4">
+                  {currentFeatureSlide.title}
+                </h2>
+                <p className="font-serif text-xl md:text-2xl tracking-[0.3em] uppercase text-white/80 mb-10">
+                  {currentFeatureSlide.subtitle}
+                </p>
+                {currentFeatureSlide.cta && (
+                    <Link
+                    href={currentFeatureSlide.cta.href} 
+                    className="inline-block px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
+                    >
+                    {currentFeatureSlide.cta.text}
+                    </Link>
+                )}
                   </motion.div>
+            </AnimatePresence>
+              </div>
+
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide} 
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all z-20"
+          >
+            <ChevronLeftIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+          </button>
+          <button 
+            onClick={nextSlide} 
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all z-20"
+          >
+            <ChevronRightIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            {FEATURE_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`h-1 rounded-full transition-all duration-500 ${i === currentSlide ? "bg-white w-12" : "bg-white/40 w-4"}`}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* ==========================================
+            LOCATIONS GRID
+        ========================================== */}
+        <section>
+          {/* Row 1: 2 Large */}
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {FEATURED_LOCATIONS.slice(0, 2).map((loc) => (
+              <Link key={loc.slug} href={`/locations/${loc.slug}`} className="relative overflow-hidden aspect-[4/3] group">
+                <Image src={loc.image} alt={loc.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-all group-hover:from-black/70" />
+                <h3 className="absolute bottom-1/3 left-1/2 -translate-x-1/2 z-10 text-white font-serif text-2xl md:text-3xl tracking-[0.2em] uppercase text-center">{loc.name}</h3>
+                    </Link>
                 ))}
               </div>
-              <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900/60 px-6 py-6 md:px-8 md:py-7">
-                <p className="text-sm text-slate-300">
-                  Triple net lease properties offer investors stable passive income through credit-rated corporate tenants. While NNN investments can be part of tax-advantaged strategies, they do not guarantee specific tax outcomes. Review the{" "}
-                  <Link
-                    href="https://ttc.lacounty.gov/documentary-transfer-tax/"
-                    className="text-slate-100 underline decoration-2 underline-offset-4"
-                  >
-                    Los Angeles County documentary transfer tax guidance
-                  </Link>{" "}
-                  and consult qualified tax professionals for your specific situation.
-                </p>
+          {/* Row 2: 3 Medium */}
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {FEATURED_LOCATIONS.slice(2, 5).map((loc) => (
+              <Link key={loc.slug} href={`/locations/${loc.slug}`} className="relative overflow-hidden aspect-square group">
+                <Image src={loc.image} alt={loc.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-all group-hover:from-black/70" />
+                <h3 className="absolute bottom-1/3 left-1/2 -translate-x-1/2 z-10 text-white font-serif text-xl md:text-2xl tracking-[0.2em] uppercase text-center">{loc.name}</h3>
+                </Link>
+            ))}
               </div>
+        </section>
+
+        {/* ==========================================
+            PROPERTY TYPES GRID
+        ========================================== */}
+        <section>
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {PROPERTY_TYPES.slice(0, 6).map((pt) => (
+              <Link key={pt.slug} href={`/property-types/${pt.slug}`} className="relative overflow-hidden aspect-[4/3] group">
+                <Image src={pt.image} alt={pt.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 transition-all group-hover:to-black/70" />
+                <h3 className="absolute bottom-6 left-6 z-10 text-white font-serif text-xl md:text-2xl tracking-[0.15em] uppercase">{pt.name}</h3>
+              </Link>
+            ))}
             </div>
           </section>
 
-          <section className="bg-slate-900 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
+        {/* ==========================================
+            ABOUT / BRAND SECTION - WHITE LOGO
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-navy">
+          <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+              {/* White Logo */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="flex justify-center md:justify-start"
               >
-                <div className="max-w-2xl">
-                  <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                    NNN Lease Investment Process
+                <Image
+                  src="/1031-exchange-los-angeles-ca-logo.png"
+                  alt="1031 Exchange Los Angeles"
+                  width={400}
+                  height={100}
+                  className="brightness-0 invert"
+                  style={{ width: 'auto', height: 'auto', maxWidth: '400px' }}
+                />
+              </motion.div>
+
+              {/* Content */}
+                  <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <p className="font-serif text-xl text-white/60 italic mb-6">
+                  Southern California Investment Excellence
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8 tracking-wide">
+                  Your Trusted Exchange Partner
+                </h2>
+                <div className="space-y-6 text-white/70 text-lg leading-relaxed">
+                  <p>
+                    Los Angeles investors benefit from our deep local expertise and comprehensive understanding of Southern California&apos;s dynamic real estate market. Our team provides expert 1031 exchange guidance tailored to the unique opportunities found across Los Angeles County.
                   </p>
-                  <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                    Identify credit-rated tenants, verify lease terms, and secure passive income properties.
-                  </h2>
-                </div>
-                <div className="flex gap-4 text-sm text-slate-300">
-                  <Link
-                    href="https://www.irs.gov/forms-pubs/about-form-8824"
-                    className="inline-flex items-center gap-2 underline decoration-2 underline-offset-4 hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-                  >
-                    IRS Form 8824
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                  <Link
-                    href="https://www.irs.gov/tax-professionals/like-kind-exchanges-under-irc-code-section-1031"
-                    className="inline-flex items-center gap-2 underline decoration-2 underline-offset-4 hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-                  >
-                    Like-Kind Property Rules
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </div>
-              </motion.div>
-              <div className="mt-12 grid gap-6 md:grid-cols-3">
-                {[
-                  {
-                    title: "Evaluate tenant creditworthiness",
-                    description:
-                      "Research corporate tenant financial strength, S&P/Moody ratings, and business stability across economic cycles.",
-                    icon: ShieldCheck,
-                  },
-                  {
-                    title: "Analyze lease structures",
-                    description:
-                      "Review absolute NNN vs regular NNN terms, rent escalation clauses, and expense responsibility assignments.",
-                    icon: FileText,
-                  },
-                  {
-                    title: "Secure passive income properties",
-                    description:
-                      "Identify recession-proof businesses with guaranteed monthly cash flow and zero management requirements.",
-                    icon: Target,
-                  },
-                ].map((item) => (
+                  <p>
+                    From identifying replacement properties to navigating complex timelines, we ensure every exchange maximizes tax deferral benefits while positioning investors for long-term growth.
+                        </p>
+                      </div>
                   <motion.div
-                    key={item.title}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 shadow-sm"
-                  >
-                    <item.icon
-                      className="h-9 w-9"
-                      style={{ color: ACCENT_COLOR }}
-                      aria-hidden="true"
-                    />
-                    <h3 className="mt-5 font-serif text-xl text-white">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                      {item.description}
-                    </p>
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-10"
+                >
+                      <Link
+                    href="/contact" 
+                    className="inline-block px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
+                      >
+                    Contact Us
+                      </Link>
                   </motion.div>
-                ))}
-              </div>
-              <div className="mt-10 rounded-2xl border border-slate-800 bg-slate-900/60 px-6 py-6 md:px-8 md:py-7">
-                <p className="text-sm text-slate-300">
-                  Vacation rentals and mixed-use personal residences require special handling. Review{" "}
-                  <Link
-                    href="https://www.irs.gov/irb/2008-16_IRB#RP-2008-16"
-                    className="text-slate-100 underline decoration-2 underline-offset-4"
-                  >
-                    Rev. Proc. 2008-16
-                  </Link>{" "}
-                  to align personal use limits with IRS safe harbor provisions.
-                </p>
+              </motion.div>
               </div>
             </div>
           </section>
 
-          <section className="bg-slate-950 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="max-w-2xl"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  NNN Property Services
-                </p>
-                <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Comprehensive triple net lease property identification and acquisition support across Los Angeles CA.
-                </h2>
-              </motion.div>
-              <div className="mt-14 grid gap-8 md:grid-cols-2">
-                {SERVICES.map((service) => (
-                  <motion.div
-                    key={service.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow transition hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <h3 className="font-serif text-xl text-white">
-                        {service.title}
-                      </h3>
-                      <ArrowRight className="h-5 w-5 text-slate-500" aria-hidden="true" />
+        {/* ==========================================
+            MARKET AT A GLANCE - ANIMATED & LARGE
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-cream">
+          <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <AnimatedTitle 
+              overline="Market Intelligence" 
+              title="Los Angeles at a Glance" 
+            />
+
+            <div className="grid md:grid-cols-4 gap-8 lg:gap-12 mt-16">
+              <AnimatedCounter value="$2.4M" suffix="" label="Average Exchange Value" />
+              <AnimatedCounter value={1247} suffix="" label="Active Opportunities" />
+              <AnimatedCounter value={45} suffix="" label="Day Identification" />
+              <AnimatedCounter value={180} suffix="" label="Day Completion" />
                     </div>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                    </div>
+        </section>
+
+        {/* ==========================================
+            SERVICES SECTION - ELEGANT
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <AnimatedTitle 
+              overline="What We Offer" 
+              title="Exchange Services" 
+            />
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100">
+              {EXCHANGE_SERVICES.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Link 
+                    href={service.href} 
+                    className="block bg-white p-10 lg:p-12 h-full group hover:bg-cream transition-all duration-500"
+                  >
+                    <div className="h-px w-12 bg-navy mb-8 group-hover:w-20 transition-all duration-500" />
+                    <h3 className="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-navy/80 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-8">
                       {service.description}
                     </p>
-                    <Link
-                      href={service.href}
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-100 underline decoration-2 underline-offset-4 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-                    >
-                      View service detail
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-10">
-                <Link
-                  href="/services/"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-800 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  See all services
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-slate-900 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="max-w-2xl"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  Property Types
-                </p>
-                <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Discover triple net lease opportunities across essential service businesses with credit-rated corporate tenants.
-                </h2>
-              </motion.div>
-              <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-                {PROPERTY_TYPES.map((property) => (
-                  <motion.div
-                    key={property.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/70 p-7 shadow transition hover:-translate-y-1 hover:shadow-lg relative overflow-hidden"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getPropertyTypeImagePath(property.slug)})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  >
-                    <Layers
-                      className="h-8 w-8"
-                      style={{ color: ACCENT_COLOR }}
-                      aria-hidden="true"
-                    />
-                    <h3 className="mt-5 font-serif text-lg text-white">
-                      {property.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                      {property.benefit}
-                    </p>
-                    <Link
-                      href={property.href}
-                      className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-slate-100 underline decoration-2 underline-offset-4 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-                    >
-                      Learn more
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-10">
-                <Link
-                  href="/property-types/"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-800 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  Explore property types
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-slate-950 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="max-w-3xl"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  Los Angeles Coverage
-                </p>
-                <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Comprehensive NNN lease property identification across every Los Angeles CA submarket.
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-slate-300">
-                  {BRAND_NAME} connects investors with triple net lease properties featuring credit-rated tenants from Downtown LA to the Inland Empire. Our extensive market knowledge ensures access to recession-proof businesses with guaranteed income streams.
-                </p>
-
-                {/* Location Search */}
-                <div className="mt-6 max-w-md">
-                  <SearchInput
-                    placeholder="Search Los Angeles areas..."
-                    items={CA_CITIES_SLUGS.map(city => ({
-                      title: city.name,
-                      slug: city.slug,
-                      description: city.description,
-                      href: `/locations/${city.slug}`,
-                    }))}
-                    onNoResults={(query) => {
-                      window.location.href = `/contact?project_type=Other&location=${encodeURIComponent(query)}`;
-                    }}
-                  />
-                </div>
-              </motion.div>
-              <div className="mt-14 grid gap-8 md:grid-cols-2">
-                {filteredCities.length > 0 ? filteredCities.map((city) => (
-                  <motion.div
-                    key={city.slug}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 relative overflow-hidden"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url(${getLocationImagePath(city.slug)})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  >
-                    <div className="flex items-start gap-3">
-                      <MapPin
-                        className="mt-1 h-5 w-5"
-                        style={{ color: ACCENT_COLOR }}
-                        aria-hidden="true"
-                      />
-                      <div>
-                        <h3 className="font-serif text-lg text-white">
-                          {city.name}
-                        </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                          {city.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <Link
-                        href={`/locations/${city.slug}`}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-slate-100 underline decoration-2 underline-offset-4 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                      >
-                        View location detail
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                      </Link>
-                    </div>
-                  </motion.div>
-                )) : (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="col-span-full text-center py-12"
-                  >
-                    <div className="max-w-md mx-auto">
-                      <MapPin className="h-12 w-12 text-slate-600 mx-auto mb-4" />
-                      <h3 className="font-serif text-xl text-white mb-2">
-                        No areas found
-                      </h3>
-                      <p className="text-slate-400 mb-6">
-                        We couldn&apos;t find &quot;{locationSearchQuery}&quot; in Los Angeles CA, but we serve many other areas.
-                      </p>
-                      <Link
-                        href={`/contact?project_type=Other&location=${encodeURIComponent(locationSearchQuery)}`}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-slate-900 rounded-lg font-medium hover:bg-amber-600 transition-colors"
-                      >
-                        Contact for Other Areas
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/locations/"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-800 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  See locations
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-                <p className="text-sm text-slate-400">
-                  Service available statewide, including Orange County, San Diego County, and Northern California exchanges.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Tools Section */}
-          <section className="bg-slate-900 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="text-center mb-16"
-              >
-                <h2 className="font-serif text-3xl text-white md:text-4xl mb-4">
-                  Free NNN Property Tools
-                </h2>
-                <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                  Educational calculators and resources to help Los Angeles CA investors evaluate
-                  triple net lease opportunities. These tools provide analysis and guidance for
-                  identifying passive income properties with credit-rated corporate tenants.
-                </p>
-              </motion.div>
-
-              <div className="grid gap-8 md:grid-cols-3">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-blue-900/20 to-blue-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <Link href="/tools/boot-calculator" className="block">
-                    <Calculator className="mb-4 h-12 w-12 text-blue-400" />
-                    <h3 className="mb-2 text-2xl font-semibold">Boot Calculator</h3>
-                    <p className="text-slate-100 mb-4">
-                      Calculate boot and estimate tax implications from cash received, mortgage relief, and non-like-kind property.
-                    </p>
-                    <div className="flex items-center text-sm font-medium text-blue-300 group-hover:text-blue-200">
-                      Use Calculator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    <span className="inline-flex items-center gap-3 font-sans text-sm tracking-[0.15em] uppercase text-navy">
+                      Learn More
+                      <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </span>
                   </Link>
                 </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-green-900/20 to-green-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <Link href="/tools/exchange-cost-estimator" className="block">
-                    <Receipt className="mb-4 h-12 w-12 text-green-400" />
-                    <h3 className="mb-2 text-2xl font-semibold">Exchange Cost Estimator</h3>
-                    <p className="text-slate-100 mb-4">
-                      Estimate QI fees, escrow costs, title insurance, and recording fees for Los Angeles County exchanges.
-                    </p>
-                    <div className="flex items-center text-sm font-medium text-green-300 group-hover:text-green-200">
-                      Use Estimator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Link>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="group rounded-2xl border border-slate-800 bg-gradient-to-br from-purple-900/20 to-purple-800/20 p-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <Link href="/tools/identification-rules-checker" className="block">
-                    <Target className="mb-4 h-12 w-12 text-purple-400" />
-                    <h3 className="mb-2 text-2xl font-semibold">Identification Rules Checker</h3>
-                    <p className="text-slate-100 mb-4">
-                      Validate replacement property identification against IRS Three Property, 200%, and 95% Rules.
-                    </p>
-                    <div className="flex items-center text-sm font-medium text-purple-300 group-hover:text-purple-200">
-                      Use Validator <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Link>
-                </motion.div>
+              ))}
               </div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-12 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="text-center mt-16"
               >
                 <Link
-                  href="/tools"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 transition-colors"
+                href="/services" 
+                className="inline-block px-12 py-4 border-2 border-navy text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy hover:text-white transition-all"
                 >
-                  View All Tools
-                  <ArrowRight className="h-4 w-4" />
+                View All Services
                 </Link>
               </motion.div>
             </div>
           </section>
 
-          <section className="bg-slate-950 py-20 md:py-28">
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="max-w-3xl"
-              >
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  Frequently Asked Questions
-                </p>
-                <h2 className="mt-3 font-serif text-3xl text-white md:text-4xl">
-                  Comprehensive answers for investors exploring triple net lease properties and passive income opportunities.
-                </h2>
-              </motion.div>
-              <div className="mt-12 divide-y divide-slate-800 rounded-2xl border border-slate-800 bg-slate-900/60">
+        {/* ==========================================
+            FAQ SECTION - ELEGANT
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-cream">
+          <div className="max-w-4xl mx-auto px-6 md:px-8">
+            <AnimatedTitle 
+              overline="Common Questions" 
+              title="Understanding 1031 Exchanges" 
+            />
+
+            <div className="mt-16">
                 {FAQ_ITEMS.map((faq, index) => (
                   <motion.div
-                    key={faq.question}
+                  key={index}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="p-8"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="border-b border-gray-200 py-8"
+                >
+                  <button
+                    onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                    className="w-full text-left flex items-center justify-between group"
                   >
-                    <div className="flex items-start gap-4">
-                      <InfoBadge />
-                      <div>
-                        <h3 className="font-serif text-xl text-white">
+                    <span className="font-serif text-xl md:text-2xl text-navy group-hover:text-navy/70 transition-colors pr-8">
                           {faq.question}
-                        </h3>
-                        <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </div>
-                    {index < FAQ_ITEMS.length - 1 && (
-                      <div className="mt-8 h-px bg-slate-800/80" />
+                    </span>
+                    {expandedFaq === index ? (
+                      <MinusIcon className="w-6 h-6 text-navy flex-shrink-0" />
+                    ) : (
+                      <PlusIcon className="w-6 h-6 text-navy flex-shrink-0" />
                     )}
+                  </button>
+                  <AnimatePresence>
+                    {expandedFaq === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-gray-600 leading-relaxed mt-6 text-lg">{faq.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
 
-          <section
-            id="lead-form"
-            className="bg-slate-900 py-20 md:py-28"
-            aria-labelledby="lead-form-title"
-          >
-            <div className="mx-auto max-w-7xl px-6 md:px-8">
+        {/* ==========================================
+            CONTACT SECTION
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-navy">
+          <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+              {/* Left Content */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="grid gap-12 lg:grid-cols-2"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="text-white"
               >
-                <div>
-                  <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                    Start the Conversation
-                  </p>
-                  <h2
-                    id="lead-form-title"
-                    className="mt-3 font-serif text-3xl text-white md:text-4xl"
-                  >
-                    Request a confidential consultation to discover Los Angeles CA NNN lease opportunities.
+                <p className="font-serif text-xl text-white/60 italic mb-4">Get Started</p>
+                <h2 className="font-serif text-5xl md:text-6xl font-light mb-8 tracking-wide">
+                  Request a Consultation
                   </h2>
-                  <p className="mt-4 text-base leading-relaxed text-slate-300">
-                    Share your investment goals and we will identify triple net lease properties with credit-rated corporate tenants providing guaranteed passive income. Same-day responses for serious investors.
-                  </p>
-                  <div className="mt-8 flex flex-col gap-4 text-sm text-slate-300">
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-slate-400" aria-hidden="true" />
-                      <span>Call us at {PHONE}</span>
+                <p className="text-white/70 text-lg leading-relaxed mb-12">
+                  Share your investment goals and our team will provide personalized guidance for your 1031 exchange. Complimentary consultations for qualified investors.
+                </p>
+
+                <div className="space-y-8">
+                  <div>
+                    <p className="font-sans text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Phone</p>
+                    <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="font-serif text-3xl text-white hover:text-white/80 transition-colors">
+                      {PHONE}
+                    </a>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Building className="h-5 w-5 text-slate-400" aria-hidden="true" />
-                      <span>
-                        Service area: Los Angeles County, Orange County, San Diego County, San Francisco Bay Area
-                      </span>
+                  <div>
+                    <p className="font-sans text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Office</p>
+                    <p className="text-white/70 text-lg">{ADDRESS}</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <FileText className="h-5 w-5 text-slate-400" aria-hidden="true" />
-                      <span>Complimentary timeline outline with every consultation</span>
                     </div>
-                  </div>
-                </div>
-
-                <motion.form
-                  onSubmit={handleSubmit}
-                  method="post"
-                  action="/api/contact"
-                  noValidate
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="rounded-3xl border border-slate-800 bg-slate-950/70 p-8 shadow-lg"
-                >
-                  <div className="grid gap-6">
-                    <div className="grid gap-4 md:grid-cols-2">
-                      <FormField
-                        label="Name"
-                        id="name"
-                        type="text"
-                        value={formState.name}
-                        onChange={(value) => handleInputChange("name", value)}
-                        error={errors.name}
-                        required
-                        autoComplete="name"
-                      />
-
-                      <FormField
-                        label="Company (Optional)"
-                        id="company"
-                        type="text"
-                        value={formState.company}
-                        onChange={(value) => handleInputChange("company", value)}
-                        autoComplete="organization"
-                      />
-                    </div>
-
-                    <FormField
-                      label="Email"
-                      id="email"
-                      type="email"
-                      value={formState.email}
-                      onChange={(value) => handleInputChange("email", value)}
-                      error={errors.email}
-                      required
-                      autoComplete="email"
-                    />
-
-                    <FormField
-                      label="Phone"
-                      id="phone"
-                      type="tel"
-                      value={formState.phone}
-                      onChange={(value) => handleInputChange("phone", value)}
-                      error={errors.phone}
-                      required
-                      autoComplete="tel"
-                    />
-
-                    <FormField
-                      label="Project Type"
-                      id="projectType"
-                      type="select"
-                      value={formState.projectType}
-                      onChange={(value) => handleInputChange("projectType", value)}
-                      error={errors.projectType}
-                      required
-                      options={PROJECT_TYPES}
-                    />
-
-                    <FormField
-                      label="Timeline"
-                      id="timeline"
-                      type="select"
-                      value={formState.timeline}
-                      onChange={(value) => handleInputChange("timeline", value)}
-                      error={errors.timeline}
-                      required
-                      options={[
-                        "Immediately (within 30 days)",
-                        "Within 3 months",
-                        "Within 6 months",
-                        "6+ months",
-                        "Just researching options"
-                      ]}
-                    />
-
-                    <FormField
-                      label="Project Details"
-                      id="details"
-                      type="textarea"
-                      value={formState.details}
-                      onChange={(value) => handleInputChange("details", value)}
-                      error={errors.details}
-                      required
-                      rows={4}
-                      helper="Describe your property being sold, budget range, and specific requirements."
-                    />
-                  </div>
-                  {TURNSTILE_SITE_KEY ? (
-                    <div className="flex justify-center">
-                      <div ref={captchaRef} className="min-h-[78px]" />
-                    </div>
-                  ) : null}
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold focus-visible:ring-2 focus-visible:ring-slate-50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed"
-                    style={{
-                      backgroundColor: ACCENT_COLOR,
-                      color: PRIMARY_BRAND_COLOR,
-                    }}
-                    disabled={status === "loading" || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
-                  >
-                    {status === "loading" ? "Sending..." : "Send Message"}
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </motion.button>
-
-                  {statusMessage && (
-                    <div className={`mt-4 p-4 rounded-lg ${
-                      status === "success"
-                        ? "bg-green-500/10 border border-green-500/20 text-green-300"
-                        : "bg-red-500/10 border border-red-500/20 text-red-300"
-                    }`}>
-                      {statusMessage}
-                    </div>
-                  )}
-
-                  <p className="mt-4 text-xs text-slate-400 text-center" id="form-compliance">
-                    Educational content only. Not tax or legal advice.
-                  </p>
-                </motion.form>
               </motion.div>
+
+              {/* Form */}
+                <motion.form
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+                  onSubmit={handleSubmit}
+                className="bg-white p-10 md:p-12"
+              >
+                <div className="space-y-8">
+                  <div>
+                    <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                      Full Name *
+                    </label>
+                    <input
+                        type="text"
+                        required
+                      value={formState.name}
+                      onChange={(e) => setFormState(s => ({ ...s, name: e.target.value }))}
+                      className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
+                      />
+                    </div>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                        Email *
+                      </label>
+                      <input
+                      type="email"
+                      required
+                        value={formState.email}
+                        onChange={(e) => setFormState(s => ({ ...s, email: e.target.value }))}
+                        className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                        Phone *
+                      </label>
+                      <input
+                      type="tel"
+                      required
+                        value={formState.phone}
+                        onChange={(e) => setFormState(s => ({ ...s, phone: e.target.value }))}
+                        className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                      Property Type
+                    </label>
+                    <select
+                      value={formState.propertyType}
+                      onChange={(e) => setFormState(s => ({ ...s, propertyType: e.target.value }))}
+                      className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none bg-transparent text-lg"
+                    >
+                      <option value="">Select Type</option>
+                      {PROPERTY_TYPES.map(pt => (
+                        <option key={pt.slug} value={pt.name}>{pt.name}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                      Message
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={formState.message}
+                      onChange={(e) => setFormState(s => ({ ...s, message: e.target.value }))}
+                      className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none resize-none text-lg"
+                      placeholder="Tell us about your exchange goals..."
+                    />
+                  </div>
+
+                  {TURNSTILE_SITE_KEY && <div ref={captchaRef} className="flex justify-center" />}
+
+                  <button
+                    type="submit"
+                    disabled={formStatus === "loading" || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
+                    className="w-full py-5 bg-navy text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy-light transition-all disabled:opacity-50"
+                  >
+                    {formStatus === "loading" ? "Sending..." : "Send Message"}
+                  </button>
+
+                  {formStatus === "success" && (
+                    <p className="text-center text-green-600 text-lg">Thank you! We&apos;ll be in touch within 24 hours.</p>
+                  )}
+                  {formStatus === "error" && (
+                    <p className="text-center text-red-600 text-lg">Something went wrong. Please try again.</p>
+                  )}
+                </div>
+                </motion.form>
+            </div>
             </div>
           </section>
-        </main>
 
-        <footer className="border-t border-slate-900/60 bg-slate-950">
-          <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
-            <div className="grid gap-12 md:grid-cols-4">
-              <div className="flex flex-col gap-4">
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">
-                  {BRAND_NAME}
-                </p>
-                <p className="text-sm leading-relaxed text-slate-400">
-                  Expert triple net lease property identification connecting Los Angeles CA investors with credit-rated corporate tenants and passive income opportunities.
-                </p>
-                <Link
-                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-slate-100 hover:text-white focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  <Phone className="h-4 w-4" aria-hidden="true" />
-                  {PHONE}
-                </Link>
-                {HAS_STAFFED_OFFICE ? (
-                  <div className="text-sm text-slate-400">
-                    <p>722 S Broadway</p>
-                    <p>Los Angeles, CA 90014</p>
-                    <p>Monday to Friday, 8:00 AM to 6:00 PM PT</p>
-                  </div>
-                ) : (
-                  <p className="text-sm text-slate-400">
-                    Dedicated NNN lease specialists with comprehensive Los Angeles CA market coverage.
-                  </p>
-                )}
+        {/* ==========================================
+            LOCATIONS CTA
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-cream">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
+            <AnimatedTitle 
+              overline="Service Areas" 
+              title="Serving All of Los Angeles" 
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap justify-center gap-4 mt-12"
+            >
+              {FEATURED_LOCATIONS.map((loc) => (
+                    <Link
+                  key={loc.slug}
+                  href={`/locations/${loc.slug}`}
+                  className="px-6 py-3 bg-white text-gray-600 hover:text-navy hover:shadow-lg transition-all text-sm tracking-wider border border-gray-100"
+                    >
+                  {loc.name}
+                    </Link>
+              ))}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="mt-12"
+            >
+                    <Link
+                href="/locations" 
+                className="inline-block px-12 py-4 border-2 border-navy text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy hover:text-white transition-all"
+                    >
+                View All Locations
+                    </Link>
+            </motion.div>
               </div>
-              <div>
-                <h3 className="font-serif text-lg text-white">Quick Links</h3>
-                <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                  <li>
-                    <Link
-                      href="/services/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/property-types/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      Property Types
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/locations/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      Locations
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/resources/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      Resources
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-serif text-lg text-white">Service Areas</h3>
-                <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                  {CA_CITIES_SLUGS.slice(0, 4).map((city) => (
-                    <li key={city.slug}>
-                      <Link
-                        href={`/locations/${city.slug}`}
-                        className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                      >
-                        {city.name}
-                      </Link>
-                    </li>
-                  ))}
-                  <li>
-                    <Link
-                      href="/locations/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      View full coverage
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-serif text-lg text-white">Compliance Resources</h3>
-                <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                  <li>
-                    <Link
-                      href="https://www.irs.gov/forms-pubs/about-form-8824"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      IRS Form 8824 Instructions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.irs.gov/tax-professionals/like-kind-exchanges-under-irc-code-section-1031"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      IRS Like-Kind Exchanges Overview
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.ftb.ca.gov/file/business/types/corporations/1031-like-kind-exchanges.html"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      California FTB 1031 Guidance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://ttc.lacounty.gov/documentary-transfer-tax/"
-                      className="hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                    >
-                      Los Angeles Documentary Transfer Tax
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-slate-900/60 py-6">
-              <div className="mx-auto flex flex-col gap-4 px-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between md:px-8">
-                <p>© {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.</p>
-                <p>
-                  Nothing on this site constitutes legal, tax, or investment advice. Engage qualified professionals before executing a 1031 exchange.
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
+        </section>
       </div>
     </>
   );
 }
-
-function FormField(props: {
-  label: string;
-  id: keyof FormState;
-  type: "text" | "email" | "tel" | "select" | "textarea";
-  value: string;
-  onChange: (value: string) => void;
-  autoComplete?: string;
-  error?: string;
-  required?: boolean;
-  helper?: string;
-  options?: string[];
-  rows?: number;
-}): JSX.Element {
-  const {
-    label,
-    id,
-    type,
-    value,
-    onChange,
-    autoComplete,
-    error,
-    required,
-    helper,
-    options,
-    rows,
-  } = props;
-  const inputClasses =
-    "mt-2 w-full rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-sm text-slate-200 placeholder:text-slate-500 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900";
-  const errorId = `${id}-error`;
-  const helperId = `${id}-helper`;
-  const describedBy = `${error ? errorId : ""}${helper ? ` ${helperId}` : ""}`.trim();
-
-  return (
-    <div className="flex flex-col">
-      <label htmlFor={id} className="text-sm font-medium text-slate-200">
-        {label}
-        {required ? <span style={{ color: ACCENT_COLOR }}>{" "}*</span> : null}
-      </label>
-      {type === "select" ? (
-        <select
-          id={id}
-          name={id}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          required={required}
-          className={inputClasses}
-          aria-invalid={Boolean(error)}
-          aria-describedby={describedBy || undefined}
-        >
-          <option value="">Select an option</option>
-          {options?.map(option => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
-      ) : type === "textarea" ? (
-        <textarea
-          id={id}
-          name={id}
-          value={value}
-          onChange={(event) => onChange(event.target.value)}
-          rows={rows || 4}
-          required={required}
-          autoComplete={autoComplete}
-          aria-invalid={Boolean(error)}
-          aria-describedby={describedBy || undefined}
-          className={`${inputClasses} resize-none`}
-        />
-      ) : (
-        <input
-          id={id}
-          name={id}
-          type={type}
-          value={value}
-          onChange={(event) => onChange(event.target.value)}
-          autoComplete={autoComplete}
-          required={required}
-          aria-invalid={Boolean(error)}
-          aria-describedby={describedBy || undefined}
-          className={inputClasses}
-        />
-      )}
-      {helper ? (
-        <p id={helperId} className="mt-2 text-xs text-slate-400">
-          {helper}
-        </p>
-      ) : null}
-      {error ? (
-        <p id={errorId} className="mt-2 text-xs text-red-400">
-          {error}
-        </p>
-      ) : null}
-    </div>
-  );
-}
-
-function InfoBadge(): JSX.Element {
-  return (
-    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-900/70">
-      <InfoIcon />
-    </div>
-  );
-}
-
-function InfoIcon(): JSX.Element {
-  return (
-    <Info
-      className="h-5 w-5"
-      style={{ color: ACCENT_COLOR }}
-      aria-hidden="true"
-    />
-  );
-}
-

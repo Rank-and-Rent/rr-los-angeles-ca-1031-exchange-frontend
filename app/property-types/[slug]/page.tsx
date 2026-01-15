@@ -3,13 +3,25 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft, TrendingUp, Clock, DollarSign, Building } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { inventoryBatch01, propertyTypesData, propertyTypesBatch01 } from "@/data";
 import { PHONE, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getPropertyTypeImagePath } from "@/lib/image-utils";
+
+// Custom Arrow Icons
+const ArrowRightIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+const ArrowLeftIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M19 12H5M12 19l-7-7 7-7" />
+  </svg>
+);
 
 interface PropertyTypePageProps {
   params: {
@@ -123,29 +135,29 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
         />
       </Head>
 
-      <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
+      <div className="min-h-screen bg-warm-white text-gray-900 pt-16 md:pt-20">
         {/* Breadcrumb */}
-        <div className="bg-slate-900 py-4">
+        <div className="bg-cream py-4 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <nav className="flex items-center space-x-2 text-sm text-slate-400">
-              <Link href="/" className="hover:text-slate-200 transition-colors">
+            <nav className="flex items-center space-x-2 text-sm text-gray-500">
+              <Link href="/" className="hover:text-navy transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/property-types" className="hover:text-slate-200 transition-colors">
+              <Link href="/property-types" className="hover:text-navy transition-colors">
                 Property Types
               </Link>
               <span>/</span>
-              <span className="text-slate-200">{propertyType.name}</span>
+              <span className="text-navy">{propertyType.name}</span>
             </nav>
           </div>
         </div>
 
         {/* Hero Section */}
         <section 
-          className="bg-slate-950 py-20 md:py-28 relative overflow-hidden"
+          className="bg-navy py-20 md:py-28 relative overflow-hidden"
           style={{
-            backgroundImage: `linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url(${getPropertyTypeImagePath(propertyType.slug)})`,
+            backgroundImage: `linear-gradient(rgba(26,42,58,0.85), rgba(26,42,58,0.85)), url(${getPropertyTypeImagePath(propertyType.slug)})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -161,30 +173,30 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
               <div className="flex items-center gap-4 mb-6">
                 <Link
                   href="/property-types"
-                  className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <ArrowLeft className="h-4 w-4" />
+                  <ArrowLeftIcon />
                   Back to Property Types
                 </Link>
               </div>
 
               <div className="flex items-center gap-3 mb-4">
-                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-medium rounded-full">
+                <span className="inline-block px-3 py-1 bg-white/20 text-white/90 text-xs font-medium rounded-full">
                   {propertyType.name}
                 </span>
               </div>
 
-              <h1 className="font-serif text-4xl md:text-5xl text-white mb-6">
+              <h1 className="font-serif text-4xl md:text-5xl text-white mb-6 font-light">
                 {inventoryData.title}
               </h1>
 
-              <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              <p className="text-lg text-white/80 leading-relaxed mb-8">
                 {inventoryData.copy}
               </p>
 
               {inventoryData.note && (
-                <div className="mb-8 p-4 bg-amber-500/10 border border-amber-500/20 rounded-lg">
-                  <p className="text-sm text-amber-300/90 italic">
+                <div className="mb-8 p-4 bg-white/10 border border-white/20 rounded-lg">
+                  <p className="text-sm text-white/80 italic">
                     {inventoryData.note}
                   </p>
                 </div>
@@ -193,14 +205,14 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={`/contact?project_type=${encodeURIComponent(propertyType.name)}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-500 text-slate-900 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+                  className="btn-primary"
                 >
                   Get Expert Guidance
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRightIcon />
                 </Link>
                 <a
                   href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
+                  className="btn-secondary"
                 >
                   Call {PHONE}
                 </a>
@@ -210,7 +222,7 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
         </section>
 
         {/* Property Type Details */}
-        <section className="bg-slate-900 py-20 md:py-28">
+        <section className="bg-warm-white py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="grid gap-12 lg:grid-cols-3">
               {/* Main Content */}
@@ -221,22 +233,22 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="font-serif text-2xl text-white mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl text-navy mb-6 font-light">
                     Why Invest in {propertyType.name} Properties for Your 1031 Exchange
                   </h2>
-                  <div className="prose prose-slate max-w-none">
-                    <p className="text-slate-300 leading-relaxed mb-6">
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {inventoryData.copy} Our Los Angeles CA team specializes in identifying {propertyType.name.toLowerCase()} 
                       replacement properties that meet IRS like-kind requirements while providing strong investment returns 
                       and operational benefits for 1031 exchange investors.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       When considering {propertyType.name.toLowerCase()} properties for your 1031 exchange, it&apos;s essential to 
                       evaluate factors such as location, tenant quality, lease terms, and market fundamentals. Our specialists 
                       conduct thorough due diligence to ensure replacement properties align with your investment objectives and 
                       comply with all IRS regulations.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       We work with qualified intermediaries, lenders, and local brokers throughout {PRIMARY_CITY} {PRIMARY_STATE_ABBR} 
                       to facilitate successful 1031 exchanges into {propertyType.name.toLowerCase()} assets. From initial property 
                       identification through closing, we provide comprehensive support to help you navigate the exchange process 
@@ -252,16 +264,16 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="font-serif text-2xl text-white mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl text-navy mb-6 font-light">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-6">
                     {faqs.map((faq, index) => (
-                      <div key={index} className="border-b border-slate-800 pb-6 last:border-b-0">
-                        <h3 className="font-serif text-lg text-white mb-3">
+                      <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                        <h3 className="font-serif text-lg text-navy mb-3">
                           {faq.question}
                         </h3>
-                        <p className="text-slate-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -278,9 +290,9 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="bg-slate-800 rounded-xl p-6"
+                  className="bg-cream rounded-xl p-6 border border-gray-200"
                 >
-                  <h3 className="font-serif text-lg text-white mb-4">
+                  <h3 className="font-serif text-lg text-navy mb-4">
                     Other Property Types
                   </h3>
 
@@ -301,12 +313,12 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
                         <Link
                           key={relatedType.type}
                           href={`/property-types/${relatedType.route}`}
-                          className="block p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900/80 transition-colors group"
+                          className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow group border border-gray-100"
                         >
-                          <h4 className="font-medium text-slate-200 group-hover:text-white transition-colors mb-1">
+                          <h4 className="font-medium text-navy group-hover:text-navy-dark transition-colors mb-1">
                             {relatedType.title}
                           </h4>
-                          <p className="text-sm text-slate-400 leading-relaxed">
+                          <p className="text-sm text-gray-500 leading-relaxed">
                             {relatedType.copy}
                           </p>
                         </Link>
@@ -321,29 +333,29 @@ export default function PropertyTypePage({ params }: PropertyTypePageProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-amber-500/20 rounded-xl p-6"
+                  className="bg-navy rounded-xl p-6"
                 >
                   <h3 className="font-serif text-lg text-white mb-3">
                     Ready to Explore {propertyType.name} Opportunities?
                   </h3>
-                  <p className="text-slate-300 text-sm mb-4">
+                  <p className="text-white/80 text-sm mb-4">
                     Contact our Los Angeles CA specialists for personalized {propertyType.name.toLowerCase()} property recommendations.
                   </p>
                   <Link
                     href={`/contact?project_type=${encodeURIComponent(propertyType.name)}`}
-                    className="inline-flex items-center gap-2 w-full px-4 py-3 bg-amber-500 text-slate-900 rounded-lg font-medium hover:bg-amber-600 transition-colors justify-center"
+                    className="inline-flex items-center gap-2 w-full px-4 py-3 bg-white text-navy rounded-full font-medium hover:bg-gray-100 transition-colors justify-center"
                   >
                     Schedule Consultation
-                    <ArrowRight className="h-4 w-4" />
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </motion.div>
               </div>
             </div>
           </div>
         </section>
-
       </div>
     </>
   );
 }
-

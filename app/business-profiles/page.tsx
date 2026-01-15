@@ -1,6 +1,23 @@
 "use client";
 
 import { useState, useMemo } from "react";
+
+interface BusinessProfileData {
+  title: string;
+  description: string;
+  content: string;
+  benefits: string[];
+  marketData: {
+    averageCapRate: string;
+    averageLeaseTerm: string;
+    typicalInvestment: string;
+    tenantTypes: string[];
+  };
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Filter } from "lucide-react";
@@ -27,7 +44,7 @@ export default function BusinessProfilesPage() {
   };
 
   const searchItems = businessProfilesData.map(profile => {
-    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01];
+    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
     return {
       title: profile.name,
       slug: profile.route,
@@ -69,7 +86,7 @@ export default function BusinessProfilesPage() {
                   "item": {
                     "@type": "Product",
                     "name": profile.name,
-                    "description": businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01]?.description,
+                    "description": (businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData)?.description,
                     "category": "Single Tenant Property"
                   }
                 }))
@@ -133,7 +150,7 @@ export default function BusinessProfilesPage() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {filteredBusinessProfiles.map((profile, index) => {
-                    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01];
+                    const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
                     return (
                       <motion.div
                         key={profile.slug}

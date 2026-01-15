@@ -1,12 +1,63 @@
 "use client";
 
-// useState removed - not used in this component
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft, Calendar, Clock, User, Share2, Tag } from "lucide-react";
 import Head from "next/head";
 import { BRAND_NAME } from "@/lib/constants";
 import { notFound } from "next/navigation";
+
+// Custom Icons
+const ArrowRightIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+const ArrowLeftIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M19 12H5M12 19l-7-7 7-7" />
+  </svg>
+);
+
+const CalendarIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12,6 12,12 16,14" />
+  </svg>
+);
+
+const UserIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </svg>
+);
+
+const ShareIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="18" cy="5" r="3" />
+    <circle cx="6" cy="12" r="3" />
+    <circle cx="18" cy="19" r="3" />
+    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+  </svg>
+);
+
+const TagIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+    <line x1="7" y1="7" x2="7.01" y2="7" />
+  </svg>
+);
 
 interface Article {
   _id: string;
@@ -203,20 +254,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         )}
       </Head>
 
-      <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
+      <div className="min-h-screen bg-warm-white text-gray-900 pt-16 md:pt-20">
         {/* Breadcrumb */}
-        <div className="bg-slate-900 py-4">
+        <div className="bg-cream py-4 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <nav className="flex items-center space-x-2 text-sm text-slate-400">
+            <nav className="flex items-center space-x-2 text-sm text-gray-500">
               {breadcrumbItems.map((item, index) => (
                 <div key={index} className="flex items-center">
                   {index > 0 && <span className="mx-2">/</span>}
                   {item.href ? (
-                    <Link href={item.href} className="hover:text-slate-200 transition-colors">
+                    <Link href={item.href} className="hover:text-navy transition-colors">
                       {item.label}
                     </Link>
                   ) : (
-                    <span className="text-slate-200">{item.label}</span>
+                    <span className="text-navy">{item.label}</span>
                   )}
                 </div>
               ))}
@@ -225,7 +276,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* Article Header */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20 bg-warm-white">
           <div className="max-w-4xl mx-auto px-6 md:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -238,7 +289,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   <Link
                     key={category.title}
                     href={`/blog?category=${encodeURIComponent(category.title)}`}
-                    className="px-3 py-1 bg-amber-500/10 text-amber-400 text-sm rounded-full hover:bg-amber-500/20 transition-colors"
+                    className="px-3 py-1 bg-navy/10 text-navy text-sm rounded-full hover:bg-navy/20 transition-colors"
                   >
                     {category.title}
                   </Link>
@@ -246,33 +297,33 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Title */}
-              <h1 className="font-serif text-3xl md:text-4xl text-white mb-6 leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl text-navy mb-6 leading-tight font-light">
                 {article.title}
               </h1>
 
               {/* Excerpt */}
-              <p className="text-xl text-slate-300 leading-relaxed mb-8">
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {article.excerpt}
               </p>
 
               {/* Meta */}
-              <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400 border-b border-slate-800 pb-8">
+              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-b border-gray-200 pb-8">
                 <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
+                  <UserIcon />
                   <span>{article.author.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
+                  <CalendarIcon />
                   <span>{formatDate(article.publishedAt)}</span>
                 </div>
                 {article.readingTime && (
                   <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
+                    <ClockIcon />
                     <span>{article.readingTime} min read</span>
                   </div>
                 )}
-                <button className="flex items-center gap-2 hover:text-slate-200 transition-colors">
-                  <Share2 className="h-4 w-4" />
+                <button className="flex items-center gap-2 hover:text-navy transition-colors">
+                  <ShareIcon />
                   <span>Share</span>
                 </button>
               </div>
@@ -291,12 +342,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Featured Image Placeholder */}
               {article.featuredImage && (
                 <div className="mb-8">
-                  <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg flex items-center justify-center">
-                    <div className="text-slate-500 text-center">
+                  <div className="aspect-video bg-gradient-to-br from-cream to-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
+                    <div className="text-gray-400 text-center">
                       <div className="text-lg mb-2">📷</div>
                       <p className="text-sm">{article.featuredImage.alt}</p>
                       {article.featuredImage.caption && (
-                        <p className="text-xs mt-2 text-slate-400">{article.featuredImage.caption}</p>
+                        <p className="text-xs mt-2 text-gray-500">{article.featuredImage.caption}</p>
                       )}
                     </div>
                   </div>
@@ -305,20 +356,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Content */}
               <div
-                className="prose prose-lg prose-invert max-w-none"
+                className="prose prose-lg max-w-none prose-headings:text-navy prose-headings:font-serif prose-headings:font-light prose-p:text-gray-600 prose-li:text-gray-600"
                 dangerouslySetInnerHTML={{ __html: article.content || '<p>Article content coming soon...</p>' }}
               />
 
               {/* Tags */}
               {article.tags && article.tags.length > 0 && (
-                <div className="mt-12 pt-8 border-t border-slate-800">
-                  <div className="flex flex-wrap gap-2">
-                    <Tag className="h-4 w-4 text-slate-400 mt-1" />
+                <div className="mt-12 pt-8 border-t border-gray-200">
+                  <div className="flex flex-wrap gap-2 items-center">
+                    <TagIcon />
                     {article.tags.map((tag) => (
                       <Link
                         key={tag}
                         href={`/blog?tag=${encodeURIComponent(tag)}`}
-                        className="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-full hover:bg-slate-700 transition-colors"
+                        className="px-3 py-1 bg-cream text-gray-600 text-sm rounded-full hover:bg-gray-200 transition-colors border border-gray-200"
                       >
                         #{tag}
                       </Link>
@@ -337,22 +388,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-amber-500/10 to-amber-600/10 border-y border-slate-800 py-12 md:py-16"
+            className="bg-navy py-12 md:py-16"
           >
             <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-              <h2 className="font-serif text-2xl text-white mb-4">
+              <h2 className="font-serif text-2xl text-white mb-4 font-light">
                 {article.ctaHeader || "Ready to get started?"}
               </h2>
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-white/80 mb-8 max-w-2xl mx-auto">
                 Our team specializes in Los Angeles CA 1031 exchanges and can help you navigate
                 the complexities of tax-deferred property transactions.
               </p>
               <Link
                 href={article.ctaButtonLink || "/contact"}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-slate-900 rounded-lg font-semibold hover:bg-amber-600 transition-colors shadow-lg"
+                className="btn-primary"
               >
                 {article.ctaButtonText || "Schedule Consultation"}
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRightIcon />
               </Link>
             </div>
           </motion.section>
@@ -360,7 +411,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <section className="py-12 md:py-20">
+          <section className="py-12 md:py-20 bg-cream">
             <div className="max-w-7xl mx-auto px-6 md:px-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -368,23 +419,23 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="font-serif text-2xl text-white mb-8">Related Articles</h2>
+                <h2 className="font-serif text-2xl text-navy mb-8 font-light">Related Articles</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {relatedArticles.map((relatedArticle) => (
                     <Link
                       key={relatedArticle._id}
                       href={`/blog/${relatedArticle.slug.current}`}
-                      className="block bg-slate-900 rounded-lg p-6 border border-slate-800 hover:border-slate-700 transition-colors group"
+                      className="block bg-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-shadow group"
                     >
-                      <h3 className="font-serif text-lg text-white mb-3 group-hover:text-amber-400 transition-colors">
+                      <h3 className="font-serif text-lg text-navy mb-3 group-hover:text-navy-dark transition-colors">
                         {relatedArticle.title}
                       </h3>
-                      <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
                         {relatedArticle.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-400">{formatDate(relatedArticle.publishedAt)}</span>
-                        <ArrowRight className="h-4 w-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                        <span className="text-sm text-gray-400">{formatDate(relatedArticle.publishedAt)}</span>
+                        <ArrowRightIcon className="h-4 w-4 text-navy group-hover:translate-x-1 transition-transform" />
                       </div>
                     </Link>
                   ))}
@@ -395,19 +446,19 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         )}
 
         {/* Navigation */}
-        <section className="border-t border-slate-800 py-8">
+        <section className="border-t border-gray-200 py-8 bg-warm-white">
           <div className="max-w-4xl mx-auto px-6 md:px-8">
             <div className="flex justify-between items-center">
               <Link
                 href="/blog"
-                className="flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors"
+                className="flex items-center gap-2 text-gray-500 hover:text-navy transition-colors"
               >
-                <ArrowLeft className="h-4 w-4" />
+                <ArrowLeftIcon />
                 Back to Blog
               </Link>
               <Link
                 href="/"
-                className="text-slate-400 hover:text-slate-200 transition-colors"
+                className="text-gray-500 hover:text-navy transition-colors"
               >
                 Home
               </Link>

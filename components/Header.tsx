@@ -5,112 +5,83 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  ChevronDown,
-  Phone,
-  Menu,
-  X,
-  ArrowRight,
-} from "lucide-react";
 import { PHONE, SERVICES, LOCATIONS, PROPERTY_TYPES } from "@/lib/constants";
+
+// SVG Icons
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+}
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
+function MenuIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  );
+}
+
+function CloseIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
 
 const Header = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const [isSticky, setIsSticky] = useState(false);
-  // Desktop dropdown states
+  const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const [propertiesOpen, setPropertiesOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
-  // Mobile menu states (separate from desktop)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
-  const [mobilePropertiesOpen, setMobilePropertiesOpen] = useState(false);
-  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  
   const servicesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
   const propertiesRef = useRef<HTMLDivElement>(null);
   const toolsRef = useRef<HTMLDivElement>(null);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
-  // On non-home pages, always use white text/logo
-  const shouldUseWhiteText = !isHomePage || isSticky;
+  const showDarkNav = isScrolled || !isHomePage;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 0);
+    const handleScroll = () => setIsScrolled(window.scrollY > 80);
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if (servicesRef.current && !servicesRef.current.contains(target)) setServicesOpen(false);
+      if (locationsRef.current && !locationsRef.current.contains(target)) setLocationsOpen(false);
+      if (propertiesRef.current && !propertiesRef.current.contains(target)) setPropertiesOpen(false);
+      if (toolsRef.current && !toolsRef.current.contains(target)) setToolsOpen(false);
     };
-
-    // Only handle click outside for desktop dropdowns (not mobile menu)
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Node;
-      const isMobile = window.innerWidth < 768; // md breakpoint
-      
-      // Don't handle click outside for mobile menu
-      if (isMobile && mobileMenuRef.current?.contains(target)) {
-        return;
-      }
-
-      // Desktop dropdown handlers
-      if (
-        servicesRef.current &&
-        !servicesRef.current.contains(target)
-      ) {
-        setServicesOpen(false);
-      }
-      if (
-        locationsRef.current &&
-        !locationsRef.current.contains(target)
-      ) {
-        setLocationsOpen(false);
-      }
-      if (
-        propertiesRef.current &&
-        !propertiesRef.current.contains(target)
-      ) {
-        setPropertiesOpen(false);
-      }
-      if (
-        toolsRef.current &&
-        !toolsRef.current.contains(target)
-      ) {
-        setToolsOpen(false);
-      }
-
-      // Close mobile menu if clicking outside
-      if (
-        mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(target) &&
-        isMobile
-      ) {
-        setMobileMenuOpen(false);
-        setMobileServicesOpen(false);
-        setMobileLocationsOpen(false);
-        setMobilePropertiesOpen(false);
-        setMobileToolsOpen(false);
-      }
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
         setServicesOpen(false);
         setLocationsOpen(false);
         setPropertiesOpen(false);
         setToolsOpen(false);
         setMobileMenuOpen(false);
-        setMobileServicesOpen(false);
-        setMobileLocationsOpen(false);
-        setMobilePropertiesOpen(false);
-        setMobileToolsOpen(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("keydown", handleEscape);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
@@ -118,84 +89,70 @@ const Header = () => {
     };
   }, []);
 
+  const closeAll = () => {
+    setServicesOpen(false);
+    setLocationsOpen(false);
+    setPropertiesOpen(false);
+    setToolsOpen(false);
+  };
+
+  const navLinkClass = showDarkNav 
+    ? "text-navy hover:text-navy/70 transition-colors" 
+    : "text-white/90 hover:text-white transition-colors";
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSticky || !isHomePage
-          ? "bg-slate-950/95 backdrop-blur-md border-b border-slate-800/50 shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      showDarkNav ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+    }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20 gap-4">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center flex-shrink-0 min-w-0"
-          >
+          <Link href="/" className="flex-shrink-0">
             <Image
               src="/1031-exchange-los-angeles-ca-logo.png"
               alt="1031 Exchange Los Angeles"
-              width={200}
-              height={48}
-              className={`h-12 w-auto max-w-[200px] transition-all duration-300 flex-shrink-0 ${shouldUseWhiteText ? 'brightness-0 invert' : ''}`}
+              width={180}
+              height={40}
+              priority
+              style={{ width: 'auto', height: 'auto', maxHeight: '40px' }}
+              className={`transition-all ${showDarkNav ? 'grayscale' : 'brightness-0 invert'}`}
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {/* Services Dropdown */}
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {/* Services */}
             <div className="relative" ref={servicesRef}>
               <button
-                onClick={() => {
-                  setServicesOpen(!servicesOpen);
-                  setLocationsOpen(false);
-                }}
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => {
-                  // Keep open for a brief moment to allow mouse to enter dropdown
-                  setTimeout(() => {
-                    if (!servicesRef.current?.matches(':hover')) {
-                      setServicesOpen(false);
-                    }
-                  }, 100);
-                }}
-                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
+                onClick={() => { closeAll(); setServicesOpen(!servicesOpen); }}
+                onMouseEnter={() => { closeAll(); setServicesOpen(true); }}
+                className={`flex items-center gap-1 px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}
               >
-                <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
+                Services
+                <ChevronDownIcon className="w-4 h-4" />
               </button>
-
               <AnimatePresence>
                 {servicesOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
-                    onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-100 shadow-xl p-4"
                   >
-                    <div className="space-y-4">
-                      {SERVICES.slice(0, 7).map((service) => (
-                        <Link
-                          key={service.slug}
-                          href={`/services/${service.slug}`}
-                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
-                        >
-                          {service.title}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-800">
+                    {SERVICES.slice(0, 8).map(s => (
                       <Link
-                        href="/services"
-                        className="text-sm text-white hover:text-white font-medium"
+                        key={s.slug}
+                        href={`/services/${s.slug}`}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-cream hover:text-navy transition-colors"
+                        onClick={() => setServicesOpen(false)}
                       >
-                        View all {SERVICES.length} services →
+                        {s.title}
+                      </Link>
+                    ))}
+                    <div className="border-t border-gray-100 mt-3 pt-3">
+                      <Link href="/services" className="block px-4 py-2 text-sm font-medium text-navy hover:text-navy/70">
+                        View all services →
                       </Link>
                     </div>
                   </motion.div>
@@ -203,58 +160,40 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            {/* Locations Dropdown */}
+            {/* Locations */}
             <div className="relative" ref={locationsRef}>
               <button
-                onClick={() => {
-                  setLocationsOpen(!locationsOpen);
-                  setServicesOpen(false);
-                  setPropertiesOpen(false);
-                }}
-                onMouseEnter={() => setLocationsOpen(true)}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!locationsRef.current?.matches(':hover')) {
-                      setLocationsOpen(false);
-                    }
-                  }, 100);
-                }}
-                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-                aria-expanded={locationsOpen}
-                aria-haspopup="true"
+                onClick={() => { closeAll(); setLocationsOpen(!locationsOpen); }}
+                onMouseEnter={() => { closeAll(); setLocationsOpen(true); }}
+                className={`flex items-center gap-1 px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}
               >
-                <span>Locations</span>
-                <ChevronDown className="h-4 w-4" />
+                Locations
+                <ChevronDownIcon className="w-4 h-4" />
               </button>
-
               <AnimatePresence>
                 {locationsOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
-                    onMouseEnter={() => setLocationsOpen(true)}
                     onMouseLeave={() => setLocationsOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 shadow-xl p-4"
                   >
-                    <div className="grid grid-cols-2 gap-4">
-                      {LOCATIONS.slice(0, 8).map((location) => (
+                    <div className="grid grid-cols-2 gap-1">
+                      {LOCATIONS.slice(0, 10).map(l => (
                         <Link
-                          key={location.slug}
-                          href={`/locations/${location.slug}`}
-                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-2 py-1 transition-colors"
+                          key={l.slug}
+                          href={`/locations/${l.slug}`}
+                          className="px-3 py-2 text-sm text-gray-700 hover:bg-cream hover:text-navy transition-colors"
+                          onClick={() => setLocationsOpen(false)}
                         >
-                          {location.name}
+                          {l.name}
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-6 pt-4 border-t border-slate-800">
-                      <Link
-                        href="/locations"
-                        className="text-sm text-white hover:text-white font-medium"
-                      >
-                        View all {LOCATIONS.length} locations →
+                    <div className="border-t border-gray-100 mt-3 pt-3">
+                      <Link href="/locations" className="block px-3 py-2 text-sm font-medium text-navy hover:text-navy/70">
+                        View all locations →
                       </Link>
                     </div>
                   </motion.div>
@@ -262,57 +201,37 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            {/* Properties Dropdown */}
+            {/* Properties */}
             <div className="relative" ref={propertiesRef}>
               <button
-                onClick={() => {
-                  setPropertiesOpen(!propertiesOpen);
-                  setServicesOpen(false);
-                  setLocationsOpen(false);
-                }}
-                onMouseEnter={() => setPropertiesOpen(true)}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!propertiesRef.current?.matches(':hover')) {
-                      setPropertiesOpen(false);
-                    }
-                  }, 100);
-                }}
-                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-                aria-expanded={propertiesOpen}
-                aria-haspopup="true"
+                onClick={() => { closeAll(); setPropertiesOpen(!propertiesOpen); }}
+                onMouseEnter={() => { closeAll(); setPropertiesOpen(true); }}
+                className={`flex items-center gap-1 px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}
               >
-                <span>Properties</span>
-                <ChevronDown className="h-4 w-4" />
+                Properties
+                <ChevronDownIcon className="w-4 h-4" />
               </button>
-
               <AnimatePresence>
                 {propertiesOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
-                    onMouseEnter={() => setPropertiesOpen(true)}
                     onMouseLeave={() => setPropertiesOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 shadow-xl p-4"
                   >
-                    <div className="space-y-4">
-                      {PROPERTY_TYPES.map((propertyType) => (
-                        <Link
-                          key={propertyType.slug}
-                          href={`/property-types#${propertyType.slug}`}
-                          className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
-                        >
-                          {propertyType.name}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-800">
+                    {PROPERTY_TYPES.map(pt => (
                       <Link
-                        href="/properties"
-                        className="text-sm text-white hover:text-white font-medium"
+                        key={pt.slug}
+                        href={`/property-types/${pt.slug}`}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-cream hover:text-navy transition-colors"
+                        onClick={() => setPropertiesOpen(false)}
                       >
+                        {pt.name}
+                      </Link>
+                    ))}
+                    <div className="border-t border-gray-100 mt-3 pt-3">
+                      <Link href="/property-types" className="block px-4 py-2 text-sm font-medium text-navy hover:text-navy/70">
                         View all properties →
                       </Link>
                     </div>
@@ -321,94 +240,39 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            {/* Business Profiles Link */}
-            <Link
-              href="/business-profiles"
-              className={`transition-colors ${
-                shouldUseWhiteText
-                  ? 'text-white hover:text-white'
-                  : 'text-black hover:text-black'
-              }`}
-            >
-              Business Profiles
-            </Link>
-
-            {/* Tools Dropdown */}
+            {/* Tools */}
             <div className="relative" ref={toolsRef}>
               <button
-                onClick={() => {
-                  setToolsOpen(!toolsOpen);
-                  setServicesOpen(false);
-                  setLocationsOpen(false);
-                  setPropertiesOpen(false);
-                }}
-                onMouseEnter={() => setToolsOpen(true)}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!toolsRef.current?.matches(':hover')) {
-                      setToolsOpen(false);
-                    }
-                  }, 100);
-                }}
-                className={`flex items-center space-x-1 ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-                aria-expanded={toolsOpen}
-                aria-haspopup="true"
+                onClick={() => { closeAll(); setToolsOpen(!toolsOpen); }}
+                onMouseEnter={() => { closeAll(); setToolsOpen(true); }}
+                className={`flex items-center gap-1 px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}
               >
-                <span>Tools</span>
-                <ChevronDown className="h-4 w-4" />
+                Tools
+                <ChevronDownIcon className="w-4 h-4" />
               </button>
-
               <AnimatePresence>
                 {toolsOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6"
-                    onMouseEnter={() => setToolsOpen(true)}
                     onMouseLeave={() => setToolsOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-100 shadow-xl p-4"
                   >
-                    <div className="space-y-4">
-                      <Link
-                        href="/tools/boot-calculator"
-                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
-                        onClick={() => setToolsOpen(false)}
-                      >
-                        <div className="font-medium">Boot Calculator</div>
-                        <div className="text-xs text-slate-400 mt-1">
-                          Calculate boot and tax implications
-                        </div>
+                    <Link href="/tools/boot-calculator" className="block px-4 py-3 hover:bg-cream transition-colors" onClick={() => setToolsOpen(false)}>
+                      <p className="text-sm font-medium text-navy">Boot Calculator</p>
+                      <p className="text-xs text-gray-500 mt-0.5">Calculate boot and tax implications</p>
                       </Link>
-
-                      <Link
-                        href="/tools/exchange-cost-estimator"
-                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
-                        onClick={() => setToolsOpen(false)}
-                      >
-                        <div className="font-medium">Exchange Cost Estimator</div>
-                        <div className="text-xs text-slate-400 mt-1">
-                          Estimate QI fees and closing costs
-                        </div>
+                    <Link href="/tools/exchange-cost-estimator" className="block px-4 py-3 hover:bg-cream transition-colors" onClick={() => setToolsOpen(false)}>
+                      <p className="text-sm font-medium text-navy">Cost Estimator</p>
+                      <p className="text-xs text-gray-500 mt-0.5">Estimate QI fees and closing costs</p>
                       </Link>
-
-                      <Link
-                        href="/tools/identification-rules-checker"
-                        className="block text-sm text-white hover:text-white hover:bg-slate-800/50 rounded px-3 py-2 transition-colors"
-                        onClick={() => setToolsOpen(false)}
-                      >
-                        <div className="font-medium">Identification Rules Checker</div>
-                        <div className="text-xs text-slate-400 mt-1">
-                          Validate against IRS identification rules
-                        </div>
+                    <Link href="/tools/identification-rules-checker" className="block px-4 py-3 hover:bg-cream transition-colors" onClick={() => setToolsOpen(false)}>
+                      <p className="text-sm font-medium text-navy">Rules Checker</p>
+                      <p className="text-xs text-gray-500 mt-0.5">Validate against IRS rules</p>
                       </Link>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-800">
-                      <Link
-                        href="/tools"
-                        className="text-sm text-white hover:text-white font-medium"
-                        onClick={() => setToolsOpen(false)}
-                      >
+                    <div className="border-t border-gray-100 mt-3 pt-3">
+                      <Link href="/tools" className="block px-4 py-2 text-sm font-medium text-navy hover:text-navy/70">
                         View all tools →
                       </Link>
                     </div>
@@ -417,52 +281,31 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            <Link
-              href="/about"
-              className={`${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-            >
+            <Link href="/about" className={`px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}>
               About
             </Link>
-
-            <Link
-              href="/blog"
-              className={`${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-            >
+            <Link href="/blog" className={`px-4 py-2 font-sans text-sm tracking-wide ${navLinkClass}`}>
               Blog
             </Link>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 hover:from-amber-600 hover:to-amber-700 transition-colors shadow-lg"
-            >
+            {/* CTA */}
+            <div className="flex items-center ml-6 gap-4">
+              <a href={`tel:${PHONE.replace(/\D/g, "")}`} className={`flex items-center gap-2 font-sans text-sm ${navLinkClass}`}>
+                <PhoneIcon className="w-4 h-4" />
+                <span className="hidden xl:inline">{PHONE}</span>
+              </a>
+              <Link href="/contact" className="px-6 py-2.5 bg-navy hover:bg-navy-light text-white font-sans text-sm tracking-wider transition-colors">
               Contact
-              <ArrowRight className="h-4 w-4" />
             </Link>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            type="button"
-            onClick={() => {
-              const newState = !mobileMenuOpen;
-              setMobileMenuOpen(newState);
-              // Close all mobile dropdowns when closing the menu
-              if (!newState) {
-                setMobileServicesOpen(false);
-                setMobileLocationsOpen(false);
-                setMobilePropertiesOpen(false);
-                setMobileToolsOpen(false);
-              }
-            }}
-            className={`md:hidden ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} transition-colors`}
-            aria-expanded={mobileMenuOpen}
-            aria-label="Toggle mobile menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className={`lg:hidden p-2 ${showDarkNav ? 'text-navy' : 'text-white'}`}
           >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {mobileMenuOpen ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
           </button>
         </div>
 
@@ -470,301 +313,26 @@ const Header = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              ref={mobileMenuRef}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden border-t border-slate-800/50"
+              className="lg:hidden bg-white border-t border-gray-100"
             >
-              <div className="py-6 space-y-6">
-                {/* Services Mobile */}
-                <div>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      const newState = !mobileServicesOpen;
-                      setMobileServicesOpen(newState);
-                      // Close other dropdowns when opening this one
-                      if (newState) {
-                        setMobileLocationsOpen(false);
-                        setMobilePropertiesOpen(false);
-                        setMobileToolsOpen(false);
-                      }
-                    }}
-                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={mobileServicesOpen}
-                  >
-                    <span className="font-medium">Services</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  <AnimatePresence>
-                    {mobileServicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="mt-4 space-y-4 overflow-hidden"
-                      >
-                        <div className="space-y-3">
-                          {SERVICES.slice(0, 7).map((service) => (
-                            <Link
-                              key={service.slug}
-                              href={`/services/${service.slug}`}
-                              className="block text-sm text-white hover:text-white py-2"
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setMobileServicesOpen(false);
-                              }}
-                            >
-                              {service.title}
-                            </Link>
-                          ))}
-                        </div>
-                        <Link
-                          href="/services"
-                          className="block text-sm text-white font-medium pt-2"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileServicesOpen(false);
-                          }}
-                        >
-                          View all {SERVICES.length} services →
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Locations Mobile */}
-                <div>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      const newState = !mobileLocationsOpen;
-                      setMobileLocationsOpen(newState);
-                      // Close other dropdowns when opening this one
-                      if (newState) {
-                        setMobileServicesOpen(false);
-                        setMobilePropertiesOpen(false);
-                        setMobileToolsOpen(false);
-                      }
-                    }}
-                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={mobileLocationsOpen}
-                  >
-                    <span className="font-medium">Locations</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileLocationsOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  <AnimatePresence>
-                    {mobileLocationsOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="mt-4 grid grid-cols-2 gap-2 overflow-hidden"
-                      >
-                        {LOCATIONS.map((location) => (
-                          <Link
-                            key={location.slug}
-                            href={`/locations/${location.slug}`}
-                            className="block text-sm text-white hover:text-white py-1"
-                            onClick={() => {
-                              setMobileMenuOpen(false);
-                              setMobileLocationsOpen(false);
-                            }}
-                          >
-                            {location.name}
-                          </Link>
-                        ))}
-                        <Link
-                          href="/locations"
-                          className="block text-sm text-white font-medium pt-2 col-span-2"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileLocationsOpen(false);
-                          }}
-                        >
-                          View all {LOCATIONS.length} locations →
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Properties Mobile */}
-                <div>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      const newState = !mobilePropertiesOpen;
-                      setMobilePropertiesOpen(newState);
-                      // Close other dropdowns when opening this one
-                      if (newState) {
-                        setMobileServicesOpen(false);
-                        setMobileLocationsOpen(false);
-                        setMobileToolsOpen(false);
-                      }
-                    }}
-                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={mobilePropertiesOpen}
-                  >
-                    <span className="font-medium">Properties</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobilePropertiesOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  <AnimatePresence>
-                    {mobilePropertiesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="mt-4 space-y-2 overflow-hidden"
-                      >
-                        {PROPERTY_TYPES.map((propertyType) => (
-                          <Link
-                            key={propertyType.slug}
-                            href={`/property-types#${propertyType.slug}`}
-                            className="block text-sm text-white hover:text-white py-1"
-                            onClick={() => {
-                              setMobileMenuOpen(false);
-                              setMobilePropertiesOpen(false);
-                            }}
-                          >
-                            {propertyType.name}
-                          </Link>
-                        ))}
-                        <Link
-                          href="/properties"
-                          className="block text-sm text-white font-medium pt-2"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobilePropertiesOpen(false);
-                          }}
-                        >
-                          View all properties →
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Tools Mobile */}
-                <div>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      const newState = !mobileToolsOpen;
-                      setMobileToolsOpen(newState);
-                      // Close other dropdowns when opening this one
-                      if (newState) {
-                        setMobileServicesOpen(false);
-                        setMobileLocationsOpen(false);
-                        setMobilePropertiesOpen(false);
-                      }
-                    }}
-                    className={`flex items-center justify-between w-full text-left ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'}`}
-                    aria-expanded={mobileToolsOpen}
-                  >
-                    <span className="font-medium">Tools</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileToolsOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  <AnimatePresence>
-                    {mobileToolsOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="mt-4 space-y-2 overflow-hidden"
-                      >
-                        <Link
-                          href="/tools/boot-calculator"
-                          className="block text-sm text-white hover:text-white py-1"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileToolsOpen(false);
-                          }}
-                        >
-                          Boot Calculator
-                        </Link>
-                        <Link
-                          href="/tools/exchange-cost-estimator"
-                          className="block text-sm text-white hover:text-white py-1"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileToolsOpen(false);
-                          }}
-                        >
-                          Exchange Cost Estimator
-                        </Link>
-                        <Link
-                          href="/tools/identification-rules-checker"
-                          className="block text-sm text-white hover:text-white py-1"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileToolsOpen(false);
-                          }}
-                        >
-                          Identification Rules Checker
-                        </Link>
-                        <Link
-                          href="/tools"
-                          className="block text-sm text-white font-medium pt-2"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setMobileToolsOpen(false);
-                          }}
-                        >
-                          View all tools →
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Link
-                  href="/business-profiles"
-                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Business Profiles
-                </Link>
-
-                <Link
-                  href="/about"
-                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
-
-                <Link
-                  href="/blog"
-                  className={`block ${shouldUseWhiteText ? 'text-white hover:text-white' : 'text-black hover:text-black'} font-medium`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-
-                <div className="pt-4 border-t border-slate-800">
-                  <a
-                    href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                    className="inline-flex items-center gap-2 text-white hover:text-white font-medium"
-                  >
-                    <Phone className="h-4 w-4" />
+              <div className="py-6 space-y-4">
+                <Link href="/services" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+                <Link href="/locations" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>Locations</Link>
+                <Link href="/property-types" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>Properties</Link>
+                <Link href="/tools" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>Tools</Link>
+                <Link href="/about" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link href="/blog" className="block px-4 py-2 text-navy font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+                <div className="px-4 pt-4 border-t border-gray-100">
+                  <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="flex items-center gap-3 text-navy font-medium mb-4">
+                    <PhoneIcon className="w-5 h-5" />
                     {PHONE}
                   </a>
+                  <Link href="/contact" className="block w-full py-3 bg-navy text-white text-center font-sans text-sm tracking-wider" onClick={() => setMobileMenuOpen(false)}>
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </motion.div>

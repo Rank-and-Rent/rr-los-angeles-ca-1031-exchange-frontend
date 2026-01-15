@@ -1,15 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calculator, Receipt, Target, ArrowRight, Wrench } from 'lucide-react'
-import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: '1031 Exchange Tools | Free Calculators for Los Angeles CA Investors',
-  description: 'Free educational tools for 1031 exchange investors in Los Angeles CA. Calculate boot, estimate costs, and validate identification rules. Professional guidance for tax-deferred real estate exchanges.',
-  keywords: '1031 exchange tools, boot calculator, exchange cost estimator, identification rules checker, Los Angeles CA, real estate exchange calculators',
+  description: 'Free educational tools for 1031 exchange investors in Los Angeles CA. Calculate boot, estimate costs, and validate identification rules.',
   openGraph: {
     title: '1031 Exchange Tools | Free Calculators for Los Angeles CA Investors',
-    description: 'Free educational tools for 1031 exchange investors in Los Angeles CA. Calculate boot, estimate costs, and validate identification rules.',
+    description: 'Free educational tools for 1031 exchange investors in Los Angeles CA.',
     type: 'website',
     url: 'https://www.1031exchangelosangeles.com/tools',
   },
@@ -18,164 +15,203 @@ export const metadata: Metadata = {
   },
 }
 
+// Custom SVG Icons
+function CalculatorIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <line x1="8" y1="6" x2="16" y2="6" />
+      <line x1="8" y1="10" x2="8" y2="10" />
+      <line x1="12" y1="10" x2="12" y2="10" />
+      <line x1="16" y1="10" x2="16" y2="10" />
+      <line x1="8" y1="14" x2="8" y2="14" />
+      <line x1="12" y1="14" x2="12" y2="14" />
+      <line x1="16" y1="14" x2="16" y2="14" />
+      <line x1="8" y1="18" x2="8" y2="18" />
+      <line x1="12" y1="18" x2="12" y2="18" />
+      <line x1="16" y1="18" x2="16" y2="18" />
+    </svg>
+  );
+}
+
+function ReceiptIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z" />
+      <line x1="8" y1="6" x2="16" y2="6" />
+      <line x1="8" y1="10" x2="16" y2="10" />
+      <line x1="8" y1="14" x2="12" y2="14" />
+    </svg>
+  );
+}
+
+function TargetIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  );
+}
+
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
 const tools = [
   {
     slug: 'boot-calculator',
     title: 'Boot Calculator',
     description: 'Calculate boot (cash received, mortgage relief, non-like-kind property) and estimate tax implications for your 1031 exchange.',
-    icon: Calculator,
+    icon: CalculatorIcon,
     features: ['Cash boot calculation', 'Mortgage boot analysis', 'Property boot assessment', 'Tax impact estimates'],
-    color: 'from-blue-500 to-blue-600'
   },
   {
     slug: 'exchange-cost-estimator',
     title: 'Exchange Cost Estimator',
     description: 'Estimate Qualified Intermediary fees, escrow costs, title insurance, and recording fees for Los Angeles County exchanges.',
-    icon: Receipt,
+    icon: ReceiptIcon,
     features: ['QI fee calculations', 'Title insurance costs', 'Escrow fee estimates', 'Recording fee breakdown'],
-    color: 'from-green-500 to-green-600'
   },
   {
     slug: 'identification-rules-checker',
     title: 'Identification Rules Checker',
     description: 'Validate your replacement property identification against IRS rules - Three Property, 200%, and 95% Rules.',
-    icon: Target,
+    icon: TargetIcon,
     features: ['Three Property Rule validation', '200% Rule compliance check', '95% Rule guidance', 'Rule comparison analysis'],
-    color: 'from-purple-500 to-purple-600'
   }
 ]
 
 export default function ToolsPage() {
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Tools' },
-  ]
-
   return (
-    <>
-      <Breadcrumbs items={breadcrumbItems} />
-
-      <div className="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-20">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Wrench className="h-8 w-8 text-[#C9A227]" />
-            <h1 className="font-serif text-4xl font-bold text-[#0B3C5D]">
-              1031 Exchange Tools
+    <div className="bg-white pt-20">
+      {/* Hero Section */}
+      <section className="py-24 md:py-32 bg-navy">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="font-serif text-xl text-white/60 italic mb-6">
+              Free Resources
+            </p>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-light tracking-wide mb-8">
+              Exchange Tools
             </h1>
+            <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+              Free educational calculators and validators to help Los Angeles CA investors navigate
+              the complexities of 1031 exchanges.
+            </p>
           </div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Free educational calculators and validators to help Los Angeles CA investors navigate
-            the complexities of 1031 exchanges. These tools provide estimates and guidance for
-            planning successful tax-deferred property exchanges.
-          </p>
         </div>
+      </section>
 
-        {/* Tools Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-          {tools.map((tool) => (
-            <div
-              key={tool.slug}
-              className="group"
-            >
-              <Link href={`/tools/${tool.slug}`} className="block">
-                <div className="h-full rounded-2xl border border-gray-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                  {/* Header */}
-                  <div className={`rounded-t-2xl bg-gradient-to-r ${tool.color} p-6 text-white`}>
-                    <tool.icon className="h-12 w-12 mb-4 opacity-90" />
-                    <h3 className="text-2xl font-bold mb-2">{tool.title}</h3>
-                    <p className="text-white/90 leading-relaxed">{tool.description}</p>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <h4 className="font-semibold text-[#0B3C5D] mb-4">Features:</h4>
-                    <ul className="space-y-2 mb-6">
-                      {tool.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-[#C9A227] rounded-full flex-shrink-0"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-[#0B3C5D]">Use Tool</span>
-                      <ArrowRight className="h-5 w-5 text-[#C9A227] group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
+      {/* Tools Grid */}
+      <section className="py-24 md:py-32 bg-cream">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {tools.map((tool) => (
+              <Link
+                key={tool.slug}
+                href={`/tools/${tool.slug}`}
+                className="block bg-white p-10 group hover:shadow-xl transition-all duration-500"
+              >
+                <div className="w-16 h-16 border border-navy/20 flex items-center justify-center mb-6">
+                  <tool.icon className="h-8 w-8 text-navy" />
                 </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+                
+                <h3 className="font-serif text-2xl text-navy mb-4 group-hover:text-navy/80 transition-colors">
+                  {tool.title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {tool.description}
+                </p>
+                
+                <div className="mb-8">
+                  <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gray-400 mb-4">Features</h4>
+                  <ul className="space-y-2">
+                    {tool.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-sm text-gray-600">
+                        <div className="w-1.5 h-1.5 bg-navy flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-        {/* Educational Section */}
-        <div className="bg-gradient-to-r from-[#0B3C5D] to-[#16486C] rounded-2xl p-8 md:p-12 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl font-bold mb-6">
+                <span className="inline-flex items-center gap-2 font-sans text-sm tracking-wider text-navy group-hover:gap-4 transition-all">
+                  Use Tool
+                  <ArrowRightIcon className="w-4 h-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Guidance Section */}
+      <section className="py-24 md:py-32 bg-navy">
+        <div className="max-w-5xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-16">
+            <p className="font-serif text-xl text-white/60 italic mb-4">Important Notice</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8">
               Professional Guidance Recommended
             </h2>
-            <p className="text-lg text-white/90 mb-8 leading-relaxed">
+            <p className="text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
               While these educational tools provide helpful estimates and validations, 1031 exchanges
               are complex transactions with strict IRS requirements. Every exchange is unique and
               requires personalized professional advice.
             </p>
+          </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="font-semibold mb-3">Qualified Intermediary</h3>
-                <p className="text-sm text-white/80">
-                  Work with a licensed QI firm to handle exchange documentation and ensure compliance.
-                </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { title: 'Qualified Intermediary', text: 'Work with a licensed QI firm to handle exchange documentation and ensure compliance.' },
+              { title: 'Tax Advisor', text: 'Consult a CPA or tax attorney familiar with 1031 exchange rules and California regulations.' },
+              { title: 'Real Estate Professional', text: 'Partner with experienced brokers who understand exchange requirements and timelines.' }
+            ].map((item) => (
+              <div key={item.title} className="bg-white/10 p-8">
+                <h3 className="font-serif text-xl text-white mb-4">{item.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
               </div>
-
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="font-semibold mb-3">Tax Advisor</h3>
-                <p className="text-sm text-white/80">
-                  Consult a CPA or tax attorney familiar with 1031 exchange rules and California regulations.
-                </p>
-              </div>
-
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="font-semibold mb-3">Real Estate Professional</h3>
-                <p className="text-sm text-white/80">
-                  Partner with experienced brokers who understand exchange requirements and timelines.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <h2 className="font-serif text-3xl font-bold text-[#0B3C5D] mb-4">
-              Need Personal Guidance?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Our team specializes in Los Angeles CA 1031 exchanges and can help you navigate
-              the complexities of tax-deferred property transactions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[#C9A227] to-[#B8951F] text-white hover:from-[#B8951F] hover:to-[#A67C1D] transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Schedule Consultation
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-semibold border-2 border-[#0B3C5D] text-[#0B3C5D] hover:bg-[#0B3C5D] hover:text-white transition-all duration-300"
-              >
-                View Services
-              </Link>
-            </div>
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-cream">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
+          <p className="font-sans text-sm tracking-[0.4em] uppercase text-gray-400 mb-6">
+            Need Personalized Help?
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-navy font-light mb-8">
+            Request a Consultation
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Our team specializes in Los Angeles CA 1031 exchanges and can help you navigate
+            the complexities of tax-deferred property transactions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-12 py-4 bg-navy text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy-light transition-all"
+            >
+              Schedule Consultation
+            </Link>
+            <Link
+              href="/services"
+              className="px-12 py-4 border-2 border-navy text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy hover:text-white transition-all"
+            >
+              View Services
+            </Link>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   )
 }

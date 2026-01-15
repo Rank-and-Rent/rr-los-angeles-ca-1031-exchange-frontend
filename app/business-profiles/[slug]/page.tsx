@@ -1,13 +1,30 @@
 "use client";
 
 import { useMemo } from "react";
+
+interface BusinessProfileData {
+  title: string;
+  description: string;
+  content: string;
+  benefits: string[];
+  marketData: {
+    averageCapRate: string;
+    averageLeaseTerm: string;
+    typicalInvestment: string;
+    tenantTypes: string[];
+  };
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, TrendingUp, Building, DollarSign, Clock } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { businessProfilesBatch01, businessProfilesData } from "@/data";
-import { PHONE, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
+import { PHONE } from "@/lib/constants";
 import { getBusinessProfileImagePath } from "@/lib/image-utils";
 import { notFound } from "next/navigation";
 
@@ -25,7 +42,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
   }
 
   // Get business profile data
-  const profileData = businessProfilesBatch01[businessProfile.slug as keyof typeof businessProfilesBatch01];
+  const profileData = businessProfilesBatch01[businessProfile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileData;
   if (!profileData) {
     notFound();
   }
@@ -39,7 +56,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
         const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01];
         return {
           ...bp,
-          description: data?.description || `Explore ${bp.name.toLowerCase()} investment opportunities.`,
+          description: (data as unknown as BusinessProfileData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities.`,
         };
       });
   }, [businessProfile.slug]);
@@ -53,7 +70,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
         return {
           title: bp.name,
           slug: bp.route,
-          description: data?.description || `Explore ${bp.name.toLowerCase()} investment opportunities for your 1031 exchange in Austin, TX.`,
+          description: (data as unknown as BusinessProfileData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities for your 1031 exchange in Austin, TX.`,
           href: `/business-profiles/${bp.route}`,
         };
       });

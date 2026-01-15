@@ -3,11 +3,23 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { SERVICES, ADDRESS, PHONE, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
 import { notFound } from "next/navigation";
+
+// Custom Arrow Icons
+const ArrowRightIcon = () => (
+  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+const ArrowLeftIcon = () => (
+  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M19 12H5M12 19l-7-7 7-7" />
+  </svg>
+);
 
 interface ServicePageProps {
   params: {
@@ -108,26 +120,26 @@ export default function ServicePage({ params }: ServicePageProps) {
         />
       </Head>
 
-      <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
+      <div className="min-h-screen bg-warm-white text-gray-900 pt-16 md:pt-20">
         {/* Breadcrumb */}
-        <div className="bg-slate-900 py-4">
+        <div className="bg-cream py-4 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <nav className="flex items-center space-x-2 text-sm text-slate-400">
-              <Link href="/" className="hover:text-slate-200 transition-colors">
+            <nav className="flex items-center space-x-2 text-sm text-gray-500">
+              <Link href="/" className="hover:text-navy transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/services" className="hover:text-slate-200 transition-colors">
+              <Link href="/services" className="hover:text-navy transition-colors">
                 Services
               </Link>
               <span>/</span>
-              <span className="text-slate-200">{service.title}</span>
+              <span className="text-navy">{service.title}</span>
             </nav>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="bg-slate-950 py-20 md:py-28">
+        <section className="bg-navy py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -138,38 +150,38 @@ export default function ServicePage({ params }: ServicePageProps) {
               <div className="flex items-center gap-4 mb-6">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <ArrowLeft className="h-4 w-4" />
+                  <ArrowLeftIcon />
                   Back to Services
                 </Link>
               </div>
 
               <div className="flex items-center gap-3 mb-4">
-                <span className={`inline-block px-3 py-1 bg-slate-800 text-xs text-slate-400 rounded-full capitalize`}>
+                <span className="inline-block px-3 py-1 bg-white/10 text-xs text-white/80 rounded-full capitalize tracking-wide">
                   {service.category}
                 </span>
               </div>
 
-              <h1 className="font-serif text-4xl md:text-5xl text-white mb-6">
+              <h1 className="font-serif text-4xl md:text-5xl text-white mb-6 font-light">
                 {service.title}
               </h1>
 
-              <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              <p className="text-lg text-white/80 leading-relaxed mb-8">
                 {service.description} Our Los Angeles CA specialists provide comprehensive support throughout the entire 1031 exchange process.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={`/contact?project_type=${encodeURIComponent(service.title)}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-500 text-slate-900 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+                  className="btn-primary"
                 >
                   Get Started
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRightIcon />
                 </Link>
                 <a
                   href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
+                  className="btn-secondary"
                 >
                   Call {PHONE}
                 </a>
@@ -179,7 +191,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         </section>
 
         {/* Service Details */}
-        <section className="bg-slate-900 py-20 md:py-28">
+        <section className="bg-warm-white py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="grid gap-12 lg:grid-cols-3">
               {/* Main Content */}
@@ -190,21 +202,21 @@ export default function ServicePage({ params }: ServicePageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="font-serif text-2xl text-white mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl text-navy mb-6 font-light">
                     How {service.title} Works in Los Angeles CA
                   </h2>
-                  <div className="prose prose-slate max-w-none">
-                    <p className="text-slate-300 leading-relaxed mb-6">
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {service.title} begins with a comprehensive assessment of your current property and investment goals.
                       Our Los Angeles CA team specializes in identifying replacement properties that meet IRS like-kind requirements
                       while optimizing for your specific tax and investment objectives.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       We coordinate with qualified intermediaries, attorneys, and CPAs to ensure compliance with all federal and
                       California state requirements. Our local market expertise in {PRIMARY_CITY} {PRIMARY_STATE_ABBR} helps identify
                       opportunities across all major property types and submarkets.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       From initial consultation through final closing, we provide dedicated support to help you navigate the
                       complex 1031 exchange process with confidence and achieve successful tax-deferred property replacement.
                     </p>
@@ -218,16 +230,16 @@ export default function ServicePage({ params }: ServicePageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="font-serif text-2xl text-white mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl text-navy mb-6 font-light">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-6">
                     {faqs.map((faq, index) => (
-                      <div key={index} className="border-b border-slate-800 pb-6 last:border-b-0">
-                        <h3 className="font-serif text-lg text-white mb-3">
+                      <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                        <h3 className="font-serif text-lg text-navy mb-3">
                           {faq.question}
                         </h3>
-                        <p className="text-slate-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -244,9 +256,9 @@ export default function ServicePage({ params }: ServicePageProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="bg-slate-800 rounded-xl p-6"
+                  className="bg-cream rounded-xl p-6 border border-gray-200"
                 >
-                  <h3 className="font-serif text-lg text-white mb-4">
+                  <h3 className="font-serif text-lg text-navy mb-4">
                     Related Services
                   </h3>
 
@@ -267,12 +279,12 @@ export default function ServicePage({ params }: ServicePageProps) {
                         <Link
                           key={relatedService.slug}
                           href={`/services/${relatedService.slug}`}
-                          className="block p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900/80 transition-colors group"
+                          className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow group border border-gray-100"
                         >
-                          <h4 className="font-medium text-slate-200 group-hover:text-white transition-colors mb-1">
+                          <h4 className="font-medium text-navy group-hover:text-navy-dark transition-colors mb-1">
                             {relatedService.title}
                           </h4>
-                          <p className="text-sm text-slate-400 leading-relaxed">
+                          <p className="text-sm text-gray-500 leading-relaxed">
                             {relatedService.description}
                           </p>
                         </Link>
@@ -287,20 +299,22 @@ export default function ServicePage({ params }: ServicePageProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-amber-500/20 rounded-xl p-6"
+                  className="bg-navy rounded-xl p-6"
                 >
                   <h3 className="font-serif text-lg text-white mb-3">
                     Ready to Get Started?
                   </h3>
-                  <p className="text-slate-300 text-sm mb-4">
+                  <p className="text-white/80 text-sm mb-4">
                     Contact our Los Angeles CA specialists for personalized {service.title.toLowerCase()} guidance.
                   </p>
                   <Link
                     href={`/contact?project_type=${encodeURIComponent(service.title)}`}
-                    className="inline-flex items-center gap-2 w-full px-4 py-3 bg-amber-500 text-slate-900 rounded-lg font-medium hover:bg-amber-600 transition-colors justify-center"
+                    className="inline-flex items-center gap-2 w-full px-4 py-3 bg-white text-navy rounded-full font-medium hover:bg-gray-100 transition-colors justify-center"
                   >
                     Schedule Consultation
-                    <ArrowRight className="h-4 w-4" />
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </motion.div>
               </div>

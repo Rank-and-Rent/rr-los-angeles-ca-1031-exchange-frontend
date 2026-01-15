@@ -2,10 +2,58 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Calculator, CalendarDays } from "lucide-react";
 import Head from "next/head";
 import { resources } from "@/data";
 import { PHONE } from "@/lib/constants";
+
+// Custom SVG Icons
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
+function ExternalLinkIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
+    </svg>
+  );
+}
+
+function CalculatorIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <line x1="8" y1="6" x2="16" y2="6" />
+      <line x1="8" y1="10" x2="8" y2="10.01" />
+      <line x1="12" y1="10" x2="12" y2="10.01" />
+      <line x1="16" y1="10" x2="16" y2="10.01" />
+      <line x1="8" y1="14" x2="8" y2="14.01" />
+      <line x1="12" y1="14" x2="12" y2="14.01" />
+      <line x1="16" y1="14" x2="16" y2="14.01" />
+      <line x1="8" y1="18" x2="8" y2="18.01" />
+      <line x1="12" y1="18" x2="12" y2="18.01" />
+      <line x1="16" y1="18" x2="16" y2="18.01" />
+    </svg>
+  );
+}
+
+function CalendarIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+      <line x1="16" y1="2" x2="16" y2="6" />
+      <line x1="8" y1="2" x2="8" y2="6" />
+      <line x1="3" y1="10" x2="21" y2="10" />
+    </svg>
+  );
+}
 
 export default function ResourcesPage() {
   return (
@@ -16,30 +64,26 @@ export default function ResourcesPage() {
           name="description"
           content="Comprehensive 1031 exchange resources for Los Angeles CA investors. IRS Form 8824 instructions, tax guidance, calculator, timeline tools, and regulatory compliance information."
         />
-        <meta
-          name="keywords"
-          content="1031 exchange resources, IRS Form 8824, Los Angeles CA, tax guidance, 1031 calculator, exchange timeline, IRS regulations"
-        />
         <link rel="canonical" href="https://www.1031exchangelosangeles.com/resources" />
       </Head>
 
-      <div className="min-h-screen bg-slate-950 text-slate-100 pt-16 md:pt-20">
+      <div className="bg-white pt-20">
         {/* Hero Section */}
-        <section className="bg-slate-950 py-20 md:py-28">
+        <section className="py-24 md:py-32 bg-navy">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto"
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <p className="text-sm uppercase tracking-[0.35em] text-slate-400 mb-4">
+              <p className="font-serif text-xl text-white/60 italic mb-6">
                 Resources & Tools
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl text-white mb-6">
-                1031 Exchange Resources for Los Angeles CA Investors
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-light tracking-wide mb-8">
+                Exchange Resources
               </h1>
-              <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
                 Access IRS guidance, tax forms, calculators, and compliance tools to navigate your
                 1031 exchange with confidence in California.
               </p>
@@ -48,66 +92,70 @@ export default function ResourcesPage() {
         </section>
 
         {/* Tools Section */}
-        <section className="bg-slate-900 py-20 md:py-28">
+        <section className="py-24 md:py-32 bg-cream">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <motion.div {...{}} className="grid gap-8 md:grid-cols-2 mb-16">
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow transition hover:-translate-y-1 hover:shadow-lg">
-                <Calculator
-                  className="h-10 w-10"
-                  style={{ color: "#f5b544" }}
-                  aria-hidden="true"
-                />
-                <h3 className="mt-5 font-serif text-2xl text-white">
+            <div className="grid gap-8 md:grid-cols-2 mb-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white p-10 group"
+              >
+                <div className="w-16 h-16 border border-navy/20 flex items-center justify-center mb-6">
+                  <CalculatorIcon className="h-8 w-8 text-navy" />
+                </div>
+                <h3 className="font-serif text-2xl text-navy mb-4">
                   Capital Gains Estimator
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   Forecast federal and California capital gains exposure, depreciation recapture, and potential boot to guide reinvestment targets.
                 </p>
                 <Link
                   href="/resources/calculator"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="inline-flex items-center gap-2 font-sans text-sm tracking-wider text-navy group-hover:gap-4 transition-all"
                 >
                   Launch estimator
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <ArrowRightIcon className="w-4 h-4" />
                 </Link>
-              </div>
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow transition hover:-translate-y-1 hover:shadow-lg">
-                <CalendarDays
-                  className="h-10 w-10"
-                  style={{ color: "#f5b544" }}
-                  aria-hidden="true"
-                />
-                <h3 className="mt-5 font-serif text-2xl text-white">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-white p-10 group"
+              >
+                <div className="w-16 h-16 border border-navy/20 flex items-center justify-center mb-6">
+                  <CalendarIcon className="h-8 w-8 text-navy" />
+                </div>
+                <h3 className="font-serif text-2xl text-navy mb-4">
                   Timeline Deadline Calculator
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   Calculate and track 45 day identification and 180 day exchange completion deadlines with automated reminders.
                 </p>
                 <Link
                   href="/resources/timeline"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-slate-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="inline-flex items-center gap-2 font-sans text-sm tracking-wider text-navy group-hover:gap-4 transition-all"
                 >
                   View timeline calculator
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <ArrowRightIcon className="w-4 h-4" />
                 </Link>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-serif text-3xl text-white mb-4">
-                Official IRS Resources & Guidance
-              </h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">
-                Direct links to IRS publications, forms, and regulatory guidance for 1031 exchange compliance.
+            <div className="text-center mb-16">
+              <p className="font-sans text-sm tracking-[0.4em] uppercase text-gray-400 mb-6">
+                Official Resources
               </p>
-            </motion.div>
+              <h2 className="font-serif text-4xl md:text-5xl text-navy font-light mb-6">
+                IRS Resources & Guidance
+              </h2>
+              <div className="h-px w-20 bg-navy mx-auto" />
+            </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-px bg-gray-100 md:grid-cols-2 lg:grid-cols-3">
               {resources.map((resource, index) => (
                 <motion.a
                   key={resource.key}
@@ -117,16 +165,16 @@ export default function ResourcesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 hover:bg-slate-900/80 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="bg-white p-8 group hover:bg-cream transition-all"
                 >
                   <div className="flex items-start gap-3 mb-3">
-                    <ExternalLink className="h-5 w-5 text-slate-400 group-hover:text-amber-400 transition-colors mt-0.5 flex-shrink-0" />
-                    <h3 className="font-serif text-lg text-white group-hover:text-amber-400 transition-colors">
+                    <ExternalLinkIcon className="h-5 w-5 text-gray-400 group-hover:text-navy transition-colors mt-0.5 flex-shrink-0" />
+                    <h3 className="font-serif text-lg text-navy group-hover:text-navy/80 transition-colors">
                       {resource.label}
                     </h3>
                   </div>
-                  <p className="text-sm text-slate-300 leading-relaxed pl-8">
+                  <p className="text-sm text-gray-600 leading-relaxed pl-8">
                     Official IRS resource for 1031 exchange compliance and tax guidance.
                   </p>
                 </motion.a>
@@ -135,32 +183,33 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        {/* Additional Resources Section */}
-        <section className="bg-slate-950 py-20 md:py-28">
+        {/* CTA Section */}
+        <section className="py-24 md:py-32 bg-navy">
           <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">
-                Need Personalized Guidance?
+              <p className="font-serif text-xl text-white/60 italic mb-4">Need Personalized Guidance?</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8">
+                Schedule a Consultation
               </h2>
-              <p className="text-lg text-slate-300 leading-relaxed mb-8">
+              <p className="text-lg text-white/70 leading-relaxed mb-12">
                 While these resources provide valuable information, every 1031 exchange is unique.
-                Our Los Angeles CA specialists can help you navigate complex situations and ensure compliance.
+                Our Los Angeles CA specialists can help you navigate complex situations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-500 text-slate-900 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+                  className="px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
                 >
                   Schedule Consultation
-                  <ArrowRight className="h-5 w-5" />
                 </Link>
                 <a
                   href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-slate-700 text-slate-200 rounded-lg font-medium hover:bg-slate-800 transition-colors"
+                  className="px-12 py-4 border border-white/30 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
                 >
                   Call {PHONE}
                 </a>
