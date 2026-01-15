@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { servicesData } from "@/data";
@@ -27,41 +27,6 @@ const categoryLabels = {
   "property-paths": "Property Paths",
   education: "Education & Consultation",
 };
-
-// Animated Section Title Component
-function AnimatedTitle({ overline, title }: { overline?: string; title: string }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <div ref={ref} className="text-center mb-16">
-      {overline && (
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="font-sans text-sm tracking-[0.4em] uppercase text-gray-400 mb-6"
-        >
-          {overline}
-        </motion.p>
-      )}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="font-serif text-4xl md:text-5xl lg:text-6xl text-navy font-light tracking-wide"
-      >
-        {title}
-      </motion.h2>
-      <motion.div
-        initial={{ width: 0 }}
-        animate={isInView ? { width: 80 } : {}}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="h-px bg-navy mx-auto mt-8"
-      />
-    </div>
-  );
-}
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");

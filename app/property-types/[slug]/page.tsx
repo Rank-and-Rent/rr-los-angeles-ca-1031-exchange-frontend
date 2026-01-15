@@ -3,7 +3,6 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft } from "lucide-react";
 import Head from "next/head";
 import SearchInput from "@/components/SearchInput";
 import { inventoryBatch01, propertyTypesData, propertyTypesBatch01 } from "@/data";

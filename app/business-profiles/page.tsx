@@ -1,23 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-
-interface BusinessProfileData {
-  title: string;
-  description: string;
-  content: string;
-  benefits: string[];
-  marketData: {
-    averageCapRate: string;
-    averageLeaseTerm: string;
-    typicalInvestment: string;
-    tenantTypes: string[];
-  };
-  faqs: Array<{
-    question: string;
-    answer: string;
-  }>;
-}
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Filter } from "lucide-react";
@@ -167,9 +150,7 @@ export default function BusinessProfilesPage() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {filteredBusinessProfiles.map((profile, index) => {
-<<<<<<< HEAD
                     const profileData = businessProfilesBatch01[profile.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
->>>>>>> bf0f15aa (Fix build errors and optimize build performance)
                     return (
                       <motion.div
                         key={profile.slug}

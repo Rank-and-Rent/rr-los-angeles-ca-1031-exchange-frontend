@@ -135,7 +135,7 @@ function ContactForm() {
         });
         setTurnstileId(id);
         setTurnstileReady(true);
-      } catch (error) {
+      } catch {
         setTurnstileReady(false);
       }
     }, 500);
@@ -213,7 +213,7 @@ function ContactForm() {
               "timeout-callback": () => reject(new Error("turnstile-timeout")),
             });
           });
-        } catch (err) {
+        } catch {
           setFeedback("Security verification failed. Please try again.");
           setStatus("error");
           if (window.turnstile && turnstileId) {
@@ -269,7 +269,7 @@ function ContactForm() {
           window.turnstile.reset(turnstileId);
         }
       }
-    } catch (error) {
+    } catch {
       setFeedback("An error occurred. Please try again or contact us directly.");
       setStatus("error");
       if (window.turnstile && turnstileId) {

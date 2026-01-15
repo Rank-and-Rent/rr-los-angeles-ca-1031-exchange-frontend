@@ -56,7 +56,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
         const data = businessProfilesBatch01[bp.slug as keyof typeof businessProfilesBatch01] as unknown as BusinessProfileBatchData;
         return {
           ...bp,
-          description: (data as unknown as BusinessProfileData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities.`,
+          description: (data as unknown as BusinessProfileBatchData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities.`,
         };
       });
   }, [businessProfile.slug]);
@@ -70,7 +70,7 @@ export default function BusinessProfilePage({ params }: BusinessProfilePageProps
         return {
           title: bp.name,
           slug: bp.route,
-          description: (data as unknown as BusinessProfileData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities for your 1031 exchange in Austin, TX.`,
+          description: (data as unknown as BusinessProfileBatchData | undefined)?.description || `Explore ${bp.name.toLowerCase()} investment opportunities for your 1031 exchange in Austin, TX.`,
           href: `/business-profiles/${bp.route}`,
         };
       });
