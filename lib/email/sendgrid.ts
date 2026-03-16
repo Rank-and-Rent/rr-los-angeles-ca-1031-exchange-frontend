@@ -4,7 +4,6 @@ let apiKeyInitialized = false;
 
 function ensureApiKeyInitialized() {
   if (apiKeyInitialized) return;
-  
   if (!process.env.SENDGRID_API_KEY) {
     throw new Error('Missing SENDGRID_API_KEY');
   }
@@ -12,7 +11,7 @@ function ensureApiKeyInitialized() {
   apiKeyInitialized = true;
 }
 
-export const SENDGRID_TEMPLATE_ID = process.env.SENDGRID_TEMPLATE_ID || 'd-15217ab1c55347b5847c2421b1a82847';
+export const SENDGRID_TEMPLATE_ID = process.env.SENDGRID_TEMPLATE_ID || 'd-354ba87a88bf4c819a97ba17a4c32b25';
 
 type Lead = {
   name: string;
@@ -58,11 +57,20 @@ type BrandData = {
   footer_note?: string;
   submitted_date?: string;
   supportEmail?: string;
+  brand_title?: string;
+  brand_tagline?: string;
+  brand_dark_bg?: string;
+  brand_gold?: string;
+  supportPhone?: string;
+  service_area?: string;
+  portfolio_url?: string;
+  portfolio_blurb?: string;
+  intro_copy?: string;
 };
 
 export async function sendCustomerConfirmation(brand: BrandData, lead: Lead) {
   ensureApiKeyInitialized();
-  const fromEmail = brand.supportEmail || 'help@1031exchangelosangeles.com';
+  const fromEmail = brand.supportEmail || process.env.SENDGRID_FROM_EMAIL || process.env.BUSINESS_EMAIL || 'noreply@1031exchange.com';
   const msg = {
     to: lead.email,
     from: { email: fromEmail, name: brand.company_name },
@@ -74,7 +82,7 @@ export async function sendCustomerConfirmation(brand: BrandData, lead: Lead) {
 
 export async function sendInternalNotifications(brand: BrandData, lead: Lead) {
   ensureApiKeyInitialized();
-  const fromEmail = brand.supportEmail || 'help@1031exchangelosangeles.com';
+  const fromEmail = brand.supportEmail || process.env.SENDGRID_FROM_EMAIL || process.env.BUSINESS_EMAIL || 'noreply@1031exchange.com';
   const recipients = [
     process.env.CONTRACTOR_EMAIL,
     'rankhoundseo@gmail.com',
@@ -90,6 +98,3 @@ export async function sendInternalNotifications(brand: BrandData, lead: Lead) {
   );
   await Promise.all(sends);
 }
-
-
-
