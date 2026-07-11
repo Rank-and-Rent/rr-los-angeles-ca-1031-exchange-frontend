@@ -1,0 +1,62 @@
+{
+ "slug": "replacement-property-identification",
+ "taxonomy": "services",
+ "title": "Replacement Property Identification Strategy",
+ "name": "Replacement Property Identification Strategy",
+ "metaTitle": "Replacement Property Identification Strategy in Los Angeles, CA",
+ "metaDescription": "Building a Los Angeles replacement property identification list across asset classes, applying the three-property, 200%, and 95% rules before day 45.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Los Angeles gives an exchanger an unusually wide asset mix to draw a replacement identification list from &mdash; industrial, office, multifamily, and retail all trade in meaningful volume &mdash; which is an advantage only if the list is built with the identification rules in mind from day one rather than assembled around whatever property happens to be available.</p>"
+  },
+  {
+   "heading": "Building an Identification List That Survives the 45-Day Clock",
+   "html": "<p>Every identification notice needs to satisfy one of three rules, and the list should follow whichever rule fits the exchanger's basis, not the other way around:</p><ul><li>Three-property rule &mdash; up to three properties identified regardless of their combined value</li><li>200% rule &mdash; any number of properties identified as long as their combined value does not exceed 200% of the relinquished property's value</li><li>95% rule &mdash; any number of properties identified, but at least 95% of their combined value must actually be acquired</li><li>Unambiguous legal description or street address for every property on the notice</li><li>Notice delivered in writing to the qualified intermediary before midnight on day 45</li></ul>"
+  },
+  {
+   "heading": "Matching Basis and Debt Across Asset Classes in Los Angeles",
+   "html": "<p>A relinquished multifamily property in Koreatown and a replacement industrial building near the port each carry a different debt-to-value ceiling from a lender's perspective, so the identification list needs at least one candidate in each asset class whose achievable loan amount actually replaces the debt paid off on the relinquished side. Running that debt math on every candidate before day 45, rather than after a favorite is chosen, avoids finding out too late that the preferred property cannot support enough leverage to avoid boot.</p><p>For example, an exchanger relinquishing a mid-size multifamily property might list one comparable multifamily replacement under the three-property rule alongside a single-tenant net lease property and a small industrial building, giving three different debt profiles to choose from once due diligence narrows the field.</p>"
+  },
+  {
+   "heading": "Common Identification Mistakes That Blow the Window",
+   "html": "<p>The most common mistake is treating the identification list as a formality and listing properties the exchanger has no real intent to buy, which leaves no fallback if the intended property falls out of contract during the 180-day period. A close second is listing a property description that is ambiguous &mdash; a general area or an unexecuted letter of intent rather than a specific address or parcel &mdash; which can invalidate that identification entirely.</p>"
+  },
+  {
+   "heading": "Sequencing Due Diligence Across a Multi-Asset-Class List",
+   "html": "<p>Once a Los Angeles identification list spans more than one asset class, due diligence generally needs to run in parallel rather than sequentially, since waiting to start rent roll or trailing-12 review on the second and third candidates until the lead choice falls through wastes days the 180-day period cannot spare. Assigning a single point of contact &mdash; broker, attorney, or the exchanger directly &mdash; to track estoppels, loan applications, and title work across every candidate at once keeps the list usable as a real fallback rather than a list in name only.</p><p>Title and survey review deserves the same early start as financial review: a Los Angeles property with an unresolved easement, a pending assessment, or a title exception tied to prior construction can take weeks to clear, and discovering that issue on day 40 rather than day 10 can force a rushed decision on a less-preferred candidate.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How does the three-property rule work?",
+   "a": "The three-property rule allows an exchanger to identify up to three replacement properties within 45 days regardless of their combined value, as long as at least one is ultimately acquired. It is generally the simplest rule to apply and the most common choice."
+  },
+  {
+   "q": "When does the 200% rule make more sense than the three-property rule?",
+   "a": "The 200% rule fits when an exchanger wants to identify more than three candidates, as long as their combined value stays under 200% of the relinquished property's value. It is generally used when a wider net across several submarkets or asset classes improves the odds of closing on at least one."
+  },
+  {
+   "q": "What does the 95% rule require?",
+   "a": "The 95% rule allows identifying an unlimited number of properties regardless of combined value, but at least 95% of that combined value must actually be acquired. It is generally the riskiest of the three rules because falling short of that threshold can disqualify the exchange."
+  },
+  {
+   "q": "Can the identification list be changed after day 45?",
+   "a": "Generally no, the written identification notice delivered to the qualified intermediary by day 45 is final, and properties cannot be added afterward. Substitutions before day 45 are permitted, which is why the list should be finalized with a buffer rather than at the deadline itself."
+  },
+  {
+   "q": "Does an identified property need a signed purchase contract?",
+   "a": "No, a signed contract is not required for a valid identification, but the property description needs to be unambiguous, generally a legal description or specific street address. Confirm the exact notice requirements with your qualified intermediary before day 45."
+  },
+  {
+   "q": "Should due diligence wait until one candidate is chosen from the list?",
+   "a": "No, running rent roll, trailing-12, and title review on every listed candidate in parallel generally protects the 180-day window better than starting due diligence only after a lead choice falls through. Assigning one point of contact to track all candidates keeps that parallel process manageable."
+  },
+  {
+   "q": "Can an identification list mix asset classes as different as industrial and multifamily?",
+   "a": "Yes, nothing in the identification rules requires the properties on a single notice to share an asset class, and mixing classes across a Los Angeles list is a common way to widen the debt and closing-timeline options available before the 180-day deadline."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 893
+}

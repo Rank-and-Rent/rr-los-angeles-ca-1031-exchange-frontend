@@ -1,0 +1,66 @@
+{
+ "slug": "tax-advisor-and-cpa-coordination",
+ "taxonomy": "services",
+ "title": "Tax Advisor and CPA Coordination",
+ "name": "Tax Advisor and CPA Coordination",
+ "metaTitle": "Tax Advisor and CPA Coordination in Los Angeles, CA",
+ "metaDescription": "Coordinating a tax advisor or CPA on a Los Angeles 1031 exchange, covering basis schedules, depreciation recapture, and Form 8824 timing before day 45.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>An exchange runs through the qualified intermediary and escrow, but the numbers behind it &mdash; adjusted basis, depreciation recapture exposure, and boot calculation &mdash; belong to a tax advisor or CPA, and that conversation generally needs to start before the relinquished property closes rather than at tax-filing time the following year. This page describes the coordination involved, not tax advice; confirm every calculation with a qualified tax advisor.</p>"
+  },
+  {
+   "heading": "Information the Tax Advisor Needs Before Day 45",
+   "html": "<p>A first conversation with a tax advisor about a Los Angeles exchange generally covers the following documents:</p><ul><li>Closing statement from the relinquished property sale, including debt payoff figures</li><li>Depreciation schedule showing accumulated depreciation on the relinquished property</li><li>Adjusted basis calculation, including any prior 1031 exchanges rolled into the current basis</li><li>Pro forma or purchase contract for candidate replacement properties</li><li>Entity structure and title vesting for both the relinquished and replacement property</li></ul>"
+  },
+  {
+   "heading": "Coordinating Timing Between CPA, Qualified Intermediary, and Escrow",
+   "html": "<p>The tax advisor's basis and debt-replacement calculations should be run against every candidate on the identification list, and not only the exchanger's preferred choice, since the debt-to-basis comparison can rule out a property that otherwise looks attractive on price alone. Sharing that calculation with the escrow officer and qualified intermediary before the 45-day deadline keeps the closing timeline aligned with what the tax advisor has confirmed will actually defer the gain.</p>"
+  },
+  {
+   "heading": "Form 8824 Preparation Starts Long Before Filing Season",
+   "html": "<p>Form 8824 documents the exchange on the exchanger's tax return and requires the closing statements, basis calculations, and identification notice from the transaction itself, so gathering those documents contemporaneously with the closing &mdash; rather than reconstructing them the following spring &mdash; generally makes the filing faster and reduces the risk of a reporting error.</p>"
+  },
+  {
+   "heading": "How Boot Gets Calculated Alongside the CPA",
+   "html": "<p>Boot generally results from cash received by the exchanger, debt relief that is not fully replaced on the new property, or non-like-kind property received as part of the transaction, and any of the three can create taxable gain even inside an otherwise valid exchange. A tax advisor generally runs this calculation on each identification list candidate using the debt payoff figures and the replacement property's purchase price and financing terms, which is why those numbers need to be shared with the advisor before, not after, an offer is made.</p><p>On a Los Angeles multifamily or medical office replacement where the debt-to-value ceiling is set by loan-to-value and debt-service-coverage requirements rather than by the exchanger's preference, that boot calculation often becomes the deciding factor between two otherwise comparable candidates.</p>"
+  },
+  {
+   "heading": "Working With Both a Tax Advisor and a Real Estate Attorney",
+   "html": "<p>Larger or more complex Los Angeles exchanges &mdash; multiple relinquished properties, a tenancy-in-common structure, or an entity restructuring alongside the exchange &mdash; generally benefit from a real estate attorney working alongside the tax advisor, since the attorney handles title vesting and entity documents while the tax advisor handles basis and reporting. Introducing both advisors to the qualified intermediary at the start of the transaction, rather than sequentially as questions arise, generally keeps document requests and deadline reminders from arriving at cross purposes.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What should I bring to a first call with a tax advisor about a Los Angeles exchange?",
+   "a": "Generally the closing statement or draft closing statement for the relinquished property, the depreciation schedule, and any information available on candidate replacement properties. Having those documents ready lets the advisor run basis and boot calculations on the first call rather than a follow-up."
+  },
+  {
+   "q": "What is depreciation recapture and how does it relate to a 1031 exchange?",
+   "a": "Depreciation recapture generally refers to the portion of gain attributable to depreciation taken on the relinquished property, which is taxed differently from capital gain. A properly structured exchange generally defers both the capital gain and the recapture, but the specific treatment should be confirmed with a tax advisor."
+  },
+  {
+   "q": "When should Form 8824 preparation begin?",
+   "a": "Gathering the underlying closing statements, basis schedule, and identification notice generally should begin as each document becomes available during the exchange, rather than waiting until the tax return is prepared the following year."
+  },
+  {
+   "q": "Does each owner in a multi-member LLC need a separate exchange?",
+   "a": "Generally, an exchange is done at the entity level unless the entity is a tenancy-in-common structure or the members separately hold title, and the correct approach depends on how title is vested. This is a structuring question that should be worked through with a tax advisor before the relinquished property is under contract."
+  },
+  {
+   "q": "What generally creates boot in a Los Angeles exchange?",
+   "a": "Boot generally results from cash the exchanger receives, debt on the relinquished property that is not fully replaced by debt or added cash on the replacement, or non-like-kind property included in the transaction. A tax advisor should run this calculation on each identification list candidate before an offer is made."
+  },
+  {
+   "q": "When should a real estate attorney join the exchange team alongside the tax advisor?",
+   "a": "Generally for exchanges involving multiple relinquished properties, tenancy-in-common ownership, or an entity restructuring, since those situations add title and documentation complexity beyond what a qualified intermediary and tax advisor typically handle alone. Introducing all advisors early keeps deadlines and document requests coordinated."
+  },
+  {
+   "q": "Can a tax advisor confirm whether a specific Los Angeles replacement property will fully defer the gain before an offer is made?",
+   "a": "Generally yes, given the relinquished property's closing statement, depreciation schedule, and the replacement property's proposed purchase price and financing terms, a tax advisor can run a boot calculation before an offer goes out. Doing that math ahead of an offer, rather than after acceptance, avoids discovering a shortfall too late to adjust."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 887
+}

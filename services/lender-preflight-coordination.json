@@ -1,0 +1,58 @@
+{
+ "slug": "lender-preflight-coordination",
+ "taxonomy": "services",
+ "title": "Lender Preflight Coordination",
+ "name": "Lender Preflight Coordination",
+ "metaTitle": "Lender Preflight Coordination in Los Angeles, CA",
+ "metaDescription": "Vetting financing on a candidate before it goes on the identification list, so a Los Angeles replacement purchase can actually close inside 180 days.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A replacement property that cannot realistically finance and close inside the 180-day exchange period is not a usable candidate, no matter how well it fits every other criterion, and we treat lender preflight as a screening step before identification rather than a task that begins once a property is already named. The goal is ruling out a weak financing prospect during sourcing, not discovering the problem after it is written into the identification notice.</p><p>We treat this as a distinct step from a broker's informal sense that financing should not be a problem, since an actual lender conversation, even a preliminary one, surfaces underwriting concerns a listing description never mentions.</p>"
+  },
+  {
+   "heading": "Debt Service Coverage Is the First Filter, Not the Last",
+   "html": "<p>Lenders underwriting Los Angeles multifamily, office, and industrial product are applying debt service coverage requirements that differ by asset class right now, and a candidate that pencils on a simple purchase-price-to-rent basis can still fail underwriting if in-place cash flow does not clear the lender's coverage threshold. We run a preliminary debt service coverage estimate on every serious candidate before it reaches the identification list, using conservative assumptions on rate and amortization, so an exchanger is not surprised by a term sheet that comes back with a smaller loan amount than expected.</p><p>This matters most on rent-controlled multifamily product, where in-place rents can sit meaningfully below market and a lender's underwriting will typically credit the actual in-place income rather than a projected market-rate figure.</p><p>We also flag any deferred maintenance visible during a walkthrough before the preflight conversation happens, since a lender's own inspection can surface capital needs that reduce the usable loan proceeds, and an exchanger is better served hearing that estimate from us early than from a lender's appraisal report close to the closing date.</p>"
+  },
+  {
+   "heading": "What a Preflight Conversation Actually Covers",
+   "html": "<ul><li>Preliminary debt service coverage estimate using conservative rate and amortization assumptions</li><li>Loan-to-value ceiling the lender applies to the specific asset class and submarket</li><li>Timeline to a firm loan commitment, checked against the remaining days before day 180</li><li>Appraisal and environmental review requirements specific to the property type</li><li>Any prepayment or assumption terms on existing debt that could affect the replacement purchase</li></ul>"
+  },
+  {
+   "heading": "Where Westside Office Financing Diverges From Multifamily",
+   "html": "<p>Lenders financing Westside office acquisitions right now are generally applying tighter leverage and more conservative rent-roll assumptions than lenders financing stabilized multifamily product in the same submarkets, largely a function of how office occupancy and lease renewal risk get underwritten compared to residential demand. An exchanger comparing a Westside office candidate against a Culver City or Santa Monica multifamily alternative needs preflight numbers run on both asset classes specifically, not a single generic financing assumption applied across property types.</p><p>We update these preflight figures again if the exchange runs long enough for underwriting standards to shift, since a term sheet quoted early in a search can no longer reflect the terms a lender would actually offer by the time an offer is written weeks later.</p>"
+  },
+  {
+   "heading": "Building the Closing Timeline Around the Loan Commitment Date",
+   "html": "<p>We work backward from day 180 to set a target loan commitment date with enough buffer for funding and closing logistics, typically requiring firm commitment well before the deadline rather than treating the 180th day itself as the target closing date. A candidate whose lender cannot commit to a realistic timeline against that buffer gets flagged before identification, since a financing delay discovered with ten days left on the clock has essentially no path to resolution.</p>"
+  },
+  {
+   "heading": "When an All-Cash Backup Belongs in the Plan",
+   "html": "<p>For an exchanger with the liquidity to consider it, keeping an all-cash backup candidate in reserve removes financing risk entirely from at least one option on the identification list, which matters most when every other candidate depends on a lender commitment landing inside a tight window. We flag this option specifically when preflight conversations on the primary financed candidates come back with tighter-than-expected terms or a commitment timeline that leaves little margin before day 180.</p><p>We size this backup candidate to be genuinely closeable without financing, not merely cheaper, since a low-priced property that still requires a loan the exchanger cannot fund on short notice does not actually remove the financing risk it was meant to solve.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "When should lender preflight happen relative to identification?",
+   "a": "Before a property is named on the identification list. Screening financing viability during sourcing avoids discovering a problem after the candidate is already written into the notice."
+  },
+  {
+   "q": "Does in-place rent or market rent get used in multifamily underwriting?",
+   "a": "Lenders typically credit actual in-place income rather than projected market rent, which matters on rent-controlled Los Angeles multifamily where the gap between the two can be significant."
+  },
+  {
+   "q": "Why does office financing differ from multifamily financing in this market right now?",
+   "a": "Lenders are generally applying tighter leverage and more conservative rent-roll assumptions to office product, reflecting how occupancy and lease renewal risk get underwritten differently than residential demand."
+  },
+  {
+   "q": "What happens if a lender cannot commit before the target date?",
+   "a": "The candidate should be flagged as high-risk before identification. Discovering a financing delay with little time left before day 180 leaves almost no path to recover the deadline."
+  },
+  {
+   "q": "Is an all-cash backup candidate ever worth keeping in reserve?",
+   "a": "For exchangers with the liquidity, yes, particularly when preflight conversations on financed candidates come back with tight terms or an uncertain commitment timeline."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 851
+}

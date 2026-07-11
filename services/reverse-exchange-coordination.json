@@ -1,0 +1,66 @@
+{
+ "slug": "reverse-exchange-coordination",
+ "taxonomy": "services",
+ "title": "Reverse Exchange Coordination",
+ "name": "Reverse Exchange Coordination",
+ "metaTitle": "Reverse Exchange Coordination in Los Angeles, CA",
+ "metaDescription": "Reverse exchange coordination for Los Angeles investors buying replacement property before selling, covering the EAT structure, financing, and the 180-day sale window.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A reverse exchange lets an investor buy the replacement property in Los Angeles before the relinquished property sells, which is often the only workable structure in a competitive market where the right replacement will not wait for a relinquished property to close first. The structure is more document-heavy than a standard forward exchange and needs to be set up before the replacement purchase closes, not after.</p>"
+  },
+  {
+   "heading": "How a Reverse Exchange Parks Title in Los Angeles",
+   "html": "<p>A typical reverse exchange follows this sequence:</p><ul><li>An exchange accommodation titleholder, generally a single-purpose LLC, is formed to hold title temporarily</li><li>The exchanger and the accommodation titleholder sign a qualified exchange accommodation agreement</li><li>The accommodation titleholder takes title to the replacement property at closing, often with financing arranged by the exchanger</li><li>The exchanger identifies which relinquished property will be sold within 45 days, mirroring a forward exchange</li><li>The relinquished property sells and title to the replacement transfers from the accommodation titleholder to the exchanger, generally within the 180-day parking period</li></ul>"
+  },
+  {
+   "heading": "Financing a Reverse Exchange in the Current Rate Environment",
+   "html": "<p>Lenders generally need to underwrite the accommodation titleholder LLC as the borrower of record even though the exchanger is the economic owner, which some Los Angeles lenders handle routinely and others do not offer at all, so confirming lender familiarity with reverse-exchange structures early avoids a financing delay after the replacement property is already under contract. Carrying costs on the parked property, including debt service, generally fall to the exchanger during the parking period even though title sits with the accommodation titleholder.</p>"
+  },
+  {
+   "heading": "Why Investors Choose a Reverse Structure in a Competitive Market",
+   "html": "<p>In submarkets where well-priced replacement property moves quickly, waiting for a relinquished property to close before making an offer generally means losing the deal to a buyer without that contingency. A reverse exchange removes that contingency by letting the accommodation titleholder close on the replacement first, at the cost of additional legal and titleholder fees and a compressed 180-day window to sell the relinquished property afterward.</p>"
+  },
+  {
+   "heading": "Marketing the Relinquished Property During the Parking Period",
+   "html": "<p>Because the 45-day identification clock for the relinquished property starts the moment the accommodation titleholder takes title to the replacement, getting the relinquished property listed and marketed before that closing &mdash; rather than after &mdash; buys real time inside a structure that already runs on a tighter effective schedule than a forward exchange. Pricing the relinquished property to sell within the 180-day window, rather than testing the market at an aspirational number, is generally the more conservative approach when a reverse structure is already in place.</p><p>Coordinating the listing agent, the accommodation titleholder, and the qualified intermediary on showings and offer review keeps the sale process from stalling while attention is focused on the replacement property closing that already happened.</p>"
+  },
+  {
+   "heading": "Costs Beyond the Base Qualified Intermediary Fee",
+   "html": "<p>A reverse exchange generally layers additional costs on top of a standard exchange: entity formation and annual maintenance for the accommodation titleholder LLC, additional legal review of the qualified exchange accommodation agreement, and often a higher qualified intermediary fee reflecting the added complexity. Financing costs can also run higher if a lender charges a rate premium for underwriting the accommodation titleholder structure rather than a standard purchase.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What does setting up a reverse exchange typically cost compared to a forward exchange?",
+   "a": "A reverse exchange generally carries higher fees than a standard forward exchange because it requires forming and maintaining the accommodation titleholder entity in addition to standard qualified intermediary fees. Get a full fee schedule from the intermediary handling the reverse structure before committing to it."
+  },
+  {
+   "q": "How long can the replacement property stay parked with the accommodation titleholder?",
+   "a": "Generally up to 180 days from when the accommodation titleholder takes title, mirroring the standard exchange period, though the exchanger still needs to identify the relinquished property to be sold within the first 45 days of that window."
+  },
+  {
+   "q": "Is financing harder to arrange on a reverse exchange?",
+   "a": "It can be, since the lender is technically underwriting the accommodation titleholder LLC rather than the exchanger directly, and not every lender in Los Angeles is set up to handle that structure. Confirming lender familiarity with reverse exchanges before the replacement property goes under contract avoids a late-stage financing delay."
+  },
+  {
+   "q": "What happens if the relinquished property does not sell within 180 days?",
+   "a": "If the relinquished property has not sold by the end of the 180-day parking period, the reverse exchange structure generally fails and the accommodation titleholder or exchanger needs another plan for the parked property. This is a significant risk to plan around with legal and tax advisors before starting the structure."
+  },
+  {
+   "q": "When should the relinquished property be listed for sale in a reverse exchange?",
+   "a": "Generally as early as possible, ideally before or immediately after the accommodation titleholder closes on the replacement property, since the 45-day identification and 180-day sale clocks are both already running at that point. Waiting to list the relinquished property compresses an already tight timeline."
+  },
+  {
+   "q": "Does a reverse exchange require the exchanger to already own the relinquished property free and clear?",
+   "a": "No, an existing loan on the relinquished property does not prevent a reverse exchange, but the debt payoff figures need to be confirmed early since they factor into the boot calculation once the relinquished property eventually sells. Coordinate that payoff estimate with the tax advisor and qualified intermediary before the replacement closing."
+  },
+  {
+   "q": "Can more than one property be parked with an accommodation titleholder at the same time?",
+   "a": "Generally yes, though most Los Angeles investors use a reverse structure for a single replacement property at a time given the added cost and complexity. Confirm with the qualified intermediary handling the structure whether multiple parked properties are practical for a given transaction."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 905
+}

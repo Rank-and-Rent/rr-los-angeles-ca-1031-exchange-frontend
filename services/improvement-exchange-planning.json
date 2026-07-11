@@ -1,0 +1,58 @@
+{
+ "slug": "improvement-exchange-planning",
+ "taxonomy": "services",
+ "title": "Improvement Exchange Planning",
+ "name": "Improvement Exchange Planning",
+ "metaTitle": "Improvement Exchange Planning in Los Angeles, CA",
+ "metaDescription": "Budgeting construction and improvement work into a Los Angeles exchange so completed value, beyond acquisition price alone, counts before day 180.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>An improvement exchange lets an exchanger use exchange proceeds to fund construction or renovation on the replacement property, with the completed improvements counting toward the reinvestment total, but only the value actually in place by day 180 counts. In a construction market where permitting and inspection timelines routinely run longer than a typical purchase closing, we build the improvement budget and schedule as a single document from day one, not as a purchase decision followed by a separate construction plan.</p><p>We size the scope of work against the calendar first and the exchanger's design preferences second, since a build-out that would be reasonable on a normal construction timeline can still be the wrong choice if it cannot realistically finish before day 180.</p>"
+  },
+  {
+   "heading": "Why Only Completed Value Counts",
+   "html": "<p>An exchanger acquiring a lower-priced Los Angeles industrial parcel with plans to build out office and warehouse improvements cannot count the planned construction budget toward the reinvestment requirement, only the value of work actually completed and in place before the 180-day deadline. This means the exchange proceeds have to fund a construction schedule that realistically finishes, or finishes enough of the planned scope, inside a window that is often shorter than a normal entitlement-to-completion timeline for infill industrial or commercial work in Los Angeles.</p><p>We work backward from day 180 to set the construction start date, building in the actual permitting timeline for the specific jurisdiction, since permit review pace varies meaningfully between the City of Los Angeles and surrounding cities like Burbank or Glendale.</p><p>We also confirm early whether the specific improvement scope triggers any additional review layer, a coastal zone requirement, a historic overlay, or a discretionary use permit, since any of these can add months rather than weeks to a timeline that already has to fit inside 180 days.</p>"
+  },
+  {
+   "heading": "The Line Items That Actually Belong in the Improvement Budget",
+   "html": "<ul><li>Permitting and plan check fees, sized to the specific jurisdiction's review timeline</li><li>Site work and utility connections, often underestimated on infill industrial parcels</li><li>Core construction cost per square foot for the specific improvement scope</li><li>Contingency reserve for change orders discovered during inspection</li><li>Contractor draw schedule mapped against the qualified intermediary's disbursement timeline</li></ul>"
+  },
+  {
+   "heading": "How the Qualified Intermediary Actually Holds Construction Funds",
+   "html": "<p>In this structure, the qualified intermediary or an exchange accommodation titleholder holds title to the replacement property during construction and disburses funds against a draw schedule as improvements are completed, similar in mechanics to a construction lender's draw process but governed by the exchange timeline instead of a loan agreement. We coordinate the draw schedule with the contractor's actual production pace on a Los Angeles infill site, where crane access, lay-down space, and street closure permitting can slow work in ways a suburban site would not encounter.</p><p>We ask the contractor to submit a draw schedule tied to specific completion milestones rather than calendar dates alone, since a milestone-based schedule holds up better against the exchange deadline when a single trade runs behind and the rest of the sequence has to compress around it.</p>"
+  },
+  {
+   "heading": "What Happens When Construction Runs Behind Schedule",
+   "html": "<p>If completed improvements fall short of the target value by day 180, the shortfall is simply not counted toward reinvestment, which can create taxable boot even though the exchanger fully intended to spend the full proceeds. We build a realistic contingency buffer into the schedule from the outset rather than the optimistic timeline a contractor's initial bid often assumes, because a permitting delay discovered on day 150 leaves no time to recover.</p><p>We revisit the completed-value estimate at regular intervals through the construction period rather than only at the start, so a slipping schedule shows up as a budget gap while there is still time to adjust scope or accelerate a specific trade.</p>"
+  },
+  {
+   "heading": "Sizing the Deal to the Realistic Completion Window",
+   "html": "<p>Before committing to an improvement exchange structure, we run the numbers on whether the planned scope can realistically finish inside the remaining exchange window at all, given the specific jurisdiction's permitting pace and the contractor's actual production capacity. In some cases the honest answer is that a smaller improvement scope, or a straightforward acquisition without new construction, is a better fit than an ambitious build-out that the 180-day deadline cannot accommodate.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does the full construction budget count toward reinvestment even if unfinished by day 180?",
+   "a": "No. Only the value of improvements actually completed and in place by the 180-day deadline counts. Planned but unfinished work does not satisfy the reinvestment requirement."
+  },
+  {
+   "q": "Who holds title to the property during improvement construction?",
+   "a": "Typically the qualified intermediary or an exchange accommodation titleholder holds title during the construction period, disbursing funds against a draw schedule as work is completed."
+  },
+  {
+   "q": "How does permitting timing affect an improvement exchange in Los Angeles?",
+   "a": "Permit review pace varies by jurisdiction within the county, and we build the construction schedule backward from day 180 using the specific jurisdiction's actual review timeline, not a generic estimate."
+  },
+  {
+   "q": "What happens if construction runs behind and falls short of the budgeted value?",
+   "a": "The shortfall between completed value and the target reinvestment amount is not deferred and can become taxable boot, even if the exchanger intended to spend the full amount."
+  },
+  {
+   "q": "Is an improvement exchange always the right structure for a build-out plan?",
+   "a": "Not always. If the realistic construction timeline cannot fit inside the remaining exchange window, a smaller scope or a straightforward acquisition without new construction is often the better fit."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 861
+}

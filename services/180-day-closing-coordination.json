@@ -1,0 +1,58 @@
+{
+ "slug": "180-day-closing-coordination",
+ "taxonomy": "services",
+ "title": "180-Day Closing Coordination",
+ "name": "180-Day Closing Coordination",
+ "metaTitle": "180-Day Closing Coordination in Los Angeles, CA",
+ "metaDescription": "Sequencing escrow, lender payoff, and title work across Los Angeles submarkets so the replacement purchase closes inside the 180-day exchange period.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The 180-day exchange period starts the same day the relinquished property closes and runs on a fixed calendar, not a business-day count, which means a Los Angeles closing that lands on a Friday before a holiday weekend can quietly eat three or four days off the clock before anyone notices. We build the closing calendar backward from day 180 the moment escrow opens on the sale side, because a replacement purchase that stalls in title or lender underwriting has nowhere left to go once the deadline is close.</p>"
+  },
+  {
+   "heading": "Two Clocks, One Calendar",
+   "html": "<p>The 45-day identification window and the 180-day closing period both start on the same date and run in parallel, not in sequence, so an exchanger is never working with a fresh 180 days after identification is filed. In practice that means a Los Angeles exchanger who spends the first five weeks locating a replacement property in Culver City or along the Alameda corridor has already used more than a quarter of the closing runway before a purchase contract is even signed.</p><p>We map every subsequent milestone, inspection contingency removal, loan commitment, title clearance, against that shared start date rather than against the identification deadline alone, so nobody discovers late that the real constraint was always the 180-day period.</p>"
+  },
+  {
+   "heading": "How a Los Angeles Escrow Actually Moves",
+   "html": "<p>Escrow in Los Angeles County typically runs through an independent escrow company working alongside a title company issuing a preliminary report, and either side of that pairing can introduce delay if a lien, easement, or unrecorded permit issue surfaces on the replacement parcel. Lender payoff demands on the relinquished property, HOA or CC&R estoppel letters for condominium and mixed-use product, and municipal lien searches through the City of Los Angeles or surrounding jurisdictions like Long Beach or Glendale each carry their own turnaround time that has to be built into the schedule rather than assumed.</p><ul><li>Order the preliminary title report on the replacement property the same week identification is filed, not after</li><li>Confirm lender payoff demand timing on the relinquished sale early, since stale payoff figures can delay funding</li><li>Pull municipal lien and permit history for the specific jurisdiction, since requirements vary by city within the county</li><li>Verify HOA or CC&R estoppel turnaround on condominium or mixed-use replacement candidates</li><li>Set a funding cutoff date at least three business days before day 180, not on day 180 itself</li></ul>"
+  },
+  {
+   "heading": "Sequencing a Sale in One Submarket Against a Purchase in Another",
+   "html": "<p>A relinquished sale closing in a Westside office building and a replacement purchase in a Vernon or Commerce industrial parcel move on genuinely different timelines, and treating them as a single synchronized transaction is where exchanges lose days. Industrial closings tied to environmental Phase I review or tenant estoppel collection often need more lead time than a straightforward multifamily refinance-free purchase, so we sequence the harder closing first when the exchanger has any flexibility over which side of the exchange moves faster.</p>"
+  },
+  {
+   "heading": "The County Reassessment Filing Riding Alongside the Exchange",
+   "html": "<p>Separate from the federal exchange deadline, the replacement property purchase triggers a change-in-ownership filing with the county assessor, and Los Angeles County's reassessment-on-transfer practice under Proposition 13 resets the property tax basis on the new asset regardless of how the federal gain was deferred. We flag this early so an exchanger comparing net operating income across a relinquished holding and a replacement candidate is not comparing pre-reassessment and post-reassessment tax lines as if they were the same number.</p>"
+  },
+  {
+   "heading": "What Actually Extends the Clock",
+   "html": "<p>Outside of IRS disaster relief notices tied to a federally declared disaster affecting the county where either property sits, the 180-day period does not extend for financing delays, appraisal disputes, or a slow escrow officer. When a disaster declaration does cover Los Angeles County, the relief typically pushes both the identification and closing deadlines out, but we confirm the specific notice language rather than assume relief applies automatically to every exchange in the affected area.</p><p>Because relief notices are worded around specific counties and specific triggering events, an exchanger whose relinquished property sits in Los Angeles County but whose replacement candidate sits elsewhere needs both locations checked against the notice separately, since coverage is not always symmetrical across the two sides of a single exchange.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does the 180-day period restart after the 45-day identification deadline passes?",
+   "a": "No. Both periods begin on the same day, the closing date of the relinquished property, and run concurrently. Filing identification on day 44 leaves 136 days to close, not a fresh 180."
+  },
+  {
+   "q": "Can the closing date fall on a weekend or holiday?",
+   "a": "The 180th day is a calendar deadline, and if it lands on a weekend or holiday the exchange still must close on or before that date, since there is no automatic extension to the next business day."
+  },
+  {
+   "q": "What happens if the lender's loan commitment slips past day 180?",
+   "a": "The exchange fails and the deferred gain becomes taxable in that filing year. We treat lender commitment timing as a closing risk to manage early, not a formality to confirm late."
+  },
+  {
+   "q": "Does a Los Angeles County reassessment affect whether the exchange qualifies?",
+   "a": "No, the property tax reassessment under Proposition 13 is a separate county process from the federal exchange rules. It changes the ongoing tax basis on the replacement property but has no bearing on federal deferral eligibility."
+  },
+  {
+   "q": "Is there any way to get more than 180 days in a normal transaction?",
+   "a": "Only through IRS disaster relief tied to a federally declared disaster covering the relevant county. Absent that relief, the 180-day period is fixed regardless of how complicated the closing becomes."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 891
+}

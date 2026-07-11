@@ -1,0 +1,58 @@
+{
+ "slug": "market-comparable-analysis",
+ "taxonomy": "services",
+ "title": "Market Comparable Analysis",
+ "name": "Market Comparable Analysis",
+ "metaTitle": "Market Comparable Analysis in Los Angeles, CA",
+ "metaDescription": "Building submarket-specific comps across Los Angeles asset classes so a replacement candidate's asking price can be tested before identification.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A replacement property's asking price only means something next to comparable sales in the same submarket and asset class, and Los Angeles County spans enough distinct submarkets, DTLA office, Westside creative office, port-adjacent industrial, entertainment-district retail, rent-controlled multifamily, that a comp pulled from the wrong one produces a misleading number. We build the comp set before a candidate goes on the identification list, not after an offer is already in, so the exchanger knows whether the asking price reflects the actual submarket or is priced against a different one entirely.</p><p>We update this comparison as new closed sales become available rather than relying on a single snapshot taken at the start of the exchange, since a comp set built early in a search can go stale before an offer is ever written.</p>"
+  },
+  {
+   "heading": "Why a Countywide Cap Rate Figure Is Nearly Useless",
+   "html": "<p>Cap rates on stabilized multifamily in Long Beach and cap rates on a single-tenant retail building in an entertainment-district corridor can sit in noticeably different ranges, driven by differences in tenant risk, rent-control exposure, and buyer pool depth for each asset type, and averaging them into one countywide number erases the information that actually matters to a specific replacement decision. We pull comps within the same submarket and asset class as the candidate property, adjusting only for building-specific differences like age, unit mix, or lease term remaining, rather than leaning on a blended market average.</p><p>This matters most when an exchanger is comparing candidates across two different asset classes, say a Westside office building against a Pasadena multifamily property, since the two are effectively being priced by different buyer pools with different underwriting standards.</p><p>We present both comp sets side by side rather than converting everything into a single blended metric, so the exchanger can see directly why one candidate's pricing looks different from the other's rather than being handed a single number that hides the underlying comparison.</p>"
+  },
+  {
+   "heading": "What Actually Goes Into the Comp Set",
+   "html": "<ul><li>Closed sales in the same submarket within a recent, relevant time window</li><li>Same or closely comparable asset class and building vintage</li><li>Price per square foot or price per unit, adjusted for condition and deferred maintenance</li><li>In-place cap rate calculated on actual trailing income, not pro forma projections</li><li>Days on market for comparable listings, as a signal of genuine buyer demand depth</li></ul>"
+  },
+  {
+   "heading": "Reading Rent Control Into the Multifamily Comp Set",
+   "html": "<p>Two multifamily buildings of similar size and vintage can trade at different valuations if one sits inside the City of Los Angeles Rent Stabilization Ordinance and the other sits in a jurisdiction with different local rules layered onto statewide AB 1482 protections, since the ordinance governing allowable rent increases directly shapes achievable future income. We tag every multifamily comp with its specific rent-control classification, not only its city, since two properties in the same general area can fall under meaningfully different local rules.</p>"
+  },
+  {
+   "heading": "Where Deep Buyer Demand Distorts the Comp Picture",
+   "html": "<p>Los Angeles draws a genuinely deep pool of both local and out-of-state exchange capital, and that demand can push pricing on well-located product above what a straightforward income-based valuation would otherwise support, particularly on scarce industrial and multifamily assets. We flag this gap explicitly when a candidate's asking price sits meaningfully above the comp-supported value, so an exchanger can weigh whether the deadline pressure of the exchange justifies paying into that demand premium versus considering a less contested submarket.</p><p>We present this tradeoff as a specific dollar gap rather than a general caution, so the decision is grounded in an actual figure rather than a vague sense that pricing feels high.</p>"
+  },
+  {
+   "heading": "Turning the Comp Set Into an Identification Decision",
+   "html": "<p>The finished comp analysis feeds directly into whether a candidate belongs on the identification list at all, and at what price an offer should be structured if it does. We deliver the comp set alongside the lender preflight and, where relevant, the boot calculation, so the exchanger is looking at pricing, financing, and tax exposure together rather than evaluating the asking price in isolation from everything else the exchange depends on.</p><p>We update the comp set again just before an offer is finalized if enough time has passed since the initial pull, since a submarket experiencing active demand can shift meaningfully over even a few weeks inside a live exchange timeline.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why avoid using a single countywide cap rate to evaluate a candidate?",
+   "a": "Cap rates vary meaningfully by submarket and asset class across Los Angeles County, so a blended countywide figure can mask the specific pricing dynamics that actually apply to a given candidate."
+  },
+  {
+   "q": "Does rent control classification affect how a multifamily comp is read?",
+   "a": "Yes. Two similar buildings can carry different achievable income depending on which local rent-stabilization rules apply, so we tag each comp with its specific classification rather than just its general area."
+  },
+  {
+   "q": "What time window is used for comparable sales?",
+   "a": "A recent, relevant window that reflects current submarket conditions rather than older sales that may no longer represent current pricing, particularly in a market where conditions shift by asset class."
+  },
+  {
+   "q": "Can deep buyer demand push a price above what the comps support?",
+   "a": "Yes, particularly on scarce industrial and multifamily product. We flag that premium explicitly so the exchanger can decide whether paying into it makes sense given the exchange deadline."
+  },
+  {
+   "q": "How does the comp analysis connect to the identification decision?",
+   "a": "It feeds directly into whether a candidate belongs on the list and at what price an offer should be structured, alongside lender preflight and boot calculation findings."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 876
+}

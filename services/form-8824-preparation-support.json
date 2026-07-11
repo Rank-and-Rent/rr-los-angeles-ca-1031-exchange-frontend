@@ -1,0 +1,58 @@
+{
+ "slug": "form-8824-preparation-support",
+ "taxonomy": "services",
+ "title": "Form 8824 Preparation Support",
+ "name": "Form 8824 Preparation Support",
+ "metaTitle": "Form 8824 Preparation Support in Los Angeles, CA",
+ "metaDescription": "Handing a Los Angeles exchanger's tax advisor a clean numbers package, sale price, basis, boot, and debt relief, so Form 8824 reconciles on the first pass.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Form 8824 is where every number from the exchange gets reconciled, relinquished property basis, replacement property basis, boot received, and realized versus deferred gain, and it is only as accurate as the closing figures feeding it. We hand the exchanger's tax advisor a numbers package built during the exchange itself, not reconstructed afterward from memory and scattered closing statements, so the form reconciles cleanly the first time it is prepared.</p><p>We build this package while closing documents are still fresh, rather than reconstructing figures months later during tax season, since escrow statements and lender payoff demands become harder to track down the longer they sit unfiled after a Los Angeles closing.</p>"
+  },
+  {
+   "heading": "The Five Figures the Form Actually Needs",
+   "html": "<ul><li>Adjusted basis in the relinquished property at time of sale, including prior depreciation taken</li><li>Fair market value and net sale price of the relinquished property after closing costs</li><li>Fair market value and purchase price of each replacement property</li><li>Cash boot received and net debt relief, if any, calculated during the exchange</li><li>New basis in each replacement property after applying carryover basis rules</li></ul>"
+  },
+  {
+   "heading": "Where Realized Gain and Recognized Gain Diverge",
+   "html": "<p>Realized gain is the full economic gain on the relinquished sale, but recognized gain, the portion actually taxed in the current year, is limited to boot received, whichever is less between total boot and total realized gain. On a Los Angeles multifamily sale with a large realized gain but only a modest cash boot from unreinvested proceeds, the recognized gain reported on Form 8824 can be a fraction of the economic gain the exchanger actually experienced, and we walk through that distinction with the advisor rather than assuming it is self-evident from the closing numbers alone.</p><p>Depreciation recapture is calculated separately within this framework and generally cannot be deferred beyond the amount of boot recognized, which matters for exchangers moving out of a heavily depreciated Los Angeles industrial or multifamily asset into a newer replacement property.</p><p>We flag the recapture exposure as its own line in the numbers package rather than folding it into a single combined gain figure, since an advisor reviewing depreciation history on a long-held Los Angeles asset needs that component isolated to apply the correct treatment on the return.</p>"
+  },
+  {
+   "heading": "Multi-Property Exchanges Need Their Own Worksheet Per Asset",
+   "html": "<p>When an exchange involves multiple replacement properties under the 200-percent or 95-percent identification rules, Form 8824 generally requires the gain and basis calculation to be allocated across each property individually rather than reported as one blended figure. We build a per-property basis and boot allocation worksheet during the exchange, weighted by each property's share of total replacement value, so the advisor is not left dividing a single closing number across several assets without a documented methodology.</p>"
+  },
+  {
+   "heading": "Reconciling County Assessment Numbers Against Federal Basis",
+   "html": "<p>Advisors new to Los Angeles exchanges sometimes pull the Proposition 13 reassessed value from the county assessor's records when looking for the replacement property's basis, but the assessed value used for property tax purposes and the carryover basis used for federal depreciation are calculated under entirely different rules and will rarely match. We flag this distinction explicitly in the numbers package handed to the tax advisor to prevent that substitution from happening.</p><p>We include both figures side by side in the package specifically, the county assessed value and the federal carryover basis, labeled clearly, so there is no ambiguity about which number belongs on which form.</p>"
+  },
+  {
+   "heading": "Delivering the Package Ahead of the Filing Deadline",
+   "html": "<p>The completed numbers package, sale figures, boot calculation, per-property allocation where applicable, and basis carryover detail, goes to the exchanger's tax advisor well before the return is due, giving the advisor time to ask questions rather than finalize Form 8824 under deadline pressure. We are not the tax preparer and do not give tax advice; the package is built to make the advisor's own review and filing faster and more accurate.</p><p>When an advisor is unfamiliar with a specific structural detail from the closing, an improvement exchange draw schedule or a DST allocation sized against remaining proceeds, we make ourselves available to walk through how that figure was derived, since a numbers package alone does not always convey the reasoning behind a less common calculation.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Form 8824 require every dollar of gain to be reported as taxable?",
+   "a": "No. Recognized gain is limited to boot received, which can be far smaller than the total realized gain on the relinquished property. We help distinguish these figures for the advisor."
+  },
+  {
+   "q": "Is a separate worksheet needed for each replacement property?",
+   "a": "Generally yes, when an exchange involves multiple replacement properties. Basis and boot allocation is typically calculated per property rather than as one combined figure."
+  },
+  {
+   "q": "Can a Los Angeles County assessed value be used as the federal basis figure?",
+   "a": "No. The county's Proposition 13 reassessed value and the federal carryover basis are calculated under different rules and are not interchangeable, even though both apply to the same property."
+  },
+  {
+   "q": "Does this service replace the exchanger's tax preparer?",
+   "a": "No. We assemble the closing numbers into an organized package and do not provide tax advice or file the return. The exchanger's own advisor completes and files Form 8824."
+  },
+  {
+   "q": "What happens to depreciation recapture in an exchange?",
+   "a": "It is calculated separately and generally cannot be deferred beyond the amount of boot recognized, which is particularly relevant for exchangers leaving a heavily depreciated property."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

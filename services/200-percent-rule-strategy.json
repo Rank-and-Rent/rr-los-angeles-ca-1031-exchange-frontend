@@ -1,0 +1,58 @@
+{
+ "slug": "200-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "200% Rule Strategy",
+ "name": "200% Rule Strategy",
+ "metaTitle": "200% Rule Strategy in Los Angeles, CA",
+ "metaDescription": "Structuring multi-property identification lists under the 200 percent rule to spread Los Angeles proceeds across several smaller multifamily buildings.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The 200-percent rule lets an exchanger identify any number of replacement properties, with no cap on how many, as long as their combined fair market value does not exceed twice the sale price of the relinquished property. In Los Angeles, where a single mid-size multifamily sale can fund three or four smaller acquisitions, this rule is often the more useful tool than the three-property rule, and we run the value math before the identification list is drafted, not after.</p>"
+  },
+  {
+   "heading": "Why an Exchanger Would Want More Than Three Properties",
+   "html": "<p>An exchanger selling one large apartment building in Los Angeles may want to split proceeds across several smaller multifamily properties in different submarkets rather than concentrate the replacement value in a single asset, and the 200-percent rule is what makes that split legally viable when the target list runs past three candidates. This comes up constantly with owners looking to diversify exposure to rent-control ordinances that vary by jurisdiction, since a portfolio spread across the City of Los Angeles, Long Beach, and Glendale carries different rent-stabilization exposure in each city rather than concentrating it in one rule set.</p><p>The tradeoff is that every property on a long identification list has to actually be viable, because the rule only controls the identification count and value ceiling; it does not lower the bar on financing, inspection, or closing risk for any single candidate on the list.</p>"
+  },
+  {
+   "heading": "Running the 200% Ceiling Against a Real Sale Price",
+   "html": "<p>The math is simple to state and easy to get wrong under deadline pressure: take the relinquished sale price, double it, and that figure is the hard ceiling on combined identified value across every property on the list, not an average or a target. If a relinquished Los Angeles property sells for four million dollars, the identified replacement properties can carry combined value up to eight million, but if that ceiling is exceeded by even a modest margin, the entire identification list can be disqualified rather than only the property that pushed it over.</p><ul><li>Confirm the exact sale price of the relinquished property before drafting any list</li><li>Total the fair market value of every candidate property, not only the ones expected to close</li><li>Leave margin below the 200 percent ceiling for appraisal variance on unclosed candidates</li><li>Recheck the total whenever a candidate is added or removed from the list</li><li>Document the value basis used for each property in case the ceiling is questioned later</li></ul>"
+  },
+  {
+   "heading": "How Rent Control Exposure Shapes the List",
+   "html": "<p>Multifamily assets subject to the City of Los Angeles Rent Stabilization Ordinance carry different underwriting than product in unincorporated county areas or in cities with their own local ordinances layered on top of statewide AB 1482 protections, and a 200-percent rule strategy built to spread risk across submarkets has to account for which local rules actually apply to each candidate. We treat rent-control classification as a line item on every candidate summary, not a detail to sort out after a property has already been named on the identification list.</p>"
+  },
+  {
+   "heading": "Coordinating Multiple Closings Against One 180-Day Deadline",
+   "html": "<p>Every property named under a 200-percent rule strategy shares the same 180-day closing deadline as the original relinquished sale, so an exchanger acquiring four smaller Los Angeles buildings is not getting four separate closing windows, only one. We stage which acquisitions close first based on which escrow is most exposed to delay, typically the property with the most complex title history or the slowest lender, so the deadline pressure falls on the transaction best able to absorb it.</p>"
+  },
+  {
+   "heading": "When the Three-Property Rule Is Simply Better",
+   "html": "<p>Not every Los Angeles exchange benefits from a long identification list. An exchanger targeting a single large Westside office asset or one industrial parcel near the ports has no use for the 200-percent rule's flexibility and is often better served by the simpler three-property approach, since fewer named candidates means less diligence overhead and a shorter list to defend if the identification is ever questioned.</p><p>We walk through both options before drafting anything, comparing the actual number of viable candidates against the value math each rule imposes, so the exchanger picks the identification structure that fits the acquisition plan rather than defaulting to whichever rule happens to be more familiar.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is there a limit on how many properties can be named under the 200 percent rule?",
+   "a": "No numeric limit exists, only a value ceiling. An exchanger can name ten or more properties as long as their combined fair market value stays at or under 200 percent of the relinquished sale price."
+  },
+  {
+   "q": "What happens if the combined identified value slightly exceeds the 200 percent ceiling?",
+   "a": "The entire identification list can be treated as invalid rather than only the property that pushed it over. We build in a value cushion specifically to avoid this outcome."
+  },
+  {
+   "q": "Does every identified property under this rule have to be acquired?",
+   "a": "No. Under the 200 percent rule, an exchanger only needs to acquire enough identified property to satisfy exchange requirements, unlike the 95 percent rule, which requires acquiring nearly everything named."
+  },
+  {
+   "q": "Can properties in different Los Angeles County cities be mixed on the same list?",
+   "a": "Yes. There is no geographic restriction under the 200 percent rule, which is exactly why it works well for exchangers spreading multifamily exposure across several rent-control jurisdictions at once."
+  },
+  {
+   "q": "Does using the 200 percent rule change the 180-day closing deadline?",
+   "a": "No. Every acquisition tied to the exchange still has to close within the same 180-day period that began when the relinquished property sold, regardless of how many replacement properties are involved."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 883
+}

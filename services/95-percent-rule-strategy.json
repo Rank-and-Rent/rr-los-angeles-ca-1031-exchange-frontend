@@ -1,0 +1,58 @@
+{
+ "slug": "95-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "95% Rule Strategy",
+ "name": "95% Rule Strategy",
+ "metaTitle": "95% Rule Strategy in Los Angeles, CA",
+ "metaDescription": "Structuring uncapped identification lists under the 95 percent rule for Los Angeles exchangers building a diversified basket of replacement property.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The 95-percent rule removes both the three-property count limit and the 200-percent value ceiling, but the tradeoff is steep: an exchanger has to actually acquire at least 95 percent of the total value named on the identification list, not merely a majority of it. In Los Angeles, where a large exchange can realistically touch a dozen or more candidate properties across office, retail, and industrial, this rule only works when nearly every named property is genuinely likely to close.</p><p>We run the acquisition math against realistic, not optimistic, closing odds for each named property before recommending this structure, since the rule offers no partial credit for a strong effort that still lands under the threshold.</p>"
+  },
+  {
+   "heading": "The Rule That Punishes an Optimistic List",
+   "html": "<p>Unlike the three-property and 200-percent rules, which tolerate a candidate falling out of contention without threatening the exchange, the 95-percent rule treats a shortfall as disqualifying for the whole exchange if acquired value drops below the threshold. An exchanger who names eight properties expecting to close six is not protected here, because failing to reach 95 percent of the named total across every property listed can unwind the entire deferral, not only the value tied to the properties that fell through.</p><p>We use this rule selectively in Los Angeles exchanges, typically when an exchanger is assembling a large, diversified basket for DST-style allocation across office, retail, and multifamily positions and genuinely intends to close on nearly everything named, rather than casting a wide net of loosely qualified options.</p>"
+  },
+  {
+   "heading": "Building the List So the Math Actually Works",
+   "html": "<ul><li>Only include properties with financing already reasonably likely to close</li><li>Run the 95 percent threshold against total named value before finalizing the list, not after</li><li>Exclude speculative candidates that merely round out an otherwise strong list</li><li>Confirm each property's likely closing timeline against the shared 180-day deadline</li><li>Keep the list shorter and stronger rather than long and thin when acquisition certainty matters most</li></ul>"
+  },
+  {
+   "heading": "Where This Rule Fits a Los Angeles Diversification Play",
+   "html": "<p>An exchanger selling one large Westside office building may want exposure spread across several smaller assets rather than concentrated in a single replacement, and the 95-percent rule is the tool that supports naming a genuinely large basket without the 200-percent value cap getting in the way. This comes up often when combining a directly owned property, perhaps a multifamily building in Long Beach or Pasadena, with one or more DST allocations that round out the total identified value, since DST interests can be sized precisely to hit a target acquisition percentage.</p><p>This precision matters because the 95-percent test looks at total acquired value against total identified value, not at how many individual properties actually closed. An exchanger who identifies one large directly owned building and four smaller DST allocations can still satisfy the threshold even if one of the smaller DST placements falls through, provided the remaining acquisitions still clear 95 percent of what was originally named.</p>"
+  },
+  {
+   "heading": "Coordinating Closings Across a Long List",
+   "html": "<p>Every property named under this rule shares the original 180-day closing deadline, which means a basket of eight or ten candidates has to clear escrow, title, and lender underwriting inside the same window as a single-property exchange would. We stage the closings by risk, moving the properties with the most complex title history or slowest lenders first, so a late-stage delay on any one asset does not push the whole basket below the 95 percent threshold.</p>"
+  },
+  {
+   "heading": "When the Simpler Rules Serve the Exchanger Better",
+   "html": "<p>Most Los Angeles exchanges do not need the 95-percent rule's flexibility. An exchanger targeting a single multifamily building near Northridge or one industrial parcel in the City of Industry gains nothing from an uncapped identification list and takes on unnecessary acquisition risk by using this rule when the three-property or 200-percent approach would cover the same goal with a shorter, easier-to-defend list.</p><p>We run this comparison before any identification notice is drafted, since switching rules after a list is already filed is not an option once the 45-day window has closed. Getting the rule selection right at the outset avoids painting the exchange into a strict 95-percent requirement it never actually needed.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What percentage of identified value actually has to close under this rule?",
+   "a": "At least 95 percent of the total fair market value named across the identification list. Falling short of that threshold can disqualify the entire exchange rather than only the shortfall amount."
+  },
+  {
+   "q": "Is there a limit on the number of properties that can be named?",
+   "a": "No, and there is also no 200 percent value cap under this rule. The tradeoff for that flexibility is the strict 95 percent acquisition requirement."
+  },
+  {
+   "q": "Why would a Los Angeles exchanger choose this over the 200 percent rule?",
+   "a": "Mainly when the identified value would exceed the 200 percent ceiling and the exchanger is confident nearly every named property will actually close, such as a mix of direct ownership and sized DST allocations."
+  },
+  {
+   "q": "Does one failed acquisition automatically disqualify the exchange?",
+   "a": "Not automatically, but if the failure drops total acquired value below 95 percent of what was identified, the exchange can lose its deferral. That is why the candidate list has to be built conservatively."
+  },
+  {
+   "q": "Can DST interests be used to help meet the 95 percent threshold?",
+   "a": "Yes. DST allocations can be sized to a specific value, which makes them useful for rounding out a basket to hit the required acquisition percentage without overshooting it."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 861
+}

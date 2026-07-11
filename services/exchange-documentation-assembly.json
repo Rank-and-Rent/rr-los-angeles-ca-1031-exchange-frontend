@@ -1,0 +1,58 @@
+{
+ "slug": "exchange-documentation-assembly",
+ "taxonomy": "services",
+ "title": "Exchange Documentation Assembly",
+ "name": "Exchange Documentation Assembly",
+ "metaTitle": "Exchange Documentation Assembly in Los Angeles, CA",
+ "metaDescription": "Assembling the exchange agreement, assignment paperwork, and county filings a Los Angeles closing needs in the order escrow actually requires them.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>An exchange lives or dies on paper trail as much as on timing, and the document set has to be assembled in a specific sequence relative to closing, not gathered afterward as a record of what happened. We build the file from the exchange agreement forward, so every downstream document, assignment, identification notice, closing statement, references the same defined terms and dates rather than drifting into inconsistent language across separate drafts.</p>"
+  },
+  {
+   "heading": "The Exchange Agreement Comes First, Not Last",
+   "html": "<p>The written exchange agreement with the qualified intermediary has to be in place and signed before the relinquished property closes, since an exchange structured after the fact does not qualify for deferral no matter how clean the rest of the paperwork looks. We confirm this agreement is executed and the assignment of the relinquished sale contract to the qualified intermediary is delivered to the escrow holder before the Los Angeles closing date is locked, not the week of closing when there is no room to fix a missing signature.</p><p>Every subsequent document in the file, the identification notice, the replacement purchase assignment, the closing statements, references the exchange agreement's defined dates, so a reviewer can trace the whole transaction back to a single consistent timeline rather than reconciling dates across documents that were drafted independently.</p><p>We also keep a signed copy of every document, rather than only a reference to it, in a single organized file from the start, since a title company or lender requesting proof of the exchange structure partway through closing needs the actual executed paperwork on hand, not a description of what was signed.</p><p>We treat this sequencing rule as non-negotiable, and it shapes when we bring in the qualified intermediary relative to when a Los Angeles seller first lists the relinquished property, rather than waiting until an accepted offer forces the conversation.</p>"
+  },
+  {
+   "heading": "What the Identification Notice Has to Contain",
+   "html": "<ul><li>Exchanger's signature and the date of delivery to the qualified intermediary</li><li>Unambiguous description of each candidate property, typically legal description or street address</li><li>Reference to which identification rule, three-property, 200 percent, or 95 percent, governs the list</li><li>Confirmation of receipt by the qualified intermediary, kept as a separate record from the notice itself</li><li>Any amendments, each dated and delivered before the 45-day deadline closes</li></ul>"
+  },
+  {
+   "heading": "Where the County Filing Sits Alongside the Federal Paperwork",
+   "html": "<p>The change-in-ownership statement filed with the Los Angeles County Assessor at closing runs on a separate track from the federal exchange documentation, and the two should never be conflated in the closing file. The county filing determines the new property tax basis under Proposition 13's reassessment-on-transfer rule, while the exchange agreement and assignment paperwork determine whether the federal gain is deferred, and we keep these as clearly separated sections in the closing binder so a later review of either does not require untangling the other.</p>"
+  },
+  {
+   "heading": "Assignment Paperwork on Both Sides of the Trade",
+   "html": "<p>The relinquished sale contract and the replacement purchase contract each need a signed assignment to the qualified intermediary, and Los Angeles escrow officers vary in how familiar they are with exactly what language that assignment requires. We provide the assignment templates directly to the escrow and title officers handling both closings rather than assuming the standard purchase agreement addenda already cover exchange requirements, since a missing or defective assignment can undo the exchange even when every deadline was otherwise met.</p><p>We circulate the assignment language to both escrow officers as early as possible in the transaction, rather than waiting for a request, since a delayed correction on either side can push a signature closer to closing than we prefer.</p>"
+  },
+  {
+   "heading": "Handing the File to the Tax Advisor",
+   "html": "<p>Once both closings are complete, the assembled file, exchange agreement, identification notices with confirmed delivery, both assignments, both closing statements, and the boot calculation worksheet, goes to the exchanger's tax advisor for Form 8824 preparation. We organize the file in that order specifically so the advisor is not reconstructing the timeline from scattered documents while working against the tax filing deadline.</p><p>Where more than one replacement property closed, we also include a short cover memo summarizing which document applies to which closing, since a file covering two or three Los Angeles acquisitions can otherwise blur together in a way that slows down an advisor working through it for the first time.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can the exchange agreement be signed after the relinquished property closes?",
+   "a": "No. It has to be executed before closing for the transaction to qualify as a valid exchange. An agreement signed afterward does not retroactively create exchange treatment."
+  },
+  {
+   "q": "Is the county change-in-ownership filing part of the exchange documentation?",
+   "a": "It runs alongside the exchange file but serves a separate purpose, setting the property tax basis under Proposition 13 rather than affecting federal exchange eligibility."
+  },
+  {
+   "q": "What happens if the assignment paperwork is missing from a closing?",
+   "a": "A missing or defective assignment to the qualified intermediary can jeopardize the exchange's validity even if every deadline in the transaction was otherwise met."
+  },
+  {
+   "q": "Does confirmed delivery of the identification notice need separate documentation?",
+   "a": "Yes. We keep confirmation of the qualified intermediary's receipt as a distinct record from the notice itself, since delivery is a separate requirement from drafting."
+  },
+  {
+   "q": "Who ultimately uses the assembled exchange file?",
+   "a": "The exchanger's tax advisor, who relies on the complete file, agreement, notices, assignments, closing statements, and boot worksheet, to prepare Form 8824 accurately."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

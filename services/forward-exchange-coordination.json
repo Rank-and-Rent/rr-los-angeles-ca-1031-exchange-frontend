@@ -1,0 +1,58 @@
+{
+ "slug": "forward-exchange-coordination",
+ "taxonomy": "services",
+ "title": "Forward Exchange Coordination",
+ "name": "Forward Exchange Coordination",
+ "metaTitle": "Forward Exchange Coordination in Los Angeles, CA",
+ "metaDescription": "Running the standard sell-first exchange sequence for Los Angeles owners, from qualified intermediary setup through replacement property closing.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A forward exchange is the standard sequence: the relinquished property sells first, a qualified intermediary holds the proceeds, and the exchanger identifies and closes on replacement property within the 45-day and 180-day windows. Most Los Angeles owners selling an appreciated office, multifamily, or industrial asset use this structure rather than a reverse exchange, and the coordination work is mostly about not letting any one step slip against the properties still moving through it.</p><p>We treat every forward exchange as its own sequencing problem rather than a template applied uniformly, since the specific mix of asset classes and submarkets involved changes which handoff points carry the most risk of delay.</p>"
+  },
+  {
+   "heading": "Setting Up Before the Relinquished Sale Closes",
+   "html": "<p>The qualified intermediary agreement has to be signed and the sale contract assigned to the intermediary before the relinquished property closes, which means this work needs to happen while the sale is still in escrow, not after funds have already been disbursed to the seller directly. We coordinate this with the listing broker and escrow officer on Los Angeles sales well ahead of the anticipated closing date, since a seller who receives sale proceeds directly, even briefly, before the intermediary structure is in place has constructive receipt of the funds and loses the ability to defer.</p><p>Once the relinquished sale closes, the intermediary holds net proceeds and the exchanger's 45-day identification clock and 180-day closing clock both begin running from that date.</p><p>We confirm the intermediary agreement's exact language against the escrow instructions before the sale closes, since a mismatch between how the two documents describe the assignment can create a gap a title company later flags during the replacement purchase, well after the point where it would have been simple to fix.</p>"
+  },
+  {
+   "heading": "Where a Westside Office Sale Adds Its Own Timing Pressure",
+   "html": "<p>An owner exiting a Westside office building often has tenant estoppel certificates, lease abstracts, and loan payoff figures to gather before the sale can close cleanly, and any delay on that side pushes back the start date for both exchange deadlines. We track these relinquished-side dependencies with the same attention we give to replacement-side sourcing, since a slow office sale closing does not buy an exchanger any extra time once the clock does start; it only delays when the clock starts.</p><p>Where possible, we push tenant estoppel collection to begin as soon as the property is listed rather than after an accepted offer, since Westside office tenants can take weeks to return a signed estoppel and that lag has derailed more than one otherwise straightforward Los Angeles office sale from closing on the seller's preferred date.</p>"
+  },
+  {
+   "heading": "The Handoff Points That Actually Need Coordination",
+   "html": "<ul><li>Qualified intermediary agreement signed before relinquished sale closes</li><li>Identification notice delivered in writing before day 45</li><li>Replacement purchase contract assigned to the intermediary before that closing</li><li>Loan commitment and title clearance confirmed against the shared 180-day deadline</li><li>Final closing statement and boot calculation delivered to the tax advisor after funding</li></ul>"
+  },
+  {
+   "heading": "Running Multiple Replacement Purchases in Sequence",
+   "html": "<p>When a single relinquished sale funds more than one replacement property, common with a Westside office exit rolling into two or three smaller Los Angeles multifamily buildings, each purchase needs its own assignment paperwork and its own closing timeline mapped against the same 180-day deadline. We sequence which closing happens first based on which escrow carries the most risk of delay, so a straightforward acquisition is not left waiting on a complicated one that could still miss the deadline.</p>"
+  },
+  {
+   "heading": "What Ends the Coordination Work",
+   "html": "<p>The forward exchange is complete once every identified replacement property has closed inside the 180-day window and the qualified intermediary has disbursed all held funds into those purchases. At that point the file, agreement, identification notices, assignments, closing statements, and boot calculation, goes to the exchanger's tax advisor for Form 8824 preparation, and our coordination role on that specific exchange ends.</p><p>We keep a closing debrief as part of that handoff, noting anything that ran tighter than expected, a lender commitment that came in later than planned or a title issue on one of the replacement parcels, so the same friction point can be anticipated earlier the next time that exchanger runs a forward exchange.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What makes a forward exchange different from a reverse exchange?",
+   "a": "In a forward exchange, the relinquished property sells first and the intermediary later disburses proceeds into replacement property. A reverse exchange flips that order, acquiring replacement property before the relinquished sale closes."
+  },
+  {
+   "q": "Can the seller receive any sale proceeds directly during a forward exchange?",
+   "a": "No. Even brief direct receipt of proceeds before the qualified intermediary structure is in place can constitute constructive receipt and disqualify the exchange."
+  },
+  {
+   "q": "Does a slow relinquished sale closing extend the identification deadline?",
+   "a": "No. The 45-day and 180-day clocks only start once the relinquished sale actually closes, so delays on that side push back when the clock starts rather than extending it once running."
+  },
+  {
+   "q": "How are multiple replacement properties coordinated under one exchange?",
+   "a": "Each replacement purchase gets its own assignment and closing timeline, all mapped against the same 180-day deadline that began with the relinquished sale."
+  },
+  {
+   "q": "When does the coordination work on a forward exchange actually end?",
+   "a": "Once every identified replacement property has closed within the 180-day window and the intermediary has disbursed all held funds, at which point the closing file moves to the tax advisor."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "multifamily-replacement-sourcing",
+ "taxonomy": "services",
+ "title": "Multifamily Replacement Property Sourcing",
+ "name": "Multifamily Replacement Property Sourcing",
+ "metaTitle": "Multifamily Replacement Property Sourcing in Los Angeles, CA",
+ "metaDescription": "Multifamily replacement property sourcing in Los Angeles built around RSO and AB 1482 rent-cap status, trailing rent rolls, and DSCR before the 45-day list closes.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Multifamily replacement sourcing in Los Angeles runs on one number ahead of every other: how much of the rent roll sits under the Rent Stabilization Ordinance or the statewide AB 1482 cap, because that number sets the ceiling on how fast in-place rents can move toward market. Two buildings with the same trailing NOI can carry very different upside once that status is sorted out.</p>"
+  },
+  {
+   "heading": "Reading a Los Angeles Rent Roll Before It Reaches the Identification List",
+   "html": "<p>Pre-1978 buildings with five or more units inside city limits generally fall under the Rent Stabilization Ordinance, where the annual allowable increase is set by the city each year and has recently landed in the 3% to 8% band depending on utility pass-throughs. Newer buildings outside RSO but still covered by the statewide cap fall under AB 1482, which limits increases to the lesser of 5% plus CPI or 10% in any 12-month period.</p><p>Because in-place rents on covered units move slowly, turnover is the primary lever for closing the gap to market rent, and trailing 24-month turnover data on the relinquished-side comparable matters as much as the current rent roll for pricing a replacement.</p>"
+  },
+  {
+   "heading": "Underwriting Checklist for a Multifamily Replacement",
+   "html": "<p>Run every multifamily candidate through the same set of questions before it goes on the list:</p><ul><li>RSO, AB 1482, or exempt status confirmed unit by unit, not building-wide</li><li>Trailing 12-month rent roll with lease start date and current rent for every unit</li><li>Vacancy and turnover rate over the trailing 24 months</li><li>Soft-story or non-ductile concrete retrofit compliance status</li><li>Just-cause eviction and relocation-fee exposure under the applicable ordinance</li><li>Utility billing structure &mdash; RUBS versus master-metered</li></ul>"
+  },
+  {
+   "heading": "Submarkets and Basis Ranges",
+   "html": "<p>Dense pre-1978 stock in Koreatown and Mid-City has generally traded at tighter cap rates, often 4.25% to 5.25%, reflecting land value and long-term rent-control upside once turnover occurs. Newer, post-1978 product in the Valley and South Bay trades a bit wider, typically 4.5% to 5.5%, with less rent-control friction but also less repositioning upside. High-rise multifamily in and around Downtown Los Angeles carries its own pricing tier tied to concession activity and lease-up velocity.</p><p>Small multifamily properties in the five-to-twenty-unit range trade on a different buyer pool than larger institutional-scale assets, generally private investors and 1031 exchangers rather than funds, and that buyer pool tends to price turnover potential and deferred maintenance more conservatively than an institutional underwriting model would.</p>"
+  },
+  {
+   "heading": "Matching Debt and Basis to Avoid Boot",
+   "html": "<p>Lenders on Los Angeles multifamily replacement properties are generally underwriting to 55% to 65% loan-to-value with a minimum debt-service-coverage ratio in the 1.20x to 1.25x range in the current rate environment, which sets the practical debt ceiling on any candidate. If the new loan comes in below what was paid off on the relinquished property, cash has to fill the gap or the difference is treated as boot &mdash; run that comparison before the property makes the identification list, and confirm the final treatment with a qualified intermediary and tax advisor.</p>"
+  },
+  {
+   "heading": "Insurance and Property Tax Pressure on the Operating Statement",
+   "html": "<p>Property insurance premiums on Los Angeles multifamily have generally climbed faster than rent growth in recent renewal cycles, and buildings with older electrical, plumbing, or roofing systems can see even steeper increases or reduced carrier options at renewal. That expense line needs its own line-item review rather than a flat trend-forward assumption pulled from the trailing 12.</p><p>Property tax is a separate pressure point: Proposition 13 generally triggers reassessment to a value closer to the purchase price upon a change of ownership, which raises the tax line above what the seller had been paying and should be modeled at the new basis, not the seller's trailing figure, when underwriting a multifamily replacement.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much does AB 1482 limit rent growth on replacement multifamily?",
+   "a": "AB 1482 caps annual rent increases at the lesser of 5% plus the local CPI or 10%, applied per 12-month period on covered units. Buildings exempt from RSO but still subject to AB 1482 can see faster rent growth than RSO-covered stock but slower than fully exempt product like newer construction."
+  },
+  {
+   "q": "What is RSO and why does it matter for exchange underwriting?",
+   "a": "The Rent Stabilization Ordinance generally covers pre-1978 buildings with five or more units within Los Angeles city limits, and it sets a lower annual increase cap than the statewide AB 1482 rule. Knowing which ordinance applies unit by unit changes the projected rent growth used to underwrite a replacement property."
+  },
+  {
+   "q": "Does a soft-story retrofit obligation transfer with the building?",
+   "a": "Yes, mandatory seismic retrofit compliance generally attaches to the property, not the seller, so an incomplete retrofit becomes the new owner's obligation and cost at closing. Confirm retrofit status and any remaining compliance deadline before the property goes on the identification list."
+  },
+  {
+   "q": "How does vacancy and turnover affect basis allocation on a multifamily replacement?",
+   "a": "Higher trailing turnover generally signals faster ability to move rent-controlled units toward market, which changes the pro forma NOI used to justify the purchase price. Low turnover on a heavily rent-controlled building should be discounted in the underwriting rather than assumed away."
+  },
+  {
+   "q": "What debt-service-coverage ratio should I expect lenders to require?",
+   "a": "Lenders on Los Angeles multifamily have generally been underwriting to a minimum DSCR in the 1.20x to 1.25x range alongside 55% to 65% loan-to-value in the current rate environment. Actual terms vary by lender, sponsor strength, and building condition."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

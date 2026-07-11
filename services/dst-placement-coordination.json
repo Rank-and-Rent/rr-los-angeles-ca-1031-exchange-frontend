@@ -1,0 +1,58 @@
+{
+ "slug": "dst-placement-coordination",
+ "taxonomy": "services",
+ "title": "DST Placement Coordination",
+ "name": "DST Placement Coordination",
+ "metaTitle": "DST Placement Coordination in Los Angeles, CA",
+ "metaDescription": "Sizing Delaware Statutory Trust allocations to close identification gaps for Los Angeles exchangers who cannot place full proceeds in direct ownership.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A Delaware Statutory Trust interest is treated as direct real property ownership for exchange purposes, which makes it a precise tool for closing a gap that direct acquisition cannot fill on a tight deadline. When a Los Angeles exchanger has proceeds left over after a direct purchase, or cannot find a fitting direct replacement inside the 45-day window, we size a DST allocation to absorb exactly the remaining value rather than treating it as a fallback of last resort.</p>"
+  },
+  {
+   "heading": "Why the Leftover Dollar Matters",
+   "html": "<p>Full deferral requires that all net proceeds and all debt be reinvested into replacement property, and even a modest shortfall becomes taxable boot. An exchanger selling a Westside office asset and buying a smaller replacement property in Glendale or Burbank often has proceeds remaining after the direct purchase, and a DST interest sized to that specific dollar amount closes the gap without forcing the exchanger into a direct acquisition larger than what actually fits their goals.</p><p>This sizing work has to happen before the 45-day identification deadline, since the DST interest needs to be named on the identification list alongside any direct property candidates, not added afterward once the shortfall becomes obvious.</p><p>We typically request a preliminary allocation confirmation from the sponsor before the identification deadline, since some offerings close to new capital once they reach a target raise, and an exchanger cannot rely on an allocation that may no longer be open by the time the exchange actually needs it funded.</p>"
+  },
+  {
+   "heading": "Where DSTs Fit an Entertainment-District Retail Exit",
+   "html": "<p>An exchanger exiting a retail property in an entertainment-heavy corridor, where lease structures often carry percentage rent tied to foot traffic and tenant concentration risk runs higher than in a diversified multifamily portfolio, sometimes wants out of direct retail management entirely rather than trading into another single-tenant retail asset. A DST allocation across a diversified pool of properties, potentially including multifamily, industrial, or net-lease assets outside the entertainment corridor, gives that exchanger deferral without requiring another direct retail purchase in a similarly concentrated location.</p><p>We also review how the specific DST's underlying assets are distributed geographically and by tenant type before recommending an offering, since a diversification goal is not actually met if the replacement DST turns out to be concentrated in a single sector or region much like the property the exchanger just sold.</p>"
+  },
+  {
+   "heading": "What a DST Placement Actually Requires Before Closing",
+   "html": "<ul><li>Confirm the minimum investment threshold for the specific DST offering against the exchanger's remaining proceeds</li><li>Verify the sponsor and offering are accepting new investors within the exchanger's closing window</li><li>Name the DST interest precisely on the identification list, including sponsor and offering identifiers</li><li>Confirm the DST's underlying debt structure does not create unexpected mortgage boot</li><li>Review the trust agreement for transfer restrictions before treating the interest as the final placement</li></ul>"
+  },
+  {
+   "heading": "The Illiquidity Tradeoff an Exchanger Should Weigh Going In",
+   "html": "<p>A DST interest is not a liquid position; it typically cannot be sold or exchanged again until the sponsor disposes of the underlying property on its own timeline, which can run considerably longer than an exchanger might hold a directly owned asset. We walk through this tradeoff before the identification deadline, not after the interest is already named, since an exchanger who values control over exit timing may prefer a smaller direct acquisition over a DST allocation even at the cost of a somewhat higher taxable boot.</p>"
+  },
+  {
+   "heading": "Coordinating the Closing With the Broader Exchange",
+   "html": "<p>A DST closing typically moves faster than a direct real estate purchase, often within days rather than the weeks a traditional escrow requires, which makes it a useful tool for absorbing risk near the 180-day deadline if a direct acquisition is running behind schedule. We keep the DST placement staged as a contingency option through the exchange timeline whenever a direct Los Angeles purchase carries real closing risk, so there is a fallback that can still close before day 180 even if the primary acquisition falls through.</p><p>We confirm this contingency plan in writing well ahead of the deadline, including which specific sponsor offering would absorb the shortfall and at what dollar amount, so switching to the backup under time pressure is a matter of executing a decision already made rather than scrambling to make one.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does a DST interest count as real property for exchange purposes?",
+   "a": "Yes, when properly structured, a Delaware Statutory Trust interest is treated as direct ownership of real property, making it eligible as replacement property in a 1031 exchange."
+  },
+  {
+   "q": "Can a DST allocation be used alongside a direct property purchase?",
+   "a": "Yes. This is one of the most common uses, sizing a DST interest to absorb leftover proceeds after a direct acquisition so the full exchange value is reinvested."
+  },
+  {
+   "q": "How liquid is a DST interest once purchased?",
+   "a": "Not very. The interest generally cannot be sold independently and is tied to the sponsor's disposition timeline for the underlying property, which can run well beyond a typical direct-ownership hold period."
+  },
+  {
+   "q": "Does a DST placement still need to be named on the identification list?",
+   "a": "Yes. Like any other replacement property, the specific DST interest has to be identified in writing before the 45-day deadline, including sponsor and offering details."
+  },
+  {
+   "q": "Why would an exchanger leaving retail property consider a DST instead of another retail purchase?",
+   "a": "A diversified DST pool can reduce concentration in a single tenant category or corridor, which appeals to exchangers looking to step back from direct retail management after a concentrated retail exit."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 869
+}

@@ -1,0 +1,62 @@
+{
+ "slug": "qualified-intermediary-coordination",
+ "taxonomy": "services",
+ "title": "Qualified Intermediary Coordination",
+ "name": "Qualified Intermediary Coordination",
+ "metaTitle": "Qualified Intermediary Coordination in Los Angeles, CA",
+ "metaDescription": "Coordinating a qualified intermediary on a Los Angeles 1031 exchange, from exchange agreement setup through fund flow and constructive receipt avoidance.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The qualified intermediary is the entity that holds exchange proceeds between the sale of the relinquished property and the purchase of the replacement, and getting that relationship set up before the relinquished property closes escrow &mdash; not after &mdash; is what keeps a Los Angeles exchange on schedule. The documents and deadlines involved are mechanical, and missing one by a day can unwind the entire exchange.</p>"
+  },
+  {
+   "heading": "What the Qualified Intermediary Holds and When",
+   "html": "<p>A qualified intermediary engagement on a typical Los Angeles closing involves the following documents, generally assembled before the relinquished property closes:</p><ul><li>Exchange agreement between the exchanger and the qualified intermediary</li><li>Assignment of the exchanger's rights in the relinquished property purchase contract</li><li>Notice of assignment delivered to the buyer of the relinquished property</li><li>Qualified escrow or qualified trust agreement holding the exchange proceeds</li><li>Written identification notice listing replacement property candidates within 45 days</li><li>Assignment of rights in the replacement property purchase contract before that closing</li></ul>"
+  },
+  {
+   "heading": "Fund Flow Timing on a Los Angeles Closing",
+   "html": "<p>Once the relinquished property closes, net proceeds move directly from the closing escrow to the qualified intermediary's account, not through the exchanger, and stay there until they are wired to the closing escrow for the replacement property. Los Angeles escrow and title companies handling exchange closings generally need the qualified intermediary's wiring instructions and exchange agreement in hand several days before closing to avoid a last-minute delay in disbursement.</p>"
+  },
+  {
+   "heading": "Coordinating Deadlines Across Escrow, Lender, and Qualified Intermediary",
+   "html": "<p>The 45-day identification window and 180-day exchange period run from the closing date of the relinquished property, independent of how long the replacement property purchase takes to negotiate or how long a lender takes to fund. Building a shared calendar between the qualified intermediary, escrow officer, and lender at the start of the exchange &mdash; rather than reconstructing deadlines mid-transaction &mdash; is what keeps those three timelines aligned.</p>"
+  },
+  {
+   "heading": "Keeping the Exchanger Out of Constructive Receipt",
+   "html": "<p>Constructive receipt occurs when the exchanger gains control over the sale proceeds, even briefly, and it can disqualify the entire exchange regardless of intent. The qualified intermediary's exchange agreement is written to prevent that by routing every dollar directly between escrow accounts, which is why the agreement needs to be signed and in place before the relinquished property closes rather than drafted afterward.</p>"
+  },
+  {
+   "heading": "What to Confirm Before Choosing a Qualified Intermediary in Los Angeles",
+   "html": "<p>Qualified intermediaries are not licensed or regulated the way escrow companies and title companies are in California, so confirming how exchange funds are held &mdash; a segregated qualified escrow account versus a commingled trust account &mdash; and what fidelity bond or errors-and-omissions coverage backs that account matters before signing an exchange agreement. Asking for references from local escrow officers who have closed exchanges with the intermediary is a reasonable step given how much rides on the funds being available and accounted for on the replacement closing date.</p><p>Turnaround time on document preparation is worth confirming directly rather than assuming, since a Los Angeles closing calendar can move quickly once a replacement property is under contract, and a qualified intermediary slow to turn around an assignment or closing statement can put the 180-day deadline at risk even when every other part of the transaction is on schedule.</p>"
+  },
+  {
+   "heading": "Final Accounting After the Replacement Property Closes",
+   "html": "<p>Once the replacement property closes, the qualified intermediary generally issues a final accounting showing funds received from the relinquished property sale, funds disbursed to the replacement purchase, any interest earned while funds were held, and any remaining balance returned to the exchanger. That final accounting, along with the identification notice and both closing statements, is what a tax advisor needs to prepare Form 8824 accurately, so requesting it promptly rather than months later keeps the paperwork trail intact.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What does a qualified intermediary typically charge for a Los Angeles exchange?",
+   "a": "Fees generally include a flat setup charge in the low four figures plus, on larger or multi-property exchanges, a basis-point charge on funds held. Exact pricing varies by intermediary and deal complexity, so get a written fee schedule before signing the exchange agreement."
+  },
+  {
+   "q": "Is a qualified intermediary the same as an attorney or accountant?",
+   "a": "No, a qualified intermediary is a separate role defined by tax regulations to hold exchange funds and prepare exchange documents, distinct from the legal or tax advice provided by an attorney or CPA. Most exchanges use all three roles together, each handling a different part of the transaction."
+  },
+  {
+   "q": "What happens if exchange proceeds touch the exchanger's bank account?",
+   "a": "That generally triggers constructive receipt, which can disqualify the exchange even if the funds are quickly forwarded to the qualified intermediary. Proceeds need to route directly from the closing escrow to the qualified intermediary's qualified escrow or trust account without passing through the exchanger."
+  },
+  {
+   "q": "How early before closing should the qualified intermediary be engaged?",
+   "a": "Generally before the relinquished property's purchase contract is signed or shortly after, since the exchange agreement and assignment documents need to be in place before that closing. Waiting until days before closing raises the risk of a documentation gap that jeopardizes the exchange."
+  },
+  {
+   "q": "Are qualified intermediaries regulated in California?",
+   "a": "Qualified intermediaries are not licensed the way escrow and title companies are in California, so how funds are held and what insurance or bonding backs the account varies by firm. Confirming those details before signing an exchange agreement is a reasonable diligence step given how much of the transaction depends on the funds being available on schedule."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 858
+}

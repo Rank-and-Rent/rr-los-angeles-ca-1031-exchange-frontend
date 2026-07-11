@@ -1,0 +1,62 @@
+{
+ "slug": "t12-financial-review",
+ "taxonomy": "services",
+ "title": "Trailing-12 Financial Review",
+ "name": "Trailing-12 Financial Review",
+ "metaTitle": "Trailing-12 Financial Review in Los Angeles, CA",
+ "metaDescription": "Trailing-12 financial statement review for Los Angeles replacement property, reconciling gross rent, expense ratios, and one-time items before identification.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A trailing-12 financial statement is the single document that generally separates a replacement property's marketed cap rate from its actual, underwritable cap rate, and reviewing it line by line before a Los Angeles candidate goes on the identification list is what keeps that gap from surfacing after the property is already under contract.</p>"
+  },
+  {
+   "heading": "What the Trailing-12 Needs to Reconcile Against",
+   "html": "<p>Every trailing-12 statement should reconcile to the following before it is used to underwrite a cap rate:</p><ul><li>Gross scheduled rent, tied back to the rent roll unit by unit</li><li>Vacancy and collection loss, reconciled to specific units or tenants</li><li>Other income &mdash; parking, storage, laundry, or utility reimbursement (RUBS)</li><li>Operating expenses broken out by category rather than a single lump sum</li><li>Net operating income before debt service and capital reserves</li><li>Capital expenditure reserve, generally excluded from NOI but relevant to true cash flow</li></ul>"
+  },
+  {
+   "heading": "Normalizing One-Time Items Before Comparing Cap Rates",
+   "html": "<p>A trailing-12 statement often includes one-time items &mdash; a lawsuit settlement, a major repair, or a one-time consulting fee &mdash; that should be added back before comparing the resulting NOI to a marketed cap rate, since leaving them in understates the property's ongoing cash flow. The reverse is also common: a seller's marketed pro forma sometimes strips out recurring costs like reserve funding or management fees under the label of normalization, which should be added back rather than accepted at face value.</p>"
+  },
+  {
+   "heading": "Where Trailing-12 Numbers Diverge From Seller Pro Forma in Los Angeles Deals",
+   "html": "<p>Seller-provided pro forma numbers for Los Angeles properties generally assume faster rent growth toward market than the trailing actuals support, particularly on rent-controlled multifamily where the increase ceiling is fixed by ordinance rather than market conditions. Comparing the trailing-12 actuals against the pro forma line by line, rather than accepting the marketed cap rate on the pro forma number, is what protects the identification decision from being built on an optimistic projection.</p>"
+  },
+  {
+   "heading": "Capital Expenditure History and Deferred Maintenance",
+   "html": "<p>A trailing-12 statement rarely captures the full capital expenditure picture, since major roof, HVAC, or seismic retrofit spending is often booked separately from operating expenses or spread across several years, so requesting a trailing three- to five-year capital expenditure schedule alongside the trailing-12 gives a clearer read on what a replacement property will actually cost to maintain going forward. Deferred maintenance identified during a physical inspection but not reflected in either the trailing-12 or the capital expenditure schedule should be priced into the offer separately rather than assumed to be minor.</p><p>On older Los Angeles buildings, seismic retrofit obligations in particular can represent a capital cost larger than several years of trailing net operating income, so confirming whether that cost has already been incurred, is budgeted, or remains unaddressed changes the effective basis of the deal materially.</p>"
+  },
+  {
+   "heading": "Using the Trailing-12 to Set the Identification List Debt Target",
+   "html": "<p>Once a normalized NOI is established, dividing it by the minimum debt-service-coverage ratio a lender will require gives the maximum debt service the property can support, which translates directly into the maximum loan amount and, from there, the minimum equity an exchanger needs to bring to close without triggering boot. Running that calculation on every trailing-12 before a property is added to the identification list, rather than after an offer is accepted, keeps the list realistic instead of aspirational.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What counts as a normalized NOI on a Los Angeles trailing-12?",
+   "a": "A normalized NOI generally adds back one-time expenses like a lawsuit settlement or major repair while also adding back any recurring cost, such as management fees or reserve funding, that a seller's pro forma may have stripped out. The goal is an NOI that reflects ongoing operations, not a best-case or worst-case snapshot."
+  },
+  {
+   "q": "What expense ratio is typical by asset class in Los Angeles?",
+   "a": "Expense ratios generally run higher for multifamily, often 40% to 45% of gross income, than for single-tenant net lease property, which can run below 10% when the tenant covers taxes, insurance, and maintenance directly. Comparing a candidate's ratio to its asset class, not a single blanket benchmark, is the more reliable check."
+  },
+  {
+   "q": "How far back should a trailing-12 review go?",
+   "a": "A full trailing 12 months is the minimum, but reviewing the prior 12 months alongside it generally reveals whether a recent improvement in NOI is a stabilized trend or a short-term spike."
+  },
+  {
+   "q": "How large is the typical gap between seller pro forma and trailing actuals in Los Angeles?",
+   "a": "The gap varies by asset class and submarket, but rent-controlled multifamily pro formas in particular tend to assume faster rent growth than the ordinance-capped actuals can support, so that comparison deserves specific attention rather than a general assumption that pro forma and actuals will be close."
+  },
+  {
+   "q": "Should a capital expenditure schedule be reviewed separately from the trailing-12?",
+   "a": "Yes, major capital spending like roof replacement or seismic retrofit work is often booked outside routine operating expenses, so a trailing three- to five-year capital expenditure schedule generally gives a more complete cost picture than the trailing-12 alone. Deferred maintenance found during inspection should be priced separately from either document."
+  },
+  {
+   "q": "How does the trailing-12 translate into a maximum loan amount for the identification list?",
+   "a": "Dividing the normalized NOI by the lender's minimum debt-service-coverage ratio generally sets the maximum supportable debt service, which in turn sets the maximum loan amount and the minimum equity needed to close without creating boot. Running this on every candidate, not only the preferred one, keeps the list realistic."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 859
+}

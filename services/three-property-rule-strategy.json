@@ -1,0 +1,66 @@
+{
+ "slug": "three-property-rule-strategy",
+ "taxonomy": "services",
+ "title": "Three-Property Rule Strategy",
+ "name": "Three-Property Rule Strategy",
+ "metaTitle": "Three-Property Rule Strategy in Los Angeles, CA",
+ "metaDescription": "Applying the three-property identification rule to a Los Angeles 1031 exchange, matched against the 200% and 95% rules across asset classes before day 45.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The three-property rule is generally the simplest of the three identification rules, but simplest does not mean automatic: with the range of asset classes trading in Los Angeles, from industrial near the port to multifamily in Koreatown, choosing which three properties to name still takes real underwriting before the 45-day notice goes to the qualified intermediary.</p>"
+  },
+  {
+   "heading": "When the Three-Property Rule Fits a Los Angeles Portfolio",
+   "html": "<p>The identification rules available under a standard exchange are:</p><ul><li>Three-property rule &mdash; up to three properties named regardless of combined value</li><li>200% rule &mdash; unlimited properties named as long as combined value stays under 200% of the relinquished property's value</li><li>95% rule &mdash; unlimited properties named, but at least 95% of combined value must be acquired</li><li>Only one of the three rules needs to be satisfied by the written identification notice</li><li>The rule chosen at day 45 cannot be changed after the deadline passes</li></ul>"
+  },
+  {
+   "heading": "Choosing Three-Property Over the 200% Rule",
+   "html": "<p>The three-property rule generally makes sense when an exchanger already has a strong lead candidate plus one or two credible backups, since naming exactly three keeps the identification notice simple and avoids the combined-value ceiling the 200% rule imposes. In a market like Los Angeles where a single-tenant net lease pad, a small industrial building, and a multifamily property can carry very different price points, the three-property rule lets an exchanger mix asset classes freely without doing a combined-value calculation.</p><p>The 200% rule becomes more useful when an exchanger wants a wider net &mdash; five or six candidates across several submarkets &mdash; generally because the preferred asset class is thinly traded and backups improve the odds of closing something within 180 days.</p>"
+  },
+  {
+   "heading": "Common Mistakes With the Three-Property Identification",
+   "html": "<p>Naming exactly three properties without any real intent to buy two of them wastes the flexibility the rule offers, since those two slots could otherwise hold genuine backups from a different asset class or submarket. A second common mistake is describing a property loosely &mdash; by neighborhood or general area rather than a specific address or legal description &mdash; which can invalidate that identification even though the exchanger had a specific building in mind.</p>"
+  },
+  {
+   "heading": "Building a Three-Property List Across Los Angeles Asset Classes",
+   "html": "<p>A practical approach for a Los Angeles exchanger is to name a primary candidate that matches the relinquished property's basis and debt profile closely, a second candidate in a different asset class that trades on a more predictable financing structure, such as a corporate-guaranteed net lease deal, and a third candidate that offers a faster closing timeline in case the first two run into estoppel or title delays. That mix gives real optionality rather than three variations on the same underwriting risk.</p><p>Debt sizing should be checked on all three named properties, not only the lead candidate, since discovering during loan underwriting that the backup candidates cannot support enough leverage to avoid boot defeats the purpose of naming backups in the first place.</p>"
+  },
+  {
+   "heading": "How the Three-Property Rule Interacts With a Reverse Exchange",
+   "html": "<p>The three-property rule applies the same way in a reverse exchange structure, where the exchanger identifies which relinquished property will be sold within 45 days of the accommodation titleholder taking title to the replacement, as it does in a standard forward exchange identifying replacement candidates. Exchangers running a reverse structure on a competitive Los Angeles replacement property still need to apply one of the three identification rules correctly on the relinquished side of the transaction.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I identify a fourth property under the three-property rule?",
+   "a": "No, the three-property rule caps the notice at three properties regardless of value; identifying a fourth generally requires switching to the 200% or 95% rule for the entire notice instead."
+  },
+  {
+   "q": "What happens if I identify three properties but only close on two?",
+   "a": "Closing on fewer than all three identified properties is generally fine under the three-property rule, since the requirement is that at least one identified property is acquired, not all three."
+  },
+  {
+   "q": "Does the three-property rule apply per exchange or per exchanger?",
+   "a": "The rule applies per exchange transaction, so an exchanger running more than one exchange in the same year applies the rule separately to each one."
+  },
+  {
+   "q": "How precise does a property description need to be under the three-property rule?",
+   "a": "Generally a legal description or unambiguous street address, not a neighborhood or general area description. An imprecise description can invalidate that specific identification even under the simpler three-property rule."
+  },
+  {
+   "q": "Should the three named properties be similar asset classes or different ones?",
+   "a": "Naming a mix of asset classes with different financing profiles and closing timelines generally gives more real optionality than three similar candidates carrying the same underwriting risk. A primary candidate matched to the relinquished property's basis, plus two genuinely different backups, is a common practical approach in Los Angeles."
+  },
+  {
+   "q": "Is the three-property rule available on every type of 1031 exchange?",
+   "a": "The three-property rule applies to standard forward exchanges and to the relinquished-property side of a reverse exchange in the same way, since the underlying identification requirement does not change based on which side of the transaction closes first. Confirm the specific application with a qualified intermediary for any less common exchange structure."
+  },
+  {
+   "q": "Does naming three properties guarantee that at least one will close successfully?",
+   "a": "No, the rule only sets the identification requirement; whether a named property actually closes still depends on financing, title, and negotiation outcomes. Naming genuine backups with different financing profiles generally improves the odds of closing at least one within the 180-day period, but it does not guarantee it."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 877
+}

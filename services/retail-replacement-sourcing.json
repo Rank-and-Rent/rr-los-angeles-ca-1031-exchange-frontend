@@ -1,0 +1,62 @@
+{
+ "slug": "retail-replacement-sourcing",
+ "taxonomy": "services",
+ "title": "Retail Replacement Property Sourcing",
+ "name": "Retail Replacement Property Sourcing",
+ "metaTitle": "Retail Replacement Property Sourcing in Los Angeles, CA",
+ "metaDescription": "Retail replacement sourcing along Los Angeles' highest-traffic corridors, matched to co-tenancy, percentage rent, and parking ratio before the 45-day list closes.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Retail replacement sourcing in Los Angeles has to account for how differently strip centers, unanchored multi-tenant retail, and single-tenant pads underwrite from each other, since the same corridor can carry three very different cap rate tiers depending on which of those three formats a candidate falls into.</p>"
+  },
+  {
+   "heading": "Retail Stock Along Los Angeles' Highest-Traffic Corridors",
+   "html": "<p>High street retail along Melrose, the Third Street Promenade in Santa Monica, and Hollywood Boulevard has generally traded at tighter cap rates, often 4% to 5%, reflecting land value and entertainment-district foot traffic. Strip and neighborhood retail along boulevards such as Ventura and Sepulveda trades wider, typically 5.5% to 6.5%, with pricing more dependent on anchor tenant strength than on street-level visibility alone.</p><p>Building size on these corridors ranges from a 3,000-square-foot single storefront to a 40,000-square-foot neighborhood strip center with eight to twelve tenants, and that range is part of why comparing two retail candidates on cap rate alone, without adjusting for tenant count and lease structure, tends to mislead an exchanger choosing between them.</p>"
+  },
+  {
+   "heading": "Checklist for a Multi-Tenant Retail Candidate",
+   "html": "<p>Screen every strip or neighborhood retail candidate against the following before it goes on the identification list:</p><ul><li>Anchor tenant identity and remaining lease term versus in-line tenant turnover risk</li><li>Co-tenancy clauses that let an anchor reduce rent or terminate if another anchor vacates</li><li>Percentage rent structure for tenants paying a base rent plus a share of sales</li><li>CAM reimbursement caps and whether they have kept pace with actual expenses</li><li>Parking ratio, with roughly 4 stalls per 1,000 square feet the practical floor for a neighborhood strip center</li></ul>"
+  },
+  {
+   "heading": "Vacancy and Tenant Mix Risk Since E-Commerce Repositioning",
+   "html": "<p>Retail centers with a grocery, service, or experiential tenant as the draw have generally held occupancy better through the shift toward e-commerce than centers relying on apparel or general merchandise, and that distinction matters more for underwriting a replacement property than headline occupancy alone. A center showing 95% occupancy carried by several short-term or month-to-month tenants carries different risk than the same occupancy figure supported by long-term anchor leases.</p><p>Service-oriented and experience-oriented tenants &mdash; medical and dental suites, fitness studios, restaurants, salons &mdash; have generally proven harder for e-commerce to displace than soft goods retailers, and a Los Angeles retail candidate leaning toward that tenant mix generally carries lower rollover risk over a five- to ten-year hold than one weighted toward general merchandise.</p>"
+  },
+  {
+   "heading": "Basis Matching for Multi-Tenant Strip Versus Single-Tenant Retail Pad",
+   "html": "<p>A single-tenant retail pad with a corporate-guaranteed lease generally supports a higher loan-to-value than a multi-tenant strip center with rollover risk across several smaller tenants, which changes how much of the relinquished property's debt each format can realistically replace. Listing at least one candidate from each format on the identification notice keeps that debt-matching decision open until closer to the 180-day deadline rather than locking it in on day one.</p>"
+  },
+  {
+   "heading": "Parking and Site Plan Constraints on Older Retail Centers",
+   "html": "<p>Many Los Angeles strip centers built before current parking codes were adopted carry a legal nonconforming parking ratio, which can limit what a new owner is permitted to build or reconfigure on the site without triggering a full code upgrade. Confirming nonconforming status with the local planning department before identification matters as much as the parking count itself, since a nonconforming site can restrict future redevelopment even when current tenant demand supports the existing layout.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why does high street retail in Los Angeles price tighter than neighborhood strip centers?",
+   "a": "Melrose, the Third Street Promenade, and Hollywood Boulevard carry land value and entertainment-district foot traffic that neighborhood strip centers generally do not, which compresses cap rates on that stock relative to boulevard retail. Tenant mix and lease term still move pricing within each category."
+  },
+  {
+   "q": "What is a co-tenancy clause and why does it matter for underwriting?",
+   "a": "A co-tenancy clause generally lets a tenant pay reduced rent or terminate its lease if a named anchor tenant vacates the center, which creates a hidden risk to net operating income that is not visible from occupancy alone. Reviewing every co-tenancy clause before identification protects the pro forma."
+  },
+  {
+   "q": "Does percentage rent add meaningful upside on a retail replacement property?",
+   "a": "It can, but percentage rent income is generally more volatile than base rent and depends on tenant sales performance, so it should be underwritten conservatively rather than assumed to continue at a recent high-water mark."
+  },
+  {
+   "q": "How does e-commerce exposure affect retail replacement underwriting in Los Angeles?",
+   "a": "Centers carried by grocery, service, or experiential tenants have generally held occupancy better than centers relying on apparel or general merchandise, so tenant mix matters more for underwriting than the current occupancy percentage alone."
+  },
+  {
+   "q": "What is legal nonconforming parking and why does it matter on an older retail center?",
+   "a": "It means the property's existing parking ratio was built to a code standard no longer in effect and would not be permitted if built today, which can limit future redevelopment or expansion without a full parking upgrade. Confirming nonconforming status with the local planning department before identification avoids surprises after closing."
+  },
+  {
+   "q": "How much does tenant mix matter compared to headline occupancy when comparing two retail candidates?",
+   "a": "Tenant mix generally matters more than the occupancy percentage alone, since a center at 95% occupancy carried by short-term or month-to-month tenants faces different rollover risk than one at the same occupancy supported by long-term service or grocery leases. Reviewing the lease expiration schedule alongside occupancy gives a more complete picture."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 859
+}

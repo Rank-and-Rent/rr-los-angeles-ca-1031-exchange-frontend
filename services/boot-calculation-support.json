@@ -1,0 +1,58 @@
+{
+ "slug": "boot-calculation-support",
+ "taxonomy": "services",
+ "title": "Boot Calculation Support",
+ "name": "Boot Calculation Support",
+ "metaTitle": "Boot Calculation Support in Los Angeles, CA",
+ "metaDescription": "Line-by-line cash and debt boot math for Los Angeles exchanges, so the taxable portion of a trade is known before escrow closes, not after.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Boot is any value an exchanger receives out of an exchange that is not like-kind replacement real property, and it shows up in two forms that get calculated differently: cash boot, meaning proceeds actually taken out, and mortgage boot, meaning a drop in debt from the relinquished property to the replacement property. We run both calculations as a line-item worksheet before closing, because a taxable boot figure discovered after the fact leaves no room to restructure the deal.</p>"
+  },
+  {
+   "heading": "Cash Boot Is a Straight Subtraction",
+   "html": "<p>Cash boot is the simplest of the two to calculate: it is any exchange proceeds not reinvested into replacement property, including funds released to the exchanger directly or used to pay down debt unrelated to the exchange. If a Los Angeles multifamily sale nets proceeds after closing costs and the replacement purchase price is lower than that net figure, the difference is cash boot and is taxable in the year received, regardless of how the rest of the exchange is structured.</p><p>We calculate this against the actual net sale proceeds after commissions, escrow fees, and any prorated property tax adjustment, not the gross sale price, since using the wrong starting figure is the most common error we see in a first-pass boot estimate.</p><p>We also separate out any funds an exchanger withdraws mid-exchange for reasons unrelated to the transaction, legal fees paid outside escrow or an early distribution requested from the qualified intermediary, since those withdrawals count as boot the moment they are received regardless of whether the exchanger later reinvests an equivalent amount from another source.</p><p>Prorated items at closing, property tax adjustments, security deposit transfers, and rent proration, also flow through this figure, and we itemize each one individually rather than netting them into a single adjustment line, since a tax advisor reviewing the file later needs to see how each component was treated.</p>"
+  },
+  {
+   "heading": "Mortgage Boot Follows the Debt Line, Not the Cash Line",
+   "html": "<ul><li>Compare loan balance on the relinquished property to loan balance assumed or originated on the replacement property</li><li>A net decrease in debt is treated as boot unless offset by additional cash invested</li><li>Additional cash contributed by the exchanger can offset a debt decrease dollar for dollar</li><li>Debt reduction cannot be offset by increasing cash taken out elsewhere in the exchange</li><li>Confirm final loan figures with the lender before closing, since preliminary quotes often shift</li></ul>"
+  },
+  {
+   "heading": "Where Los Angeles Financing Complicates the Debt Comparison",
+   "html": "<p>A relinquished Westside office property carrying a large existing loan balance and a replacement industrial parcel near Vernon financed at a lower loan-to-value ratio can create mortgage boot even when the exchanger has no intention of taking cash out, simply because Los Angeles lenders are underwriting industrial and office product to different leverage standards right now. We run the debt comparison against actual lender term sheets rather than assumed loan-to-value ratios, since a five or ten percentage point difference in leverage between asset classes can turn what looked like a clean trade into a partially taxable one.</p>"
+  },
+  {
+   "heading": "Basis Carryover and the County Tax Line Are Separate Questions",
+   "html": "<p>The federal basis carried into the replacement property, which determines future depreciation and gain calculation, is a different number entirely from the property tax basis Los Angeles County assigns after the change-in-ownership filing under Proposition 13. We keep these two figures on separate lines in the closing summary so an exchanger comparing projected cash flow on the replacement property is not confusing depreciation basis with the new assessed value driving the property tax bill.</p>"
+  },
+  {
+   "heading": "What a Completed Worksheet Actually Shows the Exchanger",
+   "html": "<p>By the time we hand off a boot calculation, the exchanger has a single figure representing total taxable boot, cash plus net debt reduction, along with the underlying line items that produced it, so there is no ambiguity going into the closing. That worksheet then feeds directly into the Form 8824 preparation the exchanger's tax advisor completes, keeping the numbers consistent from the closing table through the tax return.</p><p>We deliver the worksheet with a plain-language summary alongside the raw figures, since an exchanger reviewing a boot calculation for the first time benefits from seeing the final taxable amount alongside which specific line item, a debt reduction on the replacement loan or a small cash release at closing, actually produced it.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is boot always paid in cash?",
+   "a": "No. Boot can also come from a net decrease in mortgage debt between the relinquished and replacement properties, even if the exchanger never receives a dollar of cash at closing."
+  },
+  {
+   "q": "Can additional cash offset a drop in debt to avoid mortgage boot?",
+   "a": "Yes. Contributing outside cash into the replacement purchase can offset a decrease in loan balance, but the offset only works in that direction, not by increasing cash taken out elsewhere."
+  },
+  {
+   "q": "Why would a Los Angeles exchange create boot even without cash out?",
+   "a": "Because lenders can underwrite different asset classes, such as office versus industrial, to different leverage levels, a like-value trade can still produce a lower loan balance on the replacement side."
+  },
+  {
+   "q": "Does a lower property tax basis under Proposition 13 reduce taxable boot?",
+   "a": "No. The county reassessment sets the ongoing property tax basis, which is unrelated to the federal basis and gain calculation used to determine boot and depreciation."
+  },
+  {
+   "q": "When should boot be calculated relative to closing?",
+   "a": "Before closing, ideally as soon as loan terms and net sale proceeds are known, so any taxable exposure is identified while there is still time to adjust the structure."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 865
+}

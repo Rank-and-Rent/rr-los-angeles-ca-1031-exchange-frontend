@@ -1,0 +1,62 @@
+{
+ "slug": "rent-roll-analysis",
+ "taxonomy": "services",
+ "title": "Rent Roll Analysis for Exchange Underwriting",
+ "name": "Rent Roll Analysis for Exchange Underwriting",
+ "metaTitle": "Rent Roll Analysis for Exchange Underwriting in Los Angeles, CA",
+ "metaDescription": "Rent roll analysis for Los Angeles 1031 exchange replacement property, covering RSO flags, market-rent gaps, and delinquency review before the identification list closes.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A rent roll is the first document that separates a multifamily or retail replacement candidate that will underwrite cleanly from one that will not, and in Los Angeles that analysis has to go unit by unit rather than building-wide because rent control status changes the math per unit, not per property.</p>"
+  },
+  {
+   "heading": "What a Los Angeles Rent Roll Needs to Show",
+   "html": "<p>A usable rent roll for exchange underwriting includes the following, unit by unit rather than as a building average:</p><ul><li>Unit mix and square footage for every unit in the building</li><li>Lease start date and current in-place rent per unit</li><li>Gap between current rent and comparable market rent</li><li>RSO or AB 1482 coverage flag per unit</li><li>Security deposit ledger reconciled to the lease file</li><li>Delinquency and collection history over the trailing 12 months</li></ul>"
+  },
+  {
+   "heading": "Reconciling the Rent Roll Against the Trailing 12",
+   "html": "<p>The rent roll's gross scheduled rent line needs to tie to the trailing-12 financial statement's gross rental income before either document is used to underwrite a cap rate, and a mismatch of more than a few percentage points generally signals either a stale rent roll or unrecorded concessions. Vacancy and delinquency shown on the trailing 12 should also reconcile to specific units on the rent roll rather than being taken as a single unexplained line item.</p><p>Any unit showing a rent below what the RSO or AB 1482 ceiling would otherwise allow is worth flagging separately, since that gap represents upside the seller left on the table rather than a structural cap on the unit.</p>"
+  },
+  {
+   "heading": "Red Flags That Change the Timeline",
+   "html": "<p>A rent roll with several units at flat or below-market rent for multiple years without a documented reason, deposit balances that do not reconcile to the lease file, or a cluster of month-to-month tenancies without RSO protection all generally warrant a second look before the property is added to the identification list, since any of the three can extend the diligence period past what the 45-day window comfortably allows.</p>"
+  },
+  {
+   "heading": "Comparing the Rent Roll to Nearby Comparable Buildings",
+   "html": "<p>A rent roll only means something once it is measured against comparable buildings in the same Los Angeles submarket, since a unit priced below what the rent roll alone suggests as market can still be at market if comparable buildings nearby show the same figure. Pulling three to five comparable rent rolls from recent transactions or active listings in the same submarket, and lining up unit size, vintage, and amenity level, keeps the market-rent gap analysis honest rather than optimistic.</p><p>Seasonal timing matters too: a rent roll pulled during a slow leasing month can understate achievable rent relative to one pulled during peak leasing season, so noting when the comparable data was collected helps explain any gap between the subject property and its comparables.</p>"
+  },
+  {
+   "heading": "Handing the Analysis to the Qualified Intermediary and Lender",
+   "html": "<p>Once the rent roll and trailing-12 reconcile, that same package generally becomes the backbone of what a lender underwrites for financing and what a qualified intermediary keeps on file to support the exchange documentation, so building it once, correctly, avoids redoing the work twice under time pressure closer to the 180-day deadline. Any red flag identified during the rent roll review should be disclosed to the lender directly rather than left for the appraiser or underwriter to discover independently, since a late-stage surprise on a financed deal can push the closing date past what the exchange period allows.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How far back should a rent roll used for exchange underwriting go?",
+   "a": "A current rent roll paired with trailing 12-month collections and a 24-month turnover history generally gives enough data to underwrite rent growth potential and delinquency risk. Shorter histories make it harder to distinguish a temporary vacancy spike from a structural leasing problem."
+  },
+  {
+   "q": "What is a red flag on a Los Angeles rent roll?",
+   "a": "Multiple units held flat or below the RSO or AB 1482 allowable increase for several years without explanation, deposit balances that do not reconcile to lease files, and a cluster of undocumented month-to-month tenancies are common red flags. Any of these generally warrants extra diligence time before the property goes on the identification list."
+  },
+  {
+   "q": "How do RSO flags affect the valuation of a replacement property?",
+   "a": "Units confirmed under RSO generally carry slower rent growth assumptions in the underwriting model than exempt or AB 1482-only units, which lowers the pro forma NOI used to justify a purchase price. Flagging coverage unit by unit, rather than assuming building-wide status, keeps that valuation accurate."
+  },
+  {
+   "q": "Do tenant estoppels replace the need for rent roll analysis?",
+   "a": "Estoppels confirm individual lease terms directly with tenants but generally arrive later in the closing process than a seller-provided rent roll, so rent roll analysis is what drives the initial identification and pricing decision. Estoppels then verify that analysis before the replacement property closes."
+  },
+  {
+   "q": "How many comparable rent rolls should I collect for a Los Angeles submarket?",
+   "a": "Three to five comparable buildings of similar vintage, size, and amenity level in the same submarket generally gives enough data to judge whether the subject property's rents are in line with the market. Fewer comparables make it harder to distinguish a genuine below-market unit from normal building-to-building variation."
+  },
+  {
+   "q": "Who should prepare the rent roll analysis for an exchange?",
+   "a": "A broker, property manager, or third-party underwriting service can generally prepare the initial rent roll analysis, but the exchanger or their advisor should review the reconciliation against the trailing-12 personally before relying on it for an identification decision."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 868
+}

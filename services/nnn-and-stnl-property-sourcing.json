@@ -1,0 +1,62 @@
+{
+ "slug": "nnn-and-stnl-property-sourcing",
+ "taxonomy": "services",
+ "title": "NNN and Single-Tenant Net Lease Property Sourcing",
+ "name": "NNN and Single-Tenant Net Lease Property Sourcing",
+ "metaTitle": "NNN and Single-Tenant Net Lease Property Sourcing in Los Angeles, CA",
+ "metaDescription": "Net lease replacement sourcing in Los Angeles matched to lease term, corporate guarantee, and Prop 13 reassessment before the identification deadline closes.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Single-tenant net lease replacement property draws a deep buyer pool in Los Angeles, which cuts both ways for a 1031 exchange &mdash; comparable stock is easier to find, but competition compresses the cap rate on the strongest credit deals fast. Matching lease term, rent structure, and reassessed property tax exposure to the exchanger's basis needs to happen before a candidate goes on the identification list, not after an offer is out.</p>"
+  },
+  {
+   "heading": "Single-Tenant Net Lease Stock Around Los Angeles",
+   "html": "<p>Quick-service restaurant, drugstore, auto-parts, and discount-retail boxes in the 2,000 to 15,000 square foot range make up most of the single-tenant net lease inventory circulating across Los Angeles County. Investment-grade credit tenants on long-term leases have generally priced in the 4.75% to 6% cap rate range, with the tighter end reserved for corporate-guaranteed leases with ten or more years remaining.</p><p>Franchisee-operated locations without a corporate guarantee trade wider than corporate-guaranteed deals with an otherwise identical box and location, since the underlying credit is weaker even when the brand name is the same.</p>"
+  },
+  {
+   "heading": "Lease Terms That Change the Basis Math",
+   "html": "<p>Screen every net lease candidate against these terms before running the numbers:</p><ul><li>Remaining primary lease term, with ten or more years generally preferred for financing</li><li>Rent escalation structure &mdash; annual 1% to 2% bumps versus a 10% step every five years</li><li>Landlord-retained obligations, including roof and structure carve-outs in an otherwise NNN lease</li><li>Corporate guarantee versus franchisee-only obligation</li><li>CAM reimbursement caps and whether the tenant pays real estate taxes directly</li></ul>"
+  },
+  {
+   "heading": "Prop 13 Reassessment and Basis Planning",
+   "html": "<p>A change of ownership in Los Angeles County generally triggers reassessment of the property under Proposition 13, resetting the assessed value to something closer to the purchase price and raising the annual property tax bill above what the prior owner paid. On a true NNN lease the tenant typically reimburses the higher tax bill through CAM, but on a modified gross or gross lease the reassessment lands directly on the owner's net operating income, so lease structure and reassessment exposure need to be underwritten together, not separately.</p>"
+  },
+  {
+   "heading": "Corridors With the Deepest Net Lease Demand",
+   "html": "<p>High-traffic boulevards including Ventura, Sepulveda, and Pico carry a steady supply of single-tenant net lease turnover, while entertainment-district corridors in Hollywood and the Arts District downtown draw a different buyer profile chasing land value alongside lease income. The deep buyer pool across these corridors means faster comparable sales data but also faster-moving cap rates, so pricing assumptions made more than a few weeks before the identification deadline should be refreshed.</p>"
+  },
+  {
+   "heading": "Financing Terms on a Net Lease Replacement Purchase",
+   "html": "<p>Lenders generally offer the most aggressive terms on corporate-guaranteed, investment-grade net lease deals with ten or more years remaining, often 65% to 70% loan-to-value with a debt-service-coverage ratio around 1.30x, since the underwriting rests almost entirely on the tenant's credit rather than the real estate fundamentals. Franchisee-guaranteed leases, shorter remaining terms, or secondary corridors generally pull that loan-to-value down and push the coverage requirement higher.</p><p>Because net lease financing is largely a credit-underwriting exercise, matching the loan proceeds to the debt paid off on the relinquished property is usually more predictable on this asset class than on multifamily or medical office, which is part of why net lease shows up as a common backup candidate on identification lists formed around other primary asset classes.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What cap rate range applies to single-tenant net lease replacement property in Los Angeles?",
+   "a": "Investment-grade, corporate-guaranteed net lease deals with ten or more years remaining have generally traded between 4.75% and 6%, with tighter pricing reserved for the strongest credit and longest lease term. Franchisee-only guarantees on the same box type typically price wider."
+  },
+  {
+   "q": "Does a corporate guarantee matter more than the brand name on the sign?",
+   "a": "Yes, lenders and buyers generally underwrite to the entity backing the lease payment, not the brand alone, so a corporate-guaranteed lease prices tighter than a franchisee-guaranteed lease on an identical building. Confirm which entity signed the lease before comparing two net lease candidates."
+  },
+  {
+   "q": "How does Prop 13 reassessment affect a NNN replacement property?",
+   "a": "A change of ownership generally triggers reassessment to a value closer to the purchase price, raising the property tax bill. On a true NNN lease the tenant typically reimburses that increase through CAM, while on gross or modified gross leases the higher tax bill reduces the owner's net income directly."
+  },
+  {
+   "q": "How fast do single-tenant net lease deals close compared to multifamily or medical office?",
+   "a": "Single-tenant net lease closings are generally faster, often 30 to 45 days from contract, because there is one tenant estoppel to collect and simpler due diligence than a multi-tenant building. That speed can help protect the 180-day exchange period when the identification list closes late."
+  },
+  {
+   "q": "Can a vacant single-tenant box still qualify as replacement property?",
+   "a": "Real property held for investment generally qualifies as like-kind regardless of occupancy, so a vacant box can be eligible. Vacancy changes the underwriting for carrying costs and lease-up timing, which should be reviewed with a tax advisor and qualified intermediary."
+  },
+  {
+   "q": "How much does location within Los Angeles County move net lease pricing on an otherwise identical box?",
+   "a": "Two identical corporate-guaranteed boxes with the same lease term can price meaningfully apart depending on traffic count, visibility, and surrounding land value, so comparable sales should be pulled from the same corridor rather than a countywide average. A generic countywide cap rate range is a starting point, not a substitute for corridor-specific comparables."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 863
+}
