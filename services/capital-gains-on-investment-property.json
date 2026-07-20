@@ -1,0 +1,75 @@
+{
+ "slug": "capital-gains-on-investment-property",
+ "taxonomy": "services",
+ "title": "Capital Gains on Investment Property",
+ "name": "Capital Gains on Investment Property",
+ "metaTitle": "Capital Gains on Investment Property in Los Angeles, CA",
+ "metaDescription": "A plain language walkthrough of how capital gains tax applies to Los Angeles investment property sales, and the role a 1031 exchange can play.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Investment property covers a wide range of Los Angeles real estate: a single tenant retail building on a busy corridor, an industrial warehouse near the ports, a small apartment building in Koreatown, or raw land held for future development. What these all share for tax purposes is that a sale produces a capital gain measured against the owner's adjusted basis, and that gain is exposed to federal capital gains tax, potential depreciation recapture, and California's ordinary income treatment, all in the same tax year unless the sale is structured as a tax deferred exchange.</p>"
+  },
+  {
+   "heading": "Basis, Gain, and Why They Are Not the Purchase Price",
+   "html": "<p>Adjusted basis starts with the original purchase price, adds the cost of qualifying capital improvements over the holding period, and subtracts depreciation claimed each year the property was held for investment or business use. A Los Angeles investor who bought an industrial property a decade ago for a modest price, invested in a roof replacement and tenant improvements, and depreciated the building annually, will typically have a lower adjusted basis than the original purchase price suggests, which means the taxable gain on sale can be larger than the simple difference between purchase and sale price implies.</p>"
+  },
+  {
+   "heading": "Holding Period and Investment Intent",
+   "html": "<p>Property must be held for productive use in a trade or business or for investment to qualify for either long term capital gains treatment or a Section 1031 exchange. Property bought and sold quickly for resale, sometimes called dealer property, generally does not qualify for either. An investor who has held a Los Angeles commercial building for rental income over multiple years is on solid ground; an investor who purchased with the intent to flip within months faces a much harder argument for exchange eligibility, and this distinction matters before a sale is structured, not after.</p>"
+  },
+  {
+   "heading": "Stacking Federal, Recapture, and California Exposure",
+   "html": "<p>A full accounting of the tax on an investment property sale adds three layers: federal long term capital gains tax on the appreciation, federal unrecaptured Section 1250 gain on prior depreciation capped at twenty five percent, and California state tax on the full gain at ordinary income rates. For a Los Angeles investor selling an appreciated property that has been depreciated for many years, these three layers combined can represent a substantial share of the sale proceeds, which is why so many exchangers in the Los Angeles market choose to defer through a Section 1031 exchange rather than accept the full liability in the year of sale.</p>"
+  },
+  {
+   "heading": "How We Support the Decision",
+   "html": "<p>Before an investment property goes to market, we help the owner understand the estimated combined tax exposure of an outright sale compared against reinvestment through a like kind exchange, and we coordinate the qualified intermediary and identification timeline if an exchange is the chosen path. This is planning and coordination support, not tax or legal advice, and we work alongside the investor's own CPA and attorney throughout the process.</p>"
+  },
+  {
+   "heading": "Cost Segregation and Its Effect on Recapture Exposure",
+   "html": "<p>Some Los Angeles investors accelerate depreciation on a commercial or industrial property through a cost segregation study, which reclassifies certain building components into shorter recovery periods to increase early year deductions. While this strategy reduces taxable income during the holding period, it also increases the amount of depreciation subject to recapture on a later sale, meaning an investor who used cost segregation aggressively should expect a correspondingly larger recapture bill if they sell outright rather than exchange. Coordinating with a CPA who understands the property's specific depreciation history is essential before estimating the tax impact of any sale.</p>"
+  },
+  {
+   "heading": "Entity Structure Can Complicate an Exchange",
+   "html": "<p>Investment property held inside an LLC, partnership, or other entity requires careful attention when structuring a 1031 exchange, since the same taxpayer that sells the relinquished property generally must acquire the replacement property. A Los Angeles investment property held by a multi member LLC, for example, may require the LLC itself to complete the exchange rather than individual members exchanging their membership interests, and any change in ownership structure close to a transaction should be reviewed well in advance with tax counsel.</p>"
+  },
+  {
+   "heading": "Passive Activity Loss Rules and Suspended Losses",
+   "html": "<p>Investors who have accumulated suspended passive activity losses on a Los Angeles investment property over years of ownership, often because rental losses exceeded the amounts currently deductible against other income, may be able to use those suspended losses to offset the gain in the year the property is sold outright. This interaction between suspended losses and a sale is specific to each investor's tax history and does not apply the same way within a 1031 exchange, where the underlying gain is deferred rather than recognized, so an investor sitting on significant suspended losses should discuss with their CPA whether an outright sale in a specific year might actually be more tax efficient than continuing to defer through exchanges indefinitely.</p><p>This is a genuinely case specific question, and we raise it here only to illustrate why the sale versus exchange decision benefits from a full review of an investor's tax history rather than a general assumption that deferral is always preferable.</p>"
+  },
+  {
+   "heading": "How This Fits Into Our Services",
+   "html": "<p>Understanding the estimated tax exposure on a planned sale is typically the starting point for a Los Angeles investor deciding whether a 1031 exchange makes sense, and it is where our coordination role begins once an owner, working with their own CPA, has decided that deferral is the right direction. We then help with the practical steps: identifying qualifying replacement property within the required timeline and coordinating with a qualified intermediary, while the tax determination itself remains the responsibility of the owner's licensed advisors.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why can taxable gain be larger than the difference between purchase price and sale price?",
+   "a": "Because adjusted basis is reduced by depreciation claimed over the holding period, the taxable gain reflects the drop in basis in addition to any appreciation, which can make the gain larger than a simple price comparison suggests."
+  },
+  {
+   "q": "Does property purchased with the intent to resell quickly qualify for a 1031 exchange?",
+   "a": "Generally no. Property held primarily for resale, often called dealer property, does not meet the investment or business use requirement for Section 1031 treatment."
+  },
+  {
+   "q": "Does California apply a separate tax on top of the federal capital gains tax?",
+   "a": "Yes. California taxes the same gain as ordinary income under its own rate schedule, in addition to the federal capital gains and depreciation recapture tax, with no coordination or offset between the two systems."
+  },
+  {
+   "q": "Can raw land held for investment qualify for a 1031 exchange?",
+   "a": "Yes, undeveloped land held for investment can qualify as relinquished or replacement property in a like kind exchange, as long as it was not held primarily for resale."
+  },
+  {
+   "q": "Is there a minimum holding period required before a sale qualifies for long term capital gains treatment?",
+   "a": "Property must be held for more than one year to qualify for long term capital gains rates rather than short term rates, which are taxed as ordinary income."
+  }
+ ],
+ "internalLinks": [
+  "capital-gains-on-rental-property",
+  "depreciation-recapture-explained",
+  "commercial-real-estate-investing",
+  "replacement-property-identification"
+ ],
+ "wordCount": 886
+}

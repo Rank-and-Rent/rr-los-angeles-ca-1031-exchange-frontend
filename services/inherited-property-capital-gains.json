@@ -1,0 +1,74 @@
+{
+ "slug": "inherited-property-capital-gains",
+ "taxonomy": "services",
+ "title": "Inherited Property Capital Gains",
+ "name": "Inherited Property Capital Gains",
+ "metaTitle": "Inherited Property Capital Gains Tax in Los Angeles, CA",
+ "metaDescription": "How the stepped up basis rule changes capital gains exposure for inherited Los Angeles property, and when heirs still consider a 1031 exchange.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Heirs who inherit Los Angeles real estate benefit from one of the most significant provisions in the tax code for property owners: the stepped up basis rule under Internal Revenue Code Section 1014. Rather than inheriting the decedent's original purchase price and depreciation history, the heir's basis generally resets to the property's fair market value as of the date of death, which can eliminate most or all of the built in capital gain that had accumulated during the decedent's ownership.</p>"
+  },
+  {
+   "heading": "Why Stepped Up Basis Matters So Much in Los Angeles",
+   "html": "<p>Los Angeles properties held for multiple decades, particularly in neighborhoods that have appreciated substantially such as parts of the Eastside or the Westside, can carry enormous built in gains under the original owner's basis. Without the step up, a sale by heirs would trigger tax on decades of appreciation the heirs never benefited from as unrealized value. With the step up, an heir who sells shortly after inheriting typically owes little or no capital gains tax, since the sale price and the stepped up basis are close together.</p>"
+  },
+  {
+   "heading": "When Heirs Still Consider a 1031 Exchange",
+   "html": "<p>The step up resets basis, it does not eliminate the usefulness of a 1031 exchange going forward. An heir who decides to hold the inherited property for a period and it continues to appreciate, or an heir who wants to consolidate several inherited properties into a different type of asset, still faces capital gains exposure on any appreciation that occurs after the date of death. An heir converting a Los Angeles single family rental inherited from a parent into a diversified portfolio of smaller commercial interests, for example, would use a Section 1031 exchange to defer tax on the post inheritance appreciation, not on the value that existed at the date of death.</p>"
+  },
+  {
+   "heading": "Community Property and California's Double Step Up",
+   "html": "<p>California is a community property state, and under Internal Revenue Code Section 1014(b)(6), community property held by a married couple can receive a full step up in basis on both halves of the property when one spouse dies, not just the deceased spouse's half as would apply to jointly held property in most other states. This is a meaningful distinction for Los Angeles couples with substantial real estate holdings, and confirming that a property was properly titled as community property is a step we encourage heirs to take with an estate attorney before assuming the full step up applies.</p>"
+  },
+  {
+   "heading": "How We Support Heirs Through This Process",
+   "html": "<p>We help heirs of Los Angeles property understand the practical implications of stepped up basis on a planned sale or exchange, and coordinate replacement property identification if the heir chooses to continue deferring tax on post inheritance appreciation through a Section 1031 exchange. Basis determinations and estate tax questions require an estate attorney and CPA, and we work alongside those advisors rather than replacing them.</p>"
+  },
+  {
+   "heading": "Multiple Heirs and Fractional Inherited Interests",
+   "html": "<p>When a Los Angeles property passes to more than one heir, each heir typically receives a stepped up basis in their respective fractional interest, and disagreements among heirs about whether to sell, hold, or exchange the property are common. Heirs who want different outcomes, one wanting to sell and take proceeds and another wanting to continue deferring tax through an exchange, sometimes structure a partition or buyout among themselves before any sale, which requires careful coordination among the heirs, their respective advisors, and often an estate attorney familiar with the property's title history.</p>"
+  },
+  {
+   "heading": "Timing an Exchange Relative to the Date of Death Valuation",
+   "html": "<p>Because stepped up basis is set as of the date of death, an heir who wants to sell shortly after inheriting a Los Angeles property faces relatively low or no capital gains exposure and often has less need for a 1031 exchange in the near term. An heir who intends to hold the property for a longer period, allowing further appreciation to accumulate, has a stronger case for eventually using a 1031 exchange once the post inheritance appreciation itself becomes meaningful enough to justify the deferral strategy.</p>"
+  },
+  {
+   "heading": "Portability, Estate Tax, and How It Differs From Basis Step Up",
+   "html": "<p>Stepped up basis under Section 1014 is a separate concept from federal estate tax, which applies only to estates exceeding a much higher exemption threshold and affects relatively few Los Angeles families even with significant real estate holdings. An heir should not assume that avoiding estate tax exposure also means avoiding capital gains exposure on a later sale, since the stepped up basis rule applies broadly regardless of whether the estate owed any estate tax at all, and these are genuinely separate questions best reviewed together with an estate attorney at the time of inheritance.</p>"
+  },
+  {
+   "heading": "Coordinating With the Estate Administration Process",
+   "html": "<p>Heirs of a Los Angeles property are often navigating probate or trust administration at the same time they are considering a sale or exchange, and the timing of when title actually transfers to the heir can affect when a 1031 exchange becomes possible for that heir individually. We coordinate with the estate attorney handling administration to understand this timing before beginning replacement property identification, since starting the exchange clock at the wrong point in the process can create avoidable complications.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What is stepped up basis?",
+   "a": "Stepped up basis resets an inherited property's tax basis to its fair market value as of the date of the decedent's death, generally eliminating capital gains tax on appreciation that occurred before inheritance."
+  },
+  {
+   "q": "Does stepped up basis mean an heir can never owe capital gains tax on inherited property?",
+   "a": "No. Appreciation that occurs after the date of death is still a taxable gain on a later sale, and a 1031 exchange can defer tax on that post inheritance appreciation if the heir continues to hold investment property."
+  },
+  {
+   "q": "How does California's community property status affect the step up for married couples?",
+   "a": "Community property held by a married couple in California can receive a full step up in basis on both halves of the property when one spouse dies, rather than only the deceased spouse's half."
+  },
+  {
+   "q": "Does depreciation the original owner claimed carry over to the heir?",
+   "a": "No. Because basis resets at death, the depreciation schedule effectively restarts for the heir, and the original owner's prior depreciation recapture exposure does not pass to the heir."
+  },
+  {
+   "q": "Can several inherited properties be exchanged into a single replacement property?",
+   "a": "Yes, multiple relinquished properties can be combined into one or more replacement properties within a single exchange, subject to the identification and timing rules under Section 1031."
+  }
+ ],
+ "internalLinks": [
+  "home-sale-capital-gains",
+  "depreciation-recapture-explained",
+  "how-to-reduce-capital-gains-tax"
+ ],
+ "wordCount": 800
+}

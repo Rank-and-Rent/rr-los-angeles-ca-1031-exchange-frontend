@@ -1,0 +1,75 @@
+{
+ "slug": "depreciation-recapture-explained",
+ "taxonomy": "services",
+ "title": "Depreciation Recapture Explained",
+ "name": "Depreciation Recapture Explained",
+ "metaTitle": "Depreciation Recapture Explained for Los Angeles, CA Investors",
+ "metaDescription": "How depreciation recapture works on a Los Angeles investment property sale, and why deferring it through a 1031 exchange matters for long term owners.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Every year a Los Angeles investment property is held for rental or business use, the owner typically claims a depreciation deduction against taxable income, spreading the building's cost, excluding land, over a recovery period of twenty seven and a half years for residential rental property or thirty nine years for commercial property. That deduction reduces tax owed during the holding period, but it also reduces the property's adjusted basis, which means it comes back as taxable gain when the property is eventually sold.</p>"
+  },
+  {
+   "heading": "How the Recapture Tax Rate Works",
+   "html": "<p>The portion of gain attributable to depreciation claimed on real property, known as unrecaptured Section 1250 gain, is taxed federally at a maximum rate of twenty five percent, which is higher than the top long term capital gains rate of twenty percent that applies to the remaining appreciation gain. For an owner who has held a Los Angeles apartment building or commercial property for many years, the accumulated depreciation can represent a substantial share of the total gain, meaning the recapture portion often drives more of the tax bill than the appreciation itself.</p>"
+  },
+  {
+   "heading": "California Does Not Distinguish Recapture From Ordinary Gain",
+   "html": "<p>Federal law separates recapture from regular capital gain and caps its rate, but California does not make this distinction. The state taxes the entire gain, appreciation and recapture combined, as ordinary income under its standard rate schedule. This means a Los Angeles seller effectively faces the federal recapture rate on top of California's ordinary income rate applied to that same recaptured amount, with no state level cap comparable to the federal twenty five percent ceiling.</p>"
+  },
+  {
+   "heading": "Why Long Held Los Angeles Properties Carry the Most Exposure",
+   "html": "<p>An investor who purchased a Los Angeles commercial or multifamily property decades ago and has claimed depreciation every year since has, by definition, reduced the property's basis substantially below its original purchase price. When that property has also appreciated significantly in value over the same holding period, as much Los Angeles real estate has, the combination produces a large total gain with a disproportionately large recapture component. This is precisely the situation where deferring the full tax bill through a Section 1031 exchange has the most financial significance, since selling outright crystallizes both the appreciation gain and the accumulated recapture in a single tax year.</p>"
+  },
+  {
+   "heading": "How a 1031 Exchange Defers Recapture",
+   "html": "<p>When a qualifying Section 1031 exchange is completed, both the deferred appreciation gain and the deferred depreciation recapture carry forward into the replacement property's basis rather than becoming taxable in the year of the exchange. The replacement property then begins its own depreciation schedule, subject to specific rules for exchanged basis versus any additional purchase price. We help Los Angeles owners quantify their estimated recapture exposure before a sale decision, working alongside their CPA, so the deferral benefit of an exchange is understood in real dollar terms rather than in the abstract.</p>"
+  },
+  {
+   "heading": "How Cost Segregation Interacts With Recapture on Sale",
+   "html": "<p>An investor who used a cost segregation study to accelerate depreciation on a Los Angeles commercial property increased their deductions in early years of ownership, but this generally increases the total depreciation subject to recapture upon a later sale rather than reducing overall lifetime tax exposure. Reviewing the property's full depreciation schedule, including any cost segregation adjustments, is a necessary step before estimating recapture exposure on a planned sale.</p>"
+  },
+  {
+   "heading": "Recapture on a Partial Exchange",
+   "html": "<p>When an exchange is only partially completed, meaning the exchanger receives some cash or reduces debt without fully reinvesting all proceeds into replacement property, the resulting boot is taxed first as ordinary appreciation gain and then, in many cases, as recaptured depreciation before any remaining amount is taxed as capital gain, following specific ordering rules under the tax code. This ordering can mean that even a relatively small amount of boot triggers a disproportionate share of the recapture tax, which is why we help exchangers understand boot exposure before finalizing a replacement property's purchase price and financing structure.</p>"
+  },
+  {
+   "heading": "Recapture Exposure When Combining a Cash Out With an Exchange",
+   "html": "<p>An exchanger who wants to pull some cash out of a Los Angeles property sale while still deferring the bulk of the gain through a 1031 exchange should understand that the cash received, known as boot, is taxed first, generally before the exchanger reaches the more favorably taxed portion of the gain, and depreciation recapture is frequently absorbed into that taxable boot before any capital gain deferral benefit applies to the remaining amount. We help exchangers model this tradeoff, working with their CPA, before deciding how much cash, if any, to take out of a transaction that is otherwise structured as a tax deferred exchange.</p>"
+  },
+  {
+   "heading": "Why We Encourage a Written Estimate Before Listing",
+   "html": "<p>Because depreciation recapture exposure is often the least intuitive part of a Los Angeles property sale for owners to estimate on their own, we encourage getting a written estimate from a CPA covering the recapture, appreciation, and California tax components separately before a property is listed, rather than discovering the full liability only after an offer is already in hand. This estimate becomes the basis for a clear eyed comparison between an outright sale and a 1031 exchange.</p><p>Owners sometimes ask whether waiting a few additional years before selling changes the recapture calculation meaningfully. Additional years of ownership generally mean additional years of depreciation claimed, which increases the recapture exposure further rather than reducing it, so waiting does not shrink this particular liability. What changes over time is the appreciation component and the owner's overall financial picture, both of which are separate from the recapture question and worth reviewing together with a CPA before any specific sale timing decision.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What is the maximum federal tax rate on depreciation recapture for real property?",
+   "a": "Unrecaptured Section 1250 gain from real property is capped at a maximum federal rate of twenty five percent, higher than the top long term capital gains rate that applies to the remaining appreciation."
+  },
+  {
+   "q": "Does California cap the tax rate on depreciation recapture the way federal law does?",
+   "a": "No. California taxes the full gain, including the recaptured depreciation, as ordinary income with no separate cap or reduced rate for the recapture portion."
+  },
+  {
+   "q": "Can a 1031 exchange defer depreciation recapture, not just the appreciation gain?",
+   "a": "Yes. A properly structured exchange defers both the appreciation gain and the depreciation recapture, carrying both forward into the replacement property's basis."
+  },
+  {
+   "q": "Why do long held properties often have a larger recapture component?",
+   "a": "Because depreciation accumulates every year a property is held for rental or business use, a longer holding period generally means more total depreciation claimed and a larger recapture exposure on sale."
+  },
+  {
+   "q": "Does the replacement property in an exchange start a fresh depreciation schedule?",
+   "a": "The replacement property generally continues depreciation on the exchanged basis carried over from the relinquished property, with any additional purchase price depreciated separately, subject to specific tax rules."
+  }
+ ],
+ "internalLinks": [
+  "capital-gains-on-rental-property",
+  "capital-gains-on-investment-property",
+  "boot-calculation-support",
+  "tax-advisor-and-cpa-coordination"
+ ],
+ "wordCount": 879
+}

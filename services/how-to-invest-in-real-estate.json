@@ -1,0 +1,79 @@
+{
+ "slug": "how-to-invest-in-real-estate",
+ "taxonomy": "services",
+ "title": "How to Invest in Real Estate",
+ "name": "How to Invest in Real Estate",
+ "metaTitle": "How to Invest in Real Estate in Los Angeles, CA",
+ "metaDescription": "An overview of the main paths into Los Angeles real estate investing, from direct ownership to passive structures, and where 1031 exchanges apply.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Real estate investing in Los Angeles spans a wide range of approaches, from buying a small multifamily property in Highland Park and managing it directly, to purchasing a fractional interest in a diversified portfolio through a passive structure. The right approach depends on an investor's available capital, appetite for active management, and tax situation, and many investors use more than one approach across their portfolio over time.</p>"
+  },
+  {
+   "heading": "Direct Ownership",
+   "html": "<p>Direct ownership means buying a specific property, whether a single family rental, a small apartment building, a retail strip, or an industrial building, and holding title individually or through an entity the investor controls. This approach gives full control over leasing, management, and disposition decisions, along with full exposure to that single property's performance and risk. Los Angeles direct ownership investors often gravitate toward multifamily in rent controlled submarkets, industrial near the ports and Inland Empire logistics corridor, or retail along established commercial corridors.</p>"
+  },
+  {
+   "heading": "Passive and Fractional Structures",
+   "html": "<p>Investors who want real estate exposure without day to day management responsibilities can consider passive structures such as Delaware Statutory Trusts, tenants in common arrangements, real estate syndications, or crowdfunding platforms. These structures vary significantly in their legal form, minimum investment size, liquidity, and, critically, their eligibility for 1031 exchange treatment. Delaware Statutory Trust interests generally qualify as like kind real property under Revenue Ruling 2004-86, while typical syndication and crowdfunding equity, structured as an interest in a partnership or LLC, generally does not qualify for a 1031 exchange because Section 1031(a)(2) excludes partnership interests from like kind treatment.</p>"
+  },
+  {
+   "heading": "Where 1031 Exchanges Fit Into the Bigger Picture",
+   "html": "<p>An investor who already owns Los Angeles investment property and wants to change its form, moving from active management into a more passive structure, from a single asset into a diversified pool, or from one property type into another, often uses a Section 1031 exchange to make that transition without triggering a current tax bill. This makes the exchange less a standalone investment strategy and more a tool for repositioning an existing portfolio while deferring the tax consequences of the underlying real estate that would otherwise come due on a taxable sale.</p>"
+  },
+  {
+   "heading": "How We Help Los Angeles Investors Navigate This",
+   "html": "<p>We help investors who already hold Los Angeles real estate understand the range of replacement property structures available to them within a 1031 exchange, from direct acquisition of another local property to DST allocations for investors seeking to step back from active management. We do not sell securities and do not provide investment recommendations; where a passive structure like a DST is under consideration, we introduce investors to licensed providers for that piece of the transaction.</p>"
+  },
+  {
+   "heading": "Financing Considerations Across Different Investment Approaches",
+   "html": "<p>Direct ownership typically involves securing a commercial or residential investment property loan, with underwriting based on the property's income and the investor's individual creditworthiness, while passive structures like a DST generally do not require the individual investor to qualify for financing since the trust or entity handles any underlying debt. A Los Angeles investor evaluating these paths should understand how financing responsibility and risk differ between direct ownership and passive structures, since this affects both the investor's personal liability exposure and their ongoing involvement in the investment.</p>"
+  },
+  {
+   "heading": "Matching the Investment Approach to the Investor's Time Horizon",
+   "html": "<p>An investor with a long time horizon and interest in active management may find direct ownership of a Los Angeles property, with the potential for value add improvements and hands on decision making, more aligned with their goals than a passive structure with a fixed disposition timeline set by a sponsor. Conversely, an investor prioritizing simplicity and a defined exit timeline may prefer the more structured, professionally managed nature of a DST allocation, even at the cost of individual control over property decisions.</p>"
+  },
+  {
+   "heading": "Getting Started Without Existing Real Estate to Exchange",
+   "html": "<p>An investor without existing investment property cannot use a 1031 exchange as an entry point, since the mechanism requires an existing relinquished property; a first time Los Angeles real estate investor typically starts with a direct purchase, a passive fund investment outside the exchange context, or another acquisition method entirely, and only becomes a candidate for a future 1031 exchange once they hold qualifying investment property themselves. We work with exchangers who already hold Los Angeles area investment property; investors just beginning their real estate journey should look to a broader range of resources suited to first time acquisition.</p>"
+  },
+  {
+   "heading": "Combining Approaches Over a Long Term Portfolio",
+   "html": "<p>Many experienced Los Angeles investors do not settle permanently on a single approach; they may begin with direct ownership of a smaller property, build equity and experience, then use a 1031 exchange years later to move into a larger asset or a more passive structure as their goals and capacity change. Viewed this way, the choice between direct ownership and passive structures is less a one time decision and more an evolving one that a 1031 exchange can help facilitate at each transition point along the way.</p>"
+  },
+  {
+   "heading": "This Page Describes Options, Not Recommendations",
+   "html": "<p>Nothing on this page should be read as a recommendation to pursue any specific investment approach, property type, or structure; it is intended to help a Los Angeles investor understand the general landscape of options before discussing their specific goals with their own financial and tax advisors. Where an investor's plans involve DST, TIC, or other structures that may be securities, we introduce investors to licensed providers rather than making investment recommendations ourselves.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does every form of real estate investment qualify for a 1031 exchange?",
+   "a": "No. Direct ownership of real property and Delaware Statutory Trust interests generally qualify, while typical real estate syndication and crowdfunding equity structured as partnership or LLC interests generally do not, because Section 1031 excludes partnership interests from like kind treatment."
+  },
+  {
+   "q": "Can an investor move from active direct ownership into a passive structure through a 1031 exchange?",
+   "a": "Yes, an investor can exchange a directly owned relinquished property for a qualifying passive structure such as a Delaware Statutory Trust interest, as long as the exchange requirements are otherwise met."
+  },
+  {
+   "q": "Is a 1031 exchange itself a way to acquire real estate for the first time?",
+   "a": "No. A 1031 exchange requires an existing relinquished property held for investment or business use; it defers tax on the sale of that existing property rather than serving as an entry point for new investors without prior real estate holdings."
+  },
+  {
+   "q": "Do DST or TIC interests count as securities?",
+   "a": "DST or TIC interests may be considered securities. We do not sell securities and do not provide investment advice; we provide introductions to licensed providers for these structures."
+  },
+  {
+   "q": "What determines whether direct ownership or a passive structure fits an investor's goals?",
+   "a": "Factors include the investor's appetite for active management, desired diversification, minimum investment size, and liquidity needs, all of which should be discussed with the investor's own financial and tax advisors."
+  }
+ ],
+ "internalLinks": [
+  "real-estate-syndication-explained",
+  "commercial-real-estate-investing",
+  "passive-real-estate-income",
+  "dst-placement-coordination"
+ ],
+ "wordCount": 847
+}

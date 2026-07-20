@@ -1,0 +1,74 @@
+{
+ "slug": "section-121-exclusion-explained",
+ "taxonomy": "services",
+ "title": "Section 121 Exclusion Explained",
+ "name": "Section 121 Exclusion Explained",
+ "metaTitle": "Section 121 Exclusion Explained for Los Angeles, CA Homeowners",
+ "metaDescription": "A plain language explanation of the Section 121 home sale exclusion, its limits, and how it interacts with rental use for Los Angeles owners.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Section 121 of the Internal Revenue Code allows an owner who sells a primary residence to exclude a substantial portion of the gain from federal taxable income, without any requirement to reinvest the proceeds into another property. For most Los Angeles homeowners, this exclusion is the primary tool for managing tax on a home sale, separate and distinct from the reinvestment based deferral available under Section 1031 for investment property.</p>"
+  },
+  {
+   "heading": "The Basic Ownership and Use Test",
+   "html": "<p>To qualify, the owner generally must have owned the property and used it as a primary residence for at least two of the five years immediately preceding the sale. These two years do not need to be continuous, and short absences for vacation or seasonal use typically do not break the residency requirement. The exclusion applies once every two years per taxpayer, so an owner who used it on a prior sale generally must wait before claiming it again on a different property.</p>"
+  },
+  {
+   "heading": "The Exclusion Amounts",
+   "html": "<p>A single filer can exclude up to two hundred fifty thousand dollars of gain, and a married couple filing jointly can exclude up to five hundred thousand dollars, provided both spouses meet the ownership and use requirements. Given the appreciation many Los Angeles neighborhoods have seen, from the Eastside to parts of the San Fernando Valley, a long term owner's gain can exceed these thresholds, leaving a taxable balance even after the full exclusion is applied.</p>"
+  },
+  {
+   "heading": "Mixed Use Reduces the Exclusion",
+   "html": "<p>When a home has also been used as a rental during part of the ownership period, two limits apply. First, any depreciation claimed during the rental period is not eligible for exclusion and remains taxable as depreciation recapture regardless of Section 121. Second, periods of non qualified use, generally time after 2008 when the property was not the owner's primary residence, reduce the exclusion on a pro rata basis tied to the ratio of non qualified use time to total ownership time. An owner who rented out a Los Angeles property for several years before moving in as a primary residence needs this calculation done carefully before assuming the full exclusion applies.</p>"
+  },
+  {
+   "heading": "How the Exclusion Relates to a 1031 Exchange",
+   "html": "<p>Section 121 and Section 1031 serve different property types and cannot both apply to the same gain in a simple way, since 121 covers personal residence use and 1031 requires investment or business use. Special rules under Revenue Procedure 2005-14 allow certain properties with mixed personal and rental history to combine both provisions in limited circumstances, applying the Section 121 exclusion to the personal use portion of the gain and a 1031 exchange to the investment use portion. This is a narrow and fact specific area, and we coordinate with the owner's CPA to determine whether a given property's use history supports this combined treatment.</p>"
+  },
+  {
+   "heading": "Divorce, Separation, and the Ownership Test",
+   "html": "<p>Special rules under Section 121 address situations where a couple divorces or separates and one spouse continues living in the home while the other moves out; the spouse who moved out may still satisfy the use test for purposes of the exclusion if certain conditions tied to a divorce or separation agreement are met. Los Angeles homeowners navigating a divorce involving a shared residence should raise this issue with both their family law attorney and their CPA well before any sale, since the exclusion eligibility can otherwise be lost by the departing spouse.</p>"
+  },
+  {
+   "heading": "Surviving Spouse Provisions",
+   "html": "<p>A surviving spouse who sells a home within two years of the other spouse's death may, in certain circumstances, claim the full five hundred thousand dollar married exclusion rather than being limited to the two hundred fifty thousand dollar single filer amount, provided the ownership and use tests were met immediately before the deceased spouse's death and the surviving spouse has not remarried. This provision matters for Los Angeles widows and widowers considering whether to sell a long held family home in the years immediately following a spouse's passing.</p>"
+  },
+  {
+   "heading": "Documenting Primary Residence Status for a Property That Changed Use",
+   "html": "<p>For a Los Angeles property that has shifted between primary residence and rental use over time, documentation such as utility bills, voter registration, driver's license address, and tax return filing address in the relevant years can all support the residency claim if the IRS later questions whether the use test was met. Owners who anticipate a mixed use history affecting a future Section 121 claim should begin assembling this kind of supporting documentation as early as possible, since reconstructing it years later, particularly around a specific two year window, is considerably harder than maintaining it contemporaneously.</p>"
+  },
+  {
+   "heading": "Where to Get a Final Determination",
+   "html": "<p>The general rules described on this page apply broadly, but the final determination of Section 121 eligibility and the exact exclusion amount for a specific Los Angeles property depends on details we cannot evaluate from a general overview: exact ownership dates, precise use history, and any prior use of the exclusion by the same taxpayer. A CPA reviewing the specific timeline is the appropriate source for that final determination before a sale closes.</p><p>Owners occasionally ask whether renting out a portion of a primary residence, such as an accessory dwelling unit increasingly common on Los Angeles lots, affects Section 121 eligibility for the rest of the property. Generally, the exclusion can still apply to the primary residence portion, while a separate allocation and depreciation recapture calculation applies to the rented portion, making this a genuinely mixed use scenario that benefits from a CPA's specific review of the property's square footage allocation and rental history.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does an owner need to reinvest the sale proceeds to use the Section 121 exclusion?",
+   "a": "No. Unlike Section 1031, the Section 121 exclusion does not require reinvestment into another property; the excluded gain can be used for any purpose."
+  },
+  {
+   "q": "How often can a taxpayer use the Section 121 exclusion?",
+   "a": "Generally once every two years per taxpayer, tied to the ownership and use test being met again for a different qualifying sale."
+  },
+  {
+   "q": "Does depreciation claimed on a home used partly as a rental reduce the Section 121 exclusion?",
+   "a": "The exclusion does not cover the depreciation itself; that portion remains taxable as depreciation recapture even when the rest of the gain qualifies for exclusion."
+  },
+  {
+   "q": "Can Section 121 and Section 1031 both apply to the same property?",
+   "a": "In limited circumstances, under Revenue Procedure 2005-14, a property with mixed personal and rental use history can apply Section 121 to the personal use portion and a Section 1031 exchange to the investment use portion."
+  },
+  {
+   "q": "Does a short vacation away from the home break the two year residency requirement?",
+   "a": "Generally no. Brief, temporary absences typically do not disqualify a period from counting toward the two year use requirement, though the specific facts matter."
+  }
+ ],
+ "internalLinks": [
+  "home-sale-capital-gains",
+  "second-home-capital-gains-tax",
+  "how-to-reduce-capital-gains-tax"
+ ],
+ "wordCount": 878
+}

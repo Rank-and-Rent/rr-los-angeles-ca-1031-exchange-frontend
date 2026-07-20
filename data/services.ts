@@ -174,5 +174,233 @@ export const servicesData: ServiceItem[] = [
     short: "Calculate and track 45 day identification and 180 day exchange completion deadlines.",
     route: "timeline-deadline-calculator",
     category: "education"
+  },
+
+  // Guides Category
+  {
+    slug: "the-45-day-identification-period",
+    name: "The 45 Day Identification Period",
+    short: "Plain language explainer on how the forty five day identification window works under Section 1031.",
+    route: "the-45-day-identification-period",
+    category: "Guides"
+  },
+  {
+    slug: "the-180-day-exchange-deadline",
+    name: "The 180 Day Exchange Deadline",
+    short: "Plain language explainer on the one hundred eighty day exchange completion deadline and how it interacts with the identification period.",
+    route: "the-180-day-exchange-deadline",
+    category: "Guides"
+  },
+  {
+    slug: "what-is-boot-in-a-1031-exchange",
+    name: "What Is Boot in a 1031 Exchange",
+    short: "Plain language explainer on cash boot, mortgage boot, and how unlike kind value becomes taxable.",
+    route: "what-is-boot-in-a-1031-exchange",
+    category: "Guides"
+  },
+  {
+    slug: "the-qualified-intermediary-role",
+    name: "The Qualified Intermediary Role",
+    short: "Plain language explainer on why a qualified intermediary is required and how safe harbor and constructive receipt work.",
+    route: "the-qualified-intermediary-role",
+    category: "Guides"
+  },
+  {
+    slug: "like-kind-property-explained",
+    name: "Like Kind Property Explained",
+    short: "Plain language explainer on what qualifies as like kind real property for investment or business use after the Tax Cuts and Jobs Act.",
+    route: "like-kind-property-explained",
+    category: "Guides"
+  },
+  {
+    slug: "reverse-1031-exchange-explained",
+    name: "Reverse 1031 Exchange Explained",
+    short: "Plain language explainer on acquiring replacement property before the relinquished property sale through an exchange accommodation titleholder.",
+    route: "reverse-1031-exchange-explained",
+    category: "Guides"
+  },
+  {
+    slug: "improvement-build-to-suit-exchange",
+    name: "Improvement Build to Suit Exchange",
+    short: "Plain language explainer on using exchange funds for construction and improvements through an exchange accommodation titleholder.",
+    route: "improvement-build-to-suit-exchange",
+    category: "Guides"
+  },
+  {
+    slug: "related-party-1031-exchange-rules",
+    name: "Related Party 1031 Exchange Rules",
+    short: "Plain language explainer on the two year holding requirement and other limits under Section 1031(f) for exchanges between related parties.",
+    route: "related-party-1031-exchange-rules",
+    category: "Guides"
+  },
+
+  // Upstream Funnel — Tax Deferral, Investing, Asset Types (additive)
+  {
+    slug: "capital-gains-on-rental-property",
+    name: "Capital Gains on Rental Property",
+    short: "How federal and California capital gains rules apply to a Los Angeles rental sale, and where a Section 1031 exchange fits into the decision.",
+    route: "capital-gains-on-rental-property",
+    category: "Guides"
+  },
+  {
+    slug: "capital-gains-on-investment-property",
+    name: "Capital Gains on Investment Property",
+    short: "A plain language walkthrough of how capital gains tax applies to Los Angeles investment property sales, and the role a 1031 exchange can play.",
+    route: "capital-gains-on-investment-property",
+    category: "Guides"
+  },
+  {
+    slug: "home-sale-capital-gains",
+    name: "Home Sale Capital Gains",
+    short: "How capital gains tax applies to a Los Angeles primary residence sale, the Section 121 exclusion, and when a property crosses into investment territory.",
+    route: "home-sale-capital-gains",
+    category: "Guides"
+  },
+  {
+    slug: "second-home-capital-gains-tax",
+    name: "Second Home Capital Gains Tax",
+    short: "How capital gains tax applies when a Los Angeles owner sells a second home, and the narrow path a vacation property has toward 1031 exchange eligibility.",
+    route: "second-home-capital-gains-tax",
+    category: "Guides"
+  },
+  {
+    slug: "inherited-property-capital-gains",
+    name: "Inherited Property Capital Gains",
+    short: "How the stepped up basis rule changes capital gains exposure for inherited Los Angeles property, and when heirs still consider a 1031 exchange.",
+    route: "inherited-property-capital-gains",
+    category: "Guides"
+  },
+  {
+    slug: "depreciation-recapture-explained",
+    name: "Depreciation Recapture Explained",
+    short: "How depreciation recapture works on a Los Angeles investment property sale, and why deferring it through a 1031 exchange matters for long term owners.",
+    route: "depreciation-recapture-explained",
+    category: "Guides"
+  },
+  {
+    slug: "section-121-exclusion-explained",
+    name: "Section 121 Exclusion Explained",
+    short: "A plain language explanation of the Section 121 home sale exclusion, its limits, and how it interacts with rental use for Los Angeles owners.",
+    route: "section-121-exclusion-explained",
+    category: "Guides"
+  },
+  {
+    slug: "how-to-reduce-capital-gains-tax",
+    name: "How to Reduce Capital Gains Tax",
+    short: "Legitimate ways a Los Angeles property owner can reduce or defer capital gains tax exposure on a real estate sale, including the role of a 1031 exchange.",
+    route: "how-to-reduce-capital-gains-tax",
+    category: "Guides"
+  },
+  {
+    slug: "how-to-invest-in-real-estate",
+    name: "How to Invest in Real Estate",
+    short: "An overview of the main paths into Los Angeles real estate investing, from direct ownership to passive structures, and where 1031 exchanges apply.",
+    route: "how-to-invest-in-real-estate",
+    category: "Guides"
+  },
+  {
+    slug: "passive-real-estate-income",
+    name: "Passive Real Estate Income",
+    short: "What passive real estate income means for a Los Angeles investor, the structures available, and how they interact with 1031 exchange eligibility.",
+    route: "passive-real-estate-income",
+    category: "Guides"
+  },
+  {
+    slug: "real-estate-syndication-explained",
+    name: "Real Estate Syndication Explained",
+    short: "How real estate syndications are structured, why most do not qualify for a 1031 exchange, and what Los Angeles investors should understand before investing.",
+    route: "real-estate-syndication-explained",
+    category: "Guides"
+  },
+  {
+    slug: "fractional-real-estate-investing",
+    name: "Fractional Real Estate Investing",
+    short: "How fractional ownership structures like tenancy in common and DST interests work for Los Angeles real estate, and which ones preserve 1031 eligibility.",
+    route: "fractional-real-estate-investing",
+    category: "Guides"
+  },
+  {
+    slug: "real-estate-crowdfunding-explained",
+    name: "Real Estate Crowdfunding Explained",
+    short: "How real estate crowdfunding platforms are structured, why most crowdfunded investments do not qualify for a 1031 exchange, and what to check before investing.",
+    route: "real-estate-crowdfunding-explained",
+    category: "Guides"
+  },
+  {
+    slug: "commercial-real-estate-investing",
+    name: "Commercial Real Estate Investing",
+    short: "An overview of commercial real estate asset classes in the Los Angeles market and how they factor into a 1031 exchange replacement property search.",
+    route: "commercial-real-estate-investing",
+    category: "Guides"
+  },
+  {
+    slug: "building-real-estate-cash-flow",
+    name: "Building Real Estate Cash Flow",
+    short: "How Los Angeles investors evaluate and improve rental property cash flow, and how a 1031 exchange can reposition a portfolio toward stronger cash flow.",
+    route: "building-real-estate-cash-flow",
+    category: "Guides"
+  },
+  {
+    slug: "is-a-rental-a-good-investment",
+    name: "Is a Rental a Good Investment",
+    short: "A framework Los Angeles owners use to evaluate whether a rental property still fits their goals, and how a 1031 exchange fits into that decision.",
+    route: "is-a-rental-a-good-investment",
+    category: "Guides"
+  },
+  {
+    slug: "triple-net-lease-nnn",
+    name: "Triple Net Lease (NNN)",
+    short: "What a triple net lease means for a Los Angeles investor, how it differs from other lease structures, and why it is a common 1031 exchange replacement choice.",
+    route: "triple-net-lease-nnn",
+    category: "Guides"
+  },
+  {
+    slug: "what-is-an-nnn-lease",
+    name: "What Is an NNN Lease",
+    short: "A plain language explanation of what an NNN lease is, common Los Angeles property types that use it, and what a buyer should review before acquiring one.",
+    route: "what-is-an-nnn-lease",
+    category: "Guides"
+  },
+  {
+    slug: "self-storage-investing",
+    name: "Self Storage Investing",
+    short: "What makes self storage a distinct 1031 exchange replacement asset class for Los Angeles investors, and what to evaluate before acquiring a facility.",
+    route: "self-storage-investing",
+    category: "Guides"
+  },
+  {
+    slug: "multifamily-investing",
+    name: "Multifamily Investing",
+    short: "What Los Angeles multifamily investors need to understand about rent regulation, submarket dynamics, and 1031 exchange replacement property selection.",
+    route: "multifamily-investing",
+    category: "Guides"
+  },
+  {
+    slug: "apartment-building-investing",
+    name: "Apartment Building Investing",
+    short: "What Los Angeles investors should evaluate when acquiring an apartment building as 1031 exchange replacement property, from unit mix to operating expenses.",
+    route: "apartment-building-investing",
+    category: "Guides"
+  },
+  {
+    slug: "mobile-home-park-investing",
+    name: "Mobile Home Park Investing",
+    short: "What makes mobile home parks a distinct asset class for Los Angeles area 1031 exchangers, including California's specific mobile home tenancy rules.",
+    route: "mobile-home-park-investing",
+    category: "Guides"
+  },
+  {
+    slug: "industrial-real-estate-investing",
+    name: "Industrial Real Estate Investing",
+    short: "Why industrial property near the Ports of Los Angeles and Long Beach has drawn strong 1031 exchange demand, and what to evaluate before acquiring one.",
+    route: "industrial-real-estate-investing",
+    category: "Guides"
+  },
+  {
+    slug: "medical-office-investing",
+    name: "Medical Office Investing",
+    short: "What Los Angeles investors should understand about medical office property as a 1031 exchange replacement asset, from tenant improvements to location factors.",
+    route: "medical-office-investing",
+    category: "Guides"
   }
 ];

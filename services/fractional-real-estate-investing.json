@@ -1,0 +1,78 @@
+{
+ "slug": "fractional-real-estate-investing",
+ "taxonomy": "services",
+ "title": "Fractional Real Estate Investing",
+ "name": "Fractional Real Estate Investing",
+ "metaTitle": "Fractional Real Estate Investing for Los Angeles, CA Investors",
+ "metaDescription": "How fractional ownership structures like tenancy in common and DST interests work for Los Angeles real estate, and which ones preserve 1031 eligibility.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Fractional real estate investing allows multiple investors to each own a defined percentage interest in a single property or portfolio, rather than one investor owning the entire asset outright. For a Los Angeles investor with substantial 1031 exchange proceeds who does not want the concentration risk of putting everything into one directly owned building, fractional structures can offer a way to diversify across several properties while, in the right legal form, still qualifying for exchange treatment.</p>"
+  },
+  {
+   "heading": "Tenancy in Common as Direct Fractional Ownership",
+   "html": "<p>A tenancy in common, often abbreviated TIC, gives each investor a direct, undivided percentage interest in the real property itself, recorded on title alongside the other co owners. Because each TIC investor holds an actual interest in real property rather than an interest in an entity, a properly structured TIC interest can qualify as replacement property in a 1031 exchange, subject to specific IRS guidelines on the number of co owners, decision making structure, and restrictions on activities that would make the arrangement resemble a business entity rather than co ownership of property.</p>"
+  },
+  {
+   "heading": "Delaware Statutory Trusts as Passive Fractional Ownership",
+   "html": "<p>A Delaware Statutory Trust divides a property or portfolio into fractional beneficial interests held in trust, with a sponsor or trustee handling all management decisions on behalf of the investors. Because the IRS treats a properly structured DST interest as direct ownership of real property under Revenue Ruling 2004-86, it also preserves 1031 eligibility, and it removes the co owner decision making complexity that TIC structures can involve, at the cost of investor control over property level decisions.</p>"
+  },
+  {
+   "heading": "Why the Legal Form Determines Everything Here",
+   "html": "<p>The word fractional describes many different legal arrangements, and only some of them, TIC and DST interests among them, are treated as direct real property ownership for 1031 purposes. A fractional interest structured as an LLC membership, even if it is marketed using similar language, is a partnership interest excluded from like kind treatment under Section 1031(a)(2). A Los Angeles investor evaluating any fractional opportunity needs to confirm the actual legal structure, not just the general description, before assuming it will work within an exchange.</p>"
+  },
+  {
+   "heading": "How We Support Investors Evaluating These Options",
+   "html": "<p>We help Los Angeles exchangers understand the difference between TIC, DST, and LLC based fractional structures at a general level, and coordinate introductions to licensed providers when a TIC or DST allocation is being considered as replacement property. These interests may be securities, and we do not sell securities or make specific investment recommendations; sponsor and offering due diligence sits with the investor and their licensed advisors.</p>"
+  },
+  {
+   "heading": "Exit Timing Differs Significantly Between TIC and DST Structures",
+   "html": "<p>A tenancy in common interest can potentially be sold independently by an individual co owner, subject to any restrictions in the co ownership agreement, giving somewhat more individual exit flexibility than a DST interest, which is generally tied entirely to the sponsor's disposition timeline for the underlying property. A Los Angeles investor weighing these two fractional structures should consider how much individual exit control matters to their planning, since this is one of the more meaningful practical differences between otherwise similar sounding fractional ownership vehicles.</p>"
+  },
+  {
+   "heading": "Due Diligence Differs by Structure Type",
+   "html": "<p>Evaluating a TIC opportunity involves reviewing the co ownership agreement, the other co owners' financial standing, and the property management arrangement among owners, while evaluating a DST offering involves reviewing the sponsor's track record, the trust agreement, and the specific property or portfolio the trust holds. These are different due diligence processes despite both structures preserving 1031 eligibility, and an investor should not assume the review process for one translates directly to the other.</p>"
+  },
+  {
+   "heading": "Minimum Investment Sizes Vary Considerably",
+   "html": "<p>DST offerings commonly have minimum investment thresholds in the tens of thousands of dollars, which can make them accessible for sizing a specific leftover portion of a Los Angeles exchange's proceeds after a direct purchase, while TIC structures sometimes involve larger minimum buy ins tied to a specific fractional percentage of a larger property. An exchanger with a relatively modest leftover balance after a direct acquisition should confirm minimum investment thresholds early, since not every fractional structure will accommodate every dollar amount that needs to be placed before the exchange deadline.</p>"
+  },
+  {
+   "heading": "How Fractional Structures Can Serve Estate Planning Goals",
+   "html": "<p>Because fractional interests, whether TIC or DST, can sometimes be divided among multiple heirs more easily than a single directly owned property, some Los Angeles exchangers approaching a later stage of life consider fractional replacement property partly with an eye toward simplifying eventual estate distribution. This is a longer term planning consideration best discussed with an estate attorney alongside the exchange itself, since the fractional structure's terms need to actually support the intended division among future heirs.</p>"
+  },
+  {
+   "heading": "Securities Disclaimer",
+   "html": "<p>DST interests, and in some circumstances TIC interests, may be considered securities under federal and California law. We do not sell securities and do not provide investment advice on specific fractional offerings. We provide introductions to licensed providers for Los Angeles exchangers considering a fractional replacement property structure, and suitability and offering due diligence remain the investor's responsibility, conducted with those licensed professionals.</p><p>Investors new to fractional ownership sometimes ask how much control they actually retain over a TIC property compared with a DST interest. A TIC structure generally requires unanimous or majority co owner consent for major decisions depending on the co ownership agreement, giving investors more direct input than a DST, where the trustee makes essentially all management decisions on behalf of investors. This difference in control is worth weighing carefully against the relative simplicity a DST offers.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does every fractional real estate structure qualify for a 1031 exchange?",
+   "a": "No. Tenancy in common and Delaware Statutory Trust interests can qualify because they represent direct real property ownership, while LLC membership based fractional structures generally do not because they are partnership interests."
+  },
+  {
+   "q": "How many co owners can a tenancy in common structure have and still qualify for 1031 treatment?",
+   "a": "IRS guidance generally limits qualifying TIC structures to a maximum of thirty five co owners, along with restrictions on centralized management and business activities, to avoid the arrangement being treated as a partnership."
+  },
+  {
+   "q": "Does a DST investor have input into property level management decisions?",
+   "a": "Generally no. A DST is a passive structure where the trustee or sponsor makes management decisions on behalf of investors, which is part of the tradeoff for the structure's simplicity and 1031 eligibility."
+  },
+  {
+   "q": "Can fractional interests be combined with a directly owned property in the same exchange?",
+   "a": "Yes, an exchanger can identify and acquire a combination of a directly owned replacement property and a fractional TIC or DST interest within a single 1031 exchange."
+  },
+  {
+   "q": "What should an investor check before assuming a fractional offering qualifies for 1031 treatment?",
+   "a": "The investor should confirm the actual legal structure of the offering, TIC, DST, or LLC, since only some of these preserve like kind exchange eligibility regardless of how the opportunity is marketed."
+  }
+ ],
+ "internalLinks": [
+  "real-estate-syndication-explained",
+  "dst-placement-coordination",
+  "real-estate-crowdfunding-explained"
+ ],
+ "wordCount": 866
+}

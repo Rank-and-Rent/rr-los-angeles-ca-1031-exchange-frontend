@@ -1,0 +1,78 @@
+{
+ "slug": "real-estate-crowdfunding-explained",
+ "taxonomy": "services",
+ "title": "Real Estate Crowdfunding Explained",
+ "name": "Real Estate Crowdfunding Explained",
+ "metaTitle": "Real Estate Crowdfunding Explained for Los Angeles, CA Investors",
+ "metaDescription": "How real estate crowdfunding platforms are structured, why most crowdfunded investments do not qualify for a 1031 exchange, and what to check before investing.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Real estate crowdfunding platforms allow investors to contribute relatively small amounts of capital toward a specific property or fund, pooled together online with other investors, typically in exchange for an interest in an LLC or similar entity that the platform or its sponsor manages. For a Los Angeles investor curious about real estate exposure without the capital required for direct ownership, crowdfunding platforms present a low minimum entry point, but the legal structure behind that convenience carries significant implications for tax treatment.</p>"
+  },
+  {
+   "heading": "The Entity Interest Problem Again",
+   "html": "<p>Much like typical real estate syndications, most crowdfunding investments give the investor an interest in a pooled entity, usually an LLC, rather than a direct interest in the underlying real property. Because Internal Revenue Code Section 1031(a)(2) excludes partnership and LLC interests from like kind exchange treatment, a Los Angeles investor exchanging out of a directly owned relinquished property and into typical crowdfunding equity generally would not achieve tax deferral, and the original sale would be a taxable event.</p>"
+  },
+  {
+   "heading": "Some Platforms Offer Debt Rather Than Equity",
+   "html": "<p>Many crowdfunding platforms offer debt investments, where the investor is effectively a lender receiving interest payments secured by a real estate loan, rather than an equity owner of the property. A debt interest is not real property at all for 1031 purposes and does not qualify as replacement property under any circumstance, regardless of how the platform markets the underlying real estate collateral.</p>"
+  },
+  {
+   "heading": "Fund Level Versus Direct Property Structures",
+   "html": "<p>A smaller number of platforms structure specific offerings as Delaware Statutory Trusts or direct tenancy in common interests precisely to preserve 1031 eligibility for exchangers, distinguishing these from their standard pooled fund products aimed at investors without exchange requirements. A Los Angeles investor with 1031 exchange proceeds needs to identify whether a given crowdfunding offering is one of these specifically structured exchange eligible vehicles or one of the platform's standard LLC based products, since the two can appear similar in marketing but are fundamentally different for tax purposes.</p>"
+  },
+  {
+   "heading": "How We Help Sort This Out",
+   "html": "<p>We help Los Angeles exchangers understand, at a general level, why most standard crowdfunding investments do not preserve 1031 eligibility and what to look for in an offering that is specifically structured to qualify. Crowdfunding equity, debt, and DST interests may be securities, and we do not sell securities or evaluate specific platform offerings; that due diligence belongs with the investor and a licensed securities professional.</p>"
+  },
+  {
+   "heading": "Accredited Versus Non Accredited Investor Access",
+   "html": "<p>Many real estate crowdfunding platforms distinguish between offerings available to accredited investors, generally those meeting specific income or net worth thresholds, and offerings open to non accredited investors under different regulatory exemptions. This distinction affects which offerings a given Los Angeles investor can access on a platform, separate from and in addition to the question of whether a specific offering's legal structure preserves 1031 eligibility.</p>"
+  },
+  {
+   "heading": "Platform Due Diligence Is Not a Substitute for Investor Due Diligence",
+   "html": "<p>Crowdfunding platforms typically perform some level of sponsor and deal screening before listing an offering, but this screening does not eliminate the investor's own responsibility to review offering documents, understand fee structures, and confirm the legal structure of their specific investment. An investor relying solely on a platform's general reputation, without reviewing the specific offering's structure and terms, risks making an investment that does not align with their actual goals, including 1031 eligibility if that is a requirement.</p>"
+  },
+  {
+   "heading": "Platform Longevity and Fund Redemption History",
+   "html": "<p>Real estate crowdfunding as an industry is relatively young compared with traditional real estate syndication and DST sponsorship, and some platforms have faced liquidity challenges or suspended redemptions on certain fund products during periods of market stress. A Los Angeles investor evaluating any crowdfunding platform, regardless of 1031 eligibility considerations, should research the platform's operating history and how it has handled investor redemption requests during past periods of market volatility before committing capital.</p>"
+  },
+  {
+   "heading": "Fees and Fee Transparency Across Crowdfunding Platforms",
+   "html": "<p>Crowdfunding platforms typically charge a combination of platform fees, sponsor level fees, and sometimes fund level management fees, and the total fee load can vary considerably from one platform or offering to another. A Los Angeles investor should request full fee disclosure for any offering under consideration and compare the total cost structure against alternative approaches, including direct ownership or a DST allocation, before assuming a crowdfunding platform's convenience translates into a better net return.</p>"
+  },
+  {
+   "heading": "Securities Disclaimer",
+   "html": "<p>Crowdfunding equity, debt interests, and any DST or TIC offerings available through a crowdfunding platform may be considered securities under federal and California law. We do not sell securities, do not evaluate specific platform offerings, and do not provide investment recommendations. Los Angeles investors considering a crowdfunding platform as part of their broader investment approach should conduct independent due diligence and consult a licensed securities professional before committing capital.</p><p>Investors sometimes ask whether a crowdfunding platform's online interface and reporting dashboard changes any of the underlying legal analysis described above. It does not; the platform's technology and user experience are separate from the legal structure of the specific offering, and an investment presented through a polished online interface can still be structured as a non qualifying LLC interest for 1031 purposes, just as a traditional syndication would be.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does real estate crowdfunding generally qualify as replacement property in a 1031 exchange?",
+   "a": "Generally no, because most crowdfunding investments are structured as LLC or partnership interests, which Section 1031(a)(2) excludes from like kind exchange treatment."
+  },
+  {
+   "q": "Can a debt based crowdfunding investment ever qualify for a 1031 exchange?",
+   "a": "No. A debt investment is a loan interest, not real property, and does not qualify as like kind replacement property regardless of the real estate collateral securing it."
+  },
+  {
+   "q": "Are there any crowdfunding structures that do preserve 1031 eligibility?",
+   "a": "Some platforms offer specific Delaware Statutory Trust or direct tenancy in common products designed to preserve 1031 eligibility, distinct from their standard LLC based pooled fund offerings."
+  },
+  {
+   "q": "How can an investor tell which type of crowdfunding offering they are looking at?",
+   "a": "By reviewing the offering documents to confirm the legal structure, LLC interest, debt interest, DST interest, or TIC interest, since marketing materials do not always make this distinction clear."
+  },
+  {
+   "q": "Does the low minimum investment of crowdfunding platforms affect 1031 eligibility?",
+   "a": "No, the minimum investment size is unrelated to eligibility. What determines eligibility is the legal structure of the interest being offered, not how much capital is required to participate."
+  }
+ ],
+ "internalLinks": [
+  "real-estate-syndication-explained",
+  "fractional-real-estate-investing",
+  "dst-placement-coordination"
+ ],
+ "wordCount": 807
+}

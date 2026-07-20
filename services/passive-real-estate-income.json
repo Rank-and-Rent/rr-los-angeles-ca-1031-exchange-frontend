@@ -1,0 +1,79 @@
+{
+ "slug": "passive-real-estate-income",
+ "taxonomy": "services",
+ "title": "Passive Real Estate Income",
+ "name": "Passive Real Estate Income",
+ "metaTitle": "Passive Real Estate Income for Los Angeles, CA Investors",
+ "metaDescription": "What passive real estate income means for a Los Angeles investor, the structures available, and how they interact with 1031 exchange eligibility.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Passive real estate income describes rental or distribution income an investor receives from real property without taking on the day to day responsibilities of management, leasing, and maintenance that come with direct ownership. For a Los Angeles investor who has spent years actively managing a rental property, whether a small apartment building or a commercial storefront, the appeal of a more passive structure often grows as they consider retirement, health, or simply wanting fewer operational demands on their time.</p>"
+  },
+  {
+   "heading": "Net Lease Property as a Semi Passive Direct Ownership Option",
+   "html": "<p>One path toward more passive income while retaining direct ownership is acquiring a triple net leased property, where the tenant is responsible for property taxes, insurance, and maintenance in addition to rent. A Los Angeles investor exchanging out of a management intensive multifamily property into a single tenant net lease retail or industrial building can significantly reduce day to day involvement while still owning real property directly, which preserves full 1031 eligibility on any future exchange.</p>"
+  },
+  {
+   "heading": "Delaware Statutory Trusts for a Fully Passive Structure",
+   "html": "<p>For an investor who wants to step away from property management entirely while still deferring tax through a 1031 exchange, a Delaware Statutory Trust interest offers passive ownership of a fractional interest in institutional grade real estate, professionally managed by the sponsor. Because DST interests are treated as direct ownership of real property under Revenue Ruling 2004-86, they qualify as replacement property in a 1031 exchange, unlike most syndication or crowdfunding equity. The tradeoff is illiquidity; a DST interest generally cannot be sold independently and is tied to the sponsor's disposition timeline for the underlying property.</p>"
+  },
+  {
+   "heading": "Why This Matters for a Los Angeles Exchanger Near a Deadline",
+   "html": "<p>An exchanger with tight timing on a Los Angeles exchange, perhaps unable to close a direct replacement property before the one hundred eighty day deadline, sometimes turns to a DST allocation as a reliable closing vehicle precisely because DST closings typically move much faster than a traditional real estate purchase. This makes passive structures relevant not only as a long term lifestyle choice but as a practical contingency tool within an active exchange timeline.</p>"
+  },
+  {
+   "heading": "What We Coordinate",
+   "html": "<p>We help Los Angeles investors evaluate net lease direct ownership and DST allocations as replacement property options within a 1031 exchange, coordinating timing and identification requirements. DST interests may be securities, and we do not sell securities; we introduce investors to licensed providers for that portion of the transaction and do not make specific investment recommendations.</p>"
+  },
+  {
+   "heading": "Comparing DST Fees to Direct Ownership Costs",
+   "html": "<p>DST structures typically involve sponsor fees embedded in the offering, covering acquisition, asset management, and disposition services, which is different from the direct costs a Los Angeles investor would incur self managing a directly owned property, such as property management fees, leasing commissions, and their own time. Comparing the all in cost structure of a specific DST offering against the realistic cost of self managing or hiring a property manager for a comparable directly owned asset helps an investor understand whether the passive structure's cost is justified by the reduction in management burden.</p>"
+  },
+  {
+   "heading": "Diversification Across Multiple DST Offerings",
+   "html": "<p>Rather than placing an entire exchange's proceeds into a single DST offering, some Los Angeles exchangers spread their allocation across multiple DST offerings covering different property types or geographic markets, seeking to reduce concentration risk in any single asset or sponsor. This approach requires coordinating multiple sponsor relationships and confirming that each allocation is properly identified within the exchange's forty five day identification window, which adds coordination complexity compared with a single direct property acquisition.</p>"
+  },
+  {
+   "heading": "Income Consistency Differences Between Net Lease and DST Structures",
+   "html": "<p>A directly owned net lease property's income depends entirely on that single tenant continuing to perform under the lease, while a DST interest in a diversified portfolio spreads that risk across multiple properties and tenants, which can smooth out income variability compared with concentrated single tenant exposure. A Los Angeles investor weighing these two passive or semi passive paths should consider how much single tenant concentration risk they are comfortable holding directly versus diversifying away through a professionally managed structure.</p>"
+  },
+  {
+   "heading": "A Realistic Timeline for Evaluating a DST Allocation",
+   "html": "<p>Reviewing sponsor offerings, confirming allocation availability, and completing the paperwork for a DST placement generally needs to happen within the same forty five day identification window that governs the rest of a 1031 exchange, which means a Los Angeles exchanger considering a DST should begin that review as soon as the exchange is initiated rather than waiting to see how the direct property search unfolds first. We help exchangers build this parallel timeline so a DST option remains available as either a primary strategy or a contingency, without last minute scrambling near the identification deadline.</p>"
+  },
+  {
+   "heading": "Securities Disclaimer",
+   "html": "<p>DST and TIC interests, and certain other passive real estate structures, may be considered securities under federal and California law. We do not sell securities and do not provide investment advice regarding specific offerings. Where a Los Angeles exchanger is considering a DST or similar passive structure as replacement property, we provide introductions to licensed securities providers, and all investment decisions, including suitability and offering specific due diligence, remain the responsibility of the investor working with those licensed professionals.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is a triple net leased property considered passive income even though the investor still owns it directly?",
+   "a": "It is often described as semi passive, since the tenant handles taxes, insurance, and maintenance, but the owner still holds direct title and retains landlord responsibilities such as lease enforcement and property level decisions."
+  },
+  {
+   "q": "Do Delaware Statutory Trust distributions qualify as 1031 exchange eligible income?",
+   "a": "A DST interest itself, treated as direct real property ownership under Revenue Ruling 2004-86, can qualify as 1031 exchange replacement property, and the trust structure is designed to be fully passive for the investor."
+  },
+  {
+   "q": "Can an investor sell a DST interest whenever they want liquidity?",
+   "a": "Generally no. A DST interest is illiquid and typically cannot be sold independently; the investor's exit is tied to the sponsor's disposition timeline for the underlying property."
+  },
+  {
+   "q": "Why might an exchanger use a DST allocation near the end of the exchange timeline?",
+   "a": "DST closings typically move faster than a traditional direct property purchase, making a DST allocation a useful contingency for closing before the one hundred eighty day deadline if a direct acquisition is at risk of falling through."
+  },
+  {
+   "q": "Does the site sell DST or TIC securities directly?",
+   "a": "No. DST and TIC interests may be securities, and we do not sell securities. We provide introductions to licensed providers for these structures rather than selling or recommending specific offerings."
+  }
+ ],
+ "internalLinks": [
+  "dst-placement-coordination",
+  "triple-net-lease-nnn",
+  "how-to-invest-in-real-estate",
+  "building-real-estate-cash-flow"
+ ],
+ "wordCount": 803
+}

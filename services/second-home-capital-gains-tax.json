@@ -1,0 +1,74 @@
+{
+ "slug": "second-home-capital-gains-tax",
+ "taxonomy": "services",
+ "title": "Second Home Capital Gains Tax",
+ "name": "Second Home Capital Gains Tax",
+ "metaTitle": "Second Home Capital Gains Tax for Los Angeles, CA Owners",
+ "metaDescription": "How capital gains tax applies when a Los Angeles owner sells a second home, and the narrow path a vacation property has toward 1031 exchange eligibility.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A second home, whether a mountain cabin near Big Bear, a desert property near Palm Springs, or a coastal condo outside the Los Angeles metro, occupies an uncomfortable middle ground for tax purposes. It does not receive the Section 121 exclusion available to a primary residence, and it does not automatically qualify for Section 1031 exchange treatment the way a straightforward rental property does. How a second home is actually used in the years leading up to a sale determines which set of rules applies.</p>"
+  },
+  {
+   "heading": "No Personal Use Exclusion for a Second Home",
+   "html": "<p>Because Section 121 requires the property to have served as the owner's primary residence for at least two of the five years before sale, a second home used purely for personal enjoyment does not qualify for any exclusion on sale. The full gain, calculated as sale price minus adjusted basis, is exposed to federal capital gains tax and, for a Los Angeles based owner, California ordinary income tax as well.</p>"
+  },
+  {
+   "heading": "The Rental Use Safe Harbor",
+   "html": "<p>A second home can potentially qualify for a Section 1031 exchange if it meets the safe harbor described in Revenue Procedure 2008-16, which generally requires the property to have been rented at fair market rent for at least fourteen days in each of the two twelve month periods before the exchange, and the owner's personal use limited to the greater of fourteen days or ten percent of the days the property was rented at fair value during that same period. An owner who has genuinely operated a Big Bear cabin as a short term rental, tracking rental days and limiting personal stays, has a real path to exchange eligibility; an owner who used the property mostly for family vacations and rented it occasionally does not.</p>"
+  },
+  {
+   "heading": "Documentation Matters More Here Than for a Straightforward Rental",
+   "html": "<p>Because eligibility depends on actual usage patterns rather than the property's classification on paper, thorough records of rental days, rental rate, and personal use days become the foundation of any exchange claim for a second home. We help Los Angeles owners organize this usage history before a sale is contemplated, since retroactively reconstructing two years of rental and personal use records after a buyer is already under contract is far harder than tracking it as it happens.</p>"
+  },
+  {
+   "heading": "What This Means for Planning a Sale",
+   "html": "<p>An owner considering the sale of a second home should look at their actual two year usage history well before listing the property, because the safe harbor test is backward looking and cannot be fixed after the fact by simply intending to treat the property as an investment going forward. We coordinate with the owner's tax advisor to review this history against the safe harbor and, where it is met, to structure the sale as a Section 1031 exchange with a qualified intermediary.</p>"
+  },
+  {
+   "heading": "Comparing a Second Home to a Straightforward Investment Rental",
+   "html": "<p>A property purchased from the outset as a straightforward rental, with no significant personal use by the owner, has a much more direct path to 1031 eligibility than a second home with a mixed personal and rental history, since the investment intent is clearer from the start. An owner who bought a desert property near Palm Springs specifically to rent it out through a property manager and used it personally only rarely is on firmer ground than an owner who bought the same property primarily for family use and rented it out occasionally to offset costs.</p>"
+  },
+  {
+   "heading": "What Happens if the Safe Harbor Is Not Met",
+   "html": "<p>If a second home's usage history does not meet the Revenue Procedure 2008-16 safe harbor, the property may still potentially qualify for 1031 treatment based on a broader facts and circumstances analysis of the owner's investment intent, though this is a less certain path than meeting the safe harbor directly. An owner in this position should expect a more involved conversation with their tax advisor about whether the property's overall use history supports investment intent, since the outcome is far less predictable than under the safe harbor.</p>"
+  },
+  {
+   "heading": "How a Property Management Company Supports the Safe Harbor Case",
+   "html": "<p>An owner who engages a professional property management company to handle bookings, set market rate pricing, and document rental activity for a second home builds a stronger record supporting both the fair market rent requirement and the personal use limits under the Revenue Procedure 2008-16 safe harbor than an owner self managing informal bookings to friends or family at reduced rates. For a Los Angeles owner of a Big Bear or desert vacation property considering a future exchange, engaging professional management well ahead of a planned sale is one of the more practical steps toward building a defensible usage record.</p>"
+  },
+  {
+   "heading": "Why We Ask for Detailed Usage History Before Discussing Exchange Options",
+   "html": "<p>Given how fact specific the safe harbor determination is for a second home, we ask Los Angeles owners for a detailed accounting of rental and personal use days before discussing exchange options in any depth, since a general conversation cannot substitute for that specific review. This is consistent with our broader approach across every property type: identifying a realistic path forward requires the actual facts of a specific property, not a generic assumption based on the property category alone.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does a second home automatically qualify for a 1031 exchange because it is not a primary residence?",
+   "a": "No. It must meet the rental use and personal use limits described in the Revenue Procedure 2008-16 safe harbor in each of the two years before the exchange to qualify."
+  },
+  {
+   "q": "How many days must a second home be rented at fair market rent to meet the safe harbor?",
+   "a": "At least fourteen days in each of the two twelve month periods immediately before the exchange, at a fair market rental rate rather than a discounted family rate."
+  },
+  {
+   "q": "Is there a limit on personal use days under the safe harbor?",
+   "a": "Yes, personal use is generally limited to the greater of fourteen days or ten percent of the days the property was rented at fair market value during each of those two years."
+  },
+  {
+   "q": "Can an owner start tracking rental days right before listing the property and still qualify?",
+   "a": "No, the safe harbor looks at the two twelve month periods before the exchange, so usage history has to be established well in advance rather than assembled after a sale decision is made."
+  },
+  {
+   "q": "Does the Section 121 primary residence exclusion apply to a second home?",
+   "a": "No. Section 121 applies only to a property that served as the owner's primary residence for the required period, which a second home used for personal vacation purposes does not satisfy."
+  }
+ ],
+ "internalLinks": [
+  "home-sale-capital-gains",
+  "capital-gains-on-rental-property",
+  "section-121-exclusion-explained"
+ ],
+ "wordCount": 802
+}

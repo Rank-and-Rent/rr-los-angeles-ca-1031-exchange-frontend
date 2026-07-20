@@ -1,0 +1,79 @@
+{
+ "slug": "real-estate-syndication-explained",
+ "taxonomy": "services",
+ "title": "Real Estate Syndication Explained",
+ "name": "Real Estate Syndication Explained",
+ "metaTitle": "Real Estate Syndication Explained for Los Angeles, CA Investors",
+ "metaDescription": "How real estate syndications are structured, why most do not qualify for a 1031 exchange, and what Los Angeles investors should understand before investing.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A real estate syndication pools capital from multiple investors, typically organized by a sponsor who identifies the property, arranges financing, and manages the asset, while investors contribute capital in exchange for an ownership interest in the entity that holds the property. Syndications have become a common way for Los Angeles investors to access larger commercial deals, such as an apartment complex or industrial portfolio, without personally managing the asset or providing all the capital themselves.</p>"
+  },
+  {
+   "heading": "The Legal Structure Matters More Than It Might Seem",
+   "html": "<p>Most syndications are structured as a limited liability company or limited partnership, with the sponsor as the managing member or general partner and investors as passive members or limited partners. Investors in this structure own an interest in the entity, not a direct interest in the underlying real property. This distinction, entity interest versus direct property interest, is the single most important fact for any Los Angeles investor considering whether syndication investment fits into a 1031 exchange strategy.</p>"
+  },
+  {
+   "heading": "Why Most Syndication Equity Does Not Qualify for a 1031 Exchange",
+   "html": "<p>Internal Revenue Code Section 1031(a)(2) explicitly excludes interests in a partnership from like kind exchange treatment. Because most syndication investments are partnership or LLC interests rather than direct real property interests, exchanging out of a directly owned Los Angeles property and into typical syndication equity generally does not qualify for 1031 tax deferral, and the sale of the relinquished property would be taxable in the year of sale. This is a frequent point of confusion, since syndications market themselves around real estate and investors sometimes assume real estate exposure automatically means 1031 eligibility.</p>"
+  },
+  {
+   "heading": "How Some Structures Try to Preserve Exchange Eligibility",
+   "html": "<p>Certain sponsors structure offerings as tenants in common arrangements or Delaware Statutory Trusts specifically so that investors hold a direct fractional interest in the real property itself rather than an entity interest, preserving 1031 eligibility under Revenue Ruling 2004-86 for DSTs or standard tenancy in common rules for TICs. An investor evaluating a Los Angeles focused offering needs to understand precisely which legal structure is being used, since the difference between a qualifying DST and a non qualifying LLC syndication is not always obvious from marketing materials alone.</p>"
+  },
+  {
+   "heading": "Our Role and Its Limits",
+   "html": "<p>We help investors understand the general distinction between structures that preserve 1031 eligibility and those that do not, and we coordinate introductions to licensed providers when a DST or TIC structure is the right fit for an exchange. Syndication and DST or TIC interests may be securities, and we do not sell securities, provide investment recommendations, or evaluate specific sponsor offerings; those determinations require a licensed securities professional and the investor's own due diligence.</p>"
+  },
+  {
+   "heading": "How Syndications Are Typically Marketed to Los Angeles Investors",
+   "html": "<p>Real estate syndication opportunities are often presented through investor networks, real estate meetup groups, or online platforms targeting accredited investors, frequently highlighting the underlying property's location and projected returns without always foregrounding the entity structure that determines 1031 eligibility. A Los Angeles investor with exchange proceeds evaluating a syndication opportunity should ask directly whether the offering is structured as an LLC or partnership interest, or as a DST or TIC interest, since this single fact determines whether the investment can be used within their exchange at all.</p>"
+  },
+  {
+   "heading": "General Partner Versus Limited Partner Roles",
+   "html": "<p>Within a typical syndication, the general partner or managing member takes on active management responsibility and often greater liability exposure, while limited partners or passive members contribute capital without management control. Understanding this division of responsibility matters for any investor considering a syndication for reasons beyond 1031 eligibility, since the passive investor's influence over property decisions is generally limited regardless of the specific tax treatment of their interest.</p>"
+  },
+  {
+   "heading": "Reviewing a Sponsor's Track Record Independent of Structure",
+   "html": "<p>Regardless of whether a specific offering preserves 1031 eligibility, an investor considering any syndication, DST, or TIC opportunity should independently review the sponsor's track record across prior offerings, including how previous properties performed and whether prior investor distributions matched original projections. This due diligence is separate from the legal structure question and matters just as much, since a properly structured DST from an inexperienced or underperforming sponsor carries real risk despite technically preserving exchange eligibility.</p>"
+  },
+  {
+   "heading": "What to Ask Before Committing Capital to Any Syndication Style Offering",
+   "html": "<p>A Los Angeles investor evaluating a syndication opportunity, independent of 1031 considerations, should ask about the sponsor's fee structure across acquisition, asset management, and disposition, the projected hold period and exit strategy, and how the sponsor has handled underperforming assets in prior offerings. These questions apply whether or not the offering happens to be structured in a way that preserves exchange eligibility, since sponsor quality and offering terms matter independently of the tax treatment question.</p>"
+  },
+  {
+   "heading": "Securities Disclaimer",
+   "html": "<p>Syndication interests, along with DST and TIC interests, may be considered securities under federal and California law. We do not sell securities, evaluate specific sponsor offerings, or provide investment recommendations. Where a Los Angeles investor's exchange strategy involves a structure that may be a security, we provide introductions to licensed providers, and full offering due diligence remains the investor's own responsibility in coordination with those licensed professionals.</p><p>Investors sometimes assume that because a syndication holds Los Angeles real estate, any tax benefits associated with real estate ownership automatically flow through to them the same way they would for a direct owner. Depreciation and other tax attributes do generally pass through to LLC or partnership investors for income tax purposes, but the 1031 exchange eligibility question is separate from this pass through treatment and depends specifically on the exchange rules discussed above.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why does most real estate syndication equity fail to qualify for a 1031 exchange?",
+   "a": "Because Section 1031(a)(2) excludes partnership interests from like kind treatment, and most syndications are structured as LLC or limited partnership interests rather than direct real property interests."
+  },
+  {
+   "q": "Can any syndication style structure ever qualify for a 1031 exchange?",
+   "a": "Yes, if the offering is specifically structured as a Delaware Statutory Trust or a proper tenancy in common arrangement giving investors a direct fractional interest in the real property, rather than an entity interest."
+  },
+  {
+   "q": "Is it always obvious from marketing materials whether an offering preserves 1031 eligibility?",
+   "a": "No. The legal structure, not the marketing description, determines eligibility, and investors need to review the actual offering documents or consult a professional to confirm the structure."
+  },
+  {
+   "q": "Do syndication interests count as securities?",
+   "a": "Syndication interests, along with DST and TIC interests, may be considered securities. We do not sell securities and provide introductions to licensed providers only."
+  },
+  {
+   "q": "What happens if an investor exchanges into a non qualifying syndication interest by mistake?",
+   "a": "The exchange would likely fail to qualify for 1031 deferral, making the original sale taxable in the year it closed, which is why confirming the legal structure before committing funds is essential."
+  }
+ ],
+ "internalLinks": [
+  "fractional-real-estate-investing",
+  "real-estate-crowdfunding-explained",
+  "dst-placement-coordination",
+  "how-to-invest-in-real-estate"
+ ],
+ "wordCount": 854
+}

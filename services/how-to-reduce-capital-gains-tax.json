@@ -1,0 +1,79 @@
+{
+ "slug": "how-to-reduce-capital-gains-tax",
+ "taxonomy": "services",
+ "title": "How to Reduce Capital Gains Tax",
+ "name": "How to Reduce Capital Gains Tax",
+ "metaTitle": "How to Reduce Capital Gains Tax on Los Angeles, CA Property",
+ "metaDescription": "Legitimate ways a Los Angeles property owner can reduce or defer capital gains tax exposure on a real estate sale, including the role of a 1031 exchange.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Los Angeles property owners facing a sale of appreciated real estate generally have a handful of legitimate paths for reducing or deferring the tax bill, and understanding which ones apply to a given property depends heavily on how the property has been used and held. This page walks through the main categories at a high level; none of it substitutes for advice from a qualified CPA or tax attorney who can review the specific facts.</p>"
+  },
+  {
+   "heading": "Deferral Through a Section 1031 Exchange",
+   "html": "<p>For property held for investment or business use, a Section 1031 exchange defers, rather than eliminates, both the capital gains tax and any depreciation recapture, by reinvesting proceeds into like kind replacement real property through a qualified intermediary. This is the primary tool available to Los Angeles investors selling rental, commercial, or industrial property who intend to remain invested in real estate. It does not reduce the ultimate tax liability; it postpones it, potentially indefinitely if the investor continues exchanging or if the property passes to heirs with a stepped up basis.</p>"
+  },
+  {
+   "heading": "Exclusion for a Primary Residence",
+   "html": "<p>An owner selling a primary residence may qualify for the Section 121 exclusion, which permanently excludes up to two hundred fifty thousand dollars of gain for a single filer or five hundred thousand dollars for a married couple filing jointly, without any reinvestment requirement. This tool applies only to personal residence property, not investment property, and the ownership and use tests need to be met in the years before sale.</p>"
+  },
+  {
+   "heading": "Installment Sales and Timing",
+   "html": "<p>An installment sale, where the seller finances part of the purchase price and receives payments over time, can spread the recognized gain across multiple tax years rather than concentrating it in a single year, which may keep the seller in a lower bracket in each year. This does not reduce the total tax owed, but it can reduce the marginal rate applied by avoiding a single large spike in taxable income. Timing a sale relative to other income events in a given year, where legally appropriate, is a related consideration best worked through with a CPA.</p>"
+  },
+  {
+   "heading": "Charitable and Estate Planning Tools",
+   "html": "<p>Structures such as a charitable remainder trust can allow an owner to contribute appreciated property, receive an income stream, and avoid immediate recognition of the full gain, while ultimately benefiting a charitable beneficiary. Estate planning, including the stepped up basis heirs receive on inherited property, is a longer horizon tool that does not help a seller during their own lifetime sale but matters significantly for the next generation's tax exposure. These structures involve legal and tax complexity well beyond property identification, and we refer owners exploring them to an estate attorney and CPA rather than advising on them directly.</p>"
+  },
+  {
+   "heading": "Where Our Role Fits",
+   "html": "<p>Our role is coordinating the property identification and timeline management side of a Section 1031 exchange for Los Angeles investors who have determined, with their own tax advisors, that deferral through an exchange is the right path. We do not provide tax advice, recommend specific tax strategies, or promise a particular outcome; every owner's situation depends on facts we do not control, and the decision belongs with the owner and their licensed advisors.</p>"
+  },
+  {
+   "heading": "Opportunity Zones as a Separate Deferral Tool",
+   "html": "<p>Qualified Opportunity Zone investments offer a separate deferral mechanism from Section 1031, allowing an investor to defer tax on a capital gain, from real estate or other sources, by reinvesting it into a Qualified Opportunity Fund within a specified window after the sale. Opportunity Zone rules differ substantially from 1031 exchange rules, including different reinvestment requirements, different property eligibility, and different long term holding incentives, and the two programs are not interchangeable even though both involve deferring capital gains tax through reinvestment.</p>"
+  },
+  {
+   "heading": "Why Combining Multiple Strategies Requires Professional Coordination",
+   "html": "<p>A Los Angeles owner facing a complex situation, such as a highly appreciated property with significant depreciation recapture, mixed personal and rental use history, and estate planning goals for the next generation, may find that no single strategy addresses every aspect of their tax exposure. In these cases, a CPA and estate attorney working together can sometimes combine tools, such as a partial Section 121 exclusion alongside a 1031 exchange on the investment use portion, though this requires careful documentation and professional guidance rather than a do it yourself approach.</p>"
+  },
+  {
+   "heading": "Why We Do Not Recommend a Specific Strategy Without Professional Review",
+   "html": "<p>Every strategy described here, from a 1031 exchange to a Section 121 exclusion to an installment sale, depends heavily on the specific facts of a Los Angeles owner's property history, income situation, and long term goals, and no general overview can substitute for a review by a licensed CPA or tax attorney familiar with the owner's complete financial picture. We coordinate the property identification and exchange logistics once an owner has determined, with their own advisors, that a 1031 exchange is the right path, but the underlying tax strategy decision itself is not one we make or advise on.</p>"
+  },
+  {
+   "heading": "No Guaranteed Outcomes",
+   "html": "<p>None of the approaches described on this page guarantee a specific tax outcome or savings amount for any individual Los Angeles owner, and we do not make performance or savings claims tied to any strategy. Actual results depend on an owner's specific facts, current tax law at the time of a transaction, and decisions made in coordination with licensed tax and legal professionals, and this page should be read as general education rather than a projection of results.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does a 1031 exchange reduce the total amount of tax an investor eventually pays?",
+   "a": "No, a 1031 exchange defers tax rather than reducing it. The deferred gain carries forward into the replacement property's basis and becomes taxable again on a future non exchanged sale."
+  },
+  {
+   "q": "Can a Section 1031 exchange be used on a primary residence?",
+   "a": "No, Section 1031 applies only to property held for investment or business use. A primary residence is governed by the separate Section 121 exclusion instead."
+  },
+  {
+   "q": "Does an installment sale reduce the total capital gains tax owed?",
+   "a": "Not typically. It spreads recognition of the gain across multiple years, which can reduce the marginal tax rate applied in any single year, but the total gain remains taxable over time."
+  },
+  {
+   "q": "What happens to deferred capital gains tax if an owner holds a 1031 replacement property until death?",
+   "a": "If the owner holds the property until death, heirs generally receive a stepped up basis under Section 1014, which can eliminate the previously deferred gain rather than passing the tax liability to them."
+  },
+  {
+   "q": "Should a property owner decide on a tax reduction strategy before or after finding a buyer?",
+   "a": "Before. Strategies like a 1031 exchange require a qualified intermediary and specific documentation in place before the relinquished property closes, so planning has to happen ahead of a sale, not after."
+  }
+ ],
+ "internalLinks": [
+  "capital-gains-on-investment-property",
+  "depreciation-recapture-explained",
+  "section-121-exclusion-explained",
+  "qualified-intermediary-coordination"
+ ],
+ "wordCount": 854
+}

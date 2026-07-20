@@ -1,0 +1,78 @@
+{
+ "slug": "home-sale-capital-gains",
+ "taxonomy": "services",
+ "title": "Home Sale Capital Gains",
+ "name": "Home Sale Capital Gains",
+ "metaTitle": "Home Sale Capital Gains Rules for Los Angeles, CA Owners",
+ "metaDescription": "How capital gains tax applies to a Los Angeles primary residence sale, the Section 121 exclusion, and when a property crosses into investment territory.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Selling a primary residence in Los Angeles is treated very differently for tax purposes than selling an investment property, and the distinction matters because Section 1031 exchange treatment applies only to property held for investment or business use, not to a personal residence. Most homeowners rely instead on the Section 121 exclusion, which allows a portion of the gain on a primary residence sale to go untaxed entirely, without any reinvestment requirement.</p>"
+  },
+  {
+   "heading": "The Section 121 Exclusion in Brief",
+   "html": "<p>An owner who has used a home as a primary residence for at least two of the five years before sale can exclude up to two hundred fifty thousand dollars of gain if single, or up to five hundred thousand dollars if married filing jointly, from federal taxable income. Given how much Los Angeles residential real estate has appreciated over long holding periods, particularly in neighborhoods like Silver Lake, Mar Vista, or the Highland Park corridor, many long term owners exceed these exclusion amounts and owe capital gains tax on the excess.</p>"
+  },
+  {
+   "heading": "When a Former Rental Becomes a Home, or a Home Becomes a Rental",
+   "html": "<p>Los Angeles owners frequently convert a property's use over time: moving out of a home and renting it, or moving into a property that was previously an investment rental. These conversions create mixed use history that affects both the Section 121 exclusion and any later 1031 eligibility. A period of non qualified use, generally time after 2008 when the property was not used as a primary residence, can reduce the portion of gain eligible for the Section 121 exclusion on a later sale, and depreciation claimed during any rental period remains subject to recapture regardless of the exclusion.</p>"
+  },
+  {
+   "heading": "Second Homes and Vacation Property Are Not Automatically Investment Property",
+   "html": "<p>A property used personally, even part time, generally does not qualify for Section 1031 treatment unless it meets the safe harbor conditions under Revenue Procedure 2008-16, which require both a minimum rental history and limited personal use in the years before exchange. Owners of a Big Bear cabin or a desert property near Palm Springs who are considering an exchange need to review their actual usage pattern against that safe harbor before assuming the property qualifies.</p>"
+  },
+  {
+   "heading": "How We Help Owners Sort This Out",
+   "html": "<p>We help Los Angeles owners work through the use history of a property, in coordination with their tax advisor, to understand whether a Section 121 exclusion, a Section 1031 exchange, or some combination of the two applies to their specific sale. This determination depends heavily on the individual facts of ownership and use, and we do not provide tax or legal advice on which category a given property falls into; that determination belongs with the owner's CPA or attorney.</p>"
+  },
+  {
+   "heading": "How Los Angeles Appreciation Has Pushed More Sellers Above the Exclusion",
+   "html": "<p>Home values in many Los Angeles neighborhoods have risen substantially over long holding periods, and an owner who purchased decades ago in an area like Mount Washington or Atwater Village at a modest price can find that even the full five hundred thousand dollar married exclusion does not cover the entire gain. In these cases, the excess gain above the exclusion amount is taxed as a standard long term capital gain federally and as ordinary income by California, which is worth calculating well before listing a highly appreciated home.</p>"
+  },
+  {
+   "heading": "Record Keeping That Supports a Larger Exclusion",
+   "html": "<p>Qualifying capital improvements made over the ownership period, as distinct from routine repairs and maintenance, increase the home's adjusted basis and reduce the taxable gain on sale. A Los Angeles homeowner who has kept records of a kitchen remodel, a room addition, or a major system replacement can often reduce their taxable gain meaningfully compared with an owner who has not retained receipts and documentation for these improvements over the years.</p>"
+  },
+  {
+   "heading": "State Withholding on Sale Proceeds",
+   "html": "<p>California generally requires withholding on the sale of real property by certain sellers, including a portion of the sale price withheld at closing and remitted to the state as an estimated payment toward the seller's eventual tax liability, subject to specific exemptions such as the sale of a principal residence in some circumstances. A Los Angeles seller should confirm with their escrow company and CPA whether withholding applies to their specific sale, since this affects the net proceeds available at closing even before the seller's actual tax liability is finalized on their return for the year.</p>"
+  },
+  {
+   "heading": "Working Alongside the Owner's Existing Advisors",
+   "html": "<p>Because a home sale often sits at the intersection of family finances, estate planning, and sometimes a prior rental history, we generally recommend a Los Angeles owner bring their CPA and, where relevant, an estate or family law attorney into the planning conversation before listing a property with a complicated use history. Our role is limited to coordinating any 1031 exchange component that may apply to the investment use portion of a mixed use property; the residency and exclusion determinations themselves belong with the owner's own tax professionals, who can review the complete facts of the ownership and use history.</p>"
+  },
+  {
+   "heading": "A Note on Investment Property Versus Personal Residence Content",
+   "html": "<p>Because our core service focuses on 1031 exchanges for investment property, this page on primary residence capital gains is offered as background context for Los Angeles owners who may be considering converting a property between personal and rental use, or who hold a mixed use property. For a pure primary residence sale with no investment history, a real estate agent and CPA familiar with Section 121 are generally the right starting point rather than a 1031 exchange coordinator.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can a primary residence be exchanged under Section 1031?",
+   "a": "No. A primary residence held for personal use does not meet the investment or business use requirement of Section 1031, and Section 121 governs its capital gains treatment instead."
+  },
+  {
+   "q": "What is the maximum Section 121 exclusion for a married couple filing jointly?",
+   "a": "Up to five hundred thousand dollars of gain can be excluded for a married couple filing jointly, provided both spouses meet the ownership and use tests, compared with two hundred fifty thousand dollars for a single filer."
+  },
+  {
+   "q": "Does converting a rental property into a primary residence eliminate the depreciation recapture owed on it?",
+   "a": "No. Depreciation claimed during the rental period generally remains subject to recapture on a later sale, regardless of any Section 121 exclusion applied to the rest of the gain."
+  },
+  {
+   "q": "Can a vacation home ever qualify for a 1031 exchange?",
+   "a": "It can, but only if it meets the safe harbor conditions under Revenue Procedure 2008-16, which require a minimum period of qualifying rental use and limit the owner's personal use in the years before the exchange."
+  },
+  {
+   "q": "How long does an owner need to have lived in a home to qualify for the Section 121 exclusion?",
+   "a": "The owner generally must have owned and used the property as a primary residence for at least two of the five years preceding the sale."
+  }
+ ],
+ "internalLinks": [
+  "second-home-capital-gains-tax",
+  "section-121-exclusion-explained",
+  "inherited-property-capital-gains"
+ ],
+ "wordCount": 851
+}
