@@ -1,0 +1,74 @@
+{
+    "slug": "like-kind-property-explained",
+    "taxonomy": "services",
+    "title": "Like Kind Property Explained",
+    "name": "Like Kind Property Explained",
+    "metaTitle": "Like Kind Property Explained for Los Angeles 1031 Exchanges",
+    "metaDescription": "A plain language explainer on what qualifies as like-kind real property for investment or business use after the Tax Cuts and Jobs Act.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Like-kind, in the context of a 1031 exchange, is a broader concept than most investors expect; it does not mean a Los Angeles apartment building must be exchanged for another apartment building. Under current law, real property held for investment or business use is generally considered like-kind to any other real property held for investment or business use.</p>"
+        },
+        {
+            "heading": "Real Property Since the Tax Cuts and Jobs Act",
+            "html": "<p>Since the Tax Cuts and Jobs Act took effect for exchanges completed after December 31, 2017, Section 1031 applies only to real property; personal property such as equipment, vehicles, or artwork no longer qualifies for like-kind exchange treatment, which was a significant narrowing from prior law.</p>"
+        },
+        {
+            "heading": "Examples of Qualifying Cross-Category Exchanges",
+            "html": "<p>Because the like-kind standard is broad within real property, a Los Angeles investor can exchange a multifamily building for raw land, a retail property for an industrial warehouse, or a fractional DST interest for a directly owned NNN property, so long as both the relinquished and replacement property are held for investment or business use.</p>"
+        },
+        {
+            "heading": "What Does Not Qualify as Like Kind Property",
+            "html": "<p>A primary residence, most vacation homes used mainly for personal enjoyment, property held primarily for resale such as a house flip, and non-real-property assets generally do not qualify, regardless of how the acquisition is structured, since the productive-use requirement applies independently of the like-kind standard.</p>"
+        },
+        {
+            "heading": "Domestic and Foreign Property Are Not Like Kind to Each Other",
+            "html": "<p>Real property located within the United States is not considered like-kind to real property located outside the United States, so a Los Angeles investor cannot use exchange proceeds to acquire foreign real estate, or vice versa, under Section 1031.</p>"
+        },
+        {
+            "heading": "How This Broad Standard Expands Replacement Property Options",
+            "html": "<p>Because the like-kind standard within real property is so broad, a Los Angeles exchanger is not limited to searching within their original property type, which meaningfully expands the pool of viable replacement candidates within the compressed forty five day identification window compared with a narrower same-category requirement.</p>"
+        },
+        {
+            "heading": "How the Broad Standard Applies to Ground Leases and Easements",
+            "html": "<p>The like-kind standard extends beyond fee simple ownership to certain other real property interests, including a ground lease with a term of thirty years or more and, in some cases, an easement, which can expand the range of qualifying replacement structures available to a Los Angeles exchanger beyond a straightforward property purchase.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does a Los Angeles apartment building need to be exchanged for another apartment building?",
+            "a": "No, real property held for investment or business use is generally like-kind to any other real property held for investment or business use, so an apartment building can be exchanged for retail, industrial, or other qualifying property types."
+        },
+        {
+            "q": "Can personal property such as equipment or vehicles still be exchanged under Section 1031?",
+            "a": "No, since the Tax Cuts and Jobs Act took effect for exchanges completed after December 31, 2017, Section 1031 applies only to real property, and personal property no longer qualifies."
+        },
+        {
+            "q": "Can a house flip be used as relinquished property in a 1031 exchange?",
+            "a": "Generally no, property held primarily for resale, rather than for investment or business use, does not meet the productive-use requirement regardless of the like-kind classification of the property itself."
+        },
+        {
+            "q": "Can exchange proceeds be used to purchase property outside the United States?",
+            "a": "No, domestic real property is not considered like-kind to foreign real property under Section 1031, so exchange proceeds from a Los Angeles property sale cannot be used to acquire real estate located outside the country."
+        },
+        {
+            "q": "Can a DST interest be exchanged for a directly owned property, or vice versa?",
+            "a": "Yes, a properly structured Delaware statutory trust interest is treated as like-kind to directly owned investment real property, allowing an exchange between the two structures in either direction."
+        },
+        {
+            "q": "Does the broad like-kind standard expand the pool of viable replacement properties?",
+            "a": "Yes, because an exchanger is not limited to their original property type, this broad standard meaningfully expands viable options within the compressed forty five day identification window."
+        },
+        {
+            "q": "Does the property need to be the exact same use, such as retail for retail?",
+            "a": "No, the like-kind standard within real property does not require matching use categories; a retail property can be exchanged for an industrial building, raw land, or another qualifying real property type entirely."
+        }
+    ],
+    "internalLinks": [
+        "like-kind-property-explained",
+        "1031-exchange-education-consultation",
+        "commercial-real-estate-investing"
+    ],
+    "wordCount": 706
+}

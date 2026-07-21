@@ -1,0 +1,74 @@
+{
+    "slug": "california-transfer-tax-planning",
+    "taxonomy": "services",
+    "title": "California Transfer Tax Planning",
+    "name": "California Transfer Tax Planning",
+    "metaTitle": "California Transfer Tax Planning in Los Angeles, CA",
+    "metaDescription": "Minimizing documentary transfer tax costs on Los Angeles County 1031 exchange transactions, including city and county rate stacking.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Documentary transfer tax is a closing cost, not an income tax, and it applies separately from the capital gains deferral a 1031 exchange provides, meaning even a fully tax-deferred exchange still incurs transfer tax on both the relinquished property sale and, in most cases, the replacement property purchase within Los Angeles County.</p>"
+        },
+        {
+            "heading": "How Los Angeles County and City Rates Stack",
+            "html": "<p>Los Angeles County imposes a base documentary transfer tax, and the city of Los Angeles layers an additional city transfer tax on top of the county rate for property within city limits, with the city's Measure ULA adding a substantially higher rate on transactions above certain price thresholds. An exchanger comparing a replacement property inside the city of Los Angeles against one in an unincorporated county area or a different city should factor this combined rate difference into total transaction cost.</p>"
+        },
+        {
+            "heading": "Measure ULA and High-Value Transactions",
+            "html": "<p>Measure ULA imposes an additional city transfer tax on properties selling above set dollar thresholds, at rates meaningfully higher than the standard city and county combined rate, and this additional cost applies to the sale of a relinquished property within the city of Los Angeles at a qualifying price point regardless of the exchange's tax deferral status. We flag this exposure early for exchangers selling higher-value Los Angeles city property.</p>"
+        },
+        {
+            "heading": "Transfer Tax Does Not Follow the Exchange's Tax Deferral",
+            "html": "<p>Because documentary transfer tax is assessed on the transfer of real property regardless of the underlying transaction's income tax treatment, structuring a sale as a 1031 exchange provides no reduction in transfer tax liability; the tax applies the same way it would on an outright taxable sale.</p>"
+        },
+        {
+            "heading": "Comparing Total Transaction Cost Across Submarkets",
+            "html": "<p>Because combined county, city, and where applicable Measure ULA transfer tax rates vary significantly across Los Angeles County jurisdictions, we include this line item in the total cost comparison when helping an exchanger evaluate replacement property candidates in different cities, rather than treating price alone as the full picture of transaction cost.</p>"
+        },
+        {
+            "heading": "Confirming Rates Before Finalizing a Purchase Contract",
+            "html": "<p>Because city-level transfer tax rates and Measure ULA thresholds can change, we confirm current rates for the specific city where a Los Angeles County candidate property is located before a purchase contract is finalized, rather than relying on rates that may be out of date by the time of closing.</p>"
+        },
+        {
+            "heading": "Confirming Whether an Exemption or Reduced Rate Might Apply",
+            "html": "<p>Certain transfers, such as those between specific related entities or involving particular deed types, can qualify for a documentary transfer tax exemption or reduced calculation basis under California law, and we confirm with escrow and title whether any such exemption might apply to a candidate Los Angeles transaction rather than assuming the standard rate automatically applies in every case.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does a 1031 exchange reduce or eliminate documentary transfer tax?",
+            "a": "No, documentary transfer tax applies to the transfer of real property regardless of whether the transaction qualifies for income tax deferral under Section 1031; it is assessed the same way it would be on a fully taxable sale."
+        },
+        {
+            "q": "What is Measure ULA and when does it apply?",
+            "a": "Measure ULA is an additional city of Los Angeles transfer tax that applies to property sales above set dollar thresholds, at rates meaningfully higher than the standard combined county and city rate, and it applies regardless of the seller's exchange status."
+        },
+        {
+            "q": "Do transfer tax rates vary between cities within Los Angeles County?",
+            "a": "Yes, in addition to the county's base rate, individual cities within the county can impose their own additional city transfer tax, so total transfer tax cost varies depending on which city a property is located in."
+        },
+        {
+            "q": "Who typically pays documentary transfer tax in a Los Angeles transaction?",
+            "a": "This is generally negotiated between buyer and seller in the purchase contract, though local custom in Los Angeles County often has the seller paying the tax; the specific allocation should be confirmed in each transaction's contract."
+        },
+        {
+            "q": "Should transfer tax be factored into comparing replacement property candidates?",
+            "a": "Yes, because combined county, city, and where applicable Measure ULA rates vary across Los Angeles County jurisdictions, total transaction cost, not just purchase price, should factor into comparing candidate replacement properties."
+        },
+        {
+            "q": "Do transfer tax rates change over time?",
+            "a": "Yes, city-level rates and thresholds such as those under Measure ULA can change, so confirming current rates for the specific city before finalizing a purchase contract is important rather than relying on outdated figures."
+        },
+        {
+            "q": "Are there exemptions from documentary transfer tax in California?",
+            "a": "Certain transfers, such as those between specific related entities or involving particular deed types, can qualify for an exemption or reduced calculation basis, so confirming this with escrow and title on a specific transaction is worthwhile rather than assuming the standard rate always applies."
+        }
+    ],
+    "internalLinks": [
+        "capital-gains-on-investment-property",
+        "exchange-documentation-assembly",
+        "form-8824-preparation-support"
+    ],
+    "wordCount": 782
+}

@@ -1,0 +1,70 @@
+{
+    "slug": "related-party-1031-exchange-rules",
+    "taxonomy": "services",
+    "title": "Related Party 1031 Exchange Rules",
+    "name": "Related Party 1031 Exchange Rules",
+    "metaTitle": "Related Party 1031 Exchange Rules Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on the two year holding requirement and other limits under Section 1031(f) for exchanges between related parties.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Exchanging property with a related party, such as a family member or an entity the exchanger controls, is permitted under Section 1031 but comes with an additional requirement not present in an exchange between unrelated parties: both the exchanger and the related party generally need to hold their respective properties for at least two years after the exchange.</p>"
+        },
+        {
+            "heading": "Who Counts as a Related Party",
+            "html": "<p>Related parties generally include family members such as siblings, spouses, ancestors, and descendants, as well as entities in which the exchanger holds a significant ownership interest, following the related party definitions used elsewhere in the tax code; the specific ownership thresholds should be confirmed with a tax advisor for any Los Angeles exchange involving family or affiliated entities.</p>"
+        },
+        {
+            "heading": "The Two Year Holding Requirement",
+            "html": "<p>If either party disposes of the property received in the exchange within two years of the transaction, the original exchange is generally disqualified retroactively, and both parties may need to recognize the previously deferred gain, which is a meaningfully different consequence than an ordinary exchange between unrelated parties where no such holding period applies.</p>"
+        },
+        {
+            "heading": "Why This Rule Exists",
+            "html": "<p>The two year holding requirement exists specifically to prevent related parties from using an exchange to effectively cash out appreciated property while avoiding tax, for example by swapping a low-basis property for a related party's high-basis property and then quickly selling the low-basis property at a reduced taxable gain.</p>"
+        },
+        {
+            "heading": "Exceptions to the Two Year Rule",
+            "html": "<p>Limited exceptions exist, including dispositions following the death of either party, certain involuntary conversions, and situations where it can be established that neither the exchange nor the subsequent disposition was structured to avoid federal income tax, though relying on an exception should always involve careful documentation and advice from a qualified tax professional.</p>"
+        },
+        {
+            "heading": "Why Documentation Matters More in a Related Party Transaction",
+            "html": "<p>Because a related party exchange invites closer scrutiny than a transaction between unrelated parties, we recommend more thorough documentation of the business purpose and fair market value support for a Los Angeles related party exchange than might be typical for an arm's length transaction, since that documentation is what would support the exchange's validity if it were ever reviewed.</p>"
+        },
+        {
+            "heading": "Consulting a Tax Advisor Before Structuring Any Related Party Exchange",
+            "html": "<p>Given the retroactive disqualification risk if the two year holding requirement is not met, we strongly recommend involving a tax advisor before structuring any exchange between a Los Angeles exchanger and a related party, rather than after the transaction has already closed, since planning in advance allows the parties to structure holding periods and documentation appropriately from the start.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Can a 1031 exchange be completed between family members?",
+            "a": "Yes, exchanges between related parties, including family members, are permitted under Section 1031, but they carry an additional two year holding requirement not present in exchanges between unrelated parties."
+        },
+        {
+            "q": "What happens if a related party sells their property within two years of the exchange?",
+            "a": "The original exchange is generally disqualified retroactively, and both parties may need to recognize the gain that was previously deferred, unless a specific exception, such as death of a party, applies."
+        },
+        {
+            "q": "Why does the tax code treat related party exchanges differently?",
+            "a": "The two year holding requirement is designed to prevent related parties from using an exchange to effectively cash out appreciated property while minimizing tax, such as by swapping low-basis and high-basis properties and quickly reselling one of them."
+        },
+        {
+            "q": "Are there any exceptions to the two year holding requirement?",
+            "a": "Yes, limited exceptions exist for situations such as the death of either party, certain involuntary conversions, and cases where it can be shown that tax avoidance was not a purpose of the exchange or subsequent sale, though these require careful documentation."
+        },
+        {
+            "q": "Does a related party exchange still need to meet the standard forty five and one hundred eighty day deadlines?",
+            "a": "Yes, the standard identification and closing deadlines apply the same way to a related party exchange as to any other exchange, in addition to the extra two year holding requirement."
+        },
+        {
+            "q": "Does a related party exchange require more documentation than a typical exchange?",
+            "a": "Generally yes, since it invites closer scrutiny; more thorough documentation of business purpose and fair market value support helps demonstrate the exchange's validity if it is ever reviewed."
+        }
+    ],
+    "internalLinks": [
+        "1031-exchange-education-consultation",
+        "like-kind-property-explained",
+        "exchange-documentation-assembly"
+    ],
+    "wordCount": 702
+}

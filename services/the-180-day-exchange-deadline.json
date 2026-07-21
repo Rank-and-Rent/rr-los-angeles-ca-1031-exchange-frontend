@@ -1,0 +1,74 @@
+{
+    "slug": "the-180-day-exchange-deadline",
+    "taxonomy": "services",
+    "title": "The 180 Day Exchange Deadline",
+    "name": "The 180 Day Exchange Deadline",
+    "metaTitle": "The 180 Day Exchange Deadline Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on the one hundred eighty day exchange completion deadline and how it interacts with the identification period.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The one hundred eighty day deadline is the full window an exchanger has to close on replacement property, measured from the same start date as the forty five day identification period rather than beginning after it. Understanding that these two periods overlap, rather than run one after the other, is essential to planning a Los Angeles exchange correctly.</p>"
+        },
+        {
+            "heading": "Both Periods Share the Same Start Date",
+            "html": "<p>The clock for both deadlines starts the day after the relinquished property closes escrow, which means the identification period is really just the first forty five days of the larger one hundred eighty day window, leaving roughly one hundred thirty five days after identification to actually close on a replacement.</p>"
+        },
+        {
+            "heading": "The Tax Return Deadline Can Cut the Window Short",
+            "html": "<p>The exchange must close by the earlier of the full one hundred eighty calendar days or the due date, including any filed extension, of the exchanger's federal tax return for the year the relinquished property sold. A Los Angeles exchanger who sells in November or December without filing a tax extension can inadvertently lose weeks of the closing window.</p>"
+        },
+        {
+            "heading": "Why Financing Timing Matters So Much Within This Window",
+            "html": "<p>Because the identification period consumes the first forty five days, a replacement property purchase financed with a new loan generally needs to move through underwriting and closing in well under one hundred eighty days total, which is why we encourage starting loan applications early rather than waiting for identification to be finalized.</p>"
+        },
+        {
+            "heading": "What Happens If the Deadline Passes Without Closing",
+            "html": "<p>If the exchange has not closed by the earlier of day one hundred eighty or the applicable tax filing deadline, the exchange generally fails in its entirety and the deferred gain from the relinquished property sale becomes taxable for that tax year, with no general extension available outside limited federally declared disaster relief.</p>"
+        },
+        {
+            "heading": "How This Deadline Interacts With Escrow Practice in Los Angeles County",
+            "html": "<p>Standard Los Angeles County escrow timelines for a commercial property purchase, including title review, lender underwriting, and recording, can themselves take thirty to sixty days under normal conditions, which is worth keeping in mind when planning how much of the one hundred eighty day window remains available after a forty five day identification process that ran close to its own deadline.</p>"
+        },
+        {
+            "heading": "Why Some Exchangers Choose to Close Well Before the Deadline",
+            "html": "<p>Rather than closing right at day one hundred eighty, many Los Angeles exchangers aim to close several weeks earlier to leave a buffer for unexpected title or lender issues, since a late-discovered problem with no remaining days on the calendar has no fallback options once the deadline itself has passed.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does the one hundred eighty day period start after the identification period ends?",
+            "a": "No, both periods begin on the same date, the day after the relinquished property closes, so the identification deadline falls within, not before, the one hundred eighty day window."
+        },
+        {
+            "q": "Can the tax filing deadline shorten the one hundred eighty day period?",
+            "a": "Yes, the deadline is the earlier of the full one hundred eighty calendar days or the exchanger's tax return due date including extensions, so filing an extension for a late-year sale can preserve the full window."
+        },
+        {
+            "q": "How much time is left for closing after the forty five day identification deadline?",
+            "a": "Roughly one hundred thirty five days, though we recommend starting financing and closing preparations during the identification period rather than waiting for it to conclude."
+        },
+        {
+            "q": "Does the exchanger need to close on every property that was identified?",
+            "a": "No, closing on some or all of the identified properties within the one hundred eighty day window is sufficient, as long as enough value is acquired to meet the exchanger's deferral goals."
+        },
+        {
+            "q": "What is the consequence of missing the one hundred eighty day deadline?",
+            "a": "The exchange generally fails entirely, and the deferred capital gain from the relinquished property sale becomes taxable in the year of that sale, with no broadly available extension for ordinary closing delays."
+        },
+        {
+            "q": "How much of the escrow process typically fits within the remaining window after identification?",
+            "a": "Standard Los Angeles County commercial escrow, including title review, lender underwriting, and recording, can take thirty to sixty days under normal conditions, which should factor into planning if identification itself ran close to its own deadline."
+        },
+        {
+            "q": "Is it advisable to schedule closing right at day one hundred eighty?",
+            "a": "Generally not; leaving a buffer of several weeks before the actual deadline gives room to resolve any unexpected title or lender issues, since there is no fallback once day one hundred eighty has passed."
+        }
+    ],
+    "internalLinks": [
+        "180-day-closing-coordination",
+        "the-45-day-identification-period",
+        "lender-preflight-coordination"
+    ],
+    "wordCount": 750
+}

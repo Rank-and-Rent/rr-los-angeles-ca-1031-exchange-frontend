@@ -1,0 +1,66 @@
+{
+    "slug": "three-property-rule-implementation",
+    "taxonomy": "services",
+    "title": "Three Property Rule Implementation",
+    "name": "Three Property Rule Implementation",
+    "metaTitle": "Three Property Rule Implementation in Los Angeles, CA",
+    "metaDescription": "How the three property identification rule works for Los Angeles 1031 exchanges and when it fits an investor's replacement strategy better than the two hundred percent rule.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The three property rule is the identification method most Los Angeles exchangers default to because it is the simplest to apply: up to three replacement properties can be identified within the forty five day window regardless of their combined value. There is no value ceiling under this rule, which makes it the natural choice for an exchanger targeting one higher-value replacement property alongside a couple of backups.</p>"
+        },
+        {
+            "heading": "How the Rule Differs From the Value-Based Alternatives",
+            "html": "<p>Unlike the two hundred percent rule, which limits total identified value to twice the relinquished property's sale price but allows an unlimited number of properties, the three property rule caps the count at three with no dollar limit at all. A Los Angeles exchanger selling a mid-size multifamily property and targeting a single larger replacement, plus two contingency options, generally finds the three property rule more straightforward than tracking a value ceiling.</p>"
+        },
+        {
+            "heading": "Choosing Backup Properties That Are Genuinely Viable",
+            "html": "<p>Because only three slots are available, each identified property should be one the exchanger would actually be willing to close on, not a placeholder added just to fill the list. We help Los Angeles exchangers build a genuine short list of three properties across different submarkets or property types so that if the primary target falls through during due diligence, a real alternative remains available within the one hundred eighty day closing window.</p>"
+        },
+        {
+            "heading": "Interaction With the Ninety Five Percent Rule as a Fallback",
+            "html": "<p>If more than three properties need to be identified, perhaps because an exchanger is dividing a large relinquished property sale across several smaller Los Angeles replacement properties, the three property rule no longer applies and the exchanger must fall back to the two hundred percent rule with the ninety five percent acquisition requirement, which carries a different set of risks if too many identified properties fail to close.</p>"
+        },
+        {
+            "heading": "Documentation Requirements Are the Same as Any Identification",
+            "html": "<p>Regardless of which rule applies, the identification of all three properties must be in writing, signed by the exchanger, and delivered to the qualified intermediary before the forty five day deadline, with unambiguous legal descriptions or addresses for each Los Angeles property listed. We prepare this documentation alongside the property search so it is ready to finalize the moment the search narrows to three viable candidates.</p>"
+        },
+        {
+            "heading": "Combining This Rule With a Realistic Los Angeles Search Timeline",
+            "html": "<p>Because the three property rule caps the list at three regardless of value, the search leading up to identification should focus on genuinely narrowing down to a small number of strong candidates rather than casting the widest possible net, and we sequence the Los Angeles property search accordingly, prioritizing depth of underwriting on fewer candidates over breadth across many.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Is there a value limit on properties identified under the three property rule?",
+            "a": "No, the three property rule allows up to three replacement properties to be identified with no cap on their combined value, unlike the two hundred percent rule which limits value but not count."
+        },
+        {
+            "q": "Does an exchanger have to close on all three identified properties?",
+            "a": "No, an exchanger can close on one, two, or all three identified properties within the one hundred eighty day period, so long as enough value is acquired to meet the exchanger's deferral objectives."
+        },
+        {
+            "q": "What happens if an exchanger wants to identify a fourth property?",
+            "a": "The three property rule no longer applies once a fourth property is added, and the exchanger must instead qualify under the two hundred percent rule, which caps total identified value at twice the relinquished property's sale price."
+        },
+        {
+            "q": "Can identified properties be swapped for different ones after day forty five?",
+            "a": "No, once the forty five day deadline passes, the identified list is locked and cannot be amended, so all three properties should be genuinely viable candidates before the deadline arrives."
+        },
+        {
+            "q": "Is the three property rule the most commonly used identification method?",
+            "a": "Yes, it is generally the default approach for Los Angeles exchangers because it is simple to apply and has no value ceiling, making it well suited to exchanges targeting a small number of higher-value replacement properties."
+        },
+        {
+            "q": "Should the property search be broad or narrow when using the three property rule?",
+            "a": "Generally narrow; because only three slots are available regardless of value, the search should focus on thoroughly underwriting a small number of strong candidates rather than casting the widest possible net."
+        }
+    ],
+    "internalLinks": [
+        "200-percent-rule-strategy",
+        "three-property-rule-strategy",
+        "45-day-identification-strategy"
+    ],
+    "wordCount": 720
+}

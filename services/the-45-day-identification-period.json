@@ -1,0 +1,74 @@
+{
+    "slug": "the-45-day-identification-period",
+    "taxonomy": "services",
+    "title": "The 45 Day Identification Period",
+    "name": "The 45 Day Identification Period",
+    "metaTitle": "The 45 Day Identification Period Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on how the forty five day identification window works under Section 1031, written for Los Angeles exchangers.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The forty five day identification period is the window an exchanger has, starting the day after the relinquished property closes, to formally name candidate replacement properties in writing. It is one of the two fixed deadlines that make a 1031 exchange fundamentally different from an ordinary property purchase, since there is no ability to simply wait for the right Los Angeles property to come along.</p>"
+        },
+        {
+            "heading": "Why the Period Feels Shorter Than It Sounds",
+            "html": "<p>Forty five calendar days sounds like a reasonable amount of time until escrow paperwork, lender pre-qualification, and property tours are factored in; in practice, exchangers who start the property search only after the relinquished property closes often find themselves rushing to finalize a written identification in the final week of the period.</p>"
+        },
+        {
+            "heading": "What Counts as a Valid Identification",
+            "html": "<p>The identification must be a written document, signed by the exchanger, describing the candidate property unambiguously, generally by legal description or a specific street address, and delivered to the qualified intermediary or another party to the exchange agreement before midnight on day forty five. A verbal conversation with an agent, no matter how specific, does not meet this standard.</p>"
+        },
+        {
+            "heading": "Planning the Property Search Before the Clock Starts",
+            "html": "<p>The most effective way to manage the forty five day period is to begin building a candidate list of Los Angeles properties before the relinquished property even closes, so that by the time the clock starts, the exchanger is refining an existing shortlist rather than starting the search from zero.</p>"
+        },
+        {
+            "heading": "What Happens at the End of the Period",
+            "html": "<p>Once day forty five passes, the identified list is locked; no new properties can be added, though the exchanger can still choose to close on fewer than all the identified properties, or on none of them if the exchange is abandoned, understanding that abandoning the exchange after this point still means the deferred gain becomes taxable.</p>"
+        },
+        {
+            "heading": "A Common Misconception About the Deadline",
+            "html": "<p>A frequent misconception is that the forty five days only count business days, which leads some first-time Los Angeles exchangers to believe they have more time than they actually do; because the count includes weekends and holidays without exception, we confirm the exact calendar date of the deadline in writing rather than leaving it as an approximate number of weeks.</p>"
+        },
+        {
+            "heading": "Why Some Exchangers Use All Forty Five Days Even With a Clear Favorite",
+            "html": "<p>Even an exchanger who already has a strong preferred Los Angeles replacement property in mind sometimes benefits from using the available time to identify one or two backups under the three property rule, since due diligence occasionally surfaces an issue with even a well-regarded candidate property that was not apparent during the initial search.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "When does the forty five day period begin?",
+            "a": "The day after the relinquished property closes escrow, and it runs continuously on calendar days, including weekends and holidays, through the forty fifth day."
+        },
+        {
+            "q": "Can a property be identified verbally if there is not enough time to prepare paperwork?",
+            "a": "No, the identification must be in writing, signed by the exchanger, and delivered to the qualified intermediary or another authorized party before the deadline; a verbal identification does not satisfy the requirement."
+        },
+        {
+            "q": "How many properties can be identified during this period?",
+            "a": "Up to three properties with no value limit under the three property rule, or more properties if their combined value stays within two hundred percent of the relinquished property's sale price."
+        },
+        {
+            "q": "Can the identification list be changed after it is submitted?",
+            "a": "Yes, as long as any change is made and delivered in writing before the forty five day deadline expires; once the deadline passes, the list is locked and cannot be revised."
+        },
+        {
+            "q": "Is it common for exchangers to feel rushed during this period?",
+            "a": "Yes, which is why we recommend beginning the replacement property search before the relinquished property even closes, so the forty five day period is used to finalize rather than start the search."
+        },
+        {
+            "q": "Does the forty five day count skip weekends like a business-day deadline would?",
+            "a": "No, this is a common misconception; the count includes weekends and holidays without exception, which is why confirming the exact calendar date in writing matters more than an approximate number of weeks."
+        },
+        {
+            "q": "Should an exchanger identify backup properties even with a clear favorite already in mind?",
+            "a": "Generally yes, since due diligence can surface an issue with even a well-regarded favorite property, and having one or two backups identified under the three property rule protects the exchange if that happens."
+        }
+    ],
+    "internalLinks": [
+        "45-day-identification-strategy",
+        "identification-rules-explainer",
+        "the-180-day-exchange-deadline"
+    ],
+    "wordCount": 740
+}

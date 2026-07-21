@@ -1,0 +1,74 @@
+{
+    "slug": "the-qualified-intermediary-role",
+    "taxonomy": "services",
+    "title": "The Qualified Intermediary Role",
+    "name": "The Qualified Intermediary Role",
+    "metaTitle": "The Qualified Intermediary Role Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on why a qualified intermediary is required for a Los Angeles 1031 exchange and how safe harbor and constructive receipt work.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>A qualified intermediary is the independent party that holds exchange proceeds between the sale of the relinquished property and the purchase of the replacement property, and its involvement is what allows an exchanger to avoid actual or constructive receipt of those funds, a requirement central to Section 1031 qualifying for tax deferral at all.</p>"
+        },
+        {
+            "heading": "What Constructive Receipt Means and Why It Matters",
+            "html": "<p>Constructive receipt occurs when an exchanger has the right to control or access exchange funds, even without physically taking possession, and if that happens at any point, the entire exchange is disqualified regardless of intent. Routing sale proceeds through a qualified intermediary, rather than through the exchanger's own bank account even briefly, is what prevents this from happening.</p>"
+        },
+        {
+            "heading": "Why the Exchanger Cannot Serve as Their Own Intermediary",
+            "html": "<p>Treasury regulations disqualify the exchanger, and certain related parties such as an employee, attorney, accountant, or real estate agent who has served the exchanger within the prior two years, from acting as the qualified intermediary, precisely because those relationships create the risk of the exchanger controlling the funds indirectly.</p>"
+        },
+        {
+            "heading": "The Safe Harbor the Qualified Intermediary Provides",
+            "html": "<p>Using a qualified intermediary who meets the regulatory requirements creates a safe harbor that protects the exchange from being disqualified on constructive receipt grounds, provided the exchange agreement properly limits the exchanger's rights to the funds during the exchange period.</p>"
+        },
+        {
+            "heading": "What the Qualified Intermediary Actually Does Day to Day",
+            "html": "<p>Beyond holding funds, a qualified intermediary prepares the exchange agreement, coordinates the assignment of the purchase and sale contracts, and receives the written identification of replacement property from the exchanger, functioning as the administrative backbone of the exchange from the relinquished property's closing through the replacement property's closing.</p>"
+        },
+        {
+            "heading": "Why the Exchange Agreement Language Matters as Much as the Intermediary Itself",
+            "html": "<p>The safe harbor protection depends not only on using a qualified intermediary but on the exchange agreement itself properly restricting the exchanger's rights to the held funds during the exchange period; we review this agreement language on every Los Angeles exchange rather than assuming a standard template automatically provides adequate protection.</p>"
+        },
+        {
+            "heading": "Confirming the Intermediary's Independence Before Engagement",
+            "html": "<p>Before engaging a qualified intermediary, we confirm the firm and its principals have no disqualifying relationship with the exchanger under the Treasury regulations, reviewing whether anyone at the firm has served as the exchanger's employee, attorney, accountant, or agent within the prior two years, since this independence confirmation is a threshold requirement, not an optional diligence step.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Why can an exchanger not simply hold their own sale proceeds during the exchange?",
+            "a": "Doing so would constitute actual or constructive receipt of the funds, which disqualifies the exchange from tax deferral under Section 1031 regardless of the exchanger's intent to reinvest the money."
+        },
+        {
+            "q": "Can a Los Angeles exchanger use their real estate agent as the qualified intermediary?",
+            "a": "No, an agent who has served the exchanger within the two years before the exchange is a disqualified person under Treasury regulations and cannot act as the qualified intermediary."
+        },
+        {
+            "q": "What does the safe harbor from using a qualified intermediary actually protect against?",
+            "a": "It protects the exchange from being disqualified on constructive receipt grounds, provided the exchange agreement properly restricts the exchanger's ability to access the held funds during the exchange period."
+        },
+        {
+            "q": "Does the qualified intermediary do more than just hold money?",
+            "a": "Yes, the intermediary also prepares the exchange agreement, coordinates contract assignments between the exchanger and the buyer or seller, and receives the exchanger's written property identification within the forty five day deadline."
+        },
+        {
+            "q": "Is a qualified intermediary federally licensed?",
+            "a": "No, there is generally no federal licensing regime for qualified intermediaries, which is why evaluating a candidate intermediary's bonding, trust account structure, and reputation matters before engaging one."
+        },
+        {
+            "q": "Does using any qualified intermediary automatically guarantee the safe harbor protection?",
+            "a": "Not automatically; the exchange agreement itself needs to properly restrict the exchanger's rights to the held funds, so the agreement language matters as much as the intermediary's qualifications."
+        },
+        {
+            "q": "Is confirming the intermediary's independence a formality or a real requirement?",
+            "a": "It is a real, threshold requirement; anyone who has served as the exchanger's employee, attorney, accountant, or agent within the two years before the exchange is a disqualified person under Treasury regulations and cannot serve as the qualified intermediary."
+        }
+    ],
+    "internalLinks": [
+        "qualified-intermediary-coordination",
+        "qualified-intermediary-selection",
+        "exchange-documentation-assembly"
+    ],
+    "wordCount": 702
+}

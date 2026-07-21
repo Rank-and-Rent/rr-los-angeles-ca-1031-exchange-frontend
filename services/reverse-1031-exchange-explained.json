@@ -1,0 +1,74 @@
+{
+    "slug": "reverse-1031-exchange-explained",
+    "taxonomy": "services",
+    "title": "Reverse 1031 Exchange Explained",
+    "name": "Reverse 1031 Exchange Explained",
+    "metaTitle": "Reverse 1031 Exchange Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on acquiring replacement property before selling the relinquished property through an exchange accommodation titleholder.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>A reverse exchange flips the usual order of a 1031 exchange, allowing a Los Angeles investor to acquire the replacement property first and sell the relinquished property afterward, which is useful in a competitive market where waiting to sell first would mean losing the replacement property to another buyer.</p>"
+        },
+        {
+            "heading": "The Exchange Accommodation Titleholder Structure",
+            "html": "<p>Because the exchanger cannot hold title to both the relinquished and replacement property at the same time under a reverse structure, an exchange accommodation titleholder, generally a single-purpose LLC set up by the qualified intermediary, takes title to the replacement property temporarily until the relinquished property sells.</p>"
+        },
+        {
+            "heading": "The Deadlines Still Apply, Just in a Different Order",
+            "html": "<p>Within forty five days of the accommodation titleholder taking title to the replacement property, the exchanger must identify which relinquished property will be sold, and the relinquished sale generally needs to close within one hundred eighty days of that same starting date for the reverse exchange to succeed.</p>"
+        },
+        {
+            "heading": "Financing and Cost Considerations",
+            "html": "<p>Lenders need to underwrite the accommodation titleholder LLC as the technical borrower even though the exchanger is the economic owner, and not every lender is set up for this, so confirming lender familiarity with reverse exchanges before the replacement purchase closes avoids delay; a reverse exchange also generally carries higher legal and intermediary fees than a standard forward exchange.</p>"
+        },
+        {
+            "heading": "Why Investors Use This Structure",
+            "html": "<p>A reverse exchange removes the contingency of needing to sell the relinquished property first, which is often decisive in a competitive Los Angeles submarket where a seller favors an offer without that condition attached, at the cost of the additional complexity and expense of the accommodation titleholder structure.</p>"
+        },
+        {
+            "heading": "Deciding Whether a Reverse Structure Is Worth the Added Cost",
+            "html": "<p>A reverse exchange is generally worth its added cost when the alternative is losing a strong Los Angeles replacement property to a competing offer, but it is not the default recommendation for every exchange; we help exchangers weigh the specific competitive dynamics of their target property against the additional legal and financing complexity before committing to this structure.</p>"
+        },
+        {
+            "heading": "Planning the Relinquished Property Sale Before the Reverse Closing",
+            "html": "<p>Because the forty five day clock for identifying the relinquished property starts the moment the accommodation titleholder closes on the replacement, we recommend having the relinquished Los Angeles property already listed, or nearly ready to list, before that replacement closing happens, rather than starting the listing process only after the reverse structure is already in place.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Why can a reverse exchange not use the exchanger's own name to hold the replacement property?",
+            "a": "The exchanger cannot hold title to both the relinquished and replacement property simultaneously under a reverse structure, so an exchange accommodation titleholder, generally a single-purpose LLC, holds title temporarily instead."
+        },
+        {
+            "q": "Do the standard forty five and one hundred eighty day deadlines still apply to a reverse exchange?",
+            "a": "Yes, though they apply in reverse order; the exchanger has forty five days to identify the relinquished property to be sold, and generally one hundred eighty days from the replacement closing for that sale to complete."
+        },
+        {
+            "q": "Is financing harder to arrange for a reverse exchange?",
+            "a": "It can be, since the lender is technically underwriting the accommodation titleholder LLC rather than the exchanger directly, and not every lender offers this; confirming lender experience with reverse exchanges early avoids delay."
+        },
+        {
+            "q": "Does a reverse exchange cost more than a standard forward exchange?",
+            "a": "Generally yes, due to the added legal work of forming and maintaining the accommodation titleholder entity and a typically higher qualified intermediary fee reflecting the added complexity."
+        },
+        {
+            "q": "Why would an investor choose a reverse exchange over waiting to sell first?",
+            "a": "In a competitive market, a reverse exchange removes the contingency of selling the relinquished property first, which can be decisive when competing against other buyers for a desirable Los Angeles replacement property."
+        },
+        {
+            "q": "Is a reverse exchange the right choice for every transaction?",
+            "a": "No, it is generally worth the added cost when the alternative is losing a strong replacement property to a competing offer, but the added legal and financing complexity should be weighed against that specific competitive dynamic rather than used by default."
+        },
+        {
+            "q": "Does the exchanger retain any control over the parked property during a reverse exchange?",
+            "a": "The exchanger generally directs decisions about the property in practice and bears the carrying costs, but legal title sits with the accommodation titleholder until the relinquished property sells and the structure unwinds."
+        }
+    ],
+    "internalLinks": [
+        "reverse-exchange-coordination",
+        "improvement-build-to-suit-exchange",
+        "lender-preflight-coordination"
+    ],
+    "wordCount": 728
+}

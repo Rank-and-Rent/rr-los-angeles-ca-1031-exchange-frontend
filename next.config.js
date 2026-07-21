@@ -7,6 +7,13 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Ensure the repo-root services/*.json rich-content files are included
+    // in the serverless function bundle for the dynamic services route,
+    // since fs.readFileSync with an interpolated path is not always
+    // statically traceable by Vercel's file tracer.
+    outputFileTracingIncludes: {
+      '/services/[slug]': ['./services/*.json'],
+    },
   },
   // Reduce bundle size
   compiler: {

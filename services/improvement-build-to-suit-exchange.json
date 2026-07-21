@@ -1,0 +1,74 @@
+{
+    "slug": "improvement-build-to-suit-exchange",
+    "taxonomy": "services",
+    "title": "Improvement Build to Suit Exchange",
+    "name": "Improvement Build to Suit Exchange",
+    "metaTitle": "Improvement Build to Suit Exchange Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on using 1031 exchange funds for construction and improvements through an exchange accommodation titleholder.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>An improvement exchange, sometimes called a build to suit exchange, allows a Los Angeles investor to use exchange funds not only to purchase a replacement property but also to fund construction or renovation on it before taking title, which is useful when the ideal replacement is raw land or a property that needs substantial work to reach its target use.</p>"
+        },
+        {
+            "heading": "How the Exchange Accommodation Titleholder Enables Improvements",
+            "html": "<p>Because the exchanger cannot receive title to the replacement property before improvements are complete without ending the exchange's tax deferral, an exchange accommodation titleholder holds title during the construction period, using exchange funds to pay for the work, and transfers title to the exchanger once the improvements are finished or the one hundred eighty day period expires, whichever comes first.</p>"
+        },
+        {
+            "heading": "Improvements Must Be Substantially Complete Within the Exchange Period",
+            "html": "<p>Because the accommodation titleholder generally cannot hold the property beyond the one hundred eighty day exchange period, any planned construction or renovation needs to be substantially complete, or at least far enough along that the value added qualifies as like-kind property, within that same window, which is a tight timeline for any meaningful ground-up construction project.</p>"
+        },
+        {
+            "heading": "Why This Structure Suits a Specific Kind of Replacement",
+            "html": "<p>An improvement exchange works best for renovation projects or smaller build-outs that can realistically finish within the exchange period, rather than for large ground-up developments that typically take well over one hundred eighty days, since only the value of work actually completed within that window counts toward the exchange.</p>"
+        },
+        {
+            "heading": "Coordinating Contractors and Draw Schedules Within the Deadline",
+            "html": "<p>Because every dollar of construction cost needs to flow through the accommodation titleholder and be documented as part of the exchange, we help coordinate contractor draw schedules and construction timelines against the one hundred eighty day deadline from the outset, rather than treating the construction plan and the exchange deadline as separate tracks.</p>"
+        },
+        {
+            "heading": "Budgeting Contingency Into the Construction Timeline",
+            "html": "<p>Given how unforgiving the one hundred eighty day deadline is for a construction-based exchange, we encourage building meaningful schedule contingency into any planned improvements from the outset, since permitting delays or contractor scheduling issues that would be manageable on an ordinary Los Angeles construction project can jeopardize the entire exchange under this compressed timeline.</p>"
+        },
+        {
+            "heading": "Selecting Contractors With Experience on Compressed Timelines",
+            "html": "<p>Because the accommodation titleholder cannot hold the property beyond the exchange period, we help exchangers evaluate whether a candidate contractor has genuine experience delivering work on a compressed, deadline-driven schedule, since a contractor accustomed to open-ended project timelines may not be the right fit for an improvement exchange regardless of the quality of their work.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Can exchange funds be used to build or renovate a replacement property?",
+            "a": "Yes, through an improvement or build to suit exchange, in which an exchange accommodation titleholder holds title during construction and uses exchange funds to pay for the work before transferring the completed property to the exchanger."
+        },
+        {
+            "q": "Does construction need to be fully finished within the exchange period?",
+            "a": "Generally the improvements need to be substantially complete, or advanced enough that the added value qualifies as like-kind property, within the one hundred eighty day exchange period, since the accommodation titleholder cannot hold the property indefinitely."
+        },
+        {
+            "q": "Is this structure suitable for a large ground-up development project?",
+            "a": "Generally not well suited, since large developments typically take longer than one hundred eighty days to complete; this structure works better for renovation projects or smaller build-outs that can realistically finish within the exchange window."
+        },
+        {
+            "q": "Who holds title to the property while construction is underway?",
+            "a": "An exchange accommodation titleholder, generally a single-purpose LLC set up by the qualified intermediary, holds title during the construction period and transfers it to the exchanger once the work is complete or the exchange period ends."
+        },
+        {
+            "q": "Does an improvement exchange cost more than a standard exchange?",
+            "a": "Generally yes, given the added legal structure of the accommodation titleholder and the coordination required between the qualified intermediary, contractors, and construction draw schedules."
+        },
+        {
+            "q": "Should schedule contingency be built into the construction plan?",
+            "a": "Yes, given how unforgiving the one hundred eighty day deadline is, building meaningful contingency for permitting delays or contractor scheduling issues into the plan from the outset is important."
+        },
+        {
+            "q": "Can unfinished improvements still count toward the exchange value?",
+            "a": "Only the value of work actually completed within the one hundred eighty day period counts toward the exchange; planned but uncompleted improvements at the deadline generally do not add qualifying value."
+        }
+    ],
+    "internalLinks": [
+        "improvement-exchange-planning",
+        "reverse-exchange-coordination",
+        "exchange-documentation-assembly"
+    ],
+    "wordCount": 731
+}

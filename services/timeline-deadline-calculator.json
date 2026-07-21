@@ -1,0 +1,74 @@
+{
+    "slug": "timeline-deadline-calculator",
+    "taxonomy": "services",
+    "title": "Timeline Deadline Calculator",
+    "name": "Timeline Deadline Calculator",
+    "metaTitle": "1031 Exchange Timeline Deadline Calculator for Los Angeles Investors",
+    "metaDescription": "How we calculate and track the forty five day identification and one hundred eighty day closing deadlines for a Los Angeles 1031 exchange.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Both core 1031 exchange deadlines are calculated from a single fixed date, the day the relinquished property closes escrow, and both run on calendar days with no adjustment for weekends, holidays, or delays in recording. We build a written deadline calendar for every Los Angeles exchange the moment closing is scheduled, rather than treating the deadlines as an abstract future concern.</p>"
+        },
+        {
+            "heading": "How the Forty Five Day Count Is Calculated",
+            "html": "<p>Day one is the calendar day immediately following the relinquished property's closing date, and the forty five day identification deadline falls on the forty fifth calendar day after that, counted continuously through weekends and holidays. We confirm this exact date in writing with the exchanger and the qualified intermediary as soon as a closing date is set.</p>"
+        },
+        {
+            "heading": "How the One Hundred Eighty Day Count Is Calculated",
+            "html": "<p>The one hundred eighty day closing deadline is calculated from the same starting date as the identification period, not from the end of the forty five day window, and it is capped at the earlier of the full one hundred eighty calendar days or the exchanger's tax return due date including extensions for the year of the relinquished sale.</p>"
+        },
+        {
+            "heading": "Why Fourth Quarter Closings Need Special Attention",
+            "html": "<p>A Los Angeles relinquished property closing in October, November, or December can push the standard April tax filing deadline earlier than the full one hundred eighty day count would otherwise allow, so we confirm whether a tax return extension needs to be filed to preserve the exchanger's full closing window on any late-year transaction.</p>"
+        },
+        {
+            "heading": "Building in Buffer Time, Not Just Tracking the Deadline",
+            "html": "<p>Rather than treating the forty fifth or one hundred eightieth day as a target to hit exactly, we build in buffer time on both ends, aiming to have identification finalized several days before the deadline and closing scheduled comfortably before day one hundred eighty, since unexpected delays in escrow or lender processing are common and there is no flexibility once these dates pass.</p>"
+        },
+        {
+            "heading": "Sharing the Calendar With Every Party to the Exchange",
+            "html": "<p>We share the calculated identification and closing dates directly with the exchanger's qualified intermediary, lender, and any transaction attorney or CPA involved, so every party working on the Los Angeles exchange is operating from the same confirmed dates rather than independently estimating them.</p>"
+        },
+        {
+            "heading": "Accounting for Time Zone and Delivery Method When Confirming the Deadline",
+            "html": "<p>Because the identification deadline is a specific calendar date, we also confirm the required delivery method and any time zone considerations with the qualified intermediary, since a document delivered after business hours or through an unconfirmed channel on the deadline date itself can create unnecessary risk that is easily avoided with clear delivery instructions established in advance.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "What date does the forty five day clock start from?",
+            "a": "The day after the relinquished property closes escrow, and it runs continuously on calendar days through the forty fifth day, with no pause for weekends or holidays."
+        },
+        {
+            "q": "Does the one hundred eighty day period start after identification ends?",
+            "a": "No, both the forty five day and one hundred eighty day periods start on the same date, the day after the relinquished property's closing, and run concurrently rather than one after the other."
+        },
+        {
+            "q": "Can a late-year closing shorten the effective one hundred eighty day window?",
+            "a": "Yes, if the relinquished property closes late in the calendar year, the standard tax filing deadline can fall before the full one hundred eighty days have run, unless the exchanger files a tax return extension to preserve the complete window."
+        },
+        {
+            "q": "Is it advisable to plan closing right up to day one hundred eighty?",
+            "a": "Generally no, we recommend building in buffer time given how common last-minute delays in escrow, financing, or title work can be, since there is no flexibility once the deadline actually passes."
+        },
+        {
+            "q": "Are there any circumstances where these deadlines can be extended?",
+            "a": "Generally only under specific federally declared disaster relief notices issued by the IRS for affected geographic areas; ordinary delays in financing or property search are not a recognized basis for an extension."
+        },
+        {
+            "q": "Should the calculated deadlines be shared with every party involved in the exchange?",
+            "a": "Yes, sharing confirmed dates with the qualified intermediary, lender, and any transaction attorney or CPA keeps everyone working from the same numbers rather than independently estimating them."
+        },
+        {
+            "q": "Does it matter how the identification document is delivered on the deadline date?",
+            "a": "Yes, confirming the required delivery method and cutoff time with the qualified intermediary in advance avoids the risk of a document being delivered too late in the day or through an unconfirmed channel on the actual deadline."
+        }
+    ],
+    "internalLinks": [
+        "45-day-identification-strategy",
+        "180-day-closing-coordination",
+        "lender-preflight-coordination"
+    ],
+    "wordCount": 756
+}

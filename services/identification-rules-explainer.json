@@ -1,0 +1,74 @@
+{
+    "slug": "identification-rules-explainer",
+    "taxonomy": "services",
+    "title": "Identification Rules Explainer",
+    "name": "Identification Rules Explainer",
+    "metaTitle": "Identification Rules Explainer for Los Angeles 1031 Exchanges",
+    "metaDescription": "A plain language walkthrough of the three property rule, two hundred percent rule, and ninety five percent rule for identifying 1031 exchange replacement property.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The IRS gives exchangers three distinct ways to satisfy the identification requirement within the forty five day window, and choosing the right one, or understanding which one a given identification list already falls under, is fundamental to keeping a Los Angeles exchange on track. Every identification, regardless of which rule applies, must be in writing, signed, and delivered before the deadline.</p>"
+        },
+        {
+            "heading": "The Three Property Rule in Plain Terms",
+            "html": "<p>Up to three replacement properties can be identified with no limit on their combined value, which makes this the default choice for an exchanger targeting one primary replacement plus a couple of realistic backups. Most Los Angeles exchanges use this rule simply because it is the least complicated to apply correctly.</p>"
+        },
+        {
+            "heading": "The Two Hundred Percent Rule in Plain Terms",
+            "html": "<p>More than three properties can be identified, with no cap on the count, as long as their combined fair market value does not exceed two hundred percent of the relinquished property's sale price. This rule suits an exchanger who wants a longer list of options or who is dividing exchange proceeds across several smaller replacement properties.</p>"
+        },
+        {
+            "heading": "The Ninety Five Percent Rule as the Fallback Standard",
+            "html": "<p>If an identification list exceeds both the three property count and the two hundred percent value ceiling, the exchange can still be preserved only if the exchanger acquires at least ninety five percent of the total identified value, a demanding standard that makes this rule better understood as a safety net than a primary planning strategy.</p>"
+        },
+        {
+            "heading": "Choosing the Right Rule Before the Clock Starts",
+            "html": "<p>We help Los Angeles exchangers decide which rule fits their strategy before the forty five day period even begins, since building an identification list without a clear rule in mind is how exchangers accidentally end up needing the ninety five percent fallback instead of the more forgiving three property or two hundred percent options.</p>"
+        },
+        {
+            "heading": "A Simple Way to Decide Which Rule Applies to a Given Search",
+            "html": "<p>As a general starting point, an exchanger targeting one or two strong candidates should plan around the three property rule, an exchanger wanting a longer list of options or splitting proceeds across several properties should plan around the two hundred percent rule, and the ninety five percent rule should be treated purely as a fallback rather than a starting strategy.</p>"
+        },
+        {
+            "heading": "Why Getting the Rule Right Early Avoids Late Surprises",
+            "html": "<p>Exchangers who do not consciously choose an identification rule sometimes end up defaulting into the two hundred percent or even the ninety five percent rule simply by identifying more properties or higher combined value than they realized, so we confirm which rule applies to a developing candidate list throughout the search, not just at the moment of final identification.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Which identification rule applies by default if nothing is specified?",
+            "a": "There is no default; the applicable rule is determined by how many properties are identified and their combined value relative to the relinquished property's sale price, so it is worth deciding the intended approach in advance."
+        },
+        {
+            "q": "Can an exchanger switch between rules during the forty five day period?",
+            "a": "The rule that applies is effectively determined by the final identification list delivered by the deadline; amendments are allowed before day forty five, but once the deadline passes, the list and the applicable rule are locked."
+        },
+        {
+            "q": "Is the three property rule always the simplest option?",
+            "a": "For most exchangers targeting a single primary replacement with a couple of backups, yes, since it has no value ceiling to track, though it does not work if more than three genuine candidates are needed."
+        },
+        {
+            "q": "What is the main risk of relying on the ninety five percent rule?",
+            "a": "Falling short of acquiring ninety five percent of the total identified value invalidates the entire exchange, not just the shortfall, making it a considerably higher-risk approach than the three property or two hundred percent rule."
+        },
+        {
+            "q": "Do these rules affect the one hundred eighty day closing deadline?",
+            "a": "No, the identification rules govern only what can be identified within the forty five day window; the one hundred eighty day closing deadline applies the same way regardless of which identification rule is used."
+        },
+        {
+            "q": "Is there a simple way to decide which identification rule fits a given exchange?",
+            "a": "Generally yes; one or two strong candidates suggests the three property rule, wanting a longer list or splitting proceeds suggests the two hundred percent rule, and the ninety five percent rule should be treated as a fallback rather than a starting strategy."
+        },
+        {
+            "q": "Can an exchanger accidentally end up under a different identification rule than intended?",
+            "a": "Yes, adding properties or value to a candidate list without tracking the applicable thresholds can shift an exchanger from the three property rule into the two hundred percent or even the ninety five percent rule unintentionally, which is why we monitor this throughout the search."
+        }
+    ],
+    "internalLinks": [
+        "three-property-rule-strategy",
+        "200-percent-rule-strategy",
+        "95-percent-rule-strategy"
+    ],
+    "wordCount": 795
+}

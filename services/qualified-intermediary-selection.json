@@ -1,0 +1,70 @@
+{
+    "slug": "qualified-intermediary-selection",
+    "taxonomy": "services",
+    "title": "Qualified Intermediary Selection",
+    "name": "Qualified Intermediary Selection",
+    "metaTitle": "Qualified Intermediary Selection in Los Angeles, CA",
+    "metaDescription": "What Los Angeles exchangers should evaluate when choosing a qualified intermediary, including bonding, trust account structure, and fidelity insurance.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>A qualified intermediary is required by IRS regulations to hold the exchange proceeds between the relinquished property sale and the replacement property purchase, and the exchanger cannot have actual or constructive receipt of those funds at any point without disqualifying the entire exchange. Selecting a qualified intermediary is not a formality; it is a decision that determines who is holding the investor's sale proceeds for up to one hundred eighty days.</p>"
+        },
+        {
+            "heading": "Why the Exchanger Cannot Act as Its Own Intermediary",
+            "html": "<p>The qualified intermediary must be independent of the exchanger and cannot be the exchanger's employee, attorney, accountant, real estate agent, or anyone who has acted in one of those capacities for the exchanger within the two years before the exchange, under the disqualified person rules in the Treasury regulations. This independence requirement exists precisely because constructive receipt of the funds by the exchanger, even briefly, invalidates the exchange.</p>"
+        },
+        {
+            "heading": "Segregated Trust Accounts Versus Commingled Funds",
+            "html": "<p>A qualified intermediary that holds exchange proceeds in a segregated, exchanger-specific trust or escrow account, rather than commingling funds across multiple clients in a single operating account, provides meaningfully stronger protection if the intermediary firm experiences financial distress. We evaluate whether a candidate intermediary uses segregated qualified escrow or qualified trust accounts before recommending them to a Los Angeles exchanger.</p>"
+        },
+        {
+            "heading": "Fidelity Bonding and Errors and Omissions Coverage",
+            "html": "<p>Because qualified intermediaries are not federally regulated or licensed the way banks or broker dealers are, the fidelity bond and errors and omissions insurance a firm carries are one of the few external checks on its financial reliability. We look for intermediaries carrying fidelity coverage sized appropriately to the transaction values they handle, not a nominal policy that would not come close to covering a Los Angeles commercial property exchange.</p>"
+        },
+        {
+            "heading": "Prior Intermediary Failures and Why Diligence Matters",
+            "html": "<p>Several qualified intermediary firms have failed or misappropriated client funds in past exchange cycles, generally when funds were commingled or invested in the firm's own speculative ventures rather than held conservatively, and the exchanger, not the intermediary's other creditors, bore the loss in those cases. This history is the reason bonding, segregated accounts, and firm reputation are worth the extra diligence before signing an exchange agreement.</p>"
+        },
+        {
+            "heading": "How We Support Qualified Intermediary Selection",
+            "html": "<p>We help Los Angeles exchangers compare candidate intermediaries on trust account structure, bonding and insurance coverage, fee transparency, and experience with the specific exchange type involved, whether a standard forward exchange, a reverse exchange, or an improvement exchange, since not every intermediary handles all three equally well.</p>"
+        },
+        {
+            "heading": "Comparing Fee Structures Alongside Safety Measures",
+            "html": "<p>Fee is only one part of comparing qualified intermediary candidates; a lower fee from a firm with weaker bonding or a commingled account structure is generally not a better deal for a Los Angeles exchanger moving substantial sale proceeds through the intermediary for up to one hundred eighty days. We help exchangers weigh fee against the safety measures a candidate intermediary actually has in place before making a selection.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Can a Los Angeles exchanger use their own accountant or attorney as the qualified intermediary?",
+            "a": "No, anyone who has served as the exchanger's employee, attorney, accountant, investment banker, or real estate agent within the two years before the exchange is a disqualified person under the Treasury regulations and cannot serve as the qualified intermediary."
+        },
+        {
+            "q": "Are qualified intermediaries federally licensed or regulated?",
+            "a": "No, there is no federal licensing regime for qualified intermediaries in most states, which is why bonding, segregated trust accounts, and fidelity insurance are important diligence points rather than assumed protections."
+        },
+        {
+            "q": "What is the difference between a segregated and a commingled trust account?",
+            "a": "A segregated account holds one exchanger's proceeds separately from other clients' funds, while a commingled account pools multiple clients' proceeds together, which increases exposure if the intermediary firm mismanages funds or fails financially."
+        },
+        {
+            "q": "Has a qualified intermediary ever failed and caused investors to lose exchange funds?",
+            "a": "Yes, several qualified intermediary firms have failed in past cycles, generally after commingling client funds or investing them outside conservative, liquid instruments, which is why evaluating an intermediary's account structure and bonding before engaging them matters."
+        },
+        {
+            "q": "Does the qualified intermediary need experience with the specific exchange type being used?",
+            "a": "Yes, reverse exchanges and improvement exchanges involve additional structures, such as an exchange accommodation titleholder, that not every intermediary handles routinely, so confirming relevant experience before engaging a firm for a complex exchange is worthwhile."
+        },
+        {
+            "q": "Should fee be the primary factor in choosing a qualified intermediary?",
+            "a": "No, a lower fee from a firm with weaker bonding, insurance, or a commingled account structure is generally not a better outcome for an exchanger whose sale proceeds will sit with that intermediary for up to one hundred eighty days."
+        }
+    ],
+    "internalLinks": [
+        "qualified-intermediary-coordination",
+        "the-qualified-intermediary-role",
+        "exchange-documentation-assembly"
+    ],
+    "wordCount": 777
+}

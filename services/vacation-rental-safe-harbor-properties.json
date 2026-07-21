@@ -1,0 +1,70 @@
+{
+    "slug": "vacation-rental-safe-harbor-properties",
+    "taxonomy": "services",
+    "title": "Vacation Rental Safe Harbor Properties",
+    "name": "Vacation Rental Safe Harbor Properties",
+    "metaTitle": "Vacation Rental Safe Harbor Properties in Los Angeles, CA",
+    "metaDescription": "Meeting the Revenue Procedure 2008 16 safe harbor requirements for a vacation home used as Los Angeles 1031 exchange replacement property.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>A vacation home used partly for personal enjoyment does not automatically qualify as investment property for 1031 exchange purposes, but Revenue Procedure 2008-16 provides a safe harbor under which the IRS will not challenge a property's qualification if specific rental use and personal use thresholds are met, both before the exchange and after acquiring the replacement.</p>"
+        },
+        {
+            "heading": "The Rental Use Threshold Under the Safe Harbor",
+            "html": "<p>To fall within the safe harbor, a replacement property generally needs to be rented at fair market rental for at least fourteen days in each of the two twelve month periods immediately after the exchange, and a similar rental history is expected on the relinquished property in the two years before the exchange for that side of the transaction to qualify as well.</p>"
+        },
+        {
+            "heading": "The Personal Use Limitation",
+            "html": "<p>Personal use of the property by the exchanger cannot exceed the greater of fourteen days or ten percent of the number of days the property is rented at fair market rental during each twelve month period, and time spent at the property performing repairs or maintenance generally does not count as personal use for this calculation, though records should clearly document the purpose of any stay.</p>"
+        },
+        {
+            "heading": "Why This Differs From a Primary or Secondary Residence",
+            "html": "<p>A Los Angeles investor's primary residence or a second home used mainly for personal enjoyment does not qualify for 1031 treatment regardless of occasional rental activity, since the property must be held primarily for investment or business use; the safe harbor exists specifically to give exchangers a documented path to qualify a vacation-style property that is genuinely operated as a rental with limited personal use.</p>"
+        },
+        {
+            "heading": "Documentation That Supports Safe Harbor Qualification",
+            "html": "<p>We help exchangers build a clear record of rental days at fair market rate, personal use days, and the purpose of any owner stays, both on the relinquished property before the exchange and on the target replacement property after acquisition, since this documentation is what supports the safe harbor position if the exchange is ever reviewed.</p>"
+        },
+        {
+            "heading": "Keeping a Contemporaneous Log of Rental and Personal Use Days",
+            "html": "<p>We recommend a contemporaneous log, kept in real time rather than reconstructed later, of every rental day at fair market rate and every personal use day on both the relinquished and replacement property, since this kind of documentation carries far more weight in supporting a safe harbor position than an estimate assembled after the fact.</p>"
+        },
+        {
+            "heading": "Reviewing Rental Platform Records as Supporting Documentation",
+            "html": "<p>Booking records from short-term rental platforms, combined with owner calendar records showing any personal use, provide useful supporting documentation for the rental and personal use day counts the safe harbor requires, and we help exchangers assemble this record for both the relinquished and target replacement property well before it might be needed.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does a vacation home automatically qualify for a 1031 exchange?",
+            "a": "No, a property used mainly for personal enjoyment does not qualify; Revenue Procedure 2008-16 provides a safe harbor allowing qualification if specific rental use and limited personal use thresholds are met on both the relinquished and replacement property."
+        },
+        {
+            "q": "How many days does a property need to be rented to meet the safe harbor?",
+            "a": "Generally at least fourteen days at fair market rental in each of the relevant twelve month periods, both for the two years before the exchange on the relinquished property and the two years after acquiring the replacement property."
+        },
+        {
+            "q": "How much personal use is allowed under the safe harbor?",
+            "a": "Personal use generally cannot exceed the greater of fourteen days or ten percent of the days the property was rented at fair market rental during the same twelve month period."
+        },
+        {
+            "q": "Does time spent at the property doing repairs count as personal use?",
+            "a": "Generally no, days spent primarily performing repair or maintenance work are typically not counted as personal use days under the safe harbor, though the purpose of each stay should be clearly documented."
+        },
+        {
+            "q": "What happens if a property does not meet the safe harbor thresholds?",
+            "a": "Falling outside the safe harbor does not automatically disqualify the property, but it removes the documented protection the safe harbor provides, and qualification would then depend on a broader facts and circumstances analysis with a tax advisor."
+        },
+        {
+            "q": "Is an estimate of rental and personal use days sufficient documentation?",
+            "a": "A contemporaneous log kept in real time carries meaningfully more weight than an estimate reconstructed later, and we recommend this approach for both the relinquished and replacement property."
+        }
+    ],
+    "internalLinks": [
+        "passive-real-estate-income",
+        "capital-gains-on-rental-property",
+        "second-home-capital-gains-tax"
+    ],
+    "wordCount": 730
+}

@@ -1,0 +1,70 @@
+{
+    "slug": "45-day-identification-deadline-management",
+    "taxonomy": "services",
+    "title": "45 Day Identification Deadline Management",
+    "name": "45 Day Identification Deadline Management",
+    "metaTitle": "45 Day Identification Deadline Management in Los Angeles, CA",
+    "metaDescription": "How Los Angeles exchangers track and meet the forty five day identification deadline under Section 1031, including calendar mechanics and common missteps.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The forty five day identification period begins the day the relinquished property closes escrow and does not pause for weekends, holidays, or a slow Los Angeles County recording office. Missing this deadline by even one day generally disqualifies the entire exchange and triggers immediate recognition of the deferred capital gain, so calendar discipline from the moment of closing matters as much as the property search itself.</p>"
+        },
+        {
+            "heading": "How the Forty Five Day Clock Actually Runs",
+            "html": "<p>Day one of the identification period is the calendar day after the relinquished property transfers, and the count runs on calendar days, not business days, through day forty five. A Los Angeles closing on a Friday still starts the clock the following Saturday, which surprises exchangers who assume the period only advances on business days. Because the deadline falls on a fixed date, we build a written identification calendar the day escrow closes rather than waiting for a mid-period check-in.</p>"
+        },
+        {
+            "heading": "What a Compliant Written Identification Requires",
+            "html": "<p>The identification must be in writing, signed by the exchanger, and delivered to the qualified intermediary or another party to the exchange named in the exchange agreement before midnight on day forty five. The description needs to be unambiguous, generally a legal description or unambiguous street address, and a verbal mention to an agent or intermediary does not satisfy the requirement even if it happened before the deadline.</p>"
+        },
+        {
+            "heading": "Coordinating Identification With the Los Angeles Property Search",
+            "html": "<p>Because forty five days is a short window to underwrite unfamiliar Los Angeles submarkets, we start building a candidate list before the relinquished property even closes, so the identification letter is largely drafted and ready to finalize the moment the clock starts. Waiting until after closing to begin the property search is the single most common reason exchangers identify properties they have not adequately vetted.</p>"
+        },
+        {
+            "heading": "Amending an Identification Before the Deadline",
+            "html": "<p>An exchanger may revoke or replace an identified property at any time before day forty five expires, which gives some flexibility if a Los Angeles property falls out of contention during the period, but no changes are permitted once the deadline passes regardless of the reason. We track any amendment in writing with the same delivery requirements as the original identification to avoid a dispute over what was actually identified.</p>"
+        },
+        {
+            "heading": "What Happens If the Deadline Is Missed",
+            "html": "<p>If no written, compliant identification is delivered by day forty five, the exchange generally fails in its entirety and the qualified intermediary returns the exchange proceeds, at which point the full deferred gain becomes taxable in the year of the original sale. There is no extension available for a missed deadline outside of specific federally declared disaster relief, so we treat day forty five as a hard, non-negotiable date on every exchange we support.</p>"
+        },
+        {
+            "heading": "Building a Written Calendar the Day Escrow Closes",
+            "html": "<p>We do not wait until an exchange is underway to think about the forty five day deadline; the moment a Los Angeles relinquished property is under contract, we calculate the projected identification date and put it in writing for the exchanger, the qualified intermediary, and any advisor involved in the transaction. Having this date confirmed before closing, rather than calculated afterward, removes any ambiguity about exactly when the clock will start and gives everyone involved a shared reference point through the identification process.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does the forty five day period run on business days or calendar days?",
+            "a": "Calendar days. The count begins the day after the relinquished property closes and continues through weekends and holidays without pausing, so a Los Angeles investor cannot assume extra time around a holiday weekend."
+        },
+        {
+            "q": "Can an identification be made verbally to save time?",
+            "a": "No, the identification must be in writing, signed, and delivered to the qualified intermediary or another authorized party to the exchange before the forty five day deadline. A verbal mention does not satisfy the requirement."
+        },
+        {
+            "q": "What happens if an identified property falls out of contract after day forty five?",
+            "a": "If it was properly identified before the deadline, the exchanger may still proceed to acquire it or another identified property within the one hundred eighty day period, but no new properties can be added to the list after day forty five."
+        },
+        {
+            "q": "Is there any way to extend the forty five day deadline?",
+            "a": "Generally no. The only recognized extensions apply in specific federally declared disaster situations under IRS relief notices, which are announced on a case by case basis and do not apply to ordinary delays."
+        },
+        {
+            "q": "How many properties can be identified within the forty five day window?",
+            "a": "Up to three properties under the three property rule regardless of value, or more properties if the total value stays within two hundred percent of the relinquished property's sale price under the two hundred percent rule."
+        },
+        {
+            "q": "How early should identification calendar planning begin relative to the relinquished property's closing?",
+            "a": "Ideally before the relinquished property closing is even finalized, so the exchanger, qualified intermediary, and any advisors have a confirmed identification date in writing the moment the exchange period actually begins, rather than calculating it after the fact."
+        }
+    ],
+    "internalLinks": [
+        "three-property-rule-strategy",
+        "200-percent-rule-strategy",
+        "180-day-closing-coordination"
+    ],
+    "wordCount": 837
+}

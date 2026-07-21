@@ -1,0 +1,74 @@
+{
+    "slug": "what-is-boot-in-a-1031-exchange",
+    "taxonomy": "services",
+    "title": "What Is Boot in a 1031 Exchange",
+    "name": "What Is Boot in a 1031 Exchange",
+    "metaTitle": "What Is Boot in a 1031 Exchange? Explained for Los Angeles Investors",
+    "metaDescription": "A plain language explainer on cash boot, mortgage boot, and how unlike kind value in a Los Angeles 1031 exchange becomes taxable.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Boot is any value an exchanger receives from an exchange that is not like-kind real property, and it is taxable in the year of the exchange even when the rest of the transaction successfully defers gain. The term covers more than literal cash; reduced debt and certain non-real-property items received in the transaction can also count as boot.</p>"
+        },
+        {
+            "heading": "Cash Boot",
+            "html": "<p>Cash boot is the most straightforward category, arising whenever exchange proceeds are not fully reinvested into replacement property, for example when a Los Angeles exchanger buys a less expensive replacement than the relinquished property sold for and the qualified intermediary returns the leftover cash at closing.</p>"
+        },
+        {
+            "heading": "Mortgage Boot",
+            "html": "<p>Mortgage boot arises from a net reduction in debt between the relinquished and replacement property, since paying off more debt on the relinquished property than is taken on for the replacement is treated as value received by the exchanger, even without any cash physically changing hands.</p>"
+        },
+        {
+            "heading": "How Boot Is Taxed Relative to the Rest of the Gain",
+            "html": "<p>Recognized gain from boot is generally treated as depreciation recapture first, up to the amount of accumulated depreciation on the relinquished property, before any remaining recognized gain is treated as capital gain, which can result in a higher effective tax rate on boot than the exchanger might expect.</p>"
+        },
+        {
+            "heading": "Minimizing or Avoiding Boot",
+            "html": "<p>Boot can generally be avoided by acquiring replacement property equal to or greater in both value and debt than the relinquished property, or by offsetting a debt reduction with additional cash invested into the replacement purchase; we model this calculation for every Los Angeles exchange before a replacement property closing is finalized.</p>"
+        },
+        {
+            "heading": "Boot From Non-Like-Kind Property Received in the Exchange",
+            "html": "<p>Beyond cash and mortgage boot, receiving any non-like-kind property as part of the transaction, such as personal property bundled into a real estate purchase, can also constitute boot; we review the full scope of what is being conveyed in a Los Angeles replacement property purchase, not just the real property itself, to confirm nothing unexpected is creating additional taxable boot.</p>"
+        },
+        {
+            "heading": "Reviewing Closing Statements Line by Line for Hidden Boot",
+            "html": "<p>Boot can sometimes arise from items on a closing statement that are not obviously cash, such as prorated rent credits or certain seller concessions structured in a way that effectively returns value to the exchanger, so we review the closing statement on a Los Angeles replacement property line by line rather than assuming boot only comes from an obvious leftover cash balance.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Is boot the same thing as the entire exchange becoming taxable?",
+            "a": "No, boot is generally just the specific portion of value received outside the like-kind exchange, such as excess cash or a net debt reduction; the remainder of the gain typically remains deferred if the rest of the exchange is properly structured."
+        },
+        {
+            "q": "Does receiving cash back from an exchange always trigger tax?",
+            "a": "Yes, any exchange proceeds not reinvested into replacement property and returned to the exchanger are treated as cash boot and are taxable in the year of the exchange."
+        },
+        {
+            "q": "Can a reduction in debt on the replacement property really count as taxable boot?",
+            "a": "Yes, a net reduction in mortgage debt between the relinquished and replacement property is treated as value received by the exchanger, known as mortgage boot, even though no cash is directly paid to the exchanger."
+        },
+        {
+            "q": "Is boot taxed at capital gains rates or a different rate?",
+            "a": "Recognized gain from boot is generally applied first against accumulated depreciation as recapture, taxed at up to twenty five percent federally, before any remainder is taxed at standard capital gains rates."
+        },
+        {
+            "q": "How can boot be avoided in a Los Angeles exchange?",
+            "a": "Generally by acquiring a replacement property equal to or greater than the relinquished property in both value and debt, or by contributing additional cash to offset any reduction in debt between the two properties."
+        },
+        {
+            "q": "Can boot come from something other than cash or a debt reduction?",
+            "a": "Yes, receiving any non-like-kind property in the transaction, such as personal property bundled into a real estate purchase, can also constitute boot, which is why the full scope of what is being conveyed should be reviewed."
+        },
+        {
+            "q": "Can boot arise from items on a closing statement that are not an obvious cash refund?",
+            "a": "Yes, certain prorations or seller concessions structured in a way that effectively return value to the exchanger can create boot even without an obvious leftover cash balance, which is why closing statements should be reviewed carefully."
+        }
+    ],
+    "internalLinks": [
+        "boot-calculation-support",
+        "boot-analysis-and-minimization",
+        "depreciation-recapture-explained"
+    ],
+    "wordCount": 733
+}

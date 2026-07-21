@@ -1,0 +1,66 @@
+{
+    "slug": "95-percent-rule-application",
+    "taxonomy": "services",
+    "title": "95 Percent Rule Application",
+    "name": "95 Percent Rule Application",
+    "metaTitle": "95 Percent Rule Application in Los Angeles, CA",
+    "metaDescription": "When the ninety five percent identification rule applies to a Los Angeles 1031 exchange and why it is generally treated as a fallback rather than a primary strategy.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The ninety five percent rule permits an exchanger to identify an unlimited number of replacement properties with no value ceiling at all, provided the exchanger actually acquires at least ninety five percent of the total fair market value of everything identified. Because that acquisition threshold is difficult to meet in practice, this rule functions less as a primary identification strategy and more as a safety net when the two hundred percent rule's value ceiling has been exceeded.</p>"
+        },
+        {
+            "heading": "Why This Rule Is Rarely Used by Choice",
+            "html": "<p>An exchanger who deliberately elects the ninety five percent rule from the outset is taking on meaningfully more risk than one using the three property or two hundred percent rule, since failing to close on ninety five percent of identified value invalidates the entire exchange, not just the properties that did not close. Los Angeles exchangers generally only rely on this rule when it becomes the only path to preserving an exchange that already exceeded the two hundred percent value ceiling.</p>"
+        },
+        {
+            "heading": "How the Ninety Five Percent Threshold Is Measured",
+            "html": "<p>The ninety five percent figure is calculated against the total fair market value of every property on the identification list at the time of identification, not against the number of properties, meaning acquiring most of the properties on a list is not the same as acquiring ninety five percent of the identified value if the unacquired properties represent a disproportionate share of that value.</p>"
+        },
+        {
+            "heading": "A Practical Scenario Where This Rule Applies",
+            "html": "<p>Consider a Los Angeles exchanger who identified five properties whose combined value inadvertently exceeded two hundred percent of the relinquished sale price; rather than losing the entire identification, the exchanger can still preserve the exchange by closing on properties representing at least ninety five percent of that combined identified value within the one hundred eighty day period, an outcome that requires closing on nearly everything identified.</p>"
+        },
+        {
+            "heading": "Structuring an Identification List to Avoid Needing This Rule",
+            "html": "<p>We generally build Los Angeles identification lists to stay comfortably within the two hundred percent value ceiling in the first place, precisely so an exchanger never has to depend on meeting the demanding ninety five percent acquisition threshold to salvage the exchange. Careful upfront value tracking during the property search is the more reliable path than relying on this rule as a backstop.</p>"
+        },
+        {
+            "heading": "Treating This Rule as a Last Resort, Not a Plan",
+            "html": "<p>We generally advise Los Angeles exchangers against structuring an identification strategy around the ninety five percent rule from the outset, since the acquisition threshold it requires is difficult to hit reliably; where it does apply, we prioritize closing on the highest-value identified properties first to maximize the share of total identified value actually acquired.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Is there a limit on how many properties can be identified under the ninety five percent rule?",
+            "a": "No, this rule allows an unlimited number of identified properties with no value ceiling, but it requires acquiring at least ninety five percent of the total identified value, which is a difficult threshold to meet."
+        },
+        {
+            "q": "Do most Los Angeles exchangers choose this rule deliberately?",
+            "a": "Rarely by choice. It is generally used as a fallback when an identification list unintentionally exceeds the two hundred percent value ceiling, rather than selected as a primary identification strategy from the start."
+        },
+        {
+            "q": "How is the ninety five percent threshold calculated?",
+            "a": "Against the total fair market value of all identified properties at the time of identification, so acquiring most of the properties on a list does not satisfy the rule if the properties not acquired represent more than five percent of the combined value."
+        },
+        {
+            "q": "What happens if an exchanger falls short of the ninety five percent threshold?",
+            "a": "The identification is treated as invalid, generally causing the entire exchange to fail and the deferred gain to become taxable, so this rule carries meaningfully more downside risk than the three property or two hundred percent rule."
+        },
+        {
+            "q": "Can this rule be combined with the three property rule on the same identification list?",
+            "a": "No, an exchanger selects one identification method for a given exchange; if more than three properties are identified and their value exceeds two hundred percent of the relinquished sale price, the ninety five percent rule becomes the applicable standard for that identification."
+        },
+        {
+            "q": "If the ninety five percent rule applies, which properties should be prioritized for closing?",
+            "a": "Generally the highest-value identified properties, since closing on higher-value candidates first maximizes the share of total identified value actually acquired against the demanding ninety five percent threshold."
+        }
+    ],
+    "internalLinks": [
+        "95-percent-rule-strategy",
+        "200-percent-rule-strategy",
+        "three-property-rule-strategy"
+    ],
+    "wordCount": 740
+}

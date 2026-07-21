@@ -1,0 +1,70 @@
+{
+    "slug": "200-percent-rule-coordination",
+    "taxonomy": "services",
+    "title": "200 Percent Rule Coordination",
+    "name": "200 Percent Rule Coordination",
+    "metaTitle": "200 Percent Rule Coordination in Los Angeles, CA",
+    "metaDescription": "Using the two hundred percent identification rule to identify more than three Los Angeles replacement properties while staying within IRS value limits.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The two hundred percent rule allows an exchanger to identify an unlimited number of replacement properties within the forty five day window, provided the combined fair market value of everything identified does not exceed two hundred percent of the relinquished property's sale price. This is the identification method Los Angeles exchangers use when a strategy calls for more than three candidate properties, often when dividing exchange proceeds across several smaller assets.</p>"
+        },
+        {
+            "heading": "Calculating the Two Hundred Percent Ceiling",
+            "html": "<p>The ceiling is based on the gross sale price of the relinquished property, not the equity or net proceeds available for reinvestment, so a Los Angeles property that sold for two million dollars supports up to four million dollars in combined identified replacement value. Getting this calculation right at the outset avoids identifying a list that technically exceeds the ceiling and jeopardizes the entire identification.</p>"
+        },
+        {
+            "heading": "Why an Investor Would Choose This Over the Three Property Rule",
+            "html": "<p>An exchanger consolidating several smaller relinquished properties into a diversified portfolio of Los Angeles or Southern California assets, or one who wants more than three backup candidates in a competitive submarket, generally needs the flexibility the two hundred percent rule provides since the three property rule caps the list at three regardless of value.</p>"
+        },
+        {
+            "heading": "The Risk of Exceeding the Value Ceiling",
+            "html": "<p>If the combined value of everything identified exceeds two hundred percent of the relinquished sale price, the identification is treated as if no identification had been made at all, unless the exchanger satisfies the ninety five percent rule by actually acquiring at least ninety five percent of the total identified value. This all-or-nothing consequence is why we run the value calculation carefully before finalizing an identification list under this rule.</p>"
+        },
+        {
+            "heading": "Tracking Value as the Property List Is Finalized",
+            "html": "<p>Because Los Angeles property values can shift between initial interest and formal identification, we confirm current asking or contract prices for every candidate property before the list is finalized, building in a reasonable buffer under the two hundred percent ceiling rather than identifying right up against the limit.</p>"
+        },
+        {
+            "heading": "Coordinating This Rule With the Broader Exchange Timeline",
+            "html": "<p>Because the two hundred percent rule is often used when an exchanger plans to close on several properties rather than just one, we coordinate financing and closing schedules across all target properties early, since the one hundred eighty day closing window applies to the exchange as a whole regardless of how many separate closings are involved.</p>"
+        },
+        {
+            "heading": "Documenting the Value Calculation for the Exchange File",
+            "html": "<p>Because the two hundred percent ceiling is based on the relinquished property's gross sale price, we keep a written record of that sale price alongside the fair market value support for every identified Los Angeles property, so the exchange file clearly demonstrates the identification stayed within the applicable limit if the exchange is ever reviewed.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Is the two hundred percent ceiling based on net proceeds or gross sale price?",
+            "a": "It is based on the gross sale price of the relinquished property, not the net equity available for reinvestment, so the ceiling for identification purposes is generally higher than the actual cash available to close."
+        },
+        {
+            "q": "What happens if the identified properties exceed two hundred percent of value?",
+            "a": "The identification is treated as invalid unless the exchanger ends up acquiring at least ninety five percent of the total value identified, which is a difficult standard to meet if the list significantly exceeds the ceiling."
+        },
+        {
+            "q": "Why would an investor use this rule instead of the three property rule?",
+            "a": "The two hundred percent rule has no cap on the number of properties identified, only on combined value, which suits investors dividing proceeds across several smaller Los Angeles properties or wanting more than three backup candidates."
+        },
+        {
+            "q": "Can property values change between initial interest and formal identification?",
+            "a": "Yes, which is why confirming current pricing for each candidate property before finalizing the identification list, with a buffer under the two hundred percent ceiling, helps avoid inadvertently exceeding the limit."
+        },
+        {
+            "q": "Does this rule change the forty five day identification deadline?",
+            "a": "No, the forty five day deadline for delivering a written identification applies the same way regardless of which identification rule, three property, two hundred percent, or ninety five percent, is being used."
+        },
+        {
+            "q": "Should the exchange file document how the value ceiling calculation was made?",
+            "a": "Yes, keeping a written record of the relinquished property's gross sale price alongside fair market value support for every identified property demonstrates the identification stayed within the two hundred percent ceiling if the exchange is later reviewed."
+        }
+    ],
+    "internalLinks": [
+        "200-percent-rule-strategy",
+        "95-percent-rule-strategy",
+        "three-property-rule-strategy"
+    ],
+    "wordCount": 745
+}

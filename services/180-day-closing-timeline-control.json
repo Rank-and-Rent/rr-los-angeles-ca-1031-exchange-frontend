@@ -1,0 +1,70 @@
+{
+    "slug": "180-day-closing-timeline-control",
+    "taxonomy": "services",
+    "title": "180 Day Closing Timeline Control",
+    "name": "180 Day Closing Timeline Control",
+    "metaTitle": "180 Day Closing Timeline Control in Los Angeles, CA",
+    "metaDescription": "Managing the one hundred eighty day exchange completion deadline for Los Angeles investors, including how it overlaps the identification period and tax filing dates.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>The one hundred eighty day period is the full window an exchanger has to close on replacement property, and it runs concurrently with, not in addition to, the forty five day identification period, meaning the identification window is really the first forty five days of the full one hundred eighty day count. Confusing these as two separate, sequential clocks is a common early mistake among first time Los Angeles exchangers.</p>"
+        },
+        {
+            "heading": "Concurrent Deadlines, Not Sequential Ones",
+            "html": "<p>Both periods start on the same day, the day after the relinquished property closes escrow, and both run on calendar days without exception for weekends or holidays. That leaves roughly one hundred thirty five days after the identification deadline to actually close on one or more of the identified Los Angeles properties, which is a compressed window once financing, inspection, and title work are factored in.</p>"
+        },
+        {
+            "heading": "The Tax Filing Deadline Can Shorten the Effective Window",
+            "html": "<p>The one hundred eighty day period actually ends on the earlier of the standard one hundred eighty calendar days or the due date, including extensions, of the exchanger's federal tax return for the year the relinquished property sold. A late-year Los Angeles closing without a filed extension can inadvertently compress the closing window to fewer than one hundred eighty days, so we confirm the tax return extension is filed whenever a sale happens in the fourth quarter.</p>"
+        },
+        {
+            "heading": "Sequencing Financing and Closing Within the Window",
+            "html": "<p>Because the identification period consumes the first forty five days, lenders financing the replacement property purchase generally have well under one hundred eighty days to fully underwrite and close, which means loan applications for a Los Angeles replacement property should start as early as possible, ideally alongside the identification process rather than after it concludes.</p>"
+        },
+        {
+            "heading": "Closing on Multiple Identified Properties",
+            "html": "<p>An exchanger who identified more than one property under the three property or two hundred percent rule can close on some or all of them within the one hundred eighty day window, and does not need to acquire every identified property to complete a valid exchange, only enough to satisfy the exchange value and boot requirements the investor is targeting.</p>"
+        },
+        {
+            "heading": "What Happens If Closing Slips Past Day One Hundred Eighty",
+            "html": "<p>If a Los Angeles replacement closing has not occurred by the earlier of day one hundred eighty or the tax filing deadline, the exchange generally fails and the deferred gain becomes taxable for the year of the original relinquished property sale, with no extension available outside limited federally declared disaster relief.</p>"
+        },
+        {
+            "heading": "Working Backward From Day One Hundred Eighty",
+            "html": "<p>Rather than treating one hundred eighty days as an abstract outer limit, we work backward from that date to set interim milestones for financing approval, inspection contingencies, and title clearance on the Los Angeles replacement property, so that any slippage in an earlier milestone is caught with enough runway remaining to correct course before the deadline itself becomes the point of failure.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does the one hundred eighty day period start after the forty five day identification period ends?",
+            "a": "No, both periods start on the same day, the day after the relinquished property closes, and run concurrently. The identification deadline is simply the midpoint checkpoint within the larger one hundred eighty day window."
+        },
+        {
+            "q": "Can the tax filing deadline actually shorten the one hundred eighty day period?",
+            "a": "Yes, the exchange must close by the earlier of one hundred eighty calendar days or the exchanger's tax return due date including extensions. Filing an extension for a late-year sale preserves the full one hundred eighty days."
+        },
+        {
+            "q": "How much time is realistically available for financing after identification?",
+            "a": "Roughly one hundred thirty five days remain after the forty five day identification deadline, though we recommend starting loan applications during the identification period itself rather than waiting for it to close."
+        },
+        {
+            "q": "Does the exchanger have to close on every property identified?",
+            "a": "No, an exchanger can close on some, all, or in limited cases none of the identified properties within the one hundred eighty day window, so long as enough value is acquired to meet the exchanger's deferral and boot objectives."
+        },
+        {
+            "q": "Is any extension available if closing is delayed by financing issues?",
+            "a": "Generally no. Financing delays are not a recognized basis for extending the one hundred eighty day deadline; the only broadly available extensions apply under specific federally declared disaster relief notices."
+        },
+        {
+            "q": "Why work backward from the deadline instead of just tracking days remaining?",
+            "a": "Setting interim milestones for financing, inspection, and title work lets us catch delays early, while there is still time to adjust, rather than discovering a problem only when the one hundred eighty day deadline is already close."
+        }
+    ],
+    "internalLinks": [
+        "45-day-identification-strategy",
+        "forward-exchange-coordination",
+        "lender-preflight-coordination"
+    ],
+    "wordCount": 765
+}

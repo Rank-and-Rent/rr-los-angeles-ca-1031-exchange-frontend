@@ -1,0 +1,66 @@
+{
+    "slug": "depreciation-recapture-planning",
+    "taxonomy": "services",
+    "title": "Depreciation Recapture Planning",
+    "name": "Depreciation Recapture Planning",
+    "metaTitle": "Depreciation Recapture Planning in Los Angeles, CA",
+    "metaDescription": "Planning a Los Angeles 1031 exchange to manage depreciation recapture exposure under current federal tax rates alongside capital gains deferral.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>Depreciation recapture is the portion of gain attributable to depreciation deductions previously claimed on the relinquished property, and it is taxed differently from the remaining capital gain, generally at a federal rate of up to twenty five percent for real property under Section 1250 rather than standard long-term capital gains rates. A properly structured 1031 exchange defers depreciation recapture along with the rest of the gain, but the two components remain distinct for tax reporting purposes.</p>"
+        },
+        {
+            "heading": "Why Recapture Exposure Grows With Holding Period",
+            "html": "<p>A Los Angeles property held for many years, with substantial accumulated depreciation deductions taken against ordinary income during the holding period, carries a correspondingly larger recapture exposure if the exchange is not properly structured or if boot triggers partial gain recognition. We review the accumulated depreciation schedule on the relinquished property early so the exchanger understands the full stakes of a successful, fully deferred exchange.</p>"
+        },
+        {
+            "heading": "Recapture and Boot Interact Differently Than Straight Capital Gain",
+            "html": "<p>When an exchange triggers boot, the recognized gain is generally treated as depreciation recapture first, up to the amount of accumulated depreciation, before any remaining recognized gain is treated as capital gain, which means even a modest amount of boot can carry a disproportionately higher tax rate than an equivalent amount of straight capital gain. We factor this ordering into boot minimization planning rather than treating all recognized gain as taxed uniformly.</p>"
+        },
+        {
+            "heading": "California Does Not Provide a Separate Preferential Rate",
+            "html": "<p>Unlike the federal system, California taxes both capital gain and depreciation recapture as ordinary income under the state's personal income tax brackets, which can reach thirteen point three percent at the top bracket, so a Los Angeles exchanger who allows any gain to be recognized faces meaningfully higher effective state tax exposure than an investor in a state without an income tax.</p>"
+        },
+        {
+            "heading": "How Full Deferral Avoids the Recapture Question Entirely",
+            "html": "<p>Because a fully deferred exchange, with no boot and a replacement property equal to or greater than the relinquished property in both value and debt, defers the entire gain including the depreciation recapture component, the most reliable way to manage recapture exposure is generally to structure the exchange to avoid triggering any recognized gain at all rather than trying to plan around a partial recapture event.</p>"
+        },
+        {
+            "heading": "Reviewing the Depreciation Schedule Before Listing the Property",
+            "html": "<p>We recommend reviewing the accumulated depreciation schedule on a Los Angeles relinquished property before it is even listed for sale, since understanding the full recapture exposure in advance shapes how aggressively an exchanger should prioritize a fully deferred exchange structure over accepting any boot.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Is depreciation recapture taxed at the same rate as capital gains?",
+            "a": "No, federal depreciation recapture on real property is generally taxed at up to twenty five percent under Section 1250, which differs from standard long-term capital gains rates, though a fully deferred 1031 exchange postpones both components together."
+        },
+        {
+            "q": "Does California provide a lower tax rate on depreciation recapture or capital gains?",
+            "a": "No, California taxes both as ordinary income under the state's personal income tax brackets, which can reach thirteen point three percent at the top bracket, with no separate preferential capital gains or recapture rate."
+        },
+        {
+            "q": "If boot triggers some recognized gain, is that gain taxed as recapture or capital gain?",
+            "a": "Recognized gain from boot is generally treated as depreciation recapture first, up to the amount of accumulated depreciation, before any remaining amount is treated as capital gain, which can mean a disproportionately higher tax rate on even modest boot."
+        },
+        {
+            "q": "Does a fully deferred exchange eliminate depreciation recapture exposure?",
+            "a": "It defers the recapture along with the rest of the gain rather than eliminating it permanently; the recapture exposure carries forward into the replacement property's carryover basis and would become relevant again upon a future taxable sale."
+        },
+        {
+            "q": "How does holding period affect recapture exposure?",
+            "a": "Generally the longer a property is held with depreciation deductions claimed against ordinary income, the larger the accumulated recapture exposure becomes, making full deferral through a properly structured exchange more valuable for longer-held properties."
+        },
+        {
+            "q": "When should the depreciation schedule be reviewed relative to listing the property?",
+            "a": "Ideally before listing, so the exchanger understands the full recapture exposure in advance and can weigh how much priority to place on achieving a fully deferred exchange structure."
+        }
+    ],
+    "internalLinks": [
+        "depreciation-recapture-explained",
+        "capital-gains-on-investment-property",
+        "boot-calculation-support"
+    ],
+    "wordCount": 701
+}

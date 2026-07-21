@@ -1,0 +1,74 @@
+{
+    "slug": "1031-exchange-education-consultation",
+    "taxonomy": "services",
+    "title": "1031 Exchange Education Consultation",
+    "name": "1031 Exchange Education Consultation",
+    "metaTitle": "1031 Exchange Education Consultation in Los Angeles, CA",
+    "metaDescription": "A plain language starting point for Los Angeles investors learning how a 1031 exchange defers capital gains tax on investment real estate.",
+    "sections": [
+        {
+            "heading": null,
+            "html": "<p>A 1031 exchange, named for Section 1031 of the Internal Revenue Code, allows an investor to defer, not eliminate, capital gains tax on the sale of investment or business-use real property by reinvesting the proceeds into like-kind replacement property. This education consultation is generally the starting point for Los Angeles investors who have heard the term but have not yet worked through how the mechanics actually apply to their specific property.</p>"
+        },
+        {
+            "heading": "What Defer Actually Means",
+            "html": "<p>Deferral is not forgiveness; the gain that would otherwise be taxed on sale carries forward into the replacement property's basis and remains subject to tax if that replacement property is later sold outside another exchange. Some investors continue exchanging property over many years, and some ultimately hold a final replacement property until death, at which point heirs generally receive a stepped-up basis, but the exchange itself only postpones the tax, it does not cancel it.</p>"
+        },
+        {
+            "heading": "Who Qualifies to Use a 1031 Exchange",
+            "html": "<p>The relinquished and replacement property both need to be held for productive use in a trade, business, or investment, which excludes a primary residence and most personal-use property, though certain vacation rental property can qualify under a documented safe harbor. Individuals, partnerships, LLCs, and corporations can all use Section 1031, provided the underlying property meets the use requirement.</p>"
+        },
+        {
+            "heading": "The Core Deadlines Every Exchanger Needs to Understand",
+            "html": "<p>Once the relinquished property closes, the exchanger has forty five calendar days to identify replacement property in writing and one hundred eighty calendar days total to close on the replacement, with both periods running concurrently and no general extension available outside specific federally declared disaster relief. These deadlines are the most common source of a failed exchange among first time Los Angeles investors.</p>"
+        },
+        {
+            "heading": "What This Consultation Covers",
+            "html": "<p>We walk through the exchanger's specific relinquished property, current basis and accumulated depreciation, anticipated sale price, and general goals for a replacement property, and explain how the qualified intermediary, identification rules, and boot calculation apply to that specific situation before any property search begins.</p>"
+        },
+        {
+            "heading": "Setting Realistic Expectations About Market Conditions",
+            "html": "<p>Part of an initial education consultation involves setting realistic expectations about current Los Angeles market conditions, including financing rates, available inventory in the exchanger's target property type, and how competitive the forty five day identification window is likely to be, so the exchanger enters the process with an accurate picture rather than assumptions based on prior market cycles.</p>"
+        },
+        {
+            "heading": "Explaining How This Fits Into a Broader Financial Plan",
+            "html": "<p>A 1031 exchange is generally one piece of a larger financial and estate plan, and part of an education consultation involves discussing how continued exchanging, an eventual taxable sale, or holding a final replacement property until death and passing it to heirs with a stepped-up basis might fit the exchanger's longer-term goals, rather than treating the current exchange in isolation.</p>"
+        }
+    ],
+    "faqs": [
+        {
+            "q": "Does a 1031 exchange eliminate capital gains tax permanently?",
+            "a": "No, it defers the tax by carrying the gain forward into the replacement property's basis; the tax becomes due if that replacement property is later sold outside of another exchange, though continued exchanging or a stepped-up basis at death can extend or end that deferral chain."
+        },
+        {
+            "q": "Can a primary residence be exchanged under Section 1031?",
+            "a": "No, the property must be held for investment or business use, which excludes a primary residence, though a properly documented vacation rental with limited personal use can qualify under a specific IRS safe harbor."
+        },
+        {
+            "q": "What are the two main deadlines in a 1031 exchange?",
+            "a": "Forty five calendar days from the relinquished property's closing to identify replacement property in writing, and one hundred eighty calendar days total to close on the replacement, with both periods running concurrently rather than sequentially."
+        },
+        {
+            "q": "Is a qualified intermediary required for every 1031 exchange?",
+            "a": "Yes, the exchanger cannot have actual or constructive receipt of the sale proceeds at any point, which requires an independent qualified intermediary to hold the funds between the relinquished sale and the replacement purchase."
+        },
+        {
+            "q": "What should an investor bring to an initial exchange consultation?",
+            "a": "Generally the relinquished property's purchase price, depreciation schedule, anticipated sale price, and existing debt, along with a general sense of investment goals for the replacement property, so the consultation can address the specific numbers involved."
+        },
+        {
+            "q": "Does the consultation address current market conditions, not just exchange mechanics?",
+            "a": "Yes, setting realistic expectations about financing rates, available inventory, and competition within the forty five day window is part of an accurate initial education consultation."
+        },
+        {
+            "q": "Does the education consultation address long-term planning beyond the current exchange?",
+            "a": "Yes, we discuss how continued exchanging, an eventual taxable sale, or holding property until death for a stepped-up basis might fit the exchanger's broader financial and estate planning goals, not just the mechanics of the current transaction."
+        }
+    ],
+    "internalLinks": [
+        "identification-rules-explainer",
+        "timeline-deadline-calculator",
+        "like-kind-property-explained"
+    ],
+    "wordCount": 782
+}
