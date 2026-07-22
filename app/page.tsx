@@ -261,7 +261,7 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [formState, setFormState] = useState({
-    name: "", email: "", phone: "", propertyType: "", message: "",
+    name: "", phone: "", email: "", hasCompleted1031: false, notes: "",
   });
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [turnstileId, setTurnstileId] = useState<string | null>(null);
@@ -313,11 +313,18 @@ export default function HomePage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formState, turnstileToken: token }),
+        body: JSON.stringify({
+          name: formState.name,
+          phone: formState.phone,
+          email: formState.email,
+          hasCompleted1031: formState.hasCompleted1031 ? "Yes" : "No",
+          notes: formState.notes,
+          turnstileToken: token,
+        }),
       });
       if (!res.ok) throw new Error();
       setFormStatus("success");
-      setFormState({ name: "", email: "", phone: "", propertyType: "", message: "" });
+      setFormState({ name: "", phone: "", email: "", hasCompleted1031: false, notes: "" });
     } catch { setFormStatus("error"); }
   };
 
@@ -789,10 +796,12 @@ export default function HomePage() {
                 <div className="space-y-8">
                   <div>
                     <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
-                      Full Name *
+                      Name *
                     </label>
                     <input
                         type="text"
+                        name="name"
+                        autoComplete="name"
                         required
                       value={formState.name}
                       onChange={(e) => setFormState(s => ({ ...s, name: e.target.value }))}
@@ -802,54 +811,56 @@ export default function HomePage() {
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
-                        Email *
-                      </label>
-                      <input
-                      type="email"
-                      required
-                        value={formState.email}
-                        onChange={(e) => setFormState(s => ({ ...s, email: e.target.value }))}
-                        className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
-                      />
-                    </div>
-                    <div>
-                      <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
-                        Phone *
+                        Phone Number *
                       </label>
                       <input
                       type="tel"
+                      name="phone"
+                      autoComplete="tel"
                       required
                         value={formState.phone}
                         onChange={(e) => setFormState(s => ({ ...s, phone: e.target.value }))}
                         className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
                       />
                     </div>
+                    <div>
+                      <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
+                        Email *
+                      </label>
+                      <input
+                      type="email"
+                      name="email"
+                      autoComplete="email"
+                      required
+                        value={formState.email}
+                        onChange={(e) => setFormState(s => ({ ...s, email: e.target.value }))}
+                        className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none transition-colors text-lg"
+                      />
+                    </div>
                   </div>
+                  <label className="flex cursor-pointer items-center gap-3 border-b-2 border-gray-200 py-4 font-sans text-sm tracking-wide text-gray-700 transition-colors hover:border-navy">
+                    <input type="hidden" name="hasCompleted1031" value="No" />
+                    <input
+                      type="checkbox"
+                      name="hasCompleted1031"
+                      value="Yes"
+                      checked={formState.hasCompleted1031}
+                      onChange={(e) => setFormState(s => ({ ...s, hasCompleted1031: e.target.checked }))}
+                      className="h-4 w-4 shrink-0 accent-navy"
+                    />
+                    Have you completed a 1031 exchange before?
+                  </label>
                   <div>
                     <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
-                      Property Type
-                    </label>
-                    <select
-                      value={formState.propertyType}
-                      onChange={(e) => setFormState(s => ({ ...s, propertyType: e.target.value }))}
-                      className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none bg-transparent text-lg"
-                    >
-                      <option value="">Select Type</option>
-                      {PROPERTY_TYPES.map(pt => (
-                        <option key={pt.slug} value={pt.name}>{pt.name}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block font-sans text-xs tracking-[0.2em] uppercase text-gray-500 mb-3">
-                      Message
+                      Notes
                     </label>
                     <textarea
-                      rows={3}
-                      value={formState.message}
-                      onChange={(e) => setFormState(s => ({ ...s, message: e.target.value }))}
+                      name="notes"
+                      rows={5}
+                      value={formState.notes}
+                      onChange={(e) => setFormState(s => ({ ...s, notes: e.target.value }))}
                       className="w-full px-0 py-4 border-0 border-b-2 border-gray-200 focus:border-navy focus:ring-0 outline-none resize-none text-lg"
-                      placeholder="Tell us about your exchange goals..."
+                      placeholder="Share any exchange questions or context"
                     />
                   </div>
 
@@ -860,7 +871,7 @@ export default function HomePage() {
                     disabled={formStatus === "loading" || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
                     className="w-full py-5 bg-navy text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy-light transition-all disabled:opacity-50"
                   >
-                    {formStatus === "loading" ? "Sending..." : "Send Message"}
+                    {formStatus === "loading" ? "Sending..." : "Submit Exchange Inquiry"}
                   </button>
 
                   {formStatus === "success" && (
