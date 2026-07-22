@@ -5,15 +5,14 @@ import { Suspense } from "react";
 function ContactForm() {
   return (
     <div id="contact-form" className="border border-white/10 bg-navy/50 p-8">
-      <form className="space-y-6" action="/api/contact" method="post" data-type="contact-form">
+      <form className="space-y-6" data-type="contact-form" action="/api/contact" method="post">
         <div>
           <label htmlFor="contact-name" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
             Name <span className="text-cream">*</span>
           </label>
           <input
             id="contact-name"
-            type="text"
-            name="name"
+            type="text" name="name"
             autoComplete="name"
             required
             className="w-full border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none"
@@ -28,8 +27,7 @@ function ContactForm() {
             </label>
             <input
               id="contact-phone"
-              type="tel"
-              name="phone"
+              type="tel" name="phone"
               autoComplete="tel"
               required
               className="w-full border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none"
@@ -42,8 +40,7 @@ function ContactForm() {
             </label>
             <input
               id="contact-email"
-              type="email"
-              name="email"
+              type="email" name="email"
               autoComplete="email"
               required
               className="w-full border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none"
@@ -64,16 +61,18 @@ function ContactForm() {
         </label>
 
         <div>
-          <label htmlFor="contact-notes" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
+          <label htmlFor="contact-Have you completed a 1031 exchange before?" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
             Notes
           </label>
-          <textarea
-            id="contact-notes"
-            name="notes"
-            rows={5}
-            className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none"
-            placeholder="Share any exchange questions or context"
-          />
+          <textarea id="contact-notes"
+            className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
+        </div>
+<div>
+          <label htmlFor="contact-notes" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
+            Have you completed a 1031 exchange before?
+          </label>
+          <select id="contact-notes"
+            className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
         </div>
 
         <button
