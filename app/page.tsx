@@ -777,10 +777,6 @@ export default function HomePage() {
                       {PHONE}
                     </a>
                     </div>
-                  <div>
-                    <p className="font-sans text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Office</p>
-                    <p className="text-white/70 text-lg">{ADDRESS}</p>
-                    </div>
                     </div>
               </motion.div>
 

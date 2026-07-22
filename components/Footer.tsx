@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { BRAND_NAME, PHONE, EMAIL, ADDRESS, PRIMARY_STATE_ABBR, SERVICES, LOCATIONS } from "@/lib/constants";
+import { BRAND_NAME, PHONE, EMAIL, PRIMARY_STATE_ABBR, SERVICES, LOCATIONS } from "@/lib/constants";
 
 // SVG Icons
 function FacebookIcon({ className }: { className?: string }) {
@@ -56,8 +56,6 @@ const Footer = () => {
             <h3 className="font-sans text-xs tracking-[0.25em] uppercase text-white/50 mb-6">Contact</h3>
             <div className="space-y-4 text-white/70">
               <p>{BRAND_NAME}</p>
-              <p>{ADDRESS.split(',')[0]}</p>
-              <p>{ADDRESS.split(',').slice(1).join(',').trim()}</p>
               <div className="pt-2">
                 <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-white hover:text-white/70 transition-colors">
                   O: {PHONE}

@@ -168,7 +168,6 @@ export default function TermsPage() {
               <div className="bg-white p-8">
                 <p className="text-gray-600"><strong className="text-navy">Email:</strong> legal@1031exchangelosangeles.com</p>
                 <p className="text-gray-600"><strong className="text-navy">Phone:</strong> 818-412-8402</p>
-                <p className="text-gray-600"><strong className="text-navy">Address:</strong> 722 S Broadway, Los Angeles, CA 90014</p>
               </div>
             </div>
 
