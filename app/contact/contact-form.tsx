@@ -62,17 +62,17 @@ function ContactForm() {
 
         <div>
           <label htmlFor="contact-Have you completed a 1031 exchange before?" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
-            Notes
-          </label>
-          <textarea id="contact-notes"
-            className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
-        </div>
-<div>
-          <label htmlFor="contact-notes" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
             Have you completed a 1031 exchange before?
           </label>
           <select id="contact-notes"
             className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
+        </div>
+<div>
+          <label htmlFor="contact-notes" className="mb-2 block text-xs font-medium uppercase tracking-widest text-white/60">
+            Notes
+          </label>
+          <textarea id="contact-notes"
+            className="w-full resize-none border border-white/20 bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 transition-colors focus:border-cream focus:outline-none" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
         </div>
 
         <button
