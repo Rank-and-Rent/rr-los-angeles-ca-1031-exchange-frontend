@@ -215,8 +215,22 @@ export default function LocationPage({ params }: LocationPageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              {content?.mainDescription ? (
-                <div 
+              {content?.sections && content.sections.length > 0 ? (
+                <div className="max-w-none">
+                  {content.sections.map((section, index) => (
+                    <div key={index} className="mb-10 last:mb-0">
+                      <h2 className="font-serif text-2xl md:text-3xl text-navy mb-4 font-light">
+                        {section.heading}
+                      </h2>
+                      <div
+                        className="text-gray-700 text-lg leading-relaxed font-light [&_p]:mb-5 [&_p:last-child]:mb-0"
+                        dangerouslySetInnerHTML={{ __html: section.html }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : content?.mainDescription ? (
+                <div
                   className="prose prose-xl max-w-none text-gray-700 prose-p:text-gray-700 prose-p:text-xl prose-p:leading-relaxed prose-p:mb-6 prose-p:font-light"
                   dangerouslySetInnerHTML={{ __html: content.mainDescription }}
                 />

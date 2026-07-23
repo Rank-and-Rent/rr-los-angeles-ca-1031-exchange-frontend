@@ -6,6 +6,10 @@ import { locationsBatch02 } from "./batches/locations/batch-02";
 export type LocationContent = {
   layoutKey: string;
   mainDescription: string;
+  sections?: Array<{
+    heading: string;
+    html: string;
+  }>;
   popularPaths: Array<{
     rank: number;
     type: "service" | "propertyType";

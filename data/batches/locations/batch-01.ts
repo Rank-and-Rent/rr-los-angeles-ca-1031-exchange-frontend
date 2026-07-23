@@ -2,6 +2,28 @@ export const locationsBatch01 = {
   "downtown-los-angeles": {
     layoutKey: "loc_map_first",
     mainDescription: "<p>Downtown Los Angeles CA property owners seeking replacement assets through 1031 exchanges benefit from the city's position as Southern California's primary business and financial hub. Major law firms, banks, and media companies drive demand for Class A office space, luxury multifamily properties, and commercial real estate. The Arts District and South Park developments attract creative professionals and young executives, while historic buildings in the Financial District provide stable investment opportunities. Exchange investors in Downtown Los Angeles CA find value in modern office towers with credit tenants, loft conversions serving the creative economy, and residential developments near transit corridors. The 1.1% documentary transfer tax rate applies to Downtown Los Angeles CA transactions. Our nationwide property identification support helps Downtown Los Angeles CA investors locate replacement properties across all major markets while maintaining compliance with IRS exchange rules and maximizing tax-deferred returns.</p>",
+    sections: [
+      {
+        heading: "Bunker Hill, the Arts District, and South Park Trade Differently",
+        html: "<p>Downtown Los Angeles is not one market. Bunker Hill's high-rise towers compete on credit-tenant office leases and skyline views, the Arts District trades on adaptive-reuse lofts and ground-floor F&B, and South Park moves on new-construction multifamily near L.A. Live and Crypto.com Arena. A 1031 buyer replacing a single DTLA asset needs to be specific about which submarket's tenant base and lease structure they're actually underwriting, because the three neighborhoods can post very different price-per-square-foot and cap rate ranges in the same quarter. The Historic Core adds a fourth flavor entirely, with converted early-20th-century office and bank buildings now leasing as loft apartments and creative studios to tenants who want exposed brick and tall ceilings rather than a glass curtain wall. Comparing an offering memorandum from one DTLA pocket against another without adjusting for these differences is one of the more common mistakes we see exchangers make when they're working against a tight identification deadline.</p>"
+      },
+      {
+        heading: "Office-to-Residential Conversions Are Reshaping the Replacement Pool",
+        html: "<p>A wave of older Financial District office towers has entered conversion pipelines as owners chase state and city incentives for residential adaptive reuse. That shift is quietly expanding the pool of multifamily replacement candidates in DTLA, but it also means diligence on a converted or converting asset looks different than diligence on a stabilized apartment building — entitlement status, construction completion risk, and lease-up assumptions all matter more.</p>"
+      },
+      {
+        heading: "Timing an Exchange Around Metro's Regional Connector",
+        html: "<p>The Regional Connector's opening reshaped foot traffic and commute patterns through Bunker Hill and the Historic Core, and buildings within a short walk of a station have generally commanded a premium over those that aren't. Investors identifying DTLA replacement property inside their 45-day window should weigh transit proximity alongside the usual metrics of tenant credit and lease term, since it has become a real driver of rent growth in the submarket.</p>"
+      },
+      {
+        heading: "Debt Replacement and Boot in a Discounted Office Market",
+        html: "<p>DTLA office values have come down meaningfully from their pre-2020 peaks, which can create a mismatch between the debt an exchanger is carrying off their relinquished property and the loan-to-value a lender will underwrite on a discounted office replacement. We help sellers model that gap early — including debt-free-and-clear options, DST structures, or blending office exposure with multifamily or net lease assets — so boot doesn't show up as a surprise at closing.</p>"
+      },
+      {
+        heading: "How We Sequence a Downtown LA Identification List",
+        html: "<p>Because DTLA covers such different submarkets under one name, we typically start a client's search by ruling neighborhoods out rather than in — confirming whether they actually want office exposure, multifamily, or a conversion play before pulling comparable properties. From there we usually build a list that spans at least two of Bunker Hill, the Arts District, South Park, and the Historic Core, since limiting the search to a single pocket can leave an exchanger without three genuinely distinct options if their first choice falls through during due diligence. We also flag early which candidates carry assumable debt versus which will require new financing, since that distinction can materially change the closing timeline against the 180-day deadline. For sellers coming out of a fully depreciated older DTLA asset, we walk through how a cost segregation study on the replacement property might interact with their overall tax position, working alongside their CPA rather than replacing that advice. The goal is always a shortlist a client can act on quickly once one property clears diligence, not a long list of theoretical options.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -62,6 +84,10 @@ export const locationsBatch01 = {
       {
         question: "How does Downtown Los Angeles CA's proximity to other LA districts impact real estate?",
         answer: "Downtown Los Angeles CA's central location provides access to all Los Angeles CA neighborhoods and employment centers. This connectivity drives demand for housing and commercial space while supporting premium pricing in Downtown Los Angeles CA."
+      },
+      {
+        question: "Is now a good time to exchange into Downtown Los Angeles office space?",
+        answer: "It depends on the asset and the buyer's basis. Discounted office pricing has created opportunities for well-capitalized exchangers who don't need heavy leverage, but it isn't a fit for every 1031 seller. We walk investors through debt replacement math, vacancy risk, and whether a blended strategy across office, multifamily, and net lease better protects tax deferral than a single concentrated DTLA office purchase."
       }
     ],
     exampleCapability: {
@@ -75,6 +101,32 @@ export const locationsBatch01 = {
   "century-city": {
     layoutKey: "loc_industry_spotlight",
     mainDescription: "<p>Century City CA property owners navigating 1031 exchanges benefit from the area's reputation as Los Angeles CA's premier business and entertainment district, featuring major media companies and corporate headquarters. Fox, Paramount, and numerous law firms drive demand for premium office space and luxury residential properties. The district's proximity to Beverly Hills and Westwood creates a high-income demographic with sophisticated real estate preferences. Exchange investors in Century City CA find opportunities in Class A office buildings with entertainment industry tenants, luxury condominiums serving executives, and medical office buildings catering to affluent patients. The 1.1% documentary transfer tax rate applies to Century City CA transactions. Our nationwide property identification expertise helps Century City CA investors locate replacement properties across all major markets while ensuring IRS compliance and optimizing tax-deferred investment strategies.</p>",
+    sections: [
+      {
+        heading: "Century City's Twin Towers Office Market vs. Westside Medical Office",
+        html: "<p>Century City's identity is still built around its Avenue of the Stars office towers, home to entertainment law firms, talent agencies, and studio-adjacent tenants who sign long, well-structured leases. That tenant base has kept Class A office here more resilient than much of the Westside. Just blocks away, the medical office corridor feeding off Cedars-Sinai draws a completely different buyer profile — one focused on healthcare tenant retention and TI reimbursement schedules rather than entertainment-industry lease covenants.</p>"
+      },
+      {
+        heading: "Why Century City Buyers Chase Cedars-Sinai-Adjacent Medical Space",
+        html: "<p>Medical office buildings within a short drive of Cedars-Sinai Medical Center routinely lease up faster and hold occupancy better than generic professional office nearby, because specialist practices want to stay close to their admitting hospital. For 1031 exchangers coming out of Century City multifamily or retail, this corridor is one of the more dependable replacement categories on the Westside, though pricing reflects that reliability.</p>"
+      },
+      {
+        heading: "45 Days Isn't Long in a Market This Tight",
+        html: "<p>Century City and the immediately surrounding Westside submarkets see limited turnover of institutional-quality assets, which means exchangers often need to widen their identification list beyond the immediate district — into Westwood, Beverly Hills, or Santa Monica — to have three genuinely viable options inside the 45-day window. We build that broader shortlist from day one rather than waiting to see what falls through.</p>"
+      },
+      {
+        heading: "Equity-Rich Sellers, DSTs, and the Move Toward Passive Ownership",
+        html: "<p>A meaningful share of Century City condo and small-multifamily sellers are long-hold owners sitting on substantial embedded gains and less interest in hands-on management. For that profile, we often model a Delaware Statutory Trust or a triple-net replacement alongside direct ownership options, so the decision comes down to the investor's appetite for control versus passivity rather than a scramble to find any qualifying property in time.</p>"
+      },
+      {
+        heading: "What a Century City Replacement Property Actually Costs",
+        html: "<p>Century City pricing sits closer to Beverly Hills and Downtown's best assets than to the broader Westside average, and buyers should expect to compete against institutional capital for anything stabilized and well-leased in the district. Smaller medical office condominiums and boutique multifamily buildings offer a somewhat more accessible entry point than the trophy office towers, which trade almost exclusively among large institutional owners and rarely come to market. We generally steer exchangers with a single mid-sized relinquished property toward that condo and small-multifamily tier rather than trying to compete for full-building acquisitions against much larger pools of capital.</p>"
+      },
+      {
+        heading: "Coordinating a Century City Purchase With Your Qualified Intermediary",
+        html: "<p>Because Century City deals often move through relationship-driven brokerage channels rather than wide-open marketing campaigns, timing coordination between our identification work and a client's qualified intermediary matters more here than in markets with deeper listed inventory. We keep the QI looped in as soon as a viable Century City candidate surfaces, so exchange funds and closing logistics are ready to move the moment a purchase agreement is signed rather than scrambling once the 180-day deadline is already in view. That coordination is especially important for medical office and small multifamily transactions, where sellers in this district are often long-hold owners who expect a clean, well-documented buyer and can move to a competing offer quickly if financing or exchange paperwork isn't already lined up. We also help clients understand how a Century City acquisition interacts with any existing DST or fractional ownership positions they may already hold, since combining direct ownership with passive structures is a common strategy among the district's higher-net-worth exchangers.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -135,6 +187,10 @@ export const locationsBatch01 = {
       {
         question: "How do entertainment companies impact Century City CA real estate demand?",
         answer: "Major entertainment companies headquartered in Century City CA create demand for office space, luxury housing for executives, and supporting commercial properties. This industry concentration drives premium pricing in Century City CA."
+      },
+      {
+        question: "Should I widen my search beyond Century City to hit my 45-day deadline?",
+        answer: "Usually yes. Institutional-quality Century City assets don't turn over often enough to guarantee three qualifying options inside the identification window on their own. We typically build a shortlist that spans Century City, Beverly Hills, and Westwood medical or office product from the start, so the 45-day clock isn't a source of pressure to settle for a weaker asset."
       }
     ],
     exampleCapability: {
@@ -148,6 +204,32 @@ export const locationsBatch01 = {
   "hollywood": {
     layoutKey: "loc_commute_corridor",
     mainDescription: "<p>Hollywood CA property owners seeking replacement assets through 1031 exchanges benefit from the area's iconic status as the entertainment capital of the world, with major studios and production companies driving economic activity. The district's blend of creative industries, tourism, and residential communities creates diverse real estate opportunities. Film studios, post-production facilities, and entertainment services support demand for specialized commercial space, while the area's walkability attracts young professionals and creatives. Exchange investors in Hollywood CA find value in boutique office buildings serving production companies, multifamily properties near transit corridors, and retail spaces catering to tourists and locals. The 1.1% documentary transfer tax rate applies to Hollywood CA transactions. Our nationwide property identification support helps Hollywood CA investors locate replacement properties across all major markets while maintaining compliance with IRS exchange rules and capitalizing on tax-deferred growth potential.</p>",
+    sections: [
+      {
+        heading: "Hollywood Boulevard Retail vs. Vine Street Creative Office",
+        html: "<p>The tourist-facing retail along Hollywood Boulevard runs on foot traffic, tour-bus stops, and the Walk of Fame crowd, which makes lease structuring and tenant mix very different from the creative office product filling out the Vine Street and Sunset Gower corridors. Post-production houses, talent management firms, and streaming-adjacent tenants have absorbed a lot of that Vine Street space, giving the office side of Hollywood a steadier, less seasonal income profile than the tourist retail strip a few blocks away.</p>"
+      },
+      {
+        heading: "Rent-Stabilized Multifamily and the 1031 Debt Trap",
+        html: "<p>Most pre-1978 apartment buildings in Hollywood fall under the city's Rent Stabilization Ordinance, which caps annual increases well below market and limits how quickly a new owner can reposition rents after acquisition. Sellers exchanging out of these buildings often carry more embedded value than the in-place rent roll suggests, which changes the debt-replacement math and the pricing conversation on any RSO-covered building we help identify as a replacement.</p>"
+      },
+      {
+        heading: "Sound Stages, Post-Production, and Underused Industrial Parcels",
+        html: "<p>Hollywood still has pockets of light-industrial and sound-stage-adjacent parcels that don't get much attention outside the entertainment trade press, but they can be attractive 1031 replacements for exchangers who understand production real estate — specialized power infrastructure, ceiling heights, and proximity to the studios that need overflow stage or storage capacity.</p>"
+      },
+      {
+        heading: "Replacing Hollywood Equity With Triple Net Assets Outside California",
+        html: "<p>Investors coming out of a highly appreciated Hollywood property — particularly rent-controlled multifamily — frequently want to trade management-intensive California real estate for passive, single-tenant net lease assets in other states. We help structure that shift while keeping the exchange fully compliant, including modeling how California's ongoing tax treatment of the deferred gain follows the investor even after they've moved the underlying property out of state.</p>"
+      },
+      {
+        heading: "Where Hollywood Deals Actually Get Sourced",
+        html: "<p>A lot of the better Hollywood opportunities we track never hit the open market in a way a casual buyer would find — long-held apartment buildings changing hands through broker relationships, or small commercial parcels sold quietly by production-adjacent businesses consolidating real estate. Off-market and lightly marketed deal flow tends to matter more here than in submarkets with deeper institutional coverage, which is part of why we maintain direct broker relationships across the Hollywood, Los Feliz, and East Hollywood corridors rather than relying solely on listed inventory when building a client's identification list.</p>"
+      },
+      {
+        heading: "Underwriting Deferred Maintenance on Older Hollywood Buildings",
+        html: "<p>A large share of Hollywood's multifamily and mixed-use stock predates modern seismic and building code standards, and a number of buildings still owe soft-story retrofit work or other capital improvements mandated under the city's seismic retrofit ordinance. That deferred capital need should be factored directly into the purchase price and into a 1031 buyer's post-closing capital plan, since an otherwise attractive cap rate can look very different once retrofit costs are included. We review permit history and any outstanding compliance orders on every Hollywood candidate before it goes on a client's identification list, and we coordinate with structural engineers when a building's retrofit status isn't fully documented in the seller's disclosures. For buyers willing to take on that capital work, the discount built into pricing for an un-retrofitted building can create meaningful long-term value, but it's a strategy that requires going in with eyes open rather than discovering the scope of work after closing.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -208,6 +290,10 @@ export const locationsBatch01 = {
       {
         question: "How do commute patterns affect Hollywood CA real estate?",
         answer: "Hollywood CA's central location provides access to Los Angeles CA employment centers via major freeways and transit lines. This connectivity supports rental demand and property values throughout Hollywood CA."
+      },
+      {
+        question: "Does rent control affect how I should value a Hollywood multifamily building I'm selling?",
+        answer: "Yes. Most older Hollywood apartment buildings fall under the city's Rent Stabilization Ordinance, which limits how fast a buyer can move rents to market after purchase. That caps upside for the next owner and can change how a building is priced relative to its trailing income. We factor RSO status into both the sale-side valuation conversation and the replacement property search."
       }
     ],
     exampleCapability: {
@@ -221,6 +307,32 @@ export const locationsBatch01 = {
   "beverly-hills": {
     layoutKey: "loc_neighborhoods_grid",
     mainDescription: "<p>Beverly Hills CA property owners navigating 1031 exchanges benefit from the city's global reputation as an ultra-luxury real estate market, attracting wealthy individuals and celebrities from around the world. The Rodeo Drive shopping district and prestigious residential neighborhoods drive demand for high-end commercial and residential properties. Proximity to major Los Angeles CA business districts creates accessibility for executives and entrepreneurs. Exchange investors in Beverly Hills CA find opportunities in luxury multifamily properties serving affluent residents, medical office buildings catering to high-net-worth patients, and retail spaces with premium brand tenants. The 1.1% documentary transfer tax rate applies to Beverly Hills CA transactions. Our nationwide property identification expertise helps Beverly Hills CA investors locate replacement properties across all major markets while ensuring IRS compliance and optimizing tax-deferred investment returns.</p>",
+    sections: [
+      {
+        heading: "The Golden Triangle Retail Premium",
+        html: "<p>The blocks bounded by Wilshire, Santa Monica, and Canon draw the highest retail rents in Beverly Hills, and Rodeo Drive frontage in particular trades on scarcity as much as income — there are only so many storefronts, and luxury flagship tenants will pay a premium most other markets can't match. That scarcity cuts both ways for a 1031 buyer: strong long-term value retention, but a very small pool of available replacement assets in any given identification window.</p>"
+      },
+      {
+        heading: "Wilshire Corridor Medical and Professional Office",
+        html: "<p>Away from the retail core, the Wilshire Corridor and the streets feeding Cedars-Sinai support a dense cluster of medical and professional office condominiums. These units trade more like a specialty asset class than general office — pricing tracks physician demand and building amenities more than broader office market cycles, which has made this corridor a relatively steady replacement category for Beverly Hills exchangers moving out of retail or land-heavy holdings.</p>"
+      },
+      {
+        heading: "Why Beverly Hills Sellers Often Trade Out of State",
+        html: "<p>A large share of Beverly Hills 1031 sellers are exchanging out of a single ultra-high-value asset — a retail building, a small apartment property, or inherited land — into something that produces diversified, passive income. That frequently means looking beyond city limits entirely: multiple net lease properties, a multifamily portfolio in a growth market, or a DST allocation, rather than trying to reinvest the full basis back into another scarce Beverly Hills parcel.</p>"
+      },
+      {
+        heading: "Rodeo Drive Ground Leases and Fee-Simple Alternatives",
+        html: "<p>Some of the most prominent Rodeo Drive addresses sit on ground leases rather than fee-simple ownership, which changes both the underwriting and the exchange mechanics if a leasehold interest is part of what's being sold or acquired. We flag this early in any Beverly Hills engagement, since leasehold and fee-simple replacement property aren't always treated the same way for like-kind purposes and the distinction affects deal structure from the outset.</p>"
+      },
+      {
+        heading: "How Beverly Hills Pricing Compares to the Rest of the Westside",
+        html: "<p>Beverly Hills assets, particularly retail and medical office, typically command a premium over comparable product in Century City, Westwood, or Santa Monica, reflecting both the city's brand and its genuinely limited buildable land. That premium can be worth paying for the long-term stability it tends to bring, but it also means a 1031 buyer with a fixed exchange budget may find more square footage — and sometimes a better going-in yield — a few blocks outside city limits while still capturing much of the same demand base.</p>"
+      },
+      {
+        heading: "Working With Beverly Hills' Small, Relationship-Driven Broker Pool",
+        html: "<p>The brokers who handle the majority of significant Beverly Hills transactions form a genuinely small, well-connected group, and a meaningful share of deal flow moves through their existing client relationships before it's broadly marketed. For a 1031 exchanger without an established presence in that circle, working through an intermediary who already has those relationships can be the difference between seeing a property in week one of the identification period versus not seeing it at all. We maintain active relationships across this broker pool specifically so our clients aren't limited to whatever happens to be publicly listed when their 45-day clock starts. This matters even more for off-market condo and small-building transactions, where sellers frequently prefer a quiet, pre-vetted buyer over a public listing process, and where being first in line with proof of funds and a qualified intermediary already engaged can move a deal forward faster than a competing all-cash offer from an unprepared buyer.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -281,6 +393,10 @@ export const locationsBatch01 = {
       {
         question: "How do tourism and luxury brands impact Beverly Hills CA real estate?",
         answer: "Rodeo Drive and Beverly Hills tourism attract luxury retailers and support commercial real estate demand. The concentration of high-end brands drives premium rental rates in Beverly Hills CA."
+      },
+      {
+        question: "If my Beverly Hills property is on a ground lease, does that change my 1031 options?",
+        answer: "It can. Leasehold interests are generally treated differently than fee-simple ownership for like-kind exchange purposes, and the remaining lease term matters to how a leasehold interest qualifies. We review the specific lease structure early so we can confirm what qualifies as suitable replacement property before you're inside the 45-day identification window."
       }
     ],
     exampleCapability: {
@@ -294,6 +410,32 @@ export const locationsBatch01 = {
   "west-hollywood": {
     layoutKey: "loc_data_column",
     mainDescription: "<p>West Hollywood CA property owners seeking replacement assets through 1031 exchanges benefit from the city's vibrant creative community and proximity to major Los Angeles CA entertainment and business districts. The Sunset Strip, music industry, and LGBTQ+ community create a diverse, affluent demographic with unique real estate preferences. Nightlife, restaurants, and cultural attractions drive demand for specialized commercial spaces, while the area's walkability attracts young professionals and creatives. Exchange investors in West Hollywood CA find value in boutique multifamily properties serving the creative economy, retail spaces catering to tourists and locals, and office buildings housing entertainment services. The 1.1% documentary transfer tax rate applies to West Hollywood CA transactions. Our nationwide property identification support helps West Hollywood CA investors locate replacement properties across all major markets while maintaining compliance with IRS exchange rules and capitalizing on tax-deferred growth opportunities.</p>",
+    sections: [
+      {
+        heading: "Sunset Strip Hospitality and Nightlife Real Estate",
+        html: "<p>The Strip's mix of hotels, music venues, and restaurant/nightlife real estate is one of the more specialized commercial categories in the city — leases here often carry percentage-rent or entertainment-specific clauses that a generalist buyer might not expect. Exchangers who understand hospitality underwriting tend to do better identifying viable Sunset Strip replacement property than those trying to evaluate it like a standard retail box.</p>"
+      },
+      {
+        heading: "The Pacific Design Center Corridor and Creative Office",
+        html: "<p>The blocks around the Pacific Design Center on Melrose Avenue anchor West Hollywood's design and creative-office trade, drawing showroom tenants, architecture firms, and production-adjacent businesses. It's a smaller, more curated office market than Century City or Culver City, but tenant retention tends to run high once a design-industry tenant builds out a space.</p>"
+      },
+      {
+        heading: "WeHo's Rent Stabilization Ordinance Changes the Multifamily Math",
+        html: "<p>West Hollywood's rent stabilization rules are among the strictest in the county, covering most buildings constructed before 1979 and limiting annual increases well below inflation in many years. For a 1031 seller, that history directly affects the in-place rent roll relative to market rent, and buyers underwrite WeHo multifamily very differently than uncontrolled product in a neighboring city.</p>"
+      },
+      {
+        heading: "Boutique Multifamily Trades Outside a Rent-Controlled City",
+        html: "<p>Because WeHo's ordinance limits how quickly a new owner can reposition rents, we frequently see multifamily sellers here exchange into uncontrolled apartment markets — Texas, Arizona, and parts of the Inland Empire come up often — where the same equity can be redeployed into a larger unit count with more upside on rent growth.</p>"
+      },
+      {
+        heading: "Deal Size and Buyer Profile in West Hollywood",
+        html: "<p>Most West Hollywood transactions we work on involve smaller, boutique buildings — a dozen units or fewer, a single retail storefront, or a small office suite near the Design District — rather than large institutional assets, which tend to concentrate a few blocks away in Beverly Hills or Century City. That smaller deal size can actually work in an exchanger's favor, since it opens the buyer pool to private capital and 1031 investors who might be priced out of the city's larger trophy assets.</p>"
+      },
+      {
+        heading: "Retrofit Compliance on WeHo's Older Apartment Stock",
+        html: "<p>Like much of the older housing stock across the county, a significant share of West Hollywood's pre-1979 apartment buildings carry soft-story or non-ductile concrete retrofit obligations under city and state seismic ordinances, and compliance status varies widely from building to building. We check permit records and any outstanding retrofit notices on every WeHo candidate before including it on a client's identification list, since unfinished retrofit work represents a real, quantifiable capital obligation that should be reflected in the purchase price rather than discovered as a surprise after closing. Buildings that have already completed their retrofit work generally command a premium over otherwise comparable buildings that still owe the work, and we help clients weigh whether paying that premium for a finished building makes more sense than buying at a discount and taking on the construction project themselves within their post-exchange capital plan.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -354,6 +496,10 @@ export const locationsBatch01 = {
       {
         question: "How do tourism and entertainment impact West Hollywood CA real estate?",
         answer: "The Sunset Strip and West Hollywood tourism drive demand for retail and commercial space. Entertainment industry workers and visitors support rental demand throughout West Hollywood CA."
+      },
+      {
+        question: "Why do so many West Hollywood multifamily sellers exchange into other states?",
+        answer: "WeHo's rent stabilization ordinance limits how fast a new owner can move rents to market on most pre-1979 buildings, which caps the upside a buyer can underwrite locally. Sellers holding significant deferred gain often prefer to redeploy into uncontrolled multifamily markets where rent growth isn't capped by local ordinance, and we help structure that exchange while keeping the full timeline compliant."
       }
     ],
     exampleCapability: {
@@ -367,6 +513,32 @@ export const locationsBatch01 = {
   "culver-city": {
     layoutKey: "loc_university_hub",
     mainDescription: "<p>Culver City CA property owners navigating 1031 exchanges benefit from the city's transformation into a major creative and technology hub, with Sony Pictures Entertainment and tech companies driving economic growth. The area's proximity to major Los Angeles CA employment centers and improving infrastructure create accessibility for professionals. Creative industries, film production, and growing corporate presence support demand for specialized commercial spaces and quality residential properties. Exchange investors in Culver City CA find opportunities in modern office buildings serving tech and creative companies, multifamily communities near transit corridors, and industrial spaces catering to production needs. The 1.1% documentary transfer tax rate applies to Culver City CA transactions. Our nationwide property identification expertise helps Culver City CA investors locate replacement properties across all major markets while ensuring IRS compliance and optimizing tax-deferred investment strategies.</p>",
+    sections: [
+      {
+        heading: "Hayden Tract Creative Office and the Sony Pictures Effect",
+        html: "<p>The Hayden Tract's angular, architecturally distinctive office buildings — many designed by Eric Owen Moss — helped define Culver City as a creative-office destination well before the rest of the Westside caught on, and Sony Pictures Entertainment's studio lot anchors demand for production-adjacent space nearby. That combination gives Culver City office product a different tenant profile than Century City or Downtown: more media, design, and tech, less traditional professional services.</p>"
+      },
+      {
+        heading: "Ivy Station and Transit-Oriented Development Along the E Line",
+        html: "<p>Projects like Ivy Station, built directly over the Metro E Line's Culver City station, reflect a broader push toward transit-oriented, mixed-use development in the city. Multifamily and retail near E Line stops have generally benefited from that connectivity, and it's a factor worth weighing for exchangers comparing Culver City replacement candidates against similar assets elsewhere on the Westside.</p>"
+      },
+      {
+        heading: "Industrial Flex Space Getting Squeezed by Office Conversion",
+        html: "<p>As creative-office demand has pushed into former light-industrial buildings, the remaining true industrial and flex inventory in Culver City has tightened, supporting rent growth for owners who've held onto it. For a 1031 buyer, that shrinking supply can mean a smaller pool of available flex-space replacement candidates but comparatively strong holding fundamentals for whatever is available.</p>"
+      },
+      {
+        heading: "Where Culver City Sellers Redeploy Capital",
+        html: "<p>Owners exchanging out of Culver City creative office or multifamily often want to keep some West Coast media-industry exposure while reducing management intensity — which points toward net lease assets with entertainment-adjacent or tech tenants, or a DST focused on similar sectors, rather than a straight swap into another hands-on Westside building.</p>"
+      },
+      {
+        heading: "Culver City's Compressed Timeline for Quality Assets",
+        html: "<p>Well-located Culver City product, especially anything within walking distance of Sony's lot or the E Line, tends to move quickly once listed, often drawing multiple offers within the first couple of weeks on market. For a 1031 exchanger working against the 45-day identification clock, that pace means having financing and diligence teams ready to move before a property is formally identified, not after, so a competitive offer can be submitted the moment the right asset surfaces.</p>"
+      },
+      {
+        heading: "Balancing Creative Office Exposure With Diversification",
+        html: "<p>Culver City's creative-office boom has been genuinely transformative for the city, but it also means an exchanger buying a single Culver City office building is taking on real concentration risk tied to the media and tech sectors' leasing appetite, which has proven cyclical over the past several years. We often present this tradeoff directly: a client can capture Culver City's strong long-term fundamentals through a single well-located building, or reduce that sector concentration by pairing a smaller Culver City position with net lease or multifamily exposure elsewhere as part of a multi-property exchange. Neither approach is inherently right, but the decision should be made deliberately rather than by default, and we walk through both the upside case for staying concentrated in this submarket and the diversification case before a client commits their identification list to a single Culver City asset.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -427,6 +599,10 @@ export const locationsBatch01 = {
       {
         question: "How do Sony Pictures and entertainment impact Culver City CA real estate?",
         answer: "Sony Pictures Entertainment drives demand for production facilities and housing for industry workers. The studio's presence creates stable employment and supports commercial real estate values in Culver City CA."
+      },
+      {
+        question: "Is Culver City industrial flex space still available for 1031 replacement?",
+        answer: "It's tighter than it used to be. A meaningful amount of former light-industrial inventory has converted to creative office over the past decade, which has shrunk the pool of true flex-space replacement candidates and supported rent growth on what remains. We track remaining flex inventory closely and often widen the search into adjacent Westside and South Bay submarkets to keep enough qualifying options in play."
       }
     ],
     exampleCapability: {
@@ -440,6 +616,32 @@ export const locationsBatch01 = {
   "santa-monica": {
     layoutKey: "loc_map_first",
     mainDescription: "<p>Santa Monica CA property owners seeking replacement assets through 1031 exchanges benefit from the city's coastal lifestyle and proximity to major Los Angeles CA business and technology centers. The Promenade, beach culture, and growing corporate presence create demand for premium residential and commercial properties. Technology companies, creative industries, and tourism drive economic activity, while the area's walkability and amenities attract young professionals and affluent residents. Exchange investors in Santa Monica CA find opportunities in luxury multifamily properties serving tech professionals, retail spaces catering to tourists and locals, and office buildings housing innovative companies. The 1.1% documentary transfer tax rate applies to Santa Monica CA transactions. Our nationwide property identification support helps Santa Monica CA investors locate replacement properties across all major markets while maintaining compliance with IRS exchange rules and capitalizing on tax-deferred growth potential.</p>",
+    sections: [
+      {
+        heading: "Third Street Promenade Retail Reset",
+        html: "<p>The Promenade has been through a well-documented cycle of vacancy and repositioning as national tenants reassessed their footprint and the city worked on programming and mixed-use additions to draw shoppers back. Ground-floor retail here now trades at a discount to its pre-2020 rent levels in many storefronts, which has opened a window for value-oriented exchangers willing to underwrite a longer lease-up in exchange for a lower basis.</p>"
+      },
+      {
+        heading: "Silicon Beach Office Vacancy and the Opportunity It Creates",
+        html: "<p>Santa Monica's stretch of the Silicon Beach tech corridor — office buildings that once commanded steep premiums for their proximity to Google, Snap, and other tech tenants — has seen elevated vacancy as some of those tenants shed space. That softness has made select Santa Monica office assets more accessible to 1031 buyers than they were during the peak of the tech office boom, though tenant credit and remaining lease term still matter as much as location.</p>"
+      },
+      {
+        heading: "Santa Monica Rent Control and Why Multifamily Sellers Exchange Out",
+        html: "<p>Santa Monica has one of the oldest and strictest rent control systems in California, and Costa-Hawkins vacancy decontrol only partially offsets the impact on long-held apartment buildings. Sellers here are frequently sitting on rent rolls well below market, and that gap between actual and potential income shapes both the sale price and the replacement-property conversation, especially for owners considering a move to an uncontrolled market.</p>"
+      },
+      {
+        heading: "Coastal Zone Permitting Slows New Supply, Supports Existing Assets",
+        html: "<p>California Coastal Commission review adds time and uncertainty to new development within Santa Monica's coastal zone, which has kept new competitive supply limited relative to demand. For owners of existing, entitled assets near the coast, that scarcity has generally been a tailwind — a factor worth weighing when comparing a Santa Monica replacement property against a similarly priced asset in a market with fewer permitting hurdles.</p>"
+      },
+      {
+        heading: "Comparing Santa Monica to Venice and Marina del Rey",
+        html: "<p>Exchangers set on coastal Westside exposure often cross-shop Santa Monica against Venice and Marina del Rey, and the three submarkets have real differences worth understanding before committing to an identification list. Santa Monica generally offers deeper commercial and office inventory alongside its residential stock, Venice leans more toward boutique retail and creative space, and Marina del Rey's leasehold land structure sets it apart from both. We typically build a coastal Westside search across all three rather than assuming any one of them is a like-for-like substitute for the others.</p>"
+      },
+      {
+        heading: "What a Santa Monica Deal Actually Requires",
+        html: "<p>Santa Monica transactions, particularly multifamily and mixed-use, tend to involve more moving pieces than a comparable deal in a less regulated city — rent control compliance history, any pending relocation assistance obligations, Coastal Commission jurisdiction for anything near the beach, and often a longer city permitting review for any planned improvements. We build extra diligence time into every Santa Monica identification candidate to account for these layers, and we coordinate closely with local land use counsel when a property's history includes prior code enforcement or unpermitted work, which shows up more often here than in less tightly regulated submarkets. None of this makes Santa Monica a poor choice for a 1031 exchange, but it does mean the closing timeline needs realistic buffer built in from the start rather than assuming a Santa Monica deal will move at the same pace as a comparable transaction in a market with lighter regulatory overlay.</p>"
+      }
+    ],
     popularPaths: [
       {
         rank: 1,
@@ -500,6 +702,10 @@ export const locationsBatch01 = {
       {
         question: "How do tourism and beach culture impact Santa Monica CA real estate?",
         answer: "Santa Monica CA's beaches, Promenade, and tourism drive demand for retail and commercial space. The coastal lifestyle attracts affluent residents and supports premium rental rates in Santa Monica CA."
+      },
+      {
+        question: "How does Santa Monica's rent control affect the value of a multifamily building I'm exchanging out of?",
+        answer: "Santa Monica's rent control ordinance is one of the strictest in the state and typically means the actual rent roll on an older building sits well below what a comparable uncontrolled unit could command. That gap affects both what a buyer will pay and how we frame the sale for exchange purposes, particularly when the plan is to move equity into an uncontrolled multifamily market elsewhere."
       }
     ],
     exampleCapability: {
