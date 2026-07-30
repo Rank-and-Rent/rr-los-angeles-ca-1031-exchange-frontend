@@ -1,6 +1,98 @@
 import type { ServiceItem } from "./types";
 
 export const servicesData: ServiceItem[] = [
+
+  // Execution Category
+  {
+    slug: "multifamily-property-identification",
+    name: "Multifamily Property Identification",
+    short: "Locate stabilized apartment communities in Los Angeles County for 1031 exchange compliance.",
+    route: "multifamily-property-identification",
+    category: "execution"
+  },
+
+  // Upstream Funnel — Tax Deferral, Investing, Asset Types (additive)
+  {
+    slug: "capital-gains-on-rental-property",
+    name: "Capital Gains on Rental Property",
+    short: "How federal and California capital gains rules apply to a Los Angeles rental sale, and where a Section 1031 exchange fits into the decision.",
+    route: "capital-gains-on-rental-property",
+    category: "Guides"
+  },
+  {
+    slug: "inherited-property-capital-gains",
+    name: "Inherited Property Capital Gains",
+    short: "How the stepped up basis rule changes capital gains exposure for inherited Los Angeles property, and when heirs still consider a 1031 exchange.",
+    route: "inherited-property-capital-gains",
+    category: "Guides"
+  },
+  {
+    slug: "passive-real-estate-income",
+    name: "Passive Real Estate Income",
+    short: "What passive real estate income means for a Los Angeles investor, the structures available, and how they interact with 1031 exchange eligibility.",
+    route: "passive-real-estate-income",
+    category: "Guides"
+  },
+  {
+    slug: "the-qualified-intermediary-role",
+    name: "The Qualified Intermediary Role",
+    short: "Plain language explainer on why a qualified intermediary is required and how safe harbor and constructive receipt work.",
+    route: "the-qualified-intermediary-role",
+    category: "Guides"
+  },
+
+  // Property Paths Category
+  {
+    slug: "delaware-statutory-trust-placement",
+    name: "Delaware Statutory Trust Placement",
+    short: "Access institutional quality DST portfolios for passive 1031 exchange investors in California.",
+    route: "delaware-statutory-trust-placement",
+    category: "property-paths"
+  },
+  {
+    slug: "what-is-an-nnn-lease",
+    name: "What Is an NNN Lease",
+    short: "A plain language explanation of what an NNN lease is, common Los Angeles property types that use it, and what a buyer should review before acquiring one.",
+    route: "what-is-an-nnn-lease",
+    category: "Guides"
+  },
+  {
+    slug: "how-to-reduce-capital-gains-tax",
+    name: "How to Reduce Capital Gains Tax",
+    short: "Legitimate ways a Los Angeles property owner can reduce or defer capital gains tax exposure on a real estate sale, including the role of a 1031 exchange.",
+    route: "how-to-reduce-capital-gains-tax",
+    category: "Guides"
+  },
+  {
+    slug: "reverse-1031-exchange-explained",
+    name: "Reverse 1031 Exchange Explained",
+    short: "Plain language explainer on acquiring replacement property before the relinquished property sale through an exchange accommodation titleholder.",
+    route: "reverse-1031-exchange-explained",
+    category: "Guides"
+  },
+  {
+    slug: "the-180-day-exchange-deadline",
+    name: "The 180 Day Exchange Deadline",
+    short: "Plain language explainer on the one hundred eighty day exchange completion deadline and how it interacts with the identification period.",
+    route: "the-180-day-exchange-deadline",
+    category: "Guides"
+  },
+  {
+    slug: "capital-gains-on-investment-property",
+    name: "Capital Gains on Investment Property",
+    short: "A plain language walkthrough of how capital gains tax applies to Los Angeles investment property sales, and the role a 1031 exchange can play.",
+    route: "capital-gains-on-investment-property",
+    category: "Guides"
+  },
+
+  // Guides Category
+  {
+    slug: "the-45-day-identification-period",
+    name: "The 45 Day Identification Period",
+    short: "Plain language explainer on how the forty five day identification window works under Section 1031.",
+    route: "the-45-day-identification-period",
+    category: "Guides"
+  },
   // Timelines Category
   {
     slug: "45-day-identification-deadline-management",
@@ -38,36 +130,6 @@ export const servicesData: ServiceItem[] = [
     short: "Match investors with bonded QI firms operating segregated trust accounts and fidelity insurance.",
     route: "qualified-intermediary-selection",
     category: "structures"
-  },
-  {
-    slug: "three-property-rule-implementation",
-    name: "Three Property Rule Implementation",
-    short: "Structure identification lists using three property rule for maximum exchange flexibility.",
-    route: "three-property-rule-implementation",
-    category: "structures"
-  },
-  {
-    slug: "200-percent-rule-coordination",
-    name: "200 Percent Rule Coordination",
-    short: "Implement 200 percent rule strategies for unlimited property value identification.",
-    route: "200-percent-rule-coordination",
-    category: "structures"
-  },
-  {
-    slug: "95-percent-rule-application",
-    name: "95 Percent Rule Application",
-    short: "Apply 95 percent identification rule for complex portfolios and multi property exchanges.",
-    route: "95-percent-rule-application",
-    category: "structures"
-  },
-
-  // Execution Category
-  {
-    slug: "multifamily-property-identification",
-    name: "Multifamily Property Identification",
-    short: "Locate stabilized apartment communities in Los Angeles County for 1031 exchange compliance.",
-    route: "multifamily-property-identification",
-    category: "execution"
   },
   {
     slug: "triple-net-lease-property-search",
@@ -136,15 +198,6 @@ export const servicesData: ServiceItem[] = [
     route: "exchange-documentation-assembly",
     category: "reporting"
   },
-
-  // Property Paths Category
-  {
-    slug: "delaware-statutory-trust-placement",
-    name: "Delaware Statutory Trust Placement",
-    short: "Access institutional quality DST portfolios for passive 1031 exchange investors in California.",
-    route: "delaware-statutory-trust-placement",
-    category: "property-paths"
-  },
   {
     slug: "vacation-rental-safe-harbor-properties",
     name: "Vacation Rental Safe Harbor Properties",
@@ -175,22 +228,6 @@ export const servicesData: ServiceItem[] = [
     route: "timeline-deadline-calculator",
     category: "education"
   },
-
-  // Guides Category
-  {
-    slug: "the-45-day-identification-period",
-    name: "The 45 Day Identification Period",
-    short: "Plain language explainer on how the forty five day identification window works under Section 1031.",
-    route: "the-45-day-identification-period",
-    category: "Guides"
-  },
-  {
-    slug: "the-180-day-exchange-deadline",
-    name: "The 180 Day Exchange Deadline",
-    short: "Plain language explainer on the one hundred eighty day exchange completion deadline and how it interacts with the identification period.",
-    route: "the-180-day-exchange-deadline",
-    category: "Guides"
-  },
   {
     slug: "what-is-boot-in-a-1031-exchange",
     name: "What Is Boot in a 1031 Exchange",
@@ -199,24 +236,10 @@ export const servicesData: ServiceItem[] = [
     category: "Guides"
   },
   {
-    slug: "the-qualified-intermediary-role",
-    name: "The Qualified Intermediary Role",
-    short: "Plain language explainer on why a qualified intermediary is required and how safe harbor and constructive receipt work.",
-    route: "the-qualified-intermediary-role",
-    category: "Guides"
-  },
-  {
     slug: "like-kind-property-explained",
     name: "Like Kind Property Explained",
     short: "Plain language explainer on what qualifies as like kind real property for investment or business use after the Tax Cuts and Jobs Act.",
     route: "like-kind-property-explained",
-    category: "Guides"
-  },
-  {
-    slug: "reverse-1031-exchange-explained",
-    name: "Reverse 1031 Exchange Explained",
-    short: "Plain language explainer on acquiring replacement property before the relinquished property sale through an exchange accommodation titleholder.",
-    route: "reverse-1031-exchange-explained",
     category: "Guides"
   },
   {
@@ -231,22 +254,6 @@ export const servicesData: ServiceItem[] = [
     name: "Related Party 1031 Exchange Rules",
     short: "Plain language explainer on the two year holding requirement and other limits under Section 1031(f) for exchanges between related parties.",
     route: "related-party-1031-exchange-rules",
-    category: "Guides"
-  },
-
-  // Upstream Funnel — Tax Deferral, Investing, Asset Types (additive)
-  {
-    slug: "capital-gains-on-rental-property",
-    name: "Capital Gains on Rental Property",
-    short: "How federal and California capital gains rules apply to a Los Angeles rental sale, and where a Section 1031 exchange fits into the decision.",
-    route: "capital-gains-on-rental-property",
-    category: "Guides"
-  },
-  {
-    slug: "capital-gains-on-investment-property",
-    name: "Capital Gains on Investment Property",
-    short: "A plain language walkthrough of how capital gains tax applies to Los Angeles investment property sales, and the role a 1031 exchange can play.",
-    route: "capital-gains-on-investment-property",
     category: "Guides"
   },
   {
@@ -264,13 +271,6 @@ export const servicesData: ServiceItem[] = [
     category: "Guides"
   },
   {
-    slug: "inherited-property-capital-gains",
-    name: "Inherited Property Capital Gains",
-    short: "How the stepped up basis rule changes capital gains exposure for inherited Los Angeles property, and when heirs still consider a 1031 exchange.",
-    route: "inherited-property-capital-gains",
-    category: "Guides"
-  },
-  {
     slug: "depreciation-recapture-explained",
     name: "Depreciation Recapture Explained",
     short: "How depreciation recapture works on a Los Angeles investment property sale, and why deferring it through a 1031 exchange matters for long term owners.",
@@ -285,24 +285,10 @@ export const servicesData: ServiceItem[] = [
     category: "Guides"
   },
   {
-    slug: "how-to-reduce-capital-gains-tax",
-    name: "How to Reduce Capital Gains Tax",
-    short: "Legitimate ways a Los Angeles property owner can reduce or defer capital gains tax exposure on a real estate sale, including the role of a 1031 exchange.",
-    route: "how-to-reduce-capital-gains-tax",
-    category: "Guides"
-  },
-  {
     slug: "how-to-invest-in-real-estate",
     name: "How to Invest in Real Estate",
     short: "An overview of the main paths into Los Angeles real estate investing, from direct ownership to passive structures, and where 1031 exchanges apply.",
     route: "how-to-invest-in-real-estate",
-    category: "Guides"
-  },
-  {
-    slug: "passive-real-estate-income",
-    name: "Passive Real Estate Income",
-    short: "What passive real estate income means for a Los Angeles investor, the structures available, and how they interact with 1031 exchange eligibility.",
-    route: "passive-real-estate-income",
     category: "Guides"
   },
   {
@@ -355,13 +341,6 @@ export const servicesData: ServiceItem[] = [
     category: "Guides"
   },
   {
-    slug: "what-is-an-nnn-lease",
-    name: "What Is an NNN Lease",
-    short: "A plain language explanation of what an NNN lease is, common Los Angeles property types that use it, and what a buyer should review before acquiring one.",
-    route: "what-is-an-nnn-lease",
-    category: "Guides"
-  },
-  {
     slug: "self-storage-investing",
     name: "Self Storage Investing",
     short: "What makes self storage a distinct 1031 exchange replacement asset class for Los Angeles investors, and what to evaluate before acquiring a facility.",
@@ -403,4 +382,25 @@ export const servicesData: ServiceItem[] = [
     route: "medical-office-investing",
     category: "Guides"
   }
-];
+,
+  {
+    slug: "three-property-rule-implementation",
+    name: "Three Property Rule Implementation",
+    short: "Structure identification lists using three property rule for maximum exchange flexibility.",
+    route: "three-property-rule-implementation",
+    category: "structures"
+  },
+  {
+    slug: "200-percent-rule-coordination",
+    name: "200 Percent Rule Coordination",
+    short: "Implement 200 percent rule strategies for unlimited property value identification.",
+    route: "200-percent-rule-coordination",
+    category: "structures"
+  },
+  {
+    slug: "95-percent-rule-application",
+    name: "95 Percent Rule Application",
+    short: "Apply 95 percent identification rule for complex portfolios and multi property exchanges.",
+    route: "95-percent-rule-application",
+    category: "structures"
+  }];

@@ -1,5 +1,12 @@
 "use client";
 
+import ExchangeIntentSection from "../components/ExchangeIntentSection";
+
+
+
+
+
+
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -925,6 +932,6 @@ export default function HomePage() {
               </div>
         </section>
       </div>
-    </>
+    <ExchangeIntentSection /></>
   );
 }
