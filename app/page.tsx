@@ -404,9 +404,7 @@ export default function HomePage() {
                   <Link
                   href="/contact" 
                   className="px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
-                  >
-                  Start Your Exchange
-                  </Link>
+                  >Talk Through the Los Angeles Sale</Link>
                   <Link
                   href="/services" 
                   className="px-12 py-4 border border-white/50 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
@@ -593,15 +591,11 @@ export default function HomePage() {
                   Southern California Investment Excellence
                 </p>
                 <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8 tracking-wide">
-                  Your Trusted Exchange Partner
+                  Leave Los Angeles Property Management Behind
                 </h2>
                 <div className="space-y-6 text-white/70 text-lg leading-relaxed">
-                  <p>
-                    Los Angeles investors benefit from our deep local expertise and comprehensive understanding of Southern California&apos;s dynamic real estate market. Our team provides expert 1031 exchange guidance tailored to the unique opportunities found across Los Angeles County.
-                  </p>
-                  <p>
-                    From identifying replacement properties to navigating complex timelines, we ensure every exchange maximizes tax deferral benefits while positioning investors for long-term growth.
-                        </p>
+                  <p>A Los Angeles owner may be selling to leave intensive management, move equity out of one submarket, simplify inherited property, or seek a different income profile. We define that goal first and compare California, out-of-state, direct, net-lease, and passive replacements against the same sale economics and deadline.</p>
+                  <p>DST interests may give Los Angeles sellers access to professionally managed, institutional-grade real estate without personally managing tenants or capital projects. Some offerings can begin around $100,000; minimums, inventory, projected income, fees, debt, risk, liquidity restrictions, qualification, and suitability are not uniform.</p>
                       </div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -611,11 +605,9 @@ export default function HomePage() {
                   className="mt-10"
                 >
                       <Link
-                    href="/contact" 
+                    href="/contact?request=guide" 
                     className="inline-block px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
-                      >
-                    Contact Us
-                      </Link>
+                      >Get Free Los Angeles 1031 Information</Link>
                   </motion.div>
               </motion.div>
               </div>
@@ -688,11 +680,9 @@ export default function HomePage() {
               className="text-center mt-16"
               >
                 <Link
-                href="/services" 
+                href="/contact?request=properties" 
                 className="inline-block px-12 py-4 border-2 border-navy text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-navy hover:text-white transition-all"
-                >
-                View All Services
-                </Link>
+                >Request the Los Angeles Property List</Link>
               </motion.div>
             </div>
           </section>
@@ -765,7 +755,7 @@ export default function HomePage() {
               >
                 <p className="font-serif text-xl text-white/60 italic mb-4">Get Started</p>
                 <h2 className="font-serif text-5xl md:text-6xl font-light mb-8 tracking-wide">
-                  Request a Consultation
+                  Los Angeles 1031 Exchange Solutions
                   </h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-12">
                   Share your investment goals and our team will provide personalized guidance for your 1031 exchange. Complimentary consultations for qualified investors.
