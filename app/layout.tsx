@@ -22,10 +22,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: '1031 Exchange Los Angeles | Defer Capital Gains Tax on Investment Property',
+    default: "1031 Exchange Los Angeles | Property & DST Options",
     template: '%s | 1031 Exchange Los Angeles',
   },
-  description: 'Expert 1031 exchange services for Los Angeles investors. Defer capital gains taxes, identify replacement properties, and execute tax-advantaged real estate transactions with professional guidance.',
+  description: "Los Angeles owners can organize a planned sale, independent QI, replacement criteria, and direct or passive options. Request free information.",
   keywords: '1031 exchange, Los Angeles, capital gains tax deferral, like-kind exchange, investment property, qualified intermediary, replacement property, tax deferred exchange, real estate investment',
   authors: [{ name: '1031 Exchange Los Angeles' }],
   creator: '1031 Exchange Los Angeles',
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: '1031 Exchange Los Angeles | Defer Capital Gains Tax on Investment Property',
-    description: 'Expert 1031 exchange services for Los Angeles investors. Defer capital gains taxes and execute tax-advantaged real estate transactions.',
+    title: "1031 Exchange Los Angeles | Property & DST Options",
+    description: "Los Angeles owners can organize a planned sale, independent QI, replacement criteria, and direct or passive options. Request free information.",
     url: 'https://www.1031exchangelosangeles.com/',
     siteName: '1031 Exchange Los Angeles',
     images: [
@@ -76,8 +76,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '1031 Exchange Los Angeles | Defer Capital Gains Tax on Investment Property',
-    description: 'Expert 1031 exchange services for Los Angeles investors. Defer capital gains taxes and execute tax-advantaged real estate transactions.',
+    title: "1031 Exchange Los Angeles | Property & DST Options",
+    description: "Los Angeles owners can organize a planned sale, independent QI, replacement criteria, and direct or passive options. Request free information.",
     images: ['/og-image.png'],
   },
   robots: {
