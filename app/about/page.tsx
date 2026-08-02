@@ -96,7 +96,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-white/70 leading-relaxed mb-12 max-w-2xl mx-auto">
                 We help investors navigate the complex 1031 exchange process with confidence.
-                Our Los Angeles CA specialists connect you with qualified professionals while ensuring
+                Our Los Angeles, CA specialists connect you with qualified professionals while ensuring
                 compliance with all IRS requirements and California regulations.
               </p>
 
@@ -107,12 +107,12 @@ export default function AboutPage() {
                 >
                   Start Your Exchange
                 </Link>
-                <Link
-                  href="/services"
+                <a
+                  href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
                   className="px-12 py-4 border border-white/30 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
                 >
-                  Explore Services
-                </Link>
+                  Call {PHONE}
+                </a>
               </div>
             </motion.div>
           </div>

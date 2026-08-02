@@ -105,7 +105,7 @@ export default function LocationsPage() {
               </h1>
               <p className="text-lg text-white/70 leading-relaxed mb-12 max-w-2xl mx-auto">
                 Specialized property replacement services throughout Southern California.
-                Local expertise in Los Angeles CA markets and surrounding communities.
+                Local expertise in Los Angeles, CA markets and surrounding communities.
               </p>
 
               {/* Search Bar */}

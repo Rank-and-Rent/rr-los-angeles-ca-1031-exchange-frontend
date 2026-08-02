@@ -174,7 +174,7 @@ export default function ToolPage({ params }: ToolPageProps) {
               </h1>
 
               <p className="text-lg text-white/80 leading-relaxed mb-8">
-                {tool.description} This educational tool helps you understand how different exchange scenarios may affect your 1031 exchange planning in {PRIMARY_CITY} {PRIMARY_STATE_ABBR}.
+                {tool.description} This educational tool helps you understand how different exchange scenarios may affect your 1031 exchange planning in {PRIMARY_CITY}, {PRIMARY_STATE_ABBR}.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

@@ -409,7 +409,7 @@ export default function HomePage() {
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="px-12 py-4 border border-white/50 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
                   >
-                  Call Now to Talk to an Expert
+                  Call {PHONE}
                   </a>
               </motion.div>
             </motion.div>
@@ -764,8 +764,11 @@ export default function HomePage() {
                 <div className="space-y-8">
                   <div>
                     <p className="font-sans text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Phone</p>
-                    <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="font-serif text-3xl text-white hover:text-white/80 transition-colors">
-                      {PHONE}
+                    <a
+                      href={`tel:${PHONE.replace(/\D/g, "")}`}
+                      className="inline-flex items-center justify-center border border-white/40 px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-navy"
+                    >
+                      Call {PHONE}
                     </a>
                     </div>
                     </div>

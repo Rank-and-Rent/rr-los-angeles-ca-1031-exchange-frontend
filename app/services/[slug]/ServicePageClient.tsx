@@ -181,7 +181,7 @@ export default function ServicePageClient({ service, rich }: ServicePageClientPr
               </h1>
 
               <p className="text-lg text-white/80 leading-relaxed mb-8">
-                {service.description} Our Los Angeles CA specialists provide comprehensive support throughout the entire 1031 exchange process.
+                {service.description} Our Los Angeles, CA specialists provide comprehensive support throughout the entire 1031 exchange process.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

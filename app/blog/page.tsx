@@ -161,7 +161,7 @@ export default function BlogPage() {
               </h1>
               <p className="text-lg text-white/70 leading-relaxed mb-12 max-w-2xl mx-auto">
                 Expert guidance on 1031 exchanges, tax strategies, and real estate investment
-                opportunities in the Los Angeles CA market.
+                opportunities in the Los Angeles, CA market.
               </p>
 
               {/* Search Bar */}
