@@ -35,45 +35,53 @@ const StickyCTA = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDismissed]);
 
-  if (!isVisible) return null;
-
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 100 }}
-        className="fixed bottom-6 left-6 right-6 z-40 md:left-auto md:right-6 md:w-80"
+    <>
+      <a
+        href={`tel:${PHONE.replace(/\D/g, "")}`}
+        aria-label={`Call a Los Angeles 1031 exchange expert at ${PHONE}`}
+        className="fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white bg-navy text-white shadow-[0_12px_32px_rgba(7,22,45,0.35)] transition-transform duration-200 hover:scale-105 hover:bg-navy-light focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/50 md:hidden"
       >
-        <div className="bg-white border border-gray-200 shadow-2xl p-6">
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h3 className="font-serif text-xl text-navy mb-1">Start Your Exchange</h3>
-              <p className="text-sm text-gray-600">Expert guidance for LA investors.</p>
-            </div>
-            <button
-              onClick={() => { setIsDismissed(true); setIsVisible(false); }}
-              className="text-gray-400 hover:text-navy transition-colors"
-            >
-              <CloseIcon className="w-5 h-5" />
-            </button>
-          </div>
+        <PhoneIcon className="h-7 w-7" />
+        <span className="sr-only">Call {PHONE}</span>
+      </a>
 
-          <div className="space-y-3">
-            <Link href="/contact" className="hidden md:block w-full py-3 bg-navy hover:bg-navy-light text-white text-center font-sans text-sm tracking-wider transition-colors">
-              Get Started
-            </Link>
-            <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="md:hidden flex items-center justify-center gap-2 w-full py-3 bg-navy hover:bg-navy-light text-white font-sans text-sm tracking-wider transition-colors">
-              <PhoneIcon className="w-4 h-4" />
-              Call {PHONE}
-            </a>
-            <Link href="/services" className="block text-center text-sm text-gray-500 hover:text-navy transition-colors">
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            className="fixed bottom-6 right-6 z-40 hidden w-80 md:block"
+          >
+            <div className="bg-white border border-gray-200 shadow-2xl p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-serif text-xl text-navy mb-1">Start Your Exchange</h3>
+                  <p className="text-sm text-gray-600">Expert guidance for LA investors.</p>
+                </div>
+                <button
+                  onClick={() => { setIsDismissed(true); setIsVisible(false); }}
+                  aria-label="Dismiss exchange call to action"
+                  className="text-gray-400 hover:text-navy transition-colors"
+                >
+                  <CloseIcon className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="space-y-3">
+                <Link href="/contact" className="block w-full py-3 bg-navy hover:bg-navy-light text-white text-center font-sans text-sm tracking-wider transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/services" className="block text-center text-sm text-gray-500 hover:text-navy transition-colors">
+                  Explore Services
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
