@@ -374,14 +374,14 @@ export default function HomePage() {
                 Los Angeles Premier
               </motion.p>
               
-              {/* Main Title - All on one line */}
+              {/* Main Title */}
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-wider mb-8"
+                className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white tracking-wide mb-8"
               >
-                1031 Exchange
+                Turnkey 1031 Exchange Services in Los Angeles, CA
               </motion.h1>
               
               {/* Tagline */}
@@ -405,12 +405,12 @@ export default function HomePage() {
                   href="/contact" 
                   className="px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
                   >Talk Through the Los Angeles Sale</Link>
-                  <Link
-                  href="/services" 
+                  <a
+                  href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="px-12 py-4 border border-white/50 text-white font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/10 transition-all"
                   >
-                  Our Services
-                  </Link>
+                  Call Now to Talk to an Expert
+                  </a>
               </motion.div>
             </motion.div>
           </div>
@@ -430,6 +430,64 @@ export default function HomePage() {
               />
               </div>
           </motion.div>
+          </section>
+
+        {/* ==========================================
+            ABOUT / BRAND SECTION - WHITE LOGO
+        ========================================== */}
+        <section className="py-32 md:py-40 bg-navy">
+          <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+              {/* White Logo */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="flex justify-center md:justify-start"
+              >
+                <Image
+                  src="/1031-exchange-los-angeles-ca-logo.png"
+                  alt="1031 Exchange Los Angeles"
+                  width={400}
+                  height={100}
+                  className="brightness-0 invert"
+                  style={{ width: 'auto', height: 'auto', maxWidth: '400px' }}
+                />
+              </motion.div>
+
+              {/* Content */}
+                  <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <p className="font-serif text-xl text-white/60 italic mb-6">
+                  Southern California Investment Excellence
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8 tracking-wide">
+                  Leave Los Angeles Property Management Behind
+                </h2>
+                <div className="space-y-6 text-white/70 text-lg leading-relaxed">
+                  <p>A Los Angeles owner may be selling to leave intensive management, move equity out of one submarket, simplify inherited property, or seek a different income profile. We define that goal first and compare California, out-of-state, direct, net-lease, and passive replacements against the same sale economics and deadline.</p>
+                  <p>DST interests may give Los Angeles sellers access to professionally managed, institutional-grade real estate without personally managing tenants or capital projects. Some offerings can begin around $100,000; minimums, inventory, projected income, fees, debt, risk, liquidity restrictions, qualification, and suitability are not uniform.</p>
+                      </div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-10"
+                >
+                      <Link
+                    href="/contact?request=guide"
+                    className="inline-block px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
+                      >Get Free Los Angeles 1031 Information</Link>
+                  </motion.div>
+              </motion.div>
+              </div>
+            </div>
           </section>
 
         {/* ==========================================
@@ -557,64 +615,6 @@ export default function HomePage() {
           </section>
 
         {/* ==========================================
-            ABOUT / BRAND SECTION - WHITE LOGO
-        ========================================== */}
-        <section className="py-32 md:py-40 bg-navy">
-          <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
-              {/* White Logo */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="flex justify-center md:justify-start"
-              >
-                <Image
-                  src="/1031-exchange-los-angeles-ca-logo.png"
-                  alt="1031 Exchange Los Angeles"
-                  width={400}
-                  height={100}
-                  className="brightness-0 invert"
-                  style={{ width: 'auto', height: 'auto', maxWidth: '400px' }}
-                />
-              </motion.div>
-
-              {/* Content */}
-                  <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                <p className="font-serif text-xl text-white/60 italic mb-6">
-                  Southern California Investment Excellence
-                </p>
-                <h2 className="font-serif text-4xl md:text-5xl text-white font-light mb-8 tracking-wide">
-                  Leave Los Angeles Property Management Behind
-                </h2>
-                <div className="space-y-6 text-white/70 text-lg leading-relaxed">
-                  <p>A Los Angeles owner may be selling to leave intensive management, move equity out of one submarket, simplify inherited property, or seek a different income profile. We define that goal first and compare California, out-of-state, direct, net-lease, and passive replacements against the same sale economics and deadline.</p>
-                  <p>DST interests may give Los Angeles sellers access to professionally managed, institutional-grade real estate without personally managing tenants or capital projects. Some offerings can begin around $100,000; minimums, inventory, projected income, fees, debt, risk, liquidity restrictions, qualification, and suitability are not uniform.</p>
-                      </div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  className="mt-10"
-                >
-                      <Link
-                    href="/contact?request=guide" 
-                    className="inline-block px-12 py-4 bg-white text-navy font-sans text-sm tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
-                      >Get Free Los Angeles 1031 Information</Link>
-                  </motion.div>
-              </motion.div>
-              </div>
-            </div>
-          </section>
-
-        {/* ==========================================
             MARKET AT A GLANCE - ANIMATED & LARGE
         ========================================== */}
         <section className="py-32 md:py-40 bg-cream">
@@ -625,7 +625,7 @@ export default function HomePage() {
             />
 
             <div className="grid md:grid-cols-4 gap-8 lg:gap-12 mt-16">
-              <AnimatedCounter value="$2.4M" suffix="" label="Average Exchange Value" />
+              <AnimatedCounter value={2.4} suffix="M" label="Average Exchange Value" />
               <AnimatedCounter value={1247} suffix="" label="Active Opportunities" />
               <AnimatedCounter value={45} suffix="" label="Day Identification" />
               <AnimatedCounter value={180} suffix="" label="Day Completion" />
