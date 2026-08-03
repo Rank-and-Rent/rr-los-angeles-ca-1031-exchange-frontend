@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon.ico',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/favicon/apple-touch-icon.png',
     other: [
       {
